@@ -4,7 +4,6 @@ import os
 from flask import *  # render_template
 from wvlib_light import lwvlib
 import xml.etree.ElementTree as ET
-from markupsafe import escape
 
 """
 server end for running the classifier.
