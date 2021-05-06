@@ -16,14 +16,11 @@ Consequently, bad things may happen if this is run in a production environment w
 """
 
 path = f"{os.getcwd()}\\Voikko"
-print(path)
 Voikko.setLibrarySearchPath(path)
 v = Voikko(u"fi", path)
 tree = ET.parse("soderholm_et_al.xml")
 root = tree.getroot()
 wv = lwvlib.load("D:\\Work\\skipgram_dbs\\finnish_4B_parsebank_skgram.bin", 10000, 500000)
-
-# help(Voikko)
 
 
 def find_baseform(word, voikko_instance):
@@ -76,16 +73,15 @@ def evaluate_word(word):  # Returns a python map with the rating data in JSON.
     return jsonify(resultMap)
 
 
-# return escape(resultstring)
-
 def word_eval(word):
     baseform = find_baseform(word, v)
     ratingresult = rate(baseform)
-    # resultstring=("Voikko: baseform:"+baseform+" valence:"+str(ratingresult[0])+" arousal:"+str(ratingresult[1]))
+    resultstring = ("Voikko: baseform:" + baseform + " valence:" + str(ratingresult[0]) + " arousal:" + str(
+        ratingresult[1]))
     ratedsynonym = findRatedSynonym(baseform, wv)
-    # resultstring=resultstring+ "\nParsebank: nearest: " + ratedsynonym['baseform'] +
-    # " " + str(float(ratedsynonym['similarity'])) + " valence:" + ratedsynonym['rating'][0] +
-    # " arousal:" + ratedsynonym['rating'][1]
+    resultstring = resultstring + "\nParsebank: nearest: " + ratedsynonym['baseform'] + " " + \
+                   str(float(ratedsynonym['similarity'])) + " valence:" + ratedsynonym['rating'][0] + \
+                   " arousal:" + ratedsynonym['rating'][1]
     resultMap = {'voikko_baseform': baseform}
     if ratingresult[0] is not None:
         # the presence of the 'direct_' fields shows that the parsebank would not have been needed.
@@ -102,9 +98,11 @@ def word_eval(word):
 
 @app.route('/evaluate_text/<string:text>')
 def evaluate_text(text):
-    # text="Näinhän se menee. Kuntien päättäjillä on suhteita rakennusyhtiöihin ja tekniseen toimeen on sisäänrakennettu
-    # tarve purkaa vanhaa ja rakentaa uutta ja lyhytikäistä. Julkisella sektorilla ei ymmärretä kuinka kova työ yhdenkin
-    # veroeuron eteen on tehty. Siellä on vieraannuttu täysin reaalitaloudesta."
+    """
+    text = "Näinhän se menee. Kuntien päättäjillä on suhteita rakennusyhtiöihin ja tekniseen toimeen on " \
+         "sisäänrakennettu tarve purkaa vanhaa ja rakentaa uutta ja lyhytikäistä. Julkisella sektorilla ei ymmärretä" \
+         " kuinka kova työ yhdenkin veroeuron eteen on tehty. Siellä on vieraannuttu täysin reaalitaloudesta."
+    """
     result_list = []
     tokens = v.tokens(text)
     print(tokens)
