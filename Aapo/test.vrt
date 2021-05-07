@@ -1,0 +1,110 @@
+<root>
+<text comment_id="39959" date="2001-01-01" datetime="2001-01-01 02:09:00" author="tiedä häntä..." parent_comment_id="0" quoted_comment_id="0" author_logged_in="n" nick_type="anonymous" thread_id="8471" time="02:09:00" title="uudenvuodenlupaukset" topic_nums="3247,51,50" msg_type="comment" topic_name_leaf="40 plus" topic_name_top="Ryhmät" topic_names="Ryhmät &gt; Ikäryhmät &gt; 40 plus" topic_names_set="|40 plus|Ikäryhmät|Ryhmät|" topic_nums_set="|3247|50|51|" topic_adultonly="n" datefrom="20010101" dateto="20010101" timefrom="020900" timeto="020900" id="8471:39959" author_v1="tiedä häntä..." author_name_type="user_nickname" author_nick_registered="n" author_signed_status="0" thread_start_datetime="2001-01-01 02:05:00" filename_vrt="s24_2001_01.vrt" parent_datetime="2001-01-01 02:05:00" datetime_approximated="n" empty="n">
+<paragraph id="5" type="body">
+<sentence id="9" polarity="neut">
+etten	1	ettäei	että|ei	V	SUBCAT_Neg|PRS_Sg1|VOICE_Act	0	ROOT	_	1	|ettäei..vb.1|
+lupaa	2	lupa	lupa	N	NUM_Sg|CASE_Par	1	dobj	SpacesAfter=\n	2	|lupa..nn.1|
+ja	3	ja	ja	C	SUBCAT_CC	2	cc	_	3	|ja..kn.1|
+kuppi	4	kuppi	kuppi	N	NUM_Sg|CASE_Nom	2	conj	SpaceAfter=No	4	|kuppi..nn.1|
+...	5	...	...	Punct	_	1	punct	_	5	|.....xx.1|
+</sentence>
+<sentence id="10" polarity="neut">
+riippuu	1	riippua	riippua	V	PRS_Sg3|VOICE_Act|TENSE_Prs|MOOD_Ind	0	ROOT	_	1	|riippua..vb.1|
+siitä	2	se	se	Pron	SUBCAT_Dem|NUM_Sg|CASE_Ela	1	nommod	_	2	|se..pn.1|
+mitä	3	mikä	mikä	Pron	SUBCAT_Rel|NUM_Sg|CASE_Par	5	rel	_	3	|mikä..pn.1|
+siinä	4	se	se	Pron	SUBCAT_Dem|NUM_Sg|CASE_Ine	5	nommod	_	4	|se..pn.1|
+on	5	olla	olla	V	PRS_Sg3|VOICE_Act|TENSE_Prs|MOOD_Ind	2	rcmod	SpaceAfter=No	5	|olla..vb.1|
+.	6	.	.	Punct	_	1	punct	SpacesAfter=\n	6	|...xx.1|
+</sentence>
+<sentence id="11" polarity="pos">
+hyvää	1	hyvä	hyvä	A	NUM_Sg|CASE_Par|CMP_Pos	3	amod	_	1	|hyvä..jj.1|
+uutta	2	uusi	uusi	A	NUM_Sg|CASE_Par|CMP_Pos	3	amod	_	2	|uusi..jj.1|
+vuotta	3	vuosi	vuosi	N	NUM_Sg|CASE_Par	0	ROOT	_	3	|vuosi..nn.1|
+sinullekin	4	sinä	sinä	Pron	SUBCAT_Pers|NUM_Sg|CASE_All|CLIT_Foc_kin	3	nommod	SpacesAfter=\n\n	4	|sinä..pn.1|
+</sentence>
+</paragraph>
+</text>
+<text comment_id="0" date="2001-01-01" datetime="2001-01-01 01:30:00" author="Honda" parent_comment_id="0" quoted_comment_id="0" author_logged_in="n" nick_type="anonymous" thread_id="19455" time="01:30:00" title="Hyvää uutta vuotta kaikille Hondailijoille" topic_nums="3258,1109,6254,2" msg_type="thread_start" topic_name_leaf="Honda" topic_name_top="Ajoneuvot ja liikenne" topic_names="Ajoneuvot ja liikenne &gt; Autot &gt; Automerkit &gt; Honda" topic_names_set="|Ajoneuvot ja liikenne|Automerkit|Autot|Honda|" topic_nums_set="|1109|2|3258|6254|" topic_adultonly="n" datefrom="20010101" dateto="20010101" timefrom="013000" timeto="013000" id="19455:0" author_v1="Honda" author_name_type="user_nickname" author_nick_registered="n" author_signed_status="0" thread_start_datetime="2001-01-01 01:30:00" filename_vrt="s24_2001_01.vrt" parent_datetime="" datetime_approximated="n" empty="n">
+<paragraph id="1" type="title">
+<sentence id="1" polarity="pos">
+Hyvää	1	hyvä	hyvä	A	NUM_Sg|CASE_Par|CMP_Pos|CASECHANGE_Up	3	amod	_	1	|hyvä..jj.1|
+uutta	2	uusi	uusi	A	NUM_Sg|CASE_Par|CMP_Pos	3	amod	_	2	|uusi..jj.1|
+vuotta	3	vuosi	vuosi	N	NUM_Sg|CASE_Par	0	ROOT	_	3	|vuosi..nn.1|
+kaikille	4	kaikki	kaikki	Pron	SUBCAT_Indef|NUM_Pl|CASE_All	5	det	_	4	|kaikki..pn.1|
+Hondailijoille	5	Hondailijoille	Hondailijoille	N	SUBCAT_Prop|NUM_Pl|CASE_All|CASECHANGE_Up|OTHER_UNK	3	nommod	SpacesAfter=\n\n	5	|Hondailijoille..nn.1|
+</sentence>
+</paragraph>
+<paragraph id="2" type="body">
+<sentence id="2" polarity="pos">
+Hyvää	1	hyvä	hyvä	A	NUM_Sg|CASE_Par|CMP_Pos|CASECHANGE_Up	3	amod	_	1	|hyvä..jj.1|
+uutta	2	uusi	uusi	A	NUM_Sg|CASE_Par|CMP_Pos	3	amod	_	2	|uusi..jj.1|
+vuotta	3	vuosi	vuosi	N	NUM_Sg|CASE_Par	0	ROOT	_	3	|vuosi..nn.1|
+kaikille	4	kaikki	kaikki	Pron	SUBCAT_Indef|NUM_Pl|CASE_All	5	det	_	4	|kaikki..pn.1|
+Hondailijoille	5	Hondailijoille	Hondailijoille	N	SUBCAT_Prop|NUM_Pl|CASE_All|CASECHANGE_Up|OTHER_UNK	3	nommod	_	5	|Hondailijoille..nn.1|
+ja	6	ja	ja	C	SUBCAT_CC	5	cc	_	6	|ja..kn.1|
+myös	7	myös	myös	Adv	_	9	advmod	_	7	|myös..ab.1|
+muille	8	muu	muu	A	NUM_Pl|CASE_All|CMP_Pos	9	det	_	8	|muu..jj.1|
+autoiluharrastajille	9	autoillaharrastaja	autoilla|harrastaja	N	NUM_Pl|CASE_All	5	conj	SpaceAfter=No	9	|autoillaharrastaja..nn.1|
+!	10	!	!	Punct	_	3	punct	SpacesAfter=\n\n	10	|!..xx.1|
+</sentence>
+</paragraph>
+</text>
+<text comment_id="0" date="2001-01-01" datetime="2001-01-01 02:05:00" author="hymykkö" parent_comment_id="0" quoted_comment_id="0" author_logged_in="n" nick_type="anonymous" thread_id="8471" time="02:05:00" title="uudenvuodenlupaukset" topic_nums="3247,51,50" msg_type="thread_start" topic_name_leaf="40 plus" topic_name_top="Ryhmät" topic_names="Ryhmät &gt; Ikäryhmät &gt; 40 plus" topic_names_set="|40 plus|Ikäryhmät|Ryhmät|" topic_nums_set="|3247|50|51|" topic_adultonly="n" datefrom="20010101" dateto="20010101" timefrom="020500" timeto="020500" id="8471:0" author_v1="hymykkö" author_name_type="user_nickname" author_nick_registered="n" author_signed_status="0" thread_start_datetime="2001-01-01 02:05:00" filename_vrt="s24_2001_01.vrt" parent_datetime="" datetime_approximated="n" empty="n">
+<paragraph id="3" type="title">
+<sentence id="3" polarity="neut">
+uudenvuodenlupaukset	1	uudenvuodenlupaus	uuden|vuoden|lupaus	N	NUM_Pl|CASE_Nom	0	ROOT	SpacesAfter=\n\n	1	|uudenvuodenlupaus..nn.1|
+</sentence>
+</paragraph>
+<paragraph id="4" type="body">
+<sentence id="4" polarity="neut">
+kuka	1	kuka	kuka	Pron	SUBCAT_Interr|NUM_Sg|CASE_Nom	2	nsubj	_	1	|kuka..pn.1|
+teki	2	tehdä	tehdä	V	PRS_Sg3|VOICE_Act|TENSE_Prt|MOOD_Ind	0	ROOT	_	2	|tehdä..vb.1|
+uudenvuodenlupauksia	3	uudenvuodenlupaus	uuden|vuoden|lupaus	N	NUM_Pl|CASE_Par	2	dobj	SpaceAfter=No	3	|uudenvuodenlupaus..nn.1|
+.	4	.	.	Punct	_	2	punct	_	4	|...xx.1|
+</sentence>
+<sentence id="5" polarity="neut">
+millaisia	1	millainen	millainen	Pron	SUBCAT_Interr|NUM_Pl|CASE_Par	0	ROOT	_	1	|millainen..pn.1|
+ja	2	ja	ja	C	SUBCAT_CC	1	cc	_	2	|ja..kn.1|
+tuntuuko	3	tuntua	tuntua	V	PRS_Sg3|VOICE_Act|TENSE_Prs|MOOD_Ind|CLIT_Qst	1	conj	_	3	|tuntua..vb.1|
+pitävän	4	pitää	pitää	V	NUM_Sg|CASE_Gen|VOICE_Act|PCP_PrsPrc|CMP_Pos	3	xcomp	SpaceAfter=No	4	|pitää..vb.1|
+.	5	.	.	Punct	_	1	punct	SpacesAfter=\n	5	|...xx.1|
+</sentence>
+<sentence id="6" polarity="neut">
+itse	1	itse	itse	Adv	_	2	advmod	_	1	|itse..ab.1|
+lupasin	2	luvata	luvata	V	PRS_Sg1|VOICE_Act|TENSE_Prt|MOOD_Ind	0	ROOT	_	2	|luvata..vb.1|
+kehittyä	3	kehittyä	kehittyä	V	NUM_Sg|CASE_Lat|VOICE_Act|INF_Inf1	2	xcomp	_	3	|kehittyä..vb.1|
+ihmisenä	4	ihminen	ihminen	N	NUM_Sg|CASE_Ess	3	nommod	_	4	|ihminen..nn.1|
+ja	5	ja	ja	C	SUBCAT_CC	3	cc	_	5	|ja..kn.1|
+painottaa	6	painottaa	painottaa	V	PRS_Sg3|VOICE_Act|TENSE_Prs|MOOD_Ind	3	conj	_	6	|painottaa..vb.1|
+positiivisuutta	7	positiivisuus	positiivisuus	N	NUM_Sg|CASE_Par	6	dobj	SpaceAfter=No	7	|positiivisuus..nn.1|
+.	8	.	.	Punct	_	2	punct	SpacesAfter=\n	8	|...xx.1|
+</sentence>
+<sentence id="7" polarity="neut">
+tässä	1	tämä	tämä	Pron	SUBCAT_Dem|NUM_Sg|CASE_Ine	2	det	_	1	|tämä..pn.1|
+kysymys	2	kysymys	kysymys	N	NUM_Sg|CASE_Nom	14	nsubj-cop	_	2	|kysymys..nn.1|
+teille	3	tee	tee	N	NUM_Pl|CASE_All	2	nommod	SpaceAfter=No	3	|tee..nn.1|
+:	4	:	:	Punct	_	7	punct	SpacesAfter=\n	4	|:..xx.1|
+kun	5	kun	kun	C	SUBCAT_CS	7	mark	_	5	|kun..kn.1|
+kuppi	6	kuppi	kuppi	N	NUM_Sg|CASE_Nom	7	nsubj	_	6	|kuppi..nn.1|
+on	7	olla	olla	V	PRS_Sg3|VOICE_Act|TENSE_Prs|MOOD_Ind	14	advcl	_	7	|olla..vb.1|
+puolillaan	8	puoli	puoli	N	NUM_Pl|CASE_Ade|POSS_Px3	7	nommod	SpaceAfter=No	8	|puoli..nn.1|
+,	9	,	,	Punct	_	7	punct	_	9	|,..xx.1|
+niin	10	niin	niin	Adv	_	14	advmod	_	10	|niin..ab.1|
+onko	11	olla	olla	V	PRS_Sg3|VOICE_Act|TENSE_Prs|MOOD_Ind|CLIT_Qst	14	cop	_	11	|olla..vb.1|
+se	12	se	se	Pron	SUBCAT_Dem|NUM_Sg|CASE_Nom	14	nsubj-cop	_	12	|se..pn.1|
+1.	13	1.	1.	Num	_	14	num	_	13	|1...rg.1|
+puolityhjä	14	puolityhjä	puoli|tyhjä	N	NUM_Sg|CASE_Nom	0	ROOT	_	14	|puolityhjä..nn.1|
+vai	15	vai	vai	C	SUBCAT_CC	14	cc	SpacesAfter=\n	15	|vai..kn.1|
+2.	16	2.	2.	Num	_	17	num	_	16	|2...rg.1|
+puolitäysi	17	puolitäysi	puoli|täysi	A	NUM_Sg|CASE_Nom|CMP_Pos	14	conj	SpaceAfter=No	17	|puolitäysi..jj.1|
+?	18	?	?	Punct	_	14	punct	SpacesAfter=\s\s\s\n	18	|?..xx.1|
+</sentence>
+<sentence id="8" polarity="neut">
+hyvää	1	hyvä	hyvä	A	NUM_Sg|CASE_Par|CMP_Pos	3	amod	_	1	|hyvä..jj.1|
+uutta	2	uusi	uusi	A	NUM_Sg|CASE_Par|CMP_Pos	3	amod	_	2	|uusi..jj.1|
+vuotta	3	vuosi	vuosi	N	NUM_Sg|CASE_Par	4	dobj	SpacesAfter=\n	3	|vuosi..nn.1|
+toivoopi	4	toivoopi	toivoopi	V	PRS_Sg3|VOICE_Act|TENSE_Prt|MOOD_Ind|OTHER_UNK	0	ROOT	SpacesAfter=\n\n	4	|toivoopi..vb.1|
+</sentence>
+</paragraph>
+</text>
+</root>
