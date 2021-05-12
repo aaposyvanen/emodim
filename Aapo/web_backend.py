@@ -37,13 +37,13 @@ def evaluate_text(text):
     for t in tokens:
         if t.tokenType == libvoikko.Token.WORD:
             evaluate = em.word_eval(t.tokenText)
+            textValues.append(evaluate)
             try:
                 vsum += float(evaluate['rating'][0])
                 asum += float(evaluate['rating'][1])
                 dsum += float(evaluate['rating'][2])
             except TypeError:
                 continue
-            textValues.append(evaluate)
         else:
             textValues.append({'original_text': t.tokenText})
     print("Sums of per word rated emotions in the text:")
