@@ -1,5 +1,4 @@
 import libvoikko
-from libvoikko import Voikko
 import xml.etree.cElementTree as ET
 import os
 from wvlib_light import lwvlib
@@ -16,8 +15,8 @@ Consequently, bad things may happen if this is run in a production environment w
 """
 
 path = f"{os.getcwd()}\\Voikko"
-Voikko.setLibrarySearchPath(path)
-v = Voikko(u"fi", path)
+libvoikko.Voikko.setLibrarySearchPath(path)
+v = libvoikko.Voikko(u"fi", path)
 tree = ET.parse("soderholm_normalized.xml")
 # tree = ET.parse("soderholm_et_al.xml")
 root = tree.getroot()
@@ -36,9 +35,9 @@ def rate(word):
     for pattern in root.iter('pattern'):
         if pattern.attrib['word'] == word:
             # print(pattern.tag, pattern.attrib)
-            va = pattern.attrib['valence']
-            a = pattern.attrib['arousal']
-            d = pattern.attrib['dominance']
+            va = round(float(pattern.attrib['valence']), 3)
+            a = round(float(pattern.attrib['arousal']), 3)
+            d = round(float(pattern.attrib['dominance']), 3)
     return va, a, d
 
 
@@ -55,16 +54,18 @@ def findRatedSynonym(word, library):
                 baseform = find_baseform(n[1], v)
                 ratingResult = rate(baseform)
                 if ratingResult[0] is not None:
-                    return {"original_text": w, "nearest": n[1], "similarity": round(float(n[0]), 3), "baseform": baseform, "rating": ratingResult}
+                    return {"original_text": w, "nearest": n[1],
+                            "similarity": round(float(n[0]), 3), "baseform": baseform, "rating": ratingResult}
     return {"original_text": w, "nearest": None, "similarity": None, "baseform": None, "rating": ratingResult}
 
 
 def word_eval(word):
+    resultMap = {}
     t = v.tokens(word)
     baseform = find_baseform(t[0].tokenText, v)
-    resultMap = {}
     if t[0].tokenType != libvoikko.Token.WORD:
         resultMap = {"original_text": t[0].tokenText, "baseform": baseform, "rating": rate(t[0].tokenText)}
+        # print(f"Token was not of type WORD: {resultMap}")
         return resultMap
     if baseform is None:
         result = findRatedSynonym(t[0].tokenText, wv)
@@ -72,20 +73,20 @@ def word_eval(word):
         return result
     # fetch the ratings for valence, arousal and dominance for the baseform word
     rr = rate(baseform)
-    ratedSynonym = findRatedSynonym(t[0].tokenText, wv)
-    resultstring = f"Voikko: baseform: {baseform} v: {rr[0]} a: {rr[1]} d: {rr[2]}"
-    resultstring = f"{resultstring}\nParsebank: {ratedSynonym}"
-    # print(resultstring)
     if rr[0] is not None and rr[1] is not None and rr[2] is not None:
         # the presence of the 'direct_' fields shows that the parsebank would not have been needed.
         resultMap = {"original_text": t[0].tokenText, "baseform": baseform, "direct_valence": rr[0],
                      "direct_arousal": rr[1], "direct_dominance": rr[2], "rating": rr}
         # print(f"Rating came through for baseform: {resultMap}")
-
     else:
+        ratedSynonym = findRatedSynonym(t[0].tokenText, wv)
+        resultString = f"Voikko: baseform: {baseform} v: {rr[0]} a: {rr[1]} d: {rr[2]} Parsebank: {ratedSynonym}"
+        # print(resultString)
         if ratedSynonym is None:
             print(f"None found. (Word: {t[0].tokenText})")
+        # word_eval at this moment ends in this else statement most often (> 90% of the cases)
         else:
+            # finding ratedSynonym makes the iteration 70 times slower
             rs = ratedSynonym
             resultMap = {"original_text": t[0].tokenText, "baseform": baseform, "parsebank_nearest": rs['nearest'],
                          "nearest_baseform": rs['baseform'], "parsebank_nearest_distance": rs['similarity'],
@@ -93,5 +94,4 @@ def word_eval(word):
                          "parsebank_nearest_dominance": rs['rating'][2],
                          "rating": (rs['rating'][0], rs['rating'][1], rs['rating'][2])}
             # print(f"Rating did not come through for baseform and ratedSynonym was not None: {resultMap}")
-            # word_eval at this moment ends in this else statement most often (> 90% of the cases)
     return resultMap

@@ -1,3342 +1,4 @@
 {
-  "19455": [
-    [
-      {
-        "original_text": "Hyvää",
-        "baseform": "hyvä",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "uutta",
-        "baseform": "uusi",
-        "parsebank_nearest": "tekniikkaa",
-        "nearest_baseform": "tekniikka",
-        "parsebank_nearest_distance": 0.483,
-        "parsebank_nearest_valence": "0.33",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.33",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "vuotta",
-        "baseform": "vuo",
-        "parsebank_nearest": "kappaletta",
-        "nearest_baseform": "kappale",
-        "parsebank_nearest_distance": 0.435,
-        "parsebank_nearest_valence": "0.35",
-        "parsebank_nearest_arousal": "-0.46",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.35",
-          "-0.46",
-          "0"
-        ]
-      },
-      {
-        "original_text": "kaikille",
-        "baseform": "kaikki",
-        "parsebank_nearest": "ystäville",
-        "nearest_baseform": "ystävä",
-        "parsebank_nearest_distance": 0.617,
-        "parsebank_nearest_valence": "2.39",
-        "parsebank_nearest_arousal": "-1.08",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "2.39",
-          "-1.08",
-          "0"
-        ]
-      },
-      {
-        "original_text": "Hondailijoille",
-        "nearest": null,
-        "similarity": null,
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "ja",
-        "baseform": "ja",
-        "parsebank_nearest": "lopulta",
-        "nearest_baseform": "loppu",
-        "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "myös",
-        "baseform": "myös",
-        "parsebank_nearest": "mielellään",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.406,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "muille",
-        "baseform": "muu",
-        "parsebank_nearest": "ystäville",
-        "nearest_baseform": "ystävä",
-        "parsebank_nearest_distance": 0.565,
-        "parsebank_nearest_valence": "2.39",
-        "parsebank_nearest_arousal": "-1.08",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "2.39",
-          "-1.08",
-          "0"
-        ]
-      },
-      {
-        "original_text": "autoiluharrastajille",
-        "baseform": "autoiluharrastaja",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "!",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      }
-    ]
-  ],
-  "8471": [
-    [
-      {
-        "original_text": "kuka",
-        "baseform": "kuka",
-        "parsebank_nearest": "kansa",
-        "nearest_baseform": "kansa",
-        "parsebank_nearest_distance": 0.471,
-        "parsebank_nearest_valence": "0.13",
-        "parsebank_nearest_arousal": "-0.30",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.13",
-          "-0.30",
-          "0"
-        ]
-      },
-      {
-        "original_text": "teki",
-        "baseform": "tehdä",
-        "parsebank_nearest": "vaikutuksen",
-        "nearest_baseform": "vaikutus",
-        "parsebank_nearest_distance": 0.424,
-        "parsebank_nearest_valence": "0.35",
-        "parsebank_nearest_arousal": "-0.07",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.35",
-          "-0.07",
-          "0"
-        ]
-      },
-      {
-        "original_text": "uudenvuodenlupauksia",
-        "baseform": "uudenvuodenlupaus",
-        "parsebank_nearest": "juhlia",
-        "nearest_baseform": "juhla",
-        "parsebank_nearest_distance": 0.445,
-        "parsebank_nearest_valence": "1.54",
-        "parsebank_nearest_arousal": "0.49",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.54",
-          "0.49",
-          "0"
-        ]
-      },
-      {
-        "original_text": ".",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "millaisia",
-        "baseform": "millainen",
-        "parsebank_nearest": "toiveita",
-        "nearest_baseform": "toive",
-        "parsebank_nearest_distance": 0.492,
-        "parsebank_nearest_valence": "1.79",
-        "parsebank_nearest_arousal": "-0.14",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.79",
-          "-0.14",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ja",
-        "baseform": "ja",
-        "parsebank_nearest": "lopulta",
-        "nearest_baseform": "loppu",
-        "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "tuntuuko",
-        "baseform": "tuntua",
-        "parsebank_nearest": "elämäsi",
-        "nearest_baseform": "elämä",
-        "parsebank_nearest_distance": 0.437,
-        "parsebank_nearest_valence": "1.76",
-        "parsebank_nearest_arousal": "0.13",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.76",
-          "0.13",
-          "0"
-        ]
-      },
-      {
-        "original_text": "pitävän",
-        "baseform": "pitävä",
-        "parsebank_nearest": "mielestä",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.288,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": ".",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "itse",
-        "baseform": "itse",
-        "parsebank_nearest": "elämässäni",
-        "nearest_baseform": "elämä",
-        "parsebank_nearest_distance": 0.451,
-        "parsebank_nearest_valence": "1.76",
-        "parsebank_nearest_arousal": "0.13",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.76",
-          "0.13",
-          "0"
-        ]
-      },
-      {
-        "original_text": "lupasin",
-        "baseform": "luvata",
-        "parsebank_nearest": "mielelläni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.486,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "kehittyä",
-        "baseform": "kehitty",
-        "parsebank_nearest": "taidot",
-        "nearest_baseform": "taito",
-        "parsebank_nearest_distance": 0.422,
-        "parsebank_nearest_valence": "1.48",
-        "parsebank_nearest_arousal": "-0.47",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.48",
-          "-0.47",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ihmisenä",
-        "baseform": "ihminen",
-        "parsebank_nearest": "elämääni",
-        "nearest_baseform": "elämä",
-        "parsebank_nearest_distance": 0.493,
-        "parsebank_nearest_valence": "1.76",
-        "parsebank_nearest_arousal": "0.13",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.76",
-          "0.13",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ja",
-        "baseform": "ja",
-        "parsebank_nearest": "lopulta",
-        "nearest_baseform": "loppu",
-        "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "painottaa",
-        "baseform": "painottaa",
-        "parsebank_nearest": "kehityksen",
-        "nearest_baseform": "kehitys",
-        "parsebank_nearest_distance": 0.401,
-        "parsebank_nearest_valence": "0.78",
-        "parsebank_nearest_arousal": "-0.05",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.78",
-          "-0.05",
-          "0"
-        ]
-      },
-      {
-        "original_text": "positiivisuutta",
-        "baseform": "positiivisuus",
-        "parsebank_nearest": "rohkeutta",
-        "nearest_baseform": "rohkeus",
-        "parsebank_nearest_distance": 0.66,
-        "parsebank_nearest_valence": "1.38",
-        "parsebank_nearest_arousal": "0.27",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.38",
-          "0.27",
-          "0"
-        ]
-      },
-      {
-        "original_text": ".",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "tässä",
-        "baseform": "tämä",
-        "parsebank_nearest": "mielessä",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.599,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "kysymys",
-        "baseform": "kysymys",
-        "parsebank_nearest": "ajatus",
-        "nearest_baseform": "ajatus",
-        "parsebank_nearest_distance": 0.619,
-        "parsebank_nearest_valence": "1.30",
-        "parsebank_nearest_arousal": "-0.33",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.30",
-          "-0.33",
-          "0"
-        ]
-      },
-      {
-        "original_text": "teille",
-        "baseform": "te",
-        "parsebank_nearest": "kiitos",
-        "nearest_baseform": "kiitos",
-        "parsebank_nearest_distance": 0.585,
-        "parsebank_nearest_valence": "2.03",
-        "parsebank_nearest_arousal": "-0.80",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "2.03",
-          "-0.80",
-          "0"
-        ]
-      },
-      {
-        "original_text": ":",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "kun",
-        "baseform": "kun",
-        "parsebank_nearest": "lopulta",
-        "nearest_baseform": "loppu",
-        "parsebank_nearest_distance": 0.547,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "kuppi",
-        "baseform": "kuppi",
-        "direct_valence": "0.40",
-        "direct_arousal": "-0.81",
-        "direct_dominance": "0",
-        "rating": [
-          "0.40",
-          "-0.81",
-          "0"
-        ]
-      },
-      {
-        "original_text": "on",
-        "baseform": "olla",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.448,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "puolillaan",
-        "baseform": "puola",
-        "parsebank_nearest": "suklaata",
-        "nearest_baseform": "suklaa",
-        "parsebank_nearest_distance": 0.36,
-        "parsebank_nearest_valence": "1.91",
-        "parsebank_nearest_arousal": "-0.48",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.91",
-          "-0.48",
-          "0"
-        ]
-      },
-      {
-        "original_text": ",",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "niin",
-        "baseform": "niin",
-        "parsebank_nearest": "tarpeeksi",
-        "nearest_baseform": "tarve",
-        "parsebank_nearest_distance": 0.657,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.07",
-          "0.04",
-          "0"
-        ]
-      },
-      {
-        "original_text": "onko",
-        "baseform": "olla",
-        "parsebank_nearest": "mielestäsi",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.535,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "se",
-        "baseform": "se",
-        "parsebank_nearest": "vitsi",
-        "nearest_baseform": "vitsi",
-        "parsebank_nearest_distance": 0.536,
-        "parsebank_nearest_valence": "1.26",
-        "parsebank_nearest_arousal": "-0.10",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.26",
-          "-0.10",
-          "0"
-        ]
-      },
-      {
-        "original_text": "1",
-        "baseform": "1",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "puolityhjä",
-        "baseform": "puolityhjä",
-        "parsebank_nearest": "ravintola",
-        "nearest_baseform": "ravintola",
-        "parsebank_nearest_distance": 0.419,
-        "parsebank_nearest_valence": "0.78",
-        "parsebank_nearest_arousal": "-0.15",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.78",
-          "-0.15",
-          "0"
-        ]
-      },
-      {
-        "original_text": "vai",
-        "baseform": "vai",
-        "parsebank_nearest": "mielestäsi",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.555,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "2",
-        "baseform": "2",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "puolitäysi",
-        "baseform": "puolitäysi",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "?",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "hyvää",
-        "baseform": "hyvä",
-        "parsebank_nearest": "menestystä",
-        "nearest_baseform": "menestys",
-        "parsebank_nearest_distance": 0.458,
-        "parsebank_nearest_valence": "1.02",
-        "parsebank_nearest_arousal": "0.31",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.02",
-          "0.31",
-          "0"
-        ]
-      },
-      {
-        "original_text": "uutta",
-        "baseform": "uusi",
-        "parsebank_nearest": "tekniikkaa",
-        "nearest_baseform": "tekniikka",
-        "parsebank_nearest_distance": 0.483,
-        "parsebank_nearest_valence": "0.33",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.33",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "vuotta",
-        "baseform": "vuo",
-        "parsebank_nearest": "kappaletta",
-        "nearest_baseform": "kappale",
-        "parsebank_nearest_distance": 0.435,
-        "parsebank_nearest_valence": "0.35",
-        "parsebank_nearest_arousal": "-0.46",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.35",
-          "-0.46",
-          "0"
-        ]
-      },
-      {
-        "original_text": "toivoopi",
-        "baseform": "toivoa",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      }
-    ],
-    [
-      {
-        "original_text": "etten",
-        "baseform": "ettei",
-        "parsebank_nearest": "mieleni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.549,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "lupaa",
-        "baseform": "lupa",
-        "parsebank_nearest": "ilmoitusta",
-        "nearest_baseform": "ilmoitus",
-        "parsebank_nearest_distance": 0.511,
-        "parsebank_nearest_valence": "-0.07",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.07",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ja",
-        "baseform": "ja",
-        "parsebank_nearest": "lopulta",
-        "nearest_baseform": "loppu",
-        "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "kuppi",
-        "baseform": "kuppi",
-        "direct_valence": "0.40",
-        "direct_arousal": "-0.81",
-        "direct_dominance": "0",
-        "rating": [
-          "0.40",
-          "-0.81",
-          "0"
-        ]
-      },
-      {
-        "original_text": "...",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "riippuu",
-        "baseform": "riippua",
-        "parsebank_nearest": "laadusta",
-        "nearest_baseform": "laatu",
-        "parsebank_nearest_distance": 0.524,
-        "parsebank_nearest_valence": "1.06",
-        "parsebank_nearest_arousal": "-0.67",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.06",
-          "-0.67",
-          "0"
-        ]
-      },
-      {
-        "original_text": "siitä",
-        "baseform": "se",
-        "parsebank_nearest": "laadusta",
-        "nearest_baseform": "laatu",
-        "parsebank_nearest_distance": 0.503,
-        "parsebank_nearest_valence": "1.06",
-        "parsebank_nearest_arousal": "-0.67",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.06",
-          "-0.67",
-          "0"
-        ]
-      },
-      {
-        "original_text": "mitä",
-        "baseform": "mikä",
-        "parsebank_nearest": "mielestäsi",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.442,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "siinä",
-        "baseform": "se",
-        "parsebank_nearest": "mielessä",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.645,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "on",
-        "baseform": "olla",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.448,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": ".",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "hyvää",
-        "baseform": "hyvä",
-        "parsebank_nearest": "menestystä",
-        "nearest_baseform": "menestys",
-        "parsebank_nearest_distance": 0.458,
-        "parsebank_nearest_valence": "1.02",
-        "parsebank_nearest_arousal": "0.31",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.02",
-          "0.31",
-          "0"
-        ]
-      },
-      {
-        "original_text": "uutta",
-        "baseform": "uusi",
-        "parsebank_nearest": "tekniikkaa",
-        "nearest_baseform": "tekniikka",
-        "parsebank_nearest_distance": 0.483,
-        "parsebank_nearest_valence": "0.33",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.33",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "vuotta",
-        "baseform": "vuo",
-        "parsebank_nearest": "kappaletta",
-        "nearest_baseform": "kappale",
-        "parsebank_nearest_distance": 0.435,
-        "parsebank_nearest_valence": "0.35",
-        "parsebank_nearest_arousal": "-0.46",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.35",
-          "-0.46",
-          "0"
-        ]
-      },
-      {
-        "original_text": "sinullekin",
-        "baseform": "sinä",
-        "parsebank_nearest": "kiitos",
-        "nearest_baseform": "kiitos",
-        "parsebank_nearest_distance": 0.673,
-        "parsebank_nearest_valence": "2.03",
-        "parsebank_nearest_arousal": "-0.80",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "2.03",
-          "-0.80",
-          "0"
-        ]
-      }
-    ],
-    [
-      {
-        "original_text": "tehdä",
-        "baseform": "tehdä",
-        "parsebank_nearest": "leikkiä",
-        "nearest_baseform": "leikki",
-        "parsebank_nearest_distance": 0.405,
-        "parsebank_nearest_valence": "1.58",
-        "parsebank_nearest_arousal": "-0.19",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.58",
-          "-0.19",
-          "0"
-        ]
-      },
-      {
-        "original_text": "itseni",
-        "baseform": "itse",
-        "parsebank_nearest": "mieleni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.61,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "onnelliseksi",
-        "baseform": "onnellinen",
-        "parsebank_nearest": "mieleni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.485,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "-",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "täyttää",
-        "baseform": "täyttää",
-        "parsebank_nearest": "tarpeet",
-        "nearest_baseform": "tarve",
-        "parsebank_nearest_distance": 0.33,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.07",
-          "0.04",
-          "0"
-        ]
-      },
-      {
-        "original_text": "omat",
-        "baseform": "oma",
-        "parsebank_nearest": "toiveet",
-        "nearest_baseform": "toive",
-        "parsebank_nearest_distance": 0.46,
-        "parsebank_nearest_valence": "1.79",
-        "parsebank_nearest_arousal": "-0.14",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.79",
-          "-0.14",
-          "0"
-        ]
-      },
-      {
-        "original_text": "toiveeni",
-        "baseform": "toive",
-        "direct_valence": "1.79",
-        "direct_arousal": "-0.14",
-        "direct_dominance": "0",
-        "rating": [
-          "1.79",
-          "-0.14",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ja",
-        "baseform": "ja",
-        "parsebank_nearest": "lopulta",
-        "nearest_baseform": "loppu",
-        "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "haaveeni",
-        "baseform": "haave",
-        "parsebank_nearest": "elämäni",
-        "nearest_baseform": "elämä",
-        "parsebank_nearest_distance": 0.587,
-        "parsebank_nearest_valence": "1.76",
-        "parsebank_nearest_arousal": "0.13",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.76",
-          "0.13",
-          "0"
-        ]
-      },
-      {
-        "original_text": "yksi",
-        "baseform": "yksi",
-        "parsebank_nearest": "lopuksi",
-        "nearest_baseform": "loppu",
-        "parsebank_nearest_distance": 0.347,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "kerrallaan",
-        "baseform": "kerta",
-        "parsebank_nearest": "loput",
-        "nearest_baseform": "loppu",
-        "parsebank_nearest_distance": 0.404,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": ".",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "Positiivisena",
-        "baseform": "positiivinen",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "ihmisenä",
-        "baseform": "ihminen",
-        "parsebank_nearest": "elämääni",
-        "nearest_baseform": "elämä",
-        "parsebank_nearest_distance": 0.493,
-        "parsebank_nearest_valence": "1.76",
-        "parsebank_nearest_arousal": "0.13",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.76",
-          "0.13",
-          "0"
-        ]
-      },
-      {
-        "original_text": "sanon",
-        "baseform": "sanoa",
-        "parsebank_nearest": "mielelläni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.495,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "että",
-        "baseform": "että",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.472,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "puolitäysi",
-        "baseform": "puolitäysi",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": ".",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      }
-    ],
-    [
-      {
-        "original_text": "kylpyläreissu",
-        "baseform": "kylpyläreissu",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "joka",
-        "baseform": "joka",
-        "parsebank_nearest": "enkeli",
-        "nearest_baseform": "enkeli",
-        "parsebank_nearest_distance": 0.382,
-        "parsebank_nearest_valence": "1.61",
-        "parsebank_nearest_arousal": "-1.33",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.61",
-          "-1.33",
-          "0"
-        ]
-      },
-      {
-        "original_text": "viikko",
-        "baseform": "viikko",
-        "parsebank_nearest": "syksy",
-        "nearest_baseform": "syksy",
-        "parsebank_nearest_distance": 0.561,
-        "parsebank_nearest_valence": "0.62",
-        "parsebank_nearest_arousal": "-0.61",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.62",
-          "-0.61",
-          "0"
-        ]
-      },
-      {
-        "original_text": "pitäisi",
-        "baseform": "pitää",
-        "parsebank_nearest": "ajatuksena",
-        "nearest_baseform": "ajatus",
-        "parsebank_nearest_distance": 0.511,
-        "parsebank_nearest_valence": "1.30",
-        "parsebank_nearest_arousal": "-0.33",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.30",
-          "-0.33",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ottaa",
-        "baseform": "ottaa",
-        "parsebank_nearest": "mielellään",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.385,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ohjelmaan",
-        "baseform": "ohjelma",
-        "direct_valence": "0.19",
-        "direct_arousal": "-0.25",
-        "direct_dominance": "0",
-        "rating": [
-          "0.19",
-          "-0.25",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ole",
-        "baseform": "olla",
-        "parsebank_nearest": "tarpeeksi",
-        "nearest_baseform": "tarve",
-        "parsebank_nearest_distance": 0.486,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.07",
-          "0.04",
-          "0"
-        ]
-      },
-      {
-        "original_text": "hyvä",
-        "baseform": "hyvä",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.53,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "itsellesi",
-        "baseform": "itse",
-        "parsebank_nearest": "elämäsi",
-        "nearest_baseform": "elämä",
-        "parsebank_nearest_distance": 0.564,
-        "parsebank_nearest_valence": "1.76",
-        "parsebank_nearest_arousal": "0.13",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.76",
-          "0.13",
-          "0"
-        ]
-      },
-      {
-        "original_text": "tulevana",
-        "baseform": "tuleva",
-        "parsebank_nearest": "syksynä",
-        "nearest_baseform": "syksy",
-        "parsebank_nearest_distance": 0.588,
-        "parsebank_nearest_valence": "0.62",
-        "parsebank_nearest_arousal": "-0.61",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.62",
-          "-0.61",
-          "0"
-        ]
-      },
-      {
-        "original_text": "vuonna",
-        "baseform": "vuosi",
-        "parsebank_nearest": "syksynä",
-        "nearest_baseform": "syksy",
-        "parsebank_nearest_distance": 0.698,
-        "parsebank_nearest_valence": "0.62",
-        "parsebank_nearest_arousal": "-0.61",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.62",
-          "-0.61",
-          "0"
-        ]
-      }
-    ],
-    [
-      {
-        "original_text": "mä",
-        "nearest": null,
-        "similarity": null,
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "pyydän",
-        "baseform": "pyytää",
-        "parsebank_nearest": "mielelläni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.525,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "palkankorotuksen",
-        "baseform": "palkankorotus",
-        "parsebank_nearest": "prosentin",
-        "nearest_baseform": "prosentti",
-        "parsebank_nearest_distance": 0.514,
-        "parsebank_nearest_valence": "-0.20",
-        "parsebank_nearest_arousal": "-0.29",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.20",
-          "-0.29",
-          "0"
-        ]
-      },
-      {
-        "original_text": ",",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "kun",
-        "baseform": "kun",
-        "parsebank_nearest": "lopulta",
-        "nearest_baseform": "loppu",
-        "parsebank_nearest_distance": 0.547,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "oon",
-        "nearest": null,
-        "similarity": null,
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "sen",
-        "baseform": "se",
-        "parsebank_nearest": "ajatuksen",
-        "nearest_baseform": "ajatus",
-        "parsebank_nearest_distance": 0.486,
-        "parsebank_nearest_valence": "1.30",
-        "parsebank_nearest_arousal": "-0.33",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.30",
-          "-0.33",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ansainnut",
-        "baseform": "ansainnut",
-        "parsebank_nearest": "kunnian",
-        "nearest_baseform": "kunnia",
-        "parsebank_nearest_distance": 0.481,
-        "parsebank_nearest_valence": "0.72",
-        "parsebank_nearest_arousal": "-0.02",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.72",
-          "-0.02",
-          "0"
-        ]
-      },
-      {
-        "original_text": ".",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      }
-    ],
-    [
-      {
-        "original_text": "Lupasin",
-        "baseform": "luvata",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "itselleni",
-        "baseform": "itse",
-        "parsebank_nearest": "mielessäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.632,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "kesään",
-        "baseform": "kesä",
-        "parsebank_nearest": "vuoteen",
-        "nearest_baseform": "vuode",
-        "parsebank_nearest_distance": 0.62,
-        "parsebank_nearest_valence": "1.86",
-        "parsebank_nearest_arousal": "-1.33",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.86",
-          "-1.33",
-          "0"
-        ]
-      },
-      {
-        "original_text": "mennessä",
-        "baseform": "mennä",
-        "parsebank_nearest": "vuoteen",
-        "nearest_baseform": "vuode",
-        "parsebank_nearest_distance": 0.619,
-        "parsebank_nearest_valence": "1.86",
-        "parsebank_nearest_arousal": "-1.33",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.86",
-          "-1.33",
-          "0"
-        ]
-      },
-      {
-        "original_text": "siirtyä",
-        "baseform": "siirtyä",
-        "parsebank_nearest": "suosiolla",
-        "nearest_baseform": "suosio",
-        "parsebank_nearest_distance": 0.44,
-        "parsebank_nearest_valence": "0.96",
-        "parsebank_nearest_arousal": "0.12",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.96",
-          "0.12",
-          "0"
-        ]
-      },
-      {
-        "original_text": "kaljasta",
-        "baseform": "kalja",
-        "parsebank_nearest": "musiikista",
-        "nearest_baseform": "musiikki",
-        "parsebank_nearest_distance": 0.534,
-        "parsebank_nearest_valence": "2.17",
-        "parsebank_nearest_arousal": "-0.24",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "2.17",
-          "-0.24",
-          "0"
-        ]
-      },
-      {
-        "original_text": "lonkeroon",
-        "baseform": "lonkero",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": ".",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "Päätin",
-        "baseform": "päättää",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "myös",
-        "baseform": "myös",
-        "parsebank_nearest": "mielellään",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.406,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "lopettaa",
-        "baseform": "lopettaa",
-        "parsebank_nearest": "suosiolla",
-        "nearest_baseform": "suosio",
-        "parsebank_nearest_distance": 0.397,
-        "parsebank_nearest_valence": "0.96",
-        "parsebank_nearest_arousal": "0.12",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.96",
-          "0.12",
-          "0"
-        ]
-      },
-      {
-        "original_text": "sadattelun",
-        "baseform": "sadattelu",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "ja",
-        "baseform": "ja",
-        "parsebank_nearest": "lopulta",
-        "nearest_baseform": "loppu",
-        "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "alkaa",
-        "baseform": "alkaa",
-        "parsebank_nearest": "loppua",
-        "nearest_baseform": "loppu",
-        "parsebank_nearest_distance": 0.463,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "jupisemaan",
-        "baseform": "jupista",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": ",",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "vaikka",
-        "baseform": "vaikka",
-        "parsebank_nearest": "mielellään",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.558,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "kuinka",
-        "baseform": "kuinka",
-        "parsebank_nearest": "tarpeeksi",
-        "nearest_baseform": "tarve",
-        "parsebank_nearest_distance": 0.525,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.07",
-          "0.04",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ottaisi",
-        "baseform": "ottaa",
-        "parsebank_nearest": "mielellään",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.497,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "pää-",
-        "baseform": "pää-",
-        "parsebank_nearest": "ohjelmaan",
-        "nearest_baseform": "ohjelma",
-        "parsebank_nearest_distance": 0.304,
-        "parsebank_nearest_valence": "0.19",
-        "parsebank_nearest_arousal": "-0.25",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.19",
-          "-0.25",
-          "0"
-        ]
-      },
-      {
-        "original_text": "hän",
-        "baseform": "hän",
-        "parsebank_nearest": "ystävänsä",
-        "nearest_baseform": "ystävä",
-        "parsebank_nearest_distance": 0.594,
-        "parsebank_nearest_valence": "2.39",
-        "parsebank_nearest_arousal": "-1.08",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "2.39",
-          "-1.08",
-          "0"
-        ]
-      },
-      {
-        "original_text": "auton",
-        "baseform": "Autto",
-        "parsebank_nearest": "moottorin",
-        "nearest_baseform": "moottori",
-        "parsebank_nearest_distance": 0.661,
-        "parsebank_nearest_valence": "-0.35",
-        "parsebank_nearest_arousal": "-0.03",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.35",
-          "-0.03",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ruostuneet",
-        "baseform": "ruostunut",
-        "parsebank_nearest": "taidot",
-        "nearest_baseform": "taito",
-        "parsebank_nearest_distance": 0.384,
-        "parsebank_nearest_valence": "1.48",
-        "parsebank_nearest_arousal": "-0.47",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.48",
-          "-0.47",
-          "0"
-        ]
-      },
-      {
-        "original_text": "jarrut",
-        "baseform": "jarru",
-        "parsebank_nearest": "moottori",
-        "nearest_baseform": "moottori",
-        "parsebank_nearest_distance": 0.694,
-        "parsebank_nearest_valence": "-0.35",
-        "parsebank_nearest_arousal": "-0.03",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.35",
-          "-0.03",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ja",
-        "baseform": "ja",
-        "parsebank_nearest": "lopulta",
-        "nearest_baseform": "loppu",
-        "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "nivelet",
-        "baseform": "nivel",
-        "parsebank_nearest": "painon",
-        "nearest_baseform": "paino",
-        "parsebank_nearest_distance": 0.489,
-        "parsebank_nearest_valence": "-0.94",
-        "parsebank_nearest_arousal": "0.12",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.94",
-          "0.12",
-          "0"
-        ]
-      },
-      {
-        "original_text": "Ajattelin",
-        "baseform": "ajatella",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "myös",
-        "baseform": "myös",
-        "parsebank_nearest": "mielellään",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.406,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "laihtua",
-        "baseform": "laihtua",
-        "parsebank_nearest": "paino",
-        "nearest_baseform": "paino",
-        "parsebank_nearest_distance": 0.68,
-        "parsebank_nearest_valence": "-0.94",
-        "parsebank_nearest_arousal": "0.12",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.94",
-          "0.12",
-          "0"
-        ]
-      },
-      {
-        "original_text": "vuoden",
-        "baseform": "vuosi",
-        "parsebank_nearest": "syksyn",
-        "nearest_baseform": "syksy",
-        "parsebank_nearest_distance": 0.578,
-        "parsebank_nearest_valence": "0.62",
-        "parsebank_nearest_arousal": "-0.61",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.62",
-          "-0.61",
-          "0"
-        ]
-      },
-      {
-        "original_text": "aikana",
-        "baseform": "aika",
-        "parsebank_nearest": "syksyn",
-        "nearest_baseform": "syksy",
-        "parsebank_nearest_distance": 0.509,
-        "parsebank_nearest_valence": "0.62",
-        "parsebank_nearest_arousal": "-0.61",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.62",
-          "-0.61",
-          "0"
-        ]
-      },
-      {
-        "original_text": "6-8",
-        "nearest": null,
-        "similarity": null,
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "kiloa",
-        "baseform": "kilo",
-        "parsebank_nearest": "painoa",
-        "nearest_baseform": "paino",
-        "parsebank_nearest_distance": 0.726,
-        "parsebank_nearest_valence": "-0.94",
-        "parsebank_nearest_arousal": "0.12",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.94",
-          "0.12",
-          "0"
-        ]
-      },
-      {
-        "original_text": ",",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "joka",
-        "baseform": "joka",
-        "parsebank_nearest": "enkeli",
-        "nearest_baseform": "enkeli",
-        "parsebank_nearest_distance": 0.382,
-        "parsebank_nearest_valence": "1.61",
-        "parsebank_nearest_arousal": "-1.33",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.61",
-          "-1.33",
-          "0"
-        ]
-      },
-      {
-        "original_text": "taas",
-        "baseform": "taas",
-        "parsebank_nearest": "hetkeksi",
-        "nearest_baseform": "hetki",
-        "parsebank_nearest_distance": 0.523,
-        "parsebank_nearest_valence": "1.07",
-        "parsebank_nearest_arousal": "-0.78",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.07",
-          "-0.78",
-          "0"
-        ]
-      },
-      {
-        "original_text": "vaatii",
-        "baseform": "vaatia",
-        "parsebank_nearest": "taitoa",
-        "nearest_baseform": "taito",
-        "parsebank_nearest_distance": 0.465,
-        "parsebank_nearest_valence": "1.48",
-        "parsebank_nearest_arousal": "-0.47",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.48",
-          "-0.47",
-          "0"
-        ]
-      },
-      {
-        "original_text": "päätöksen",
-        "baseform": "päätös",
-        "parsebank_nearest": "ilmoituksen",
-        "nearest_baseform": "ilmoitus",
-        "parsebank_nearest_distance": 0.626,
-        "parsebank_nearest_valence": "-0.07",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.07",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": ",",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "että",
-        "baseform": "että",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.472,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "uintimatkaa",
-        "baseform": "uintimatka",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "on",
-        "baseform": "olla",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.448,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "lisättävä",
-        "baseform": "lisättävä",
-        "parsebank_nearest": "tehokkuutta",
-        "nearest_baseform": "tehokkuus",
-        "parsebank_nearest_distance": 0.514,
-        "parsebank_nearest_valence": "-0.09",
-        "parsebank_nearest_arousal": "0.80",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.09",
-          "0.80",
-          "0"
-        ]
-      },
-      {
-        "original_text": "puolel-",
-        "nearest": null,
-        "similarity": null,
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "la",
-        "nearest": null,
-        "similarity": null,
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "kilometrillä",
-        "baseform": "kilometri",
-        "parsebank_nearest": "prosentilla",
-        "nearest_baseform": "prosentti",
-        "parsebank_nearest_distance": 0.395,
-        "parsebank_nearest_valence": "-0.20",
-        "parsebank_nearest_arousal": "-0.29",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.20",
-          "-0.29",
-          "0"
-        ]
-      },
-      {
-        "original_text": ".",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      }
-    ],
-    [
-      {
-        "original_text": "Unohdin",
-        "baseform": "unohtaa",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "vastata",
-        "baseform": "vastata",
-        "parsebank_nearest": "tarpeisiin",
-        "nearest_baseform": "tarve",
-        "parsebank_nearest_distance": 0.404,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.07",
-          "0.04",
-          "0"
-        ]
-      },
-      {
-        "original_text": "kysymykseen",
-        "baseform": "kysymys",
-        "parsebank_nearest": "tarpeeseen",
-        "nearest_baseform": "tarve",
-        "parsebank_nearest_distance": 0.427,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.07",
-          "0.04",
-          "0"
-        ]
-      },
-      {
-        "original_text": ".",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "Mieles-",
-        "nearest": null,
-        "similarity": null,
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "täni",
-        "nearest": null,
-        "similarity": null,
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": ",",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "jos",
-        "baseform": "jos",
-        "parsebank_nearest": "tarpeeksi",
-        "nearest_baseform": "tarve",
-        "parsebank_nearest_distance": 0.478,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.07",
-          "0.04",
-          "0"
-        ]
-      },
-      {
-        "original_text": "kupissa",
-        "baseform": "kuppi",
-        "direct_valence": "0.40",
-        "direct_arousal": "-0.81",
-        "direct_dominance": "0",
-        "rating": [
-          "0.40",
-          "-0.81",
-          "0"
-        ]
-      },
-      {
-        "original_text": "yleensä",
-        "baseform": "Yle",
-        "parsebank_nearest": "mielellään",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.473,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "on",
-        "baseform": "olla",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.448,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "jotain",
-        "baseform": "jokin",
-        "parsebank_nearest": "suklaata",
-        "nearest_baseform": "suklaa",
-        "parsebank_nearest_distance": 0.423,
-        "parsebank_nearest_valence": "1.91",
-        "parsebank_nearest_arousal": "-0.48",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.91",
-          "-0.48",
-          "0"
-        ]
-      },
-      {
-        "original_text": ",",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "se",
-        "baseform": "se",
-        "parsebank_nearest": "vitsi",
-        "nearest_baseform": "vitsi",
-        "parsebank_nearest_distance": 0.536,
-        "parsebank_nearest_valence": "1.26",
-        "parsebank_nearest_arousal": "-0.10",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.26",
-          "-0.10",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ei",
-        "baseform": "ei",
-        "parsebank_nearest": "tarpeeksi",
-        "nearest_baseform": "tarve",
-        "parsebank_nearest_distance": 0.506,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.07",
-          "0.04",
-          "0"
-        ]
-      },
-      {
-        "original_text": "voi",
-        "baseform": "voida",
-        "parsebank_nearest": "tarpeen",
-        "nearest_baseform": "tarve",
-        "parsebank_nearest_distance": 0.401,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.07",
-          "0.04",
-          "0"
-        ]
-      },
-      {
-        "original_text": "olla",
-        "baseform": "olla",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.405,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "tyhjä",
-        "baseform": "tyhjä",
-        "parsebank_nearest": "huone",
-        "nearest_baseform": "huone",
-        "parsebank_nearest_distance": 0.475,
-        "parsebank_nearest_valence": "0.27",
-        "parsebank_nearest_arousal": "-0.63",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.27",
-          "-0.63",
-          "0"
-        ]
-      },
-      {
-        "original_text": ".",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "Puolityhjyys",
-        "baseform": "puolityhjyys",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "on",
-        "baseform": "olla",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.448,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ongelmallisempi",
-        "baseform": "ongelmallinen",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.379,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": ".",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "Tarkastelijaa",
-        "baseform": "tarkastelija",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "ehkä",
-        "baseform": "ehkä",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.583,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "auttaisi",
-        "baseform": "auttaa",
-        "parsebank_nearest": "tarpeen",
-        "nearest_baseform": "tarve",
-        "parsebank_nearest_distance": 0.345,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.07",
-          "0.04",
-          "0"
-        ]
-      },
-      {
-        "original_text": ",",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "jos",
-        "baseform": "jos",
-        "parsebank_nearest": "tarpeeksi",
-        "nearest_baseform": "tarve",
-        "parsebank_nearest_distance": 0.478,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.07",
-          "0.04",
-          "0"
-        ]
-      },
-      {
-        "original_text": "kuppi",
-        "baseform": "kuppi",
-        "direct_valence": "0.40",
-        "direct_arousal": "-0.81",
-        "direct_dominance": "0",
-        "rating": [
-          "0.40",
-          "-0.81",
-          "0"
-        ]
-      },
-      {
-        "original_text": "olisi",
-        "baseform": "olla",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.486,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "esim",
-        "nearest": null,
-        "similarity": null,
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "lasia",
-        "baseform": "lasi",
-        "parsebank_nearest": "suklaata",
-        "nearest_baseform": "suklaa",
-        "parsebank_nearest_distance": 0.533,
-        "parsebank_nearest_valence": "1.91",
-        "parsebank_nearest_arousal": "-0.48",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.91",
-          "-0.48",
-          "0"
-        ]
-      },
-      {
-        "original_text": ".",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "Pohjan",
-        "baseform": "pohja",
-        "parsebank_nearest": "kuninkaan",
-        "nearest_baseform": "kuningas",
-        "parsebank_nearest_distance": 0.419,
-        "parsebank_nearest_valence": "0.02",
-        "parsebank_nearest_arousal": "-0.42",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.02",
-          "-0.42",
-          "0"
-        ]
-      },
-      {
-        "original_text": "puolelta",
-        "baseform": "puoli",
-        "parsebank_nearest": "suuntaan",
-        "nearest_baseform": "suunta",
-        "parsebank_nearest_distance": 0.428,
-        "parsebank_nearest_valence": "0.42",
-        "parsebank_nearest_arousal": "-0.52",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.42",
-          "-0.52",
-          "0"
-        ]
-      },
-      {
-        "original_text": "katsottuna",
-        "baseform": "katsottu",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.414,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "vastaan",
-        "baseform": "vastaan",
-        "parsebank_nearest": "hyökkäys",
-        "nearest_baseform": "hyökkäys",
-        "parsebank_nearest_distance": 0.496,
-        "parsebank_nearest_valence": "-1.83",
-        "parsebank_nearest_arousal": "1.51",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-1.83",
-          "1.51",
-          "0"
-        ]
-      },
-      {
-        "original_text": "tu-",
-        "nearest": null,
-        "similarity": null,
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "lisi",
-        "nearest": null,
-        "similarity": null,
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "ensin",
-        "baseform": "ensin",
-        "parsebank_nearest": "lopuksi",
-        "nearest_baseform": "loppu",
-        "parsebank_nearest_distance": 0.571,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "kupin",
-        "baseform": "kuppi",
-        "direct_valence": "0.40",
-        "direct_arousal": "-0.81",
-        "direct_dominance": "0",
-        "rating": [
-          "0.40",
-          "-0.81",
-          "0"
-        ]
-      },
-      {
-        "original_text": "sisältö",
-        "baseform": "sisältö",
-        "parsebank_nearest": "laatu",
-        "nearest_baseform": "laatu",
-        "parsebank_nearest_distance": 0.523,
-        "parsebank_nearest_valence": "1.06",
-        "parsebank_nearest_arousal": "-0.67",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.06",
-          "-0.67",
-          "0"
-        ]
-      },
-      {
-        "original_text": ",",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "joka",
-        "baseform": "joka",
-        "parsebank_nearest": "enkeli",
-        "nearest_baseform": "enkeli",
-        "parsebank_nearest_distance": 0.382,
-        "parsebank_nearest_valence": "1.61",
-        "parsebank_nearest_arousal": "-1.33",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.61",
-          "-1.33",
-          "0"
-        ]
-      },
-      {
-        "original_text": "viesti-",
-        "baseform": "viesti-",
-        "parsebank_nearest": "armeijan",
-        "nearest_baseform": "armeija",
-        "parsebank_nearest_distance": 0.463,
-        "parsebank_nearest_valence": "-0.57",
-        "parsebank_nearest_arousal": "0.38",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.57",
-          "0.38",
-          "0"
-        ]
-      },
-      {
-        "original_text": "si",
-        "baseform": "SI",
-        "parsebank_nearest": "loppu",
-        "nearest_baseform": "loppu",
-        "parsebank_nearest_distance": 0.333,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "havaitsijalle",
-        "baseform": "havaitsija",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": ",",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "että",
-        "baseform": "että",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.472,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "tavaraa",
-        "baseform": "tavara",
-        "parsebank_nearest": "vaatteita",
-        "nearest_baseform": "vaate",
-        "parsebank_nearest_distance": 0.572,
-        "parsebank_nearest_valence": "0.74",
-        "parsebank_nearest_arousal": "-0.56",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.74",
-          "-0.56",
-          "0"
-        ]
-      },
-      {
-        "original_text": "on",
-        "baseform": "olla",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.448,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ja",
-        "baseform": "ja",
-        "parsebank_nearest": "lopulta",
-        "nearest_baseform": "loppu",
-        "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "varmistettuaan",
-        "baseform": "varmistettu",
-        "parsebank_nearest": "mielessään",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.503,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "asian",
-        "baseform": "asia",
-        "parsebank_nearest": "ajatuksen",
-        "nearest_baseform": "ajatus",
-        "parsebank_nearest_distance": 0.542,
-        "parsebank_nearest_valence": "1.30",
-        "parsebank_nearest_arousal": "-0.33",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.30",
-          "-0.33",
-          "0"
-        ]
-      },
-      {
-        "original_text": "kupin",
-        "baseform": "kuppi",
-        "direct_valence": "0.40",
-        "direct_arousal": "-0.81",
-        "direct_dominance": "0",
-        "rating": [
-          "0.40",
-          "-0.81",
-          "0"
-        ]
-      },
-      {
-        "original_text": "sivulta",
-        "baseform": "sivu",
-        "parsebank_nearest": "uutiset",
-        "nearest_baseform": "uutinen",
-        "parsebank_nearest_distance": 0.45,
-        "parsebank_nearest_valence": "0.36",
-        "parsebank_nearest_arousal": "0.33",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.36",
-          "0.33",
-          "0"
-        ]
-      },
-      {
-        "original_text": "hän",
-        "baseform": "hän",
-        "parsebank_nearest": "ystävänsä",
-        "nearest_baseform": "ystävä",
-        "parsebank_nearest_distance": 0.594,
-        "parsebank_nearest_valence": "2.39",
-        "parsebank_nearest_arousal": "-1.08",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "2.39",
-          "-1.08",
-          "0"
-        ]
-      },
-      {
-        "original_text": "toteaisi",
-        "baseform": "todeta",
-        "parsebank_nearest": "vitsi",
-        "nearest_baseform": "vitsi",
-        "parsebank_nearest_distance": 0.408,
-        "parsebank_nearest_valence": "1.26",
-        "parsebank_nearest_arousal": "-0.10",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.26",
-          "-0.10",
-          "0"
-        ]
-      },
-      {
-        "original_text": ",",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "että",
-        "baseform": "että",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.472,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "kuppihan",
-        "baseform": "kuppi",
-        "direct_valence": "0.40",
-        "direct_arousal": "-0.81",
-        "direct_dominance": "0",
-        "rating": [
-          "0.40",
-          "-0.81",
-          "0"
-        ]
-      },
-      {
-        "original_text": "on",
-        "baseform": "olla",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.448,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "puolillaan",
-        "baseform": "puola",
-        "parsebank_nearest": "suklaata",
-        "nearest_baseform": "suklaa",
-        "parsebank_nearest_distance": 0.36,
-        "parsebank_nearest_valence": "1.91",
-        "parsebank_nearest_arousal": "-0.48",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.91",
-          "-0.48",
-          "0"
-        ]
-      },
-      {
-        "original_text": ",",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "siis",
-        "baseform": "siis",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.546,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "puolitäysi",
-        "baseform": "puolitäysi",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": ".",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "Ylhäältä",
-        "baseform": "ylhäällä",
-        "parsebank_nearest": null,
-        "nearest_baseform": null,
-        "parsebank_nearest_distance": null,
-        "parsebank_nearest_valence": null,
-        "parsebank_nearest_arousal": null,
-        "parsebank_nearest_dominance": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "päin",
-        "baseform": "pää",
-        "parsebank_nearest": "suuntaan",
-        "nearest_baseform": "suunta",
-        "parsebank_nearest_distance": 0.605,
-        "parsebank_nearest_valence": "0.42",
-        "parsebank_nearest_arousal": "-0.52",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.42",
-          "-0.52",
-          "0"
-        ]
-      },
-      {
-        "original_text": "katsottuna",
-        "baseform": "katsottu",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.414,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "näyttäisi",
-        "baseform": "näkyä",
-        "parsebank_nearest": "hetkellä",
-        "nearest_baseform": "hetki",
-        "parsebank_nearest_distance": 0.365,
-        "parsebank_nearest_valence": "1.07",
-        "parsebank_nearest_arousal": "-0.78",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.07",
-          "-0.78",
-          "0"
-        ]
-      },
-      {
-        "original_text": "sisältö",
-        "baseform": "sisältö",
-        "parsebank_nearest": "laatu",
-        "nearest_baseform": "laatu",
-        "parsebank_nearest_distance": 0.523,
-        "parsebank_nearest_valence": "1.06",
-        "parsebank_nearest_arousal": "-0.67",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.06",
-          "-0.67",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ole-",
-        "nearest": null,
-        "similarity": null,
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "van",
-        "baseform": "van",
-        "parsebank_nearest": "tuomio",
-        "nearest_baseform": "tuomio",
-        "parsebank_nearest_distance": 0.262,
-        "parsebank_nearest_valence": "-1.62",
-        "parsebank_nearest_arousal": "0.75",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-1.62",
-          "0.75",
-          "0"
-        ]
-      },
-      {
-        "original_text": "jossakin",
-        "baseform": "joka",
-        "parsebank_nearest": "mielessä",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.496,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "kupin",
-        "baseform": "kuppi",
-        "direct_valence": "0.40",
-        "direct_arousal": "-0.81",
-        "direct_dominance": "0",
-        "rating": [
-          "0.40",
-          "-0.81",
-          "0"
-        ]
-      },
-      {
-        "original_text": "reunan",
-        "baseform": "reuna",
-        "parsebank_nearest": "rakennuksen",
-        "nearest_baseform": "rakennus",
-        "parsebank_nearest_distance": 0.385,
-        "parsebank_nearest_valence": "0.06",
-        "parsebank_nearest_arousal": "-0.52",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.06",
-          "-0.52",
-          "0"
-        ]
-      },
-      {
-        "original_text": "alapuolella",
-        "baseform": "alapuoli",
-        "parsebank_nearest": "läheisyydessä",
-        "nearest_baseform": "läheisyys",
-        "parsebank_nearest_distance": 0.459,
-        "parsebank_nearest_valence": "2.37",
-        "parsebank_nearest_arousal": "-1.00",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "2.37",
-          "-1.00",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ja",
-        "baseform": "ja",
-        "parsebank_nearest": "lopulta",
-        "nearest_baseform": "loppu",
-        "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
-        ]
-      },
-      {
-        "original_text": "katsoja",
-        "baseform": "katsoja",
-        "parsebank_nearest": "yleisö",
-        "nearest_baseform": "yleisö",
-        "parsebank_nearest_distance": 0.63,
-        "parsebank_nearest_valence": "0.14",
-        "parsebank_nearest_arousal": "0.41",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.14",
-          "0.41",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ajattelisi",
-        "baseform": "ajatella",
-        "parsebank_nearest": "mielessään",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.5,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": ",",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "eihän",
-        "baseform": "ei",
-        "parsebank_nearest": "vitsi",
-        "nearest_baseform": "vitsi",
-        "parsebank_nearest_distance": 0.517,
-        "parsebank_nearest_valence": "1.26",
-        "parsebank_nearest_arousal": "-0.10",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.26",
-          "-0.10",
-          "0"
-        ]
-      },
-      {
-        "original_text": "tämä",
-        "baseform": "tämä",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.506,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "ole",
-        "baseform": "olla",
-        "parsebank_nearest": "tarpeeksi",
-        "nearest_baseform": "tarve",
-        "parsebank_nearest_distance": 0.486,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.07",
-          "0.04",
-          "0"
-        ]
-      },
-      {
-        "original_text": "kuin",
-        "baseform": "kuin",
-        "parsebank_nearest": "suunnilleen",
-        "nearest_baseform": "suunta",
-        "parsebank_nearest_distance": 0.54,
-        "parsebank_nearest_valence": "0.42",
-        "parsebank_nearest_arousal": "-0.52",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.42",
-          "-0.52",
-          "0"
-        ]
-      },
-      {
-        "original_text": "puolillaan",
-        "baseform": "puola",
-        "parsebank_nearest": "suklaata",
-        "nearest_baseform": "suklaa",
-        "parsebank_nearest_distance": 0.36,
-        "parsebank_nearest_valence": "1.91",
-        "parsebank_nearest_arousal": "-0.48",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "1.91",
-          "-0.48",
-          "0"
-        ]
-      },
-      {
-        "original_text": ",",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      },
-      {
-        "original_text": "siis",
-        "baseform": "siis",
-        "parsebank_nearest": "mielestäni",
-        "nearest_baseform": "mieli",
-        "parsebank_nearest_distance": 0.546,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.91",
-          "-0.66",
-          "0"
-        ]
-      },
-      {
-        "original_text": "puolityhjä",
-        "baseform": "puolityhjä",
-        "parsebank_nearest": "ravintola",
-        "nearest_baseform": "ravintola",
-        "parsebank_nearest_distance": 0.419,
-        "parsebank_nearest_valence": "0.78",
-        "parsebank_nearest_arousal": "-0.15",
-        "parsebank_nearest_dominance": "0",
-        "rating": [
-          "0.78",
-          "-0.15",
-          "0"
-        ]
-      },
-      {
-        "original_text": ".",
-        "baseform": null,
-        "rating": [
-          null,
-          null,
-          null
-        ]
-      }
-    ]
-  ],
   "25383": [
     [
       {
@@ -3375,13 +37,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.448,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -3390,13 +52,13 @@
         "parsebank_nearest": "muodon",
         "nearest_baseform": "muoto",
         "parsebank_nearest_distance": 0.381,
-        "parsebank_nearest_valence": "0.73",
-        "parsebank_nearest_arousal": "-0.55",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.243",
+        "parsebank_nearest_arousal": "-0.183",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.73",
-          "-0.55",
-          "0"
+          "0.243",
+          "-0.183",
+          "0.000"
         ]
       },
       {
@@ -3414,13 +76,13 @@
         "parsebank_nearest": "kuolemaa",
         "nearest_baseform": "kuolema",
         "parsebank_nearest_distance": 0.509,
-        "parsebank_nearest_valence": "-1.77",
-        "parsebank_nearest_arousal": "0.44",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.590",
+        "parsebank_nearest_arousal": "0.147",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-1.77",
-          "0.44",
-          "0"
+          "-0.590",
+          "0.147",
+          "0.000"
         ]
       },
       {
@@ -3429,13 +91,13 @@
         "parsebank_nearest": "perheeseen",
         "nearest_baseform": "perhe",
         "parsebank_nearest_distance": 0.442,
-        "parsebank_nearest_valence": "2.21",
-        "parsebank_nearest_arousal": "-0.97",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.737",
+        "parsebank_nearest_arousal": "-0.323",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "2.21",
-          "-0.97",
-          "0"
+          "0.737",
+          "-0.323",
+          "0.000"
         ]
       },
       {
@@ -3444,13 +106,13 @@
         "parsebank_nearest": "lopulta",
         "nearest_baseform": "loppu",
         "parsebank_nearest_distance": 0.511,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.263",
+        "parsebank_nearest_arousal": "-0.073",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
+          "-0.263",
+          "-0.073",
+          "0.000"
         ]
       },
       {
@@ -3459,13 +121,13 @@
         "parsebank_nearest": "numeron",
         "nearest_baseform": "numero",
         "parsebank_nearest_distance": 0.449,
-        "parsebank_nearest_valence": "0.01",
-        "parsebank_nearest_arousal": "-0.30",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.003",
+        "parsebank_nearest_arousal": "-0.100",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.01",
-          "-0.30",
-          "0"
+          "0.003",
+          "-0.100",
+          "0.000"
         ]
       },
       {
@@ -3489,13 +151,13 @@
         "parsebank_nearest": "tiedossa",
         "nearest_baseform": "tieto",
         "parsebank_nearest_distance": 0.427,
-        "parsebank_nearest_valence": "1.43",
-        "parsebank_nearest_arousal": "-0.06",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.477",
+        "parsebank_nearest_arousal": "-0.020",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.43",
-          "-0.06",
-          "0"
+          "0.477",
+          "-0.020",
+          "0.000"
         ]
       },
       {
@@ -3504,13 +166,13 @@
         "parsebank_nearest": "loput",
         "nearest_baseform": "loppu",
         "parsebank_nearest_distance": 0.419,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.263",
+        "parsebank_nearest_arousal": "-0.073",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
+          "-0.263",
+          "-0.073",
+          "0.000"
         ]
       },
       {
@@ -3573,13 +235,13 @@
         "parsebank_nearest": "mielelläni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.513,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -3588,13 +250,13 @@
         "parsebank_nearest": "mielellään",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.363,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -3612,13 +274,13 @@
         "parsebank_nearest": "vaatteet",
         "nearest_baseform": "vaate",
         "parsebank_nearest_distance": 0.382,
-        "parsebank_nearest_valence": "0.74",
-        "parsebank_nearest_arousal": "-0.56",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.247",
+        "parsebank_nearest_arousal": "-0.187",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.74",
-          "-0.56",
-          "0"
+          "0.247",
+          "-0.187",
+          "0.000"
         ]
       },
       {
@@ -3627,13 +289,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.448,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -3642,13 +304,13 @@
         "parsebank_nearest": "suunnilleen",
         "nearest_baseform": "suunta",
         "parsebank_nearest_distance": 0.54,
-        "parsebank_nearest_valence": "0.42",
-        "parsebank_nearest_arousal": "-0.52",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.140",
+        "parsebank_nearest_arousal": "-0.173",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.42",
-          "-0.52",
-          "0"
+          "0.140",
+          "-0.173",
+          "0.000"
         ]
       },
       {
@@ -3657,13 +319,13 @@
         "parsebank_nearest": "vahingossa",
         "nearest_baseform": "vahinko",
         "parsebank_nearest_distance": 0.35,
-        "parsebank_nearest_valence": "-1.49",
-        "parsebank_nearest_arousal": "0.45",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.497",
+        "parsebank_nearest_arousal": "0.150",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-1.49",
-          "0.45",
-          "0"
+          "-0.497",
+          "0.150",
+          "0.000"
         ]
       },
       {
@@ -3687,13 +349,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.612,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -3702,13 +364,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.612,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -3741,13 +403,13 @@
         "parsebank_nearest": "moottori",
         "nearest_baseform": "moottori",
         "parsebank_nearest_distance": 0.487,
-        "parsebank_nearest_valence": "-0.35",
-        "parsebank_nearest_arousal": "-0.03",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.117",
+        "parsebank_nearest_arousal": "-0.010",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.35",
-          "-0.03",
-          "0"
+          "-0.117",
+          "-0.010",
+          "0.000"
         ]
       },
       {
@@ -3756,13 +418,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.448,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -3771,13 +433,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.594,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -3786,13 +448,13 @@
         "parsebank_nearest": "tarpeeksi",
         "nearest_baseform": "tarve",
         "parsebank_nearest_distance": 0.698,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.023",
+        "parsebank_nearest_arousal": "0.013",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.07",
-          "0.04",
-          "0"
+          "0.023",
+          "0.013",
+          "0.000"
         ]
       },
       {
@@ -3801,13 +463,13 @@
         "parsebank_nearest": "tarina",
         "nearest_baseform": "tarina",
         "parsebank_nearest_distance": 0.369,
-        "parsebank_nearest_valence": "1.41",
-        "parsebank_nearest_arousal": "-0.50",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.470",
+        "parsebank_nearest_arousal": "-0.167",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.41",
-          "-0.50",
-          "0"
+          "0.470",
+          "-0.167",
+          "0.000"
         ]
       },
       {
@@ -3816,13 +478,13 @@
         "parsebank_nearest": "lopulta",
         "nearest_baseform": "loppu",
         "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.263",
+        "parsebank_nearest_arousal": "-0.073",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
+          "-0.263",
+          "-0.073",
+          "0.000"
         ]
       },
       {
@@ -3843,13 +505,13 @@
       {
         "original_text": "istuimissa",
         "baseform": "istuin",
-        "direct_valence": "0.49",
-        "direct_arousal": "-0.83",
-        "direct_dominance": "0",
+        "direct_valence": "0.163",
+        "direct_arousal": "-0.277",
+        "direct_dominance": "0.000",
         "rating": [
-          "0.49",
-          "-0.83",
-          "0"
+          "0.163",
+          "-0.277",
+          "0.000"
         ]
       },
       {
@@ -3858,13 +520,13 @@
         "parsebank_nearest": "luokkaa",
         "nearest_baseform": "luokka",
         "parsebank_nearest_distance": 0.488,
-        "parsebank_nearest_valence": "-0.28",
-        "parsebank_nearest_arousal": "-0.06",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.093",
+        "parsebank_nearest_arousal": "-0.020",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.28",
-          "-0.06",
-          "0"
+          "-0.093",
+          "-0.020",
+          "0.000"
         ]
       },
       {
@@ -3882,13 +544,13 @@
         "parsebank_nearest": "laatu",
         "nearest_baseform": "laatu",
         "parsebank_nearest_distance": 0.639,
-        "parsebank_nearest_valence": "1.06",
-        "parsebank_nearest_arousal": "-0.67",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.353",
+        "parsebank_nearest_arousal": "-0.223",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.06",
-          "-0.67",
-          "0"
+          "0.353",
+          "-0.223",
+          "0.000"
         ]
       },
       {
@@ -3897,13 +559,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.448,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -3912,13 +574,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.614,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -3927,13 +589,13 @@
         "parsebank_nearest": "ohjelma",
         "nearest_baseform": "ohjelma",
         "parsebank_nearest_distance": 0.492,
-        "parsebank_nearest_valence": "0.19",
-        "parsebank_nearest_arousal": "-0.25",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.063",
+        "parsebank_nearest_arousal": "-0.083",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.19",
-          "-0.25",
-          "0"
+          "0.063",
+          "-0.083",
+          "0.000"
         ]
       },
       {
@@ -3977,13 +639,13 @@
         "parsebank_nearest": "moottori",
         "nearest_baseform": "moottori",
         "parsebank_nearest_distance": 0.689,
-        "parsebank_nearest_valence": "-0.35",
-        "parsebank_nearest_arousal": "-0.03",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.117",
+        "parsebank_nearest_arousal": "-0.010",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.35",
-          "-0.03",
-          "0"
+          "-0.117",
+          "-0.010",
+          "0.000"
         ]
       },
       {
@@ -3992,13 +654,13 @@
         "parsebank_nearest": "mielessä",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.369,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -4016,13 +678,13 @@
         "parsebank_nearest": "tarpeeksi",
         "nearest_baseform": "tarve",
         "parsebank_nearest_distance": 0.506,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.023",
+        "parsebank_nearest_arousal": "0.013",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.07",
-          "0.04",
-          "0"
+          "0.023",
+          "0.013",
+          "0.000"
         ]
       },
       {
@@ -4055,13 +717,13 @@
         "parsebank_nearest": "lopulta",
         "nearest_baseform": "loppu",
         "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.263",
+        "parsebank_nearest_arousal": "-0.073",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
+          "-0.263",
+          "-0.073",
+          "0.000"
         ]
       },
       {
@@ -4070,13 +732,13 @@
         "parsebank_nearest": "moottori",
         "nearest_baseform": "moottori",
         "parsebank_nearest_distance": 0.681,
-        "parsebank_nearest_valence": "-0.35",
-        "parsebank_nearest_arousal": "-0.03",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.117",
+        "parsebank_nearest_arousal": "-0.010",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.35",
-          "-0.03",
-          "0"
+          "-0.117",
+          "-0.010",
+          "0.000"
         ]
       },
       {
@@ -4085,13 +747,13 @@
         "parsebank_nearest": "lopun",
         "nearest_baseform": "loppu",
         "parsebank_nearest_distance": 0.409,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.263",
+        "parsebank_nearest_arousal": "-0.073",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
+          "-0.263",
+          "-0.073",
+          "0.000"
         ]
       },
       {
@@ -4100,13 +762,13 @@
         "parsebank_nearest": "läheisyydessä",
         "nearest_baseform": "läheisyys",
         "parsebank_nearest_distance": 0.582,
-        "parsebank_nearest_valence": "2.37",
-        "parsebank_nearest_arousal": "-1.00",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.790",
+        "parsebank_nearest_arousal": "-0.333",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "2.37",
-          "-1.00",
-          "0"
+          "0.790",
+          "-0.333",
+          "0.000"
         ]
       },
       {
@@ -4124,13 +786,13 @@
         "parsebank_nearest": "tarpeeksi",
         "nearest_baseform": "tarve",
         "parsebank_nearest_distance": 0.506,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.023",
+        "parsebank_nearest_arousal": "0.013",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.07",
-          "0.04",
-          "0"
+          "0.023",
+          "0.013",
+          "0.000"
         ]
       },
       {
@@ -4139,13 +801,13 @@
         "parsebank_nearest": "tarvetta",
         "nearest_baseform": "tarve",
         "parsebank_nearest_distance": 0.487,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.023",
+        "parsebank_nearest_arousal": "0.013",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.07",
-          "0.04",
-          "0"
+          "0.023",
+          "0.013",
+          "0.000"
         ]
       },
       {
@@ -4154,13 +816,13 @@
         "parsebank_nearest": "moottorin",
         "nearest_baseform": "moottori",
         "parsebank_nearest_distance": 0.563,
-        "parsebank_nearest_valence": "-0.35",
-        "parsebank_nearest_arousal": "-0.03",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.117",
+        "parsebank_nearest_arousal": "-0.010",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.35",
-          "-0.03",
-          "0"
+          "-0.117",
+          "-0.010",
+          "0.000"
         ]
       },
       {
@@ -4169,13 +831,13 @@
         "parsebank_nearest": "läheisyydessä",
         "nearest_baseform": "läheisyys",
         "parsebank_nearest_distance": 0.429,
-        "parsebank_nearest_valence": "2.37",
-        "parsebank_nearest_arousal": "-1.00",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.790",
+        "parsebank_nearest_arousal": "-0.333",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "2.37",
-          "-1.00",
-          "0"
+          "0.790",
+          "-0.333",
+          "0.000"
         ]
       },
       {
@@ -4193,13 +855,13 @@
         "parsebank_nearest": "kansalle",
         "nearest_baseform": "kansa",
         "parsebank_nearest_distance": 0.482,
-        "parsebank_nearest_valence": "0.13",
-        "parsebank_nearest_arousal": "-0.30",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.043",
+        "parsebank_nearest_arousal": "-0.100",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.13",
-          "-0.30",
-          "0"
+          "0.043",
+          "-0.100",
+          "0.000"
         ]
       },
       {
@@ -4223,13 +885,13 @@
         "parsebank_nearest": "kansalle",
         "nearest_baseform": "kansa",
         "parsebank_nearest_distance": 0.576,
-        "parsebank_nearest_valence": "0.13",
-        "parsebank_nearest_arousal": "-0.30",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.043",
+        "parsebank_nearest_arousal": "-0.100",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.13",
-          "-0.30",
-          "0"
+          "0.043",
+          "-0.100",
+          "0.000"
         ]
       },
       {
@@ -4273,13 +935,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.448,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -4288,13 +950,13 @@
         "parsebank_nearest": "moottori",
         "nearest_baseform": "moottori",
         "parsebank_nearest_distance": 0.75,
-        "parsebank_nearest_valence": "-0.35",
-        "parsebank_nearest_arousal": "-0.03",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.117",
+        "parsebank_nearest_arousal": "-0.010",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.35",
-          "-0.03",
-          "0"
+          "-0.117",
+          "-0.010",
+          "0.000"
         ]
       },
       {
@@ -4303,13 +965,13 @@
         "parsebank_nearest": "nälkä",
         "nearest_baseform": "nälkä",
         "parsebank_nearest_distance": 0.427,
-        "parsebank_nearest_valence": "-1.44",
-        "parsebank_nearest_arousal": "0.63",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.480",
+        "parsebank_nearest_arousal": "0.210",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-1.44",
-          "0.63",
-          "0"
+          "-0.480",
+          "0.210",
+          "0.000"
         ]
       },
       {
@@ -4318,13 +980,13 @@
         "parsebank_nearest": "lopulta",
         "nearest_baseform": "loppu",
         "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.263",
+        "parsebank_nearest_arousal": "-0.073",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
+          "-0.263",
+          "-0.073",
+          "0.000"
         ]
       },
       {
@@ -4333,13 +995,13 @@
         "parsebank_nearest": "maastossa",
         "nearest_baseform": "maasto",
         "parsebank_nearest_distance": 0.358,
-        "parsebank_nearest_valence": "1.06",
-        "parsebank_nearest_arousal": "-0.80",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.353",
+        "parsebank_nearest_arousal": "-0.267",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.06",
-          "-0.80",
-          "0"
+          "0.353",
+          "-0.267",
+          "0.000"
         ]
       },
       {
@@ -4348,13 +1010,13 @@
         "parsebank_nearest": "vitsi",
         "nearest_baseform": "vitsi",
         "parsebank_nearest_distance": 0.668,
-        "parsebank_nearest_valence": "1.26",
-        "parsebank_nearest_arousal": "-0.10",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.420",
+        "parsebank_nearest_arousal": "-0.033",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.26",
-          "-0.10",
-          "0"
+          "0.420",
+          "-0.033",
+          "0.000"
         ]
       },
       {
@@ -4363,13 +1025,13 @@
         "parsebank_nearest": "nälkä",
         "nearest_baseform": "nälkä",
         "parsebank_nearest_distance": 0.447,
-        "parsebank_nearest_valence": "-1.44",
-        "parsebank_nearest_arousal": "0.63",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.480",
+        "parsebank_nearest_arousal": "0.210",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-1.44",
-          "0.63",
-          "0"
+          "-0.480",
+          "0.210",
+          "0.000"
         ]
       },
       {
@@ -4402,13 +1064,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.378,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -4417,13 +1079,13 @@
         "parsebank_nearest": "laatu",
         "nearest_baseform": "laatu",
         "parsebank_nearest_distance": 0.401,
-        "parsebank_nearest_valence": "1.06",
-        "parsebank_nearest_arousal": "-0.67",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.353",
+        "parsebank_nearest_arousal": "-0.223",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.06",
-          "-0.67",
-          "0"
+          "0.353",
+          "-0.223",
+          "0.000"
         ]
       },
       {
@@ -4432,13 +1094,13 @@
         "parsebank_nearest": "tutkimusten",
         "nearest_baseform": "tutkimus",
         "parsebank_nearest_distance": 0.467,
-        "parsebank_nearest_valence": "0.05",
-        "parsebank_nearest_arousal": "-0.09",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.017",
+        "parsebank_nearest_arousal": "-0.030",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.05",
-          "-0.09",
-          "0"
+          "0.017",
+          "-0.030",
+          "0.000"
         ]
       },
       {
@@ -4447,13 +1109,13 @@
         "parsebank_nearest": "elämääni",
         "nearest_baseform": "elämä",
         "parsebank_nearest_distance": 0.393,
-        "parsebank_nearest_valence": "1.76",
-        "parsebank_nearest_arousal": "0.13",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.587",
+        "parsebank_nearest_arousal": "0.043",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.76",
-          "0.13",
-          "0"
+          "0.587",
+          "0.043",
+          "0.000"
         ]
       },
       {
@@ -4462,13 +1124,13 @@
         "parsebank_nearest": "etelän",
         "nearest_baseform": "etelä",
         "parsebank_nearest_distance": 0.523,
-        "parsebank_nearest_valence": "1.05",
-        "parsebank_nearest_arousal": "-0.35",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.350",
+        "parsebank_nearest_arousal": "-0.117",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.05",
-          "-0.35",
-          "0"
+          "0.350",
+          "-0.117",
+          "0.000"
         ]
       },
       {
@@ -4477,13 +1139,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.487,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -4492,13 +1154,13 @@
         "parsebank_nearest": "suunnilleen",
         "nearest_baseform": "suunta",
         "parsebank_nearest_distance": 0.373,
-        "parsebank_nearest_valence": "0.42",
-        "parsebank_nearest_arousal": "-0.52",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.140",
+        "parsebank_nearest_arousal": "-0.173",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.42",
-          "-0.52",
-          "0"
+          "0.140",
+          "-0.173",
+          "0.000"
         ]
       },
       {
@@ -4507,13 +1169,13 @@
         "parsebank_nearest": "lopulta",
         "nearest_baseform": "loppu",
         "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.263",
+        "parsebank_nearest_arousal": "-0.073",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
+          "-0.263",
+          "-0.073",
+          "0.000"
         ]
       },
       {
@@ -4522,13 +1184,13 @@
         "parsebank_nearest": "moottori",
         "nearest_baseform": "moottori",
         "parsebank_nearest_distance": 0.68,
-        "parsebank_nearest_valence": "-0.35",
-        "parsebank_nearest_arousal": "-0.03",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.117",
+        "parsebank_nearest_arousal": "-0.010",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.35",
-          "-0.03",
-          "0"
+          "-0.117",
+          "-0.010",
+          "0.000"
         ]
       },
       {
@@ -4561,13 +1223,13 @@
         "parsebank_nearest": "moottori",
         "nearest_baseform": "moottori",
         "parsebank_nearest_distance": 0.701,
-        "parsebank_nearest_valence": "-0.35",
-        "parsebank_nearest_arousal": "-0.03",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.117",
+        "parsebank_nearest_arousal": "-0.010",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.35",
-          "-0.03",
-          "0"
+          "-0.117",
+          "-0.010",
+          "0.000"
         ]
       },
       {
@@ -4576,13 +1238,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.448,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -4591,13 +1253,13 @@
         "parsebank_nearest": "moottori",
         "nearest_baseform": "moottori",
         "parsebank_nearest_distance": 0.694,
-        "parsebank_nearest_valence": "-0.35",
-        "parsebank_nearest_arousal": "-0.03",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.117",
+        "parsebank_nearest_arousal": "-0.010",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.35",
-          "-0.03",
-          "0"
+          "-0.117",
+          "-0.010",
+          "0.000"
         ]
       },
       {
@@ -4606,13 +1268,13 @@
         "parsebank_nearest": "lopulta",
         "nearest_baseform": "loppu",
         "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.263",
+        "parsebank_nearest_arousal": "-0.073",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
+          "-0.263",
+          "-0.073",
+          "0.000"
         ]
       },
       {
@@ -4621,13 +1283,13 @@
         "parsebank_nearest": "tutkimuksissa",
         "nearest_baseform": "tutkimus",
         "parsebank_nearest_distance": 0.443,
-        "parsebank_nearest_valence": "0.05",
-        "parsebank_nearest_arousal": "-0.09",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.017",
+        "parsebank_nearest_arousal": "-0.030",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.05",
-          "-0.09",
-          "0"
+          "0.017",
+          "-0.030",
+          "0.000"
         ]
       },
       {
@@ -4651,13 +1313,13 @@
         "parsebank_nearest": "mieltä",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.386,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -4690,13 +1352,13 @@
         "parsebank_nearest": "tarpeeksi",
         "nearest_baseform": "tarve",
         "parsebank_nearest_distance": 0.506,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.023",
+        "parsebank_nearest_arousal": "0.013",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.07",
-          "0.04",
-          "0"
+          "0.023",
+          "0.013",
+          "0.000"
         ]
       },
       {
@@ -4705,13 +1367,13 @@
         "parsebank_nearest": "tarpeeksi",
         "nearest_baseform": "tarve",
         "parsebank_nearest_distance": 0.486,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.023",
+        "parsebank_nearest_arousal": "0.013",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.07",
-          "0.04",
-          "0"
+          "0.023",
+          "0.013",
+          "0.000"
         ]
       },
       {
@@ -4731,13 +1393,13 @@
         "parsebank_nearest": "rakennuksessa",
         "nearest_baseform": "rakennus",
         "parsebank_nearest_distance": 0.387,
-        "parsebank_nearest_valence": "0.06",
-        "parsebank_nearest_arousal": "-0.52",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.020",
+        "parsebank_nearest_arousal": "-0.173",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.06",
-          "-0.52",
-          "0"
+          "0.020",
+          "-0.173",
+          "0.000"
         ]
       },
       {
@@ -4746,13 +1408,13 @@
         "parsebank_nearest": "tarpeeksi",
         "nearest_baseform": "tarve",
         "parsebank_nearest_distance": 0.583,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.023",
+        "parsebank_nearest_arousal": "0.013",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.07",
-          "0.04",
-          "0"
+          "0.023",
+          "0.013",
+          "0.000"
         ]
       },
       {
@@ -4761,13 +1423,13 @@
         "parsebank_nearest": "lopulta",
         "nearest_baseform": "loppu",
         "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.263",
+        "parsebank_nearest_arousal": "-0.073",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
+          "-0.263",
+          "-0.073",
+          "0.000"
         ]
       },
       {
@@ -4776,13 +1438,13 @@
         "parsebank_nearest": "rakennuksen",
         "nearest_baseform": "rakennus",
         "parsebank_nearest_distance": 0.464,
-        "parsebank_nearest_valence": "0.06",
-        "parsebank_nearest_arousal": "-0.52",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.020",
+        "parsebank_nearest_arousal": "-0.173",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.06",
-          "-0.52",
-          "0"
+          "0.020",
+          "-0.173",
+          "0.000"
         ]
       },
       {
@@ -4791,13 +1453,13 @@
         "parsebank_nearest": "moottorin",
         "nearest_baseform": "moottori",
         "parsebank_nearest_distance": 0.535,
-        "parsebank_nearest_valence": "-0.35",
-        "parsebank_nearest_arousal": "-0.03",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.117",
+        "parsebank_nearest_arousal": "-0.010",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.35",
-          "-0.03",
-          "0"
+          "-0.117",
+          "-0.010",
+          "0.000"
         ]
       },
       {
@@ -4806,13 +1468,13 @@
         "parsebank_nearest": "muodot",
         "nearest_baseform": "muoto",
         "parsebank_nearest_distance": 0.425,
-        "parsebank_nearest_valence": "0.73",
-        "parsebank_nearest_arousal": "-0.55",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.243",
+        "parsebank_nearest_arousal": "-0.183",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.73",
-          "-0.55",
-          "0"
+          "0.243",
+          "-0.183",
+          "0.000"
         ]
       },
       {
@@ -4821,13 +1483,13 @@
         "parsebank_nearest": "käytännössä",
         "nearest_baseform": "käytäntö",
         "parsebank_nearest_distance": 0.473,
-        "parsebank_nearest_valence": "0.13",
-        "parsebank_nearest_arousal": "-0.39",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.043",
+        "parsebank_nearest_arousal": "-0.130",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.13",
-          "-0.39",
-          "0"
+          "0.043",
+          "-0.130",
+          "0.000"
         ]
       },
       {
@@ -4836,13 +1498,13 @@
         "parsebank_nearest": "muodot",
         "nearest_baseform": "muoto",
         "parsebank_nearest_distance": 0.529,
-        "parsebank_nearest_valence": "0.73",
-        "parsebank_nearest_arousal": "-0.55",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.243",
+        "parsebank_nearest_arousal": "-0.183",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.73",
-          "-0.55",
-          "0"
+          "0.243",
+          "-0.183",
+          "0.000"
         ]
       },
       {
@@ -4875,13 +1537,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.448,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -4890,13 +1552,13 @@
         "parsebank_nearest": "mielellään",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.406,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -4905,13 +1567,13 @@
         "parsebank_nearest": "moottorin",
         "nearest_baseform": "moottori",
         "parsebank_nearest_distance": 0.513,
-        "parsebank_nearest_valence": "-0.35",
-        "parsebank_nearest_arousal": "-0.03",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.117",
+        "parsebank_nearest_arousal": "-0.010",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.35",
-          "-0.03",
-          "0"
+          "-0.117",
+          "-0.010",
+          "0.000"
         ]
       },
       {
@@ -4920,13 +1582,13 @@
         "parsebank_nearest": "moottorin",
         "nearest_baseform": "moottori",
         "parsebank_nearest_distance": 0.519,
-        "parsebank_nearest_valence": "-0.35",
-        "parsebank_nearest_arousal": "-0.03",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.117",
+        "parsebank_nearest_arousal": "-0.010",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.35",
-          "-0.03",
-          "0"
+          "-0.117",
+          "-0.010",
+          "0.000"
         ]
       },
       {
@@ -4950,13 +1612,13 @@
         "parsebank_nearest": "lopulta",
         "nearest_baseform": "loppu",
         "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.263",
+        "parsebank_nearest_arousal": "-0.073",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
+          "-0.263",
+          "-0.073",
+          "0.000"
         ]
       },
       {
@@ -4980,13 +1642,13 @@
         "parsebank_nearest": "tutkimusten",
         "nearest_baseform": "tutkimus",
         "parsebank_nearest_distance": 0.462,
-        "parsebank_nearest_valence": "0.05",
-        "parsebank_nearest_arousal": "-0.09",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.017",
+        "parsebank_nearest_arousal": "-0.030",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.05",
-          "-0.09",
-          "0"
+          "0.017",
+          "-0.030",
+          "0.000"
         ]
       },
       {
@@ -5019,13 +1681,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.448,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -5034,13 +1696,13 @@
         "parsebank_nearest": "ohjelma",
         "nearest_baseform": "ohjelma",
         "parsebank_nearest_distance": 0.492,
-        "parsebank_nearest_valence": "0.19",
-        "parsebank_nearest_arousal": "-0.25",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.063",
+        "parsebank_nearest_arousal": "-0.083",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.19",
-          "-0.25",
-          "0"
+          "0.063",
+          "-0.083",
+          "0.000"
         ]
       },
       {
@@ -5049,13 +1711,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.61,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -5079,13 +1741,13 @@
         "parsebank_nearest": "moottorin",
         "nearest_baseform": "moottori",
         "parsebank_nearest_distance": 0.661,
-        "parsebank_nearest_valence": "-0.35",
-        "parsebank_nearest_arousal": "-0.03",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.117",
+        "parsebank_nearest_arousal": "-0.010",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.35",
-          "-0.03",
-          "0"
+          "-0.117",
+          "-0.010",
+          "0.000"
         ]
       },
       {
@@ -5094,13 +1756,13 @@
         "parsebank_nearest": "luokkaa",
         "nearest_baseform": "luokka",
         "parsebank_nearest_distance": 0.431,
-        "parsebank_nearest_valence": "-0.28",
-        "parsebank_nearest_arousal": "-0.06",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.093",
+        "parsebank_nearest_arousal": "-0.020",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.28",
-          "-0.06",
-          "0"
+          "-0.093",
+          "-0.020",
+          "0.000"
         ]
       },
       {
@@ -5109,13 +1771,13 @@
         "parsebank_nearest": "vitsi",
         "nearest_baseform": "vitsi",
         "parsebank_nearest_distance": 0.424,
-        "parsebank_nearest_valence": "1.26",
-        "parsebank_nearest_arousal": "-0.10",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.420",
+        "parsebank_nearest_arousal": "-0.033",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.26",
-          "-0.10",
-          "0"
+          "0.420",
+          "-0.033",
+          "0.000"
         ]
       },
       {
@@ -5124,13 +1786,13 @@
         "parsebank_nearest": "kasveja",
         "nearest_baseform": "kasvi",
         "parsebank_nearest_distance": 0.309,
-        "parsebank_nearest_valence": "1.11",
-        "parsebank_nearest_arousal": "-1.05",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.370",
+        "parsebank_nearest_arousal": "-0.350",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.11",
-          "-1.05",
-          "0"
+          "0.370",
+          "-0.350",
+          "0.000"
         ]
       },
       {
@@ -5139,13 +1801,13 @@
         "parsebank_nearest": "lopulta",
         "nearest_baseform": "loppu",
         "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.263",
+        "parsebank_nearest_arousal": "-0.073",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
+          "-0.263",
+          "-0.073",
+          "0.000"
         ]
       },
       {
@@ -5154,13 +1816,13 @@
         "parsebank_nearest": "moottori",
         "nearest_baseform": "moottori",
         "parsebank_nearest_distance": 0.559,
-        "parsebank_nearest_valence": "-0.35",
-        "parsebank_nearest_arousal": "-0.03",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.117",
+        "parsebank_nearest_arousal": "-0.010",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.35",
-          "-0.03",
-          "0"
+          "-0.117",
+          "-0.010",
+          "0.000"
         ]
       },
       {
@@ -5169,13 +1831,13 @@
         "parsebank_nearest": "ajatuksen",
         "nearest_baseform": "ajatus",
         "parsebank_nearest_distance": 0.486,
-        "parsebank_nearest_valence": "1.30",
-        "parsebank_nearest_arousal": "-0.33",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.433",
+        "parsebank_nearest_arousal": "-0.110",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.30",
-          "-0.33",
-          "0"
+          "0.433",
+          "-0.110",
+          "0.000"
         ]
       },
       {
@@ -5184,13 +1846,13 @@
         "parsebank_nearest": "huoneeseen",
         "nearest_baseform": "huone",
         "parsebank_nearest_distance": 0.554,
-        "parsebank_nearest_valence": "0.27",
-        "parsebank_nearest_arousal": "-0.63",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.090",
+        "parsebank_nearest_arousal": "-0.210",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.27",
-          "-0.63",
-          "0"
+          "0.090",
+          "-0.210",
+          "0.000"
         ]
       },
       {
@@ -5199,13 +1861,13 @@
         "parsebank_nearest": "vahingossa",
         "nearest_baseform": "vahinko",
         "parsebank_nearest_distance": 0.469,
-        "parsebank_nearest_valence": "-1.49",
-        "parsebank_nearest_arousal": "0.45",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.497",
+        "parsebank_nearest_arousal": "0.150",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-1.49",
-          "0.45",
-          "0"
+          "-0.497",
+          "0.150",
+          "0.000"
         ]
       },
       {
@@ -5214,13 +1876,13 @@
         "parsebank_nearest": "vaatteet",
         "nearest_baseform": "vaate",
         "parsebank_nearest_distance": 0.358,
-        "parsebank_nearest_valence": "0.74",
-        "parsebank_nearest_arousal": "-0.56",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.247",
+        "parsebank_nearest_arousal": "-0.187",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.74",
-          "-0.56",
-          "0"
+          "0.247",
+          "-0.187",
+          "0.000"
         ]
       },
       {
@@ -5253,13 +1915,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.448,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -5268,13 +1930,13 @@
         "parsebank_nearest": "mielestään",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.488,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -5283,13 +1945,13 @@
         "parsebank_nearest": "suklaata",
         "nearest_baseform": "suklaa",
         "parsebank_nearest_distance": 0.423,
-        "parsebank_nearest_valence": "1.91",
-        "parsebank_nearest_arousal": "-0.48",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.637",
+        "parsebank_nearest_arousal": "-0.160",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.91",
-          "-0.48",
-          "0"
+          "0.637",
+          "-0.160",
+          "0.000"
         ]
       },
       {
@@ -5298,13 +1960,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.344,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -5352,13 +2014,13 @@
         "parsebank_nearest": "hetkessä",
         "nearest_baseform": "hetki",
         "parsebank_nearest_distance": 0.454,
-        "parsebank_nearest_valence": "1.07",
-        "parsebank_nearest_arousal": "-0.78",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.357",
+        "parsebank_nearest_arousal": "-0.260",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.07",
-          "-0.78",
-          "0"
+          "0.357",
+          "-0.260",
+          "0.000"
         ]
       },
       {
@@ -5367,13 +2029,13 @@
         "parsebank_nearest": "lopulta",
         "nearest_baseform": "loppu",
         "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.263",
+        "parsebank_nearest_arousal": "-0.073",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
+          "-0.263",
+          "-0.073",
+          "0.000"
         ]
       },
       {
@@ -5382,13 +2044,13 @@
         "parsebank_nearest": "armeijan",
         "nearest_baseform": "armeija",
         "parsebank_nearest_distance": 0.378,
-        "parsebank_nearest_valence": "-0.57",
-        "parsebank_nearest_arousal": "0.38",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.190",
+        "parsebank_nearest_arousal": "0.127",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.57",
-          "0.38",
-          "0"
+          "-0.190",
+          "0.127",
+          "0.000"
         ]
       },
       {
@@ -5397,13 +2059,13 @@
         "parsebank_nearest": "tutkimuksen",
         "nearest_baseform": "tutkimus",
         "parsebank_nearest_distance": 0.528,
-        "parsebank_nearest_valence": "0.05",
-        "parsebank_nearest_arousal": "-0.09",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.017",
+        "parsebank_nearest_arousal": "-0.030",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.05",
-          "-0.09",
-          "0"
+          "0.017",
+          "-0.030",
+          "0.000"
         ]
       },
       {
@@ -5412,13 +2074,13 @@
         "parsebank_nearest": "tutkimusten",
         "nearest_baseform": "tutkimus",
         "parsebank_nearest_distance": 0.518,
-        "parsebank_nearest_valence": "0.05",
-        "parsebank_nearest_arousal": "-0.09",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.017",
+        "parsebank_nearest_arousal": "-0.030",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.05",
-          "-0.09",
-          "0"
+          "0.017",
+          "-0.030",
+          "0.000"
         ]
       },
       {
@@ -5427,13 +2089,13 @@
         "parsebank_nearest": "ohjelmassa",
         "nearest_baseform": "ohjelma",
         "parsebank_nearest_distance": 0.429,
-        "parsebank_nearest_valence": "0.19",
-        "parsebank_nearest_arousal": "-0.25",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.063",
+        "parsebank_nearest_arousal": "-0.083",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.19",
-          "-0.25",
-          "0"
+          "0.063",
+          "-0.083",
+          "0.000"
         ]
       },
       {
@@ -5442,13 +2104,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.61,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -5457,13 +2119,13 @@
         "parsebank_nearest": "hetkessä",
         "nearest_baseform": "hetki",
         "parsebank_nearest_distance": 0.454,
-        "parsebank_nearest_valence": "1.07",
-        "parsebank_nearest_arousal": "-0.78",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.357",
+        "parsebank_nearest_arousal": "-0.260",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.07",
-          "-0.78",
-          "0"
+          "0.357",
+          "-0.260",
+          "0.000"
         ]
       },
       {
@@ -5511,13 +2173,13 @@
         "parsebank_nearest": "lopulta",
         "nearest_baseform": "loppu",
         "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.263",
+        "parsebank_nearest_arousal": "-0.073",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
+          "-0.263",
+          "-0.073",
+          "0.000"
         ]
       },
       {
@@ -5526,13 +2188,13 @@
         "parsebank_nearest": "muodossa",
         "nearest_baseform": "muoto",
         "parsebank_nearest_distance": 0.376,
-        "parsebank_nearest_valence": "0.73",
-        "parsebank_nearest_arousal": "-0.55",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.243",
+        "parsebank_nearest_arousal": "-0.183",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.73",
-          "-0.55",
-          "0"
+          "0.243",
+          "-0.183",
+          "0.000"
         ]
       },
       {
@@ -5541,13 +2203,13 @@
         "parsebank_nearest": "tutkimuksissa",
         "nearest_baseform": "tutkimus",
         "parsebank_nearest_distance": 0.376,
-        "parsebank_nearest_valence": "0.05",
-        "parsebank_nearest_arousal": "-0.09",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.017",
+        "parsebank_nearest_arousal": "-0.030",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.05",
-          "-0.09",
-          "0"
+          "0.017",
+          "-0.030",
+          "0.000"
         ]
       },
       {
@@ -5556,13 +2218,13 @@
         "parsebank_nearest": "kuori",
         "nearest_baseform": "kuori",
         "parsebank_nearest_distance": 0.512,
-        "parsebank_nearest_valence": "-0.09",
-        "parsebank_nearest_arousal": "-0.34",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.030",
+        "parsebank_nearest_arousal": "-0.113",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.09",
-          "-0.34",
-          "0"
+          "-0.030",
+          "-0.113",
+          "0.000"
         ]
       },
       {
@@ -5571,13 +2233,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.448,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -5586,13 +2248,13 @@
         "parsebank_nearest": "vitsi",
         "nearest_baseform": "vitsi",
         "parsebank_nearest_distance": 0.561,
-        "parsebank_nearest_valence": "1.26",
-        "parsebank_nearest_arousal": "-0.10",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.420",
+        "parsebank_nearest_arousal": "-0.033",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.26",
-          "-0.10",
-          "0"
+          "0.420",
+          "-0.033",
+          "0.000"
         ]
       },
       {
@@ -5601,13 +2263,13 @@
         "parsebank_nearest": "suklaata",
         "nearest_baseform": "suklaa",
         "parsebank_nearest_distance": 0.423,
-        "parsebank_nearest_valence": "1.91",
-        "parsebank_nearest_arousal": "-0.48",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.637",
+        "parsebank_nearest_arousal": "-0.160",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.91",
-          "-0.48",
-          "0"
+          "0.637",
+          "-0.160",
+          "0.000"
         ]
       },
       {
@@ -5616,13 +2278,13 @@
         "parsebank_nearest": "hetkeen",
         "nearest_baseform": "hetki",
         "parsebank_nearest_distance": 0.483,
-        "parsebank_nearest_valence": "1.07",
-        "parsebank_nearest_arousal": "-0.78",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.357",
+        "parsebank_nearest_arousal": "-0.260",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.07",
-          "-0.78",
-          "0"
+          "0.357",
+          "-0.260",
+          "0.000"
         ]
       },
       {
@@ -5631,13 +2293,13 @@
         "parsebank_nearest": "vuoteen",
         "nearest_baseform": "vuode",
         "parsebank_nearest_distance": 0.394,
-        "parsebank_nearest_valence": "1.86",
-        "parsebank_nearest_arousal": "-1.33",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.620",
+        "parsebank_nearest_arousal": "-0.443",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.86",
-          "-1.33",
-          "0"
+          "0.620",
+          "-0.443",
+          "0.000"
         ]
       },
       {
@@ -5646,13 +2308,13 @@
         "parsebank_nearest": "vaatteita",
         "nearest_baseform": "vaate",
         "parsebank_nearest_distance": 0.451,
-        "parsebank_nearest_valence": "0.74",
-        "parsebank_nearest_arousal": "-0.56",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.247",
+        "parsebank_nearest_arousal": "-0.187",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.74",
-          "-0.56",
-          "0"
+          "0.247",
+          "-0.187",
+          "0.000"
         ]
       },
       {
@@ -5672,13 +2334,13 @@
         "parsebank_nearest": "lopulta",
         "nearest_baseform": "loppu",
         "parsebank_nearest_distance": 0.438,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.263",
+        "parsebank_nearest_arousal": "-0.073",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
+          "-0.263",
+          "-0.073",
+          "0.000"
         ]
       },
       {
@@ -5702,13 +2364,13 @@
         "parsebank_nearest": "suuntaan",
         "nearest_baseform": "suunta",
         "parsebank_nearest_distance": 0.427,
-        "parsebank_nearest_valence": "0.42",
-        "parsebank_nearest_arousal": "-0.52",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.140",
+        "parsebank_nearest_arousal": "-0.173",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.42",
-          "-0.52",
-          "0"
+          "0.140",
+          "-0.173",
+          "0.000"
         ]
       },
       {
@@ -5717,13 +2379,13 @@
         "parsebank_nearest": "lopun",
         "nearest_baseform": "loppu",
         "parsebank_nearest_distance": 0.409,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.263",
+        "parsebank_nearest_arousal": "-0.073",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
+          "-0.263",
+          "-0.073",
+          "0.000"
         ]
       },
       {
@@ -5732,13 +2394,13 @@
         "parsebank_nearest": "tarpeeksi",
         "nearest_baseform": "tarve",
         "parsebank_nearest_distance": 0.509,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.023",
+        "parsebank_nearest_arousal": "0.013",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.07",
-          "0.04",
-          "0"
+          "0.023",
+          "0.013",
+          "0.000"
         ]
       },
       {
@@ -5767,13 +2429,13 @@
         "parsebank_nearest": "paino",
         "nearest_baseform": "paino",
         "parsebank_nearest_distance": 0.425,
-        "parsebank_nearest_valence": "-0.94",
-        "parsebank_nearest_arousal": "0.12",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.313",
+        "parsebank_nearest_arousal": "0.040",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.94",
-          "0.12",
-          "0"
+          "-0.313",
+          "0.040",
+          "0.000"
         ]
       },
       {
@@ -5793,13 +2455,13 @@
         "parsebank_nearest": "käytännössä",
         "nearest_baseform": "käytäntö",
         "parsebank_nearest_distance": 0.4,
-        "parsebank_nearest_valence": "0.13",
-        "parsebank_nearest_arousal": "-0.39",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.043",
+        "parsebank_nearest_arousal": "-0.130",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.13",
-          "-0.39",
-          "0"
+          "0.043",
+          "-0.130",
+          "0.000"
         ]
       },
       {
@@ -5808,13 +2470,13 @@
         "parsebank_nearest": "lopulta",
         "nearest_baseform": "loppu",
         "parsebank_nearest_distance": 0.618,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.263",
+        "parsebank_nearest_arousal": "-0.073",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
+          "-0.263",
+          "-0.073",
+          "0.000"
         ]
       },
       {
@@ -5823,13 +2485,13 @@
         "parsebank_nearest": "luokkaa",
         "nearest_baseform": "luokka",
         "parsebank_nearest_distance": 0.309,
-        "parsebank_nearest_valence": "-0.28",
-        "parsebank_nearest_arousal": "-0.06",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.093",
+        "parsebank_nearest_arousal": "-0.020",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.28",
-          "-0.06",
-          "0"
+          "-0.093",
+          "-0.020",
+          "0.000"
         ]
       },
       {
@@ -5877,13 +2539,13 @@
         "parsebank_nearest": "vaatteita",
         "nearest_baseform": "vaate",
         "parsebank_nearest_distance": 0.434,
-        "parsebank_nearest_valence": "0.74",
-        "parsebank_nearest_arousal": "-0.56",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.247",
+        "parsebank_nearest_arousal": "-0.187",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.74",
-          "-0.56",
-          "0"
+          "0.247",
+          "-0.187",
+          "0.000"
         ]
       },
       {
@@ -5892,13 +2554,13 @@
         "parsebank_nearest": "kunnian",
         "nearest_baseform": "kunnia",
         "parsebank_nearest_distance": 0.352,
-        "parsebank_nearest_valence": "0.72",
-        "parsebank_nearest_arousal": "-0.02",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.240",
+        "parsebank_nearest_arousal": "-0.007",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.72",
-          "-0.02",
-          "0"
+          "0.240",
+          "-0.007",
+          "0.000"
         ]
       },
       {
@@ -5907,13 +2569,13 @@
         "parsebank_nearest": "menestystä",
         "nearest_baseform": "menestys",
         "parsebank_nearest_distance": 0.458,
-        "parsebank_nearest_valence": "1.02",
-        "parsebank_nearest_arousal": "0.31",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.340",
+        "parsebank_nearest_arousal": "0.103",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "1.02",
-          "0.31",
-          "0"
+          "0.340",
+          "0.103",
+          "0.000"
         ]
       },
       {
@@ -5931,13 +2593,13 @@
         "parsebank_nearest": "mielestäni",
         "nearest_baseform": "mieli",
         "parsebank_nearest_distance": 0.612,
-        "parsebank_nearest_valence": "0.91",
-        "parsebank_nearest_arousal": "-0.66",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.303",
+        "parsebank_nearest_arousal": "-0.220",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.91",
-          "-0.66",
-          "0"
+          "0.303",
+          "-0.220",
+          "0.000"
         ]
       },
       {
@@ -5946,13 +2608,13 @@
         "parsebank_nearest": "lopulta",
         "nearest_baseform": "loppu",
         "parsebank_nearest_distance": 0.618,
-        "parsebank_nearest_valence": "-0.79",
-        "parsebank_nearest_arousal": "-0.22",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "-0.263",
+        "parsebank_nearest_arousal": "-0.073",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "-0.79",
-          "-0.22",
-          "0"
+          "-0.263",
+          "-0.073",
+          "0.000"
         ]
       },
       {
@@ -5961,13 +2623,13 @@
         "parsebank_nearest": "tarpeeksi",
         "nearest_baseform": "tarve",
         "parsebank_nearest_distance": 0.454,
-        "parsebank_nearest_valence": "0.07",
-        "parsebank_nearest_arousal": "0.04",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.023",
+        "parsebank_nearest_arousal": "0.013",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "0.07",
-          "0.04",
-          "0"
+          "0.023",
+          "0.013",
+          "0.000"
         ]
       },
       {
@@ -5991,13 +2653,13 @@
         "parsebank_nearest": "musiikkiin",
         "nearest_baseform": "musiikki",
         "parsebank_nearest_distance": 0.346,
-        "parsebank_nearest_valence": "2.17",
-        "parsebank_nearest_arousal": "-0.24",
-        "parsebank_nearest_dominance": "0",
+        "parsebank_nearest_valence": "0.723",
+        "parsebank_nearest_arousal": "-0.080",
+        "parsebank_nearest_dominance": "0.000",
         "rating": [
-          "2.17",
-          "-0.24",
-          "0"
+          "0.723",
+          "-0.080",
+          "0.000"
         ]
       },
       {
