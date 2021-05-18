@@ -7,7 +7,7 @@ from datetime import datetime
 
 
 """
-The Suomi24 data can be classified 
+The Suomi24 data can be classified with this script.
 """
 
 path = "D:\\Work\\Data\\s24_2001.vrt"  # this file is 3,5Gb
