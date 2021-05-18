@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
 <!--
-This is a database for the "emotion" classifier for the emodim project
-Poika Isokoski 2020.
+This is a normalized database for the "emotion" classifier for the emodim project
+Poika Isokoski 2021.
 
 Data is from:
 Söderholm C, Häyry E, Laine M, Karrasch M (2013) 

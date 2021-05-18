@@ -32,6 +32,8 @@ def find_baseform(word, v):
 
 def rate(word):
     va = a = d = None
+    if word is None:
+        return va, a, d
     for pattern in root.iter('pattern'):
         if pattern.attrib['word'] == word:
             # print(pattern.tag, pattern.attrib)
@@ -41,11 +43,10 @@ def rate(word):
     return va, a, d
 
 
-def findRatedSynonym(word, library):
-    w = find_baseform(word, v)
-    ratingResult = rate(word)
-    if word is None or len(word) < 2 or w is None:
-        return {"original_text": word, "nearest": None, "similarity": None, "baseform": None, "rating": ratingResult}
+# This function seems to be the slowest
+def findRatedSynonym(word, bf, library):
+    if word is None or len(word) < 2 or bf is None:
+        return {"original_text": word, "nearest": None, "similarity": None, "baseform": None, "rating": [0, 0, 0]}
     nearest = library.nearest(word, 1000)
     if nearest is not None:
         for n in nearest:  # Iterate through the words to find the first that we have ratings for
@@ -54,23 +55,24 @@ def findRatedSynonym(word, library):
                 baseform = find_baseform(n[1], v)
                 ratingResult = rate(baseform)
                 if ratingResult[0] is not None:
-                    return {"original_text": w, "nearest": n[1],
+                    return {"original_text": bf, "nearest": n[1],
                             "similarity": round(float(n[0]), 3), "baseform": baseform, "rating": ratingResult}
-    return {"original_text": w, "nearest": None, "similarity": None, "baseform": None, "rating": ratingResult}
+    return {"original_text": word, "nearest": None, "similarity": None, "baseform": bf, "rating": [0, 0, 0]}
 
 
 def word_eval(word):
     resultMap = {}
     t = v.tokens(word)
-    baseform = find_baseform(t[0].tokenText, v)
     if t[0].tokenType != libvoikko.Token.WORD:
-        resultMap = {"original_text": t[0].tokenText, "baseform": baseform, "rating": rate(t[0].tokenText)}
+        resultMap = {"original_text": t[0].tokenText, "baseform": None, "rating": [0, 0, 0]}
         # print(f"Token was not of type WORD: {resultMap}")
         return resultMap
+    baseform = find_baseform(t[0].tokenText, v)
     if baseform is None:
-        result = findRatedSynonym(t[0].tokenText, wv)
+        result = findRatedSynonym(t[0].tokenText, baseform, wv)
         # print(f"Baseform was None: {result}")
         return result
+    # return {"original_text": t[0].tokenText, "nearest": None, "similarity": None, "baseform": None, "rating": [0, 0, 0]} # 1000it/s
     # fetch the ratings for valence, arousal and dominance for the baseform word
     rr = rate(baseform)
     if rr[0] is not None and rr[1] is not None and rr[2] is not None:
@@ -78,8 +80,10 @@ def word_eval(word):
         resultMap = {"original_text": t[0].tokenText, "baseform": baseform, "direct_valence": rr[0],
                      "direct_arousal": rr[1], "direct_dominance": rr[2], "rating": rr}
         # print(f"Rating came through for baseform: {resultMap}")
+    # return {"original_text": t[0].tokenText, "nearest": None, "similarity": None, "baseform": None, "rating": [0, 0, 0]} # 750 it/s
     else:
-        ratedSynonym = findRatedSynonym(t[0].tokenText, wv)
+        ratedSynonym = findRatedSynonym(t[0].tokenText, baseform, wv)
+        # return {"original_text": t[0].tokenText, "nearest": None, "similarity": None, "baseform": None, "rating": [0, 0, 0]} # < 10 it/s
         resultString = f"Voikko: baseform: {baseform} v: {rr[0]} a: {rr[1]} d: {rr[2]} Parsebank: {ratedSynonym}"
         # print(resultString)
         if ratedSynonym is None:

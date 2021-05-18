@@ -22,8 +22,8 @@ def normalize(value, minimum, maximum):
 
 def createNormalizedXML(xml, root):
     newroot = ET.Element("EmotionPatterns")
-    comm = "\nThis is a database for the \"emotion\" classifier for the emodim project\nPoika Isokoski 2020.\n\n" \
-           "Data is from:\nSöderholm C, Häyry E, Laine M, Karrasch M (2013) \n" \
+    comm = "\nThis is a normalized database for the \"emotion\" classifier for the emodim project\n" \
+           "Poika Isokoski 2021.\n\nData is from:\nSöderholm C, Häyry E, Laine M, Karrasch M (2013) \n" \
            "Valence and Arousal Ratings for 420 Finnish Nouns by Age and Gender. \n" \
            "PLoS ONE 8(8): e72859. https://doi.org/10.1371/journal.pone.0072859\n"
     comment = ET.Comment(comm)

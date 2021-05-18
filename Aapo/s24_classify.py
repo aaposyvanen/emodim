@@ -31,8 +31,8 @@ def evaluate_s24_data(datadict, vsum, asum, dsum):
         for word in item:
             evaluate = em.word_eval(word)
             paragraphValues.append(evaluate)
-            with open(ftxt, 'a+', encoding='utf8') as f:
-                f.write(f"{evaluate['original_text']}: {evaluate['rating']} \n")
+            #with open(ftxt, 'a+', encoding='utf8') as f:
+             #   f.write(f"{evaluate['original_text']}: {evaluate['rating']} \n")
             try:
                 vsum += float(evaluate['rating'][0])
                 asum += float(evaluate['rating'][1])
@@ -90,9 +90,9 @@ def s24_parser(dpath):
             threadData[textData['thread_id']].append(pData)
             wordlist.clear(), textData.clear(), paragraphData.clear(), r.clear()
             # print(pData, pvsum, pasum, pdsum)
-            with open(fjson, 'a+', encoding='utf8') as f:
-                json.dump(threadData, f, indent=2, ensure_ascii=False)
+            #with open(fjson, 'a+', encoding='utf8') as f:
+             #   json.dump(threadData, f, indent=2, ensure_ascii=False)
 
 
-ftxt, fjson = createAnalyzationFiles()
+#ftxt, fjson = createAnalyzationFiles()
 s24_parser(path)
