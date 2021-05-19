@@ -1,0 +1,9 @@
+.thread {
+    display: flex;
+    border: 3px #0099ff solid;
+    border-radius: 5px;
+    color: white;
+    background-color: #404040;
+    width: 40%;
+    margin: 10px;
+}
