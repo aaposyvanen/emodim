@@ -8,7 +8,15 @@ class Thread extends Component {
     render() {
         return (
             <div className="thread">
-                This is the thread component.
+                <div className="title">
+                    Thread title
+                </div>
+                <div className="start-message">
+                    First message in thread
+                </div>
+                <div className="comments">
+                    Here go the comments
+                </div>
             </div>
         );
     }
