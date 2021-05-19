@@ -32,7 +32,7 @@ def evaluate_s24_data(data, vsum, asum, dsum):
     for word in data:
         ev = em.word_eval(word)
         paragraphValues.append(ev)
-        JSONvalues.append({word: [ev['rating'][0], ev['rating'][1]]})
+        JSONvalues.append({'word': word, 'valence': ev['rating'][0], 'arousal': ev['rating'][1]})
         with open(ftxt, 'a+', encoding='utf8') as f:
             f.write(f"{ev['original_text']}: {ev['rating']} \n")
         try:
