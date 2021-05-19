@@ -9,6 +9,7 @@ path = f"{os.getcwd()}\\Voikko"
 Voikko.setLibrarySearchPath(path)
 v = Voikko(u"fi", path)
 wv = lwvlib.load("D:\\Work\\skipgram_dbs\\finnish_4B_parsebank_skgram.bin", 10000, 500000)
+# wv = lwvlib.load("D:\\Work\\skipgram_dbs\\finnish_s24_skgram.bin", 10000, 500000)
 app = Flask(__name__, static_folder='')
 
 

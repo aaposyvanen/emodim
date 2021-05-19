@@ -46,7 +46,7 @@ def rate(word):
 # This function seems to be the slowest
 def findRatedSynonym(word, bf, library):
     if word is None or len(word) < 2 or bf is None:
-        return {"original_text": word, "nearest": None, "similarity": None, "baseform": None, "rating": [0, 0, 0]}
+        return {"original_text": word, "nearest": None, "similarity": None, "baseform": None, "rating": (None, None, None)}
     nearest = library.nearest(word, 1000)
     if nearest is not None:
         for n in nearest:  # Iterate through the words to find the first that we have ratings for
@@ -57,14 +57,14 @@ def findRatedSynonym(word, bf, library):
                 if ratingResult[0] is not None:
                     return {"original_text": bf, "nearest": n[1],
                             "similarity": round(float(n[0]), 3), "baseform": baseform, "rating": ratingResult}
-    return {"original_text": word, "nearest": None, "similarity": None, "baseform": bf, "rating": [0, 0, 0]}
+    return {"original_text": word, "nearest": None, "similarity": None, "baseform": bf, "rating": (None, None, None)}
 
 
 def word_eval(word):
     resultMap = {}
     t = v.tokens(word)
     if t[0].tokenType != libvoikko.Token.WORD:
-        resultMap = {"original_text": t[0].tokenText, "baseform": None, "rating": [0, 0, 0]}
+        resultMap = {"original_text": t[0].tokenText, "baseform": None, "rating": (None, None, None)}
         # print(f"Token was not of type WORD: {resultMap}")
         return resultMap
     baseform = find_baseform(t[0].tokenText, v)
