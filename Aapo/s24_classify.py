@@ -75,7 +75,15 @@ def s24_parser(dpath):
         # a new text block starts
         if event == 'start' and element.tag == 'text':
             # a new thread starts, save all of the new metadata in textData
-            textData = element.attrib
+            e = element.attrib
+            textData = {'comment_id': e['comment_id'], 'datetime': e['datetime'], 'author': e['author'],
+                        'parent_comment_id': e['parent_comment_id'], 'quoted_comment_id': e['quoted_comment_id'],
+                        'nick_type': e['nick_type'], 'thread_id': e['thread_id'], 'title': e['title'],
+                        'msg_type': e['msg_type'], 'topic_name_leaf': e['topic_name_leaf'],
+                        'topic_name_top': e['topic_name_top'], 'topic_names': e['topic_names'],
+                        'topic_names_set': e['topic_names_set'], 'id': e['id'], 'author_v1': e['author_v1'],
+                        'author_name_type': e['author_name_type'], 'thread_start_datetime': e['thread_start_datetime'],
+                        'parent_datetime': e['parent_datetime']}
             commentData['commentMetadata'] = textData.copy()
             pData, JSONvalues, pvsum, pasum, pdsum = evaluate_s24_data(commentData['words'], vsum, asum, dsum)
             commentData['words'] = JSONvalues
@@ -94,7 +102,7 @@ def s24_parser(dpath):
             r.clear()
         # a new paragraph starts (only process the "body" part, not "title")
         elif event == 'start' and element.tag == 'paragraph' and element.attrib['type'] == 'body':
-            commentData['commentID'] = element.attrib['id']
+            commentData['commentID'] = textData['id']
             ev, el = next(context)
             # find where the paragraph ends and extract the text in between
             while el.tag != 'paragraph':
