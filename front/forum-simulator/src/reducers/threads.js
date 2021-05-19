@@ -1,7 +1,7 @@
 import { UPDATE_THREAD } from "../actions/threads";
 
 const initialState = {
-    currentThread: []
+    currentThread: {}
 };
 
 const threadReducer = (state = initialState, action) => {

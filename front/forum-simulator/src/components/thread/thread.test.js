@@ -1,13 +1,22 @@
-import React from 'react';
+import React from "react";
 import renderer from 'react-test-renderer';
-import Thread from "./thread";
+
+import { Provider } from "react-redux";
+import configureMockStore from "redux-mock-store";
+
+import { Thread } from "./thread";
+
+const mockStore = configureMockStore();
+const store = mockStore({});
 
 describe("Thread", () => {
     it("renders correctly", () => {
         const component = renderer.create(
-            <Thread />,
+            <Provider store={store}>
+                <Thread />
+            </Provider>
         );
-        let tree = component.toJSON();
+        const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });
 });

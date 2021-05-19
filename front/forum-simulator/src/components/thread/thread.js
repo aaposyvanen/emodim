@@ -1,9 +1,17 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+
+import testdata from "../../testData/threadData_s24_01.json";
 
 import "./thread.css";
-import Message from "../message/message";
 
-class Thread extends Component {
+import { updateThread } from "../../actions/threads";
+
+export class Thread extends Component {
+
+    componentDidMount = async () => {
+        this.props.updateThread(testdata);
+    }
 
     render() {
         return (
@@ -22,4 +30,14 @@ class Thread extends Component {
     }
 }
 
-export default Thread;
+const mapStateToProps = state => {
+    return {
+        currentThread: state.threadReducer.currentThread
+    };
+}
+
+const mapDispatchToProps = {
+    updateThread
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Thread);
