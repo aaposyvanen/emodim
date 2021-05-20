@@ -7,7 +7,7 @@ exports[`Thread renders correctly 1`] = `
   <div
     className="title"
   >
-    Thread title
+    Hyvää uutta vuotta kaikille Hondailijoille
   </div>
   <div
     className="start-message"
