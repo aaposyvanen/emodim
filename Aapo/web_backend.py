@@ -28,28 +28,4 @@ def evaluate_word(word):  # Returns a python map with the rating data in JSON.
 
 @app.route('/evaluate_text/<string:text>')
 def evaluate_text(text):
-    """text = "Ihana mutta hylkäyksen pelkoa aiheuttava rakkaus ja autuus tuhoaa minut täällä."
-     """
-    textValues = []
-    # split the text into tokens
-    tokens = v.tokens(text)
-    print(f"Text: \"{text}\"")
-    vsum = asum = dsum = 0
-    for t in tokens:
-        if t.tokenType == libvoikko.Token.WORD:
-            evaluate = em.word_eval(t.tokenText)
-            textValues.append(evaluate)
-            try:
-                vsum += float(evaluate['rating'][0])
-                asum += float(evaluate['rating'][1])
-                dsum += float(evaluate['rating'][2])
-            except TypeError:
-                continue
-        else:
-            textValues.append({'original_text': t.tokenText})
-    print("Sums of per word rated emotions in the text:")
-    print(f"valence:\t{vsum:.3f}")
-    print(f"arousal:\t{asum:.3f}")
-    print(f"dominance:\t{dsum:.3f}")
-    print(textValues)
-    return jsonify(textValues)
+    return jsonify(em.evaluate_text(text))

@@ -4,6 +4,7 @@ from tqdm import tqdm
 import emodim as em
 import os
 from datetime import datetime
+import visualizer as vis
 
 
 """
@@ -32,9 +33,11 @@ def evaluate_s24_data(data, vsum, asum, dsum):
     for word in data:
         ev = em.word_eval(word)
         paragraphValues.append(ev)
-        JSONvalues.append({'word': word, 'valence': ev['rating'][0], 'arousal': ev['rating'][1]})
+        JSONvalues.append({'word': word, 'valence': ev['rating'][0], 'arousal': ev['rating'][1],
+                           'dominance': ev['rating'][2]})
         with open(ftxt, 'a+', encoding='utf8') as f:
             f.write(f"{ev['original_text']}: {ev['rating']} \n")
+        vis.createRatings(ev['original_text'], ev['rating'])
         try:
             vsum += float(ev['rating'][0])
             asum += float(ev['rating'][1])
@@ -68,6 +71,7 @@ def s24_parser(dpath):
             commentData['words'] = JSONvalues
             threadData['comments'].append(commentData.copy())
             threadList.append(threadData)
+            vis.plot()
             with open(fjson, 'w', encoding='utf8') as f:
                 json.dump(threadList, f, indent=2, ensure_ascii=False)
                 # json.dump(threadData, f, indent=2, ensure_ascii=False)

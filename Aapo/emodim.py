@@ -3,6 +3,8 @@ import xml.etree.cElementTree as ET
 import os
 from wvlib_light import lwvlib
 from tqdm import tqdm
+import pandas as pd
+
 
 """
 server end for running the classifier.
@@ -18,6 +20,7 @@ path = f"{os.getcwd()}\\Voikko"
 libvoikko.Voikko.setLibrarySearchPath(path)
 v = libvoikko.Voikko(u"fi", path)
 tree = ET.parse("soderholm_normalized.xml")
+ratings = df = pd.read_excel('bigList_normalized.xlsx')
 # tree = ET.parse("soderholm_et_al.xml")
 root = tree.getroot()
 wv = lwvlib.load("D:\\Work\\skipgram_dbs\\finnish_4B_parsebank_skgram.bin", 10000, 500000)
@@ -34,12 +37,19 @@ def rate(word):
     va = a = d = None
     if word is None:
         return va, a, d
+    for i, row in tqdm(df.iterrows()):
+        if word == row['Finnish-fi']:
+            va = df.at[i, 'Valence']
+            a = df.at[i, 'Arousal']
+            d = df.at[i, 'Dominance']
+    """
     for pattern in root.iter('pattern'):
         if pattern.attrib['word'] == word:
             # print(pattern.tag, pattern.attrib)
             va = round(float(pattern.attrib['valence']), 3)
             a = round(float(pattern.attrib['arousal']), 3)
             d = round(float(pattern.attrib['dominance']), 3)
+    """
     return va, a, d
 
 
@@ -49,7 +59,7 @@ def findRatedSynonym(word, bf, library):
         return {"original_text": word, "nearest": None, "similarity": None, "baseform": None, "rating": (None, None, None)}
     nearest = library.nearest(word, 1000)
     if nearest is not None:
-        for n in nearest:  # Iterate through the words to find the first that we have ratings for
+        for n in tqdm(nearest):  # Iterate through the words to find the first that we have ratings for
             # print(n[1])
             if len(n[1]) > 1:
                 baseform = find_baseform(n[1], v)
@@ -99,3 +109,31 @@ def word_eval(word):
                          "rating": (rs['rating'][0], rs['rating'][1], rs['rating'][2])}
             # print(f"Rating did not come through for baseform and ratedSynonym was not None: {resultMap}")
     return resultMap
+
+
+def evaluate_text(text):
+    """text = "Ihana mutta hylkäyksen pelkoa aiheuttava rakkaus ja autuus tuhoaa minut täällä."
+     """
+    textValues = []
+    # split the text into tokens
+    tokens = v.tokens(text)
+    # print(f"Text: \"{text}\"")
+    vsum = asum = dsum = 0
+    for t in tokens:
+        if t.tokenType == libvoikko.Token.WORD:
+            evaluate = word_eval(t.tokenText)
+            textValues.append(evaluate)
+            try:
+                vsum += float(evaluate['rating'][0])
+                asum += float(evaluate['rating'][1])
+                dsum += float(evaluate['rating'][2])
+            except TypeError:
+                continue
+        else:
+            textValues.append({'original_text': t.tokenText})
+    # print("Sums of per word rated emotions in the text:")
+    print(f"textValues:\t{textValues}")
+    print(f"valence:\t{vsum:.3f}")
+    print(f"arousal:\t{asum:.3f}")
+    print(f"dominance:\t{dsum:.3f}")
+    return textValues, round(vsum, 3), round(asum, 3), round(dsum, 3)
