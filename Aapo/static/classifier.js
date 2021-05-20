@@ -54,15 +54,47 @@ function appendToResult(text, span_class1, span_class2, tooltip){
 	console.log(text);
 }
 
-function visualizeInHTML(json){
-	let t=JSON.stringify(json);
-	json.forEach(function(item, index){
-//		appendToResult('<span class="v' + interpretValence(item) + '">');
-		let span_class1="v" + interpretValence(item);
-		let span_class2="a" + Math.abs(interpretArousal(item)); // positive and negative arousal values have the same effect
-		let tooltip=constructTooltip(item);
+function visualizeInHTML(json) {
+	let t = JSON.stringify(json);
+	json.forEach(function(item, index) {
+
+		const valence = interpretValence(item);
+		const arousal = Math.abs(interpretArousal(item)); // positive and negative arousal values have the same effect
+		let valenceClass,
+			arousalClass;
+
+		switch (valence) {
+			case (valence <= -0.67):
+				valenceClass = -3
+			case (valence <= -0.33):
+				valenceClass = -2
+			case (valence <= 0):
+				valenceClass = -1
+			case (valence <= 0.33):
+				valenceClass = 0
+			case (valence <= 0.67):
+				valenceClass = 2
+			case (valence <= 1):
+				valenceClass = 3
+			default:
+				valenceClass = 0;
+		}
+
+		switch (arousal) {
+			case (arousal <= 0.33):
+				arousalClass = 0
+			case (arousal <= 0.67):
+				arousalClass = 2
+			case (arousal <= 1):
+				arousalClass = 3
+			default:
+				arousalClass = 0;
+		}
+
+		let span_class1 = "v" + valenceClass;
+		let span_class2 = "a" + arousalClass;
+		let tooltip = constructTooltip(item);
 		appendToResult(item.original_text, span_class1, span_class2, tooltip);
-//		appendToResult('</span>');
 		console.log(item, index);
 	});
 	debugparagraph.append(t);
