@@ -1,20 +1,9 @@
 import React from "react";
-import renderer from 'react-test-renderer';
-
-import { Provider } from "react-redux";
-import configureMockStore from "redux-mock-store";
+import { render } from "../../test-utils";
 
 import { Thread } from "./thread";
 import threadData from "../../testData/threadData_s24_01.json";
 
-const initialState = {
-    threadReducer: {
-        availableThreads: threadData,
-        currentThread: threadData[0]
-    }
-};
-const mockStore = configureMockStore([], initialState);
-const store = mockStore({});
 
 let mockUpdateAvailableThreads,
     mockUpdateCurrentThread;
@@ -28,17 +17,13 @@ test("Thread renders correctly", () => {
 
     mockDispatch();
 
-    const tree = renderer
-        .create(
-            <Provider store={store}            >
-                <Thread
-                    updateCurrentThread={mockUpdateCurrentThread}
-                    updateAvailableThreads={mockUpdateAvailableThreads}
-                    currentThread={threadData[0]}
-                />
-            </Provider>
-        )
-        .toJSON();
+    const { container } = render(
+        <Thread
+            updateCurrentThread={mockUpdateCurrentThread}
+            updateAvailableThreads={mockUpdateAvailableThreads}
+            currentThread={threadData[0]}
+        />
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
 });
