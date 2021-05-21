@@ -1,23 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Thread renders correctly 1`] = `
-<div
-  className="thread"
->
+<div>
   <div
-    className="title"
+    class="thread"
   >
-    Hyvää uutta vuotta kaikille Hondailijoille
-  </div>
-  <div
-    className="start-message"
-  >
-    First message in thread
-  </div>
-  <div
-    className="comments"
-  >
-    Here go the comments
+    <div
+      class="title"
+    >
+      Hyvää uutta vuotta kaikille Hondailijoille
+    </div>
+    <div
+      class="message-area"
+    >
+      <div
+        class="thread-start"
+      >
+        <div
+          class="message"
+        >
+          This is the message component.
+        </div>
+      </div>
+      <div
+        class="comments"
+      />
+    </div>
   </div>
 </div>
 `;

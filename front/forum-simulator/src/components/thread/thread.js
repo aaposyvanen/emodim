@@ -7,8 +7,9 @@ import "./thread.css";
 import {
     updateAvailableThreads,
     updateCurrentThread
-} from "../../actions/threads";
+} from "../../actions/threadActions";
 
+import MessageArea from "../messageArea/messageArea";
 export class Thread extends Component {
 
     componentDidMount = async () => {
@@ -18,7 +19,7 @@ export class Thread extends Component {
     componentDidUpdate = (prevProps) => {
         if (prevProps.availableThreads !== this.props.availableThreads
             && this.props.availableThreads[0]) {
-            this.props.updateCurrentThread(this.props.availableThreads[0]);
+            this.props.updateCurrentThread(this.props.availableThreads[1]);
         }
     }
 
@@ -35,12 +36,7 @@ export class Thread extends Component {
                 <div className="title">
                     {this.getCurrentThreadTitle()}
                 </div>
-                <div className="start-message">
-                    First message in thread
-                </div>
-                <div className="comments">
-                    Here go the comments
-                </div>
+                <MessageArea />
             </div>
         );
     }
