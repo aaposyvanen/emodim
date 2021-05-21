@@ -8,20 +8,14 @@ exports[`Thread renders correctly 1`] = `
     <div
       class="title"
     >
-      Hyvää uutta vuotta kaikille Hondailijoille
+      Thread title
     </div>
     <div
       class="message-area"
     >
       <div
         class="thread-start"
-      >
-        <div
-          class="message"
-        >
-          This is the message component.
-        </div>
-      </div>
+      />
       <div
         class="comments"
       />

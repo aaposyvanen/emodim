@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import _ from "lodash";
 
 import "./messageArea.css";
 import Message from "../message/message";
@@ -11,12 +10,12 @@ export class MessageArea extends Component {
         return (
             <div className="message-area">
                 <div className="thread-start">
-                    <Message message={this.props.startMessage} />
+                    <Message data={this.props.startMessage} />
                 </div>
                 <div className="comments">
                     {
-                        _.map(this.props.comments, (comment) => {
-                            < Message message={comment} key={comment.commentID} />
+                        this.props.comments && this.props.comments.map(comment => {
+                            return < Message data={comment} key={comment.commentID} />
                         })
                     }
                 </div>
@@ -27,8 +26,7 @@ export class MessageArea extends Component {
 
 const mapStateToProps = state => {
     return {
-        thread: state.threadReducer.currentThread,
-        startMessage: state.threadReducer.currentThread.threadStartMessage,
+        startMessage: state.threadReducer.currentThread.startMessage,
         comments: state.threadReducer.currentThread.comments
     };
 }
