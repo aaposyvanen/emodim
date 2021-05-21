@@ -15,7 +15,7 @@ def plot():
 
 
 def plotFromFile():
-    path = "test_classified_19-05-2021_11-52-22.txt"
+    path = ""
     with open(path, 'r', encoding='utf-8') as f:
         lines = f.readlines()
         for l in lines:

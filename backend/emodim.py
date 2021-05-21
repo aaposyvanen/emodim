@@ -4,6 +4,8 @@ import os
 from wvlib_light import lwvlib
 from tqdm import tqdm
 import pandas as pd
+import multiprocessing as mp
+import numpy as np
 
 
 """
@@ -15,14 +17,13 @@ The libraries are loaded end kept in to increase responsiveness in a single user
 Consequently, bad things may happen if this is run in a production environment with many simultaneous users.
 
 """
-
 path = f"{os.getcwd()}\\Voikko"
 libvoikko.Voikko.setLibrarySearchPath(path)
 v = libvoikko.Voikko(u"fi", path)
-tree = ET.parse("soderholm_normalized.xml")
-ratings = df = pd.read_excel('bigList_normalized.xlsx')
+# tree = ET.parse("soderholm_normalized.xml")
+df = pd.read_excel(f"data\\bigList_normalized.xlsx")
 # tree = ET.parse("soderholm_et_al.xml")
-root = tree.getroot()
+# root = tree.getroot()
 wv = lwvlib.load("D:\\Work\\skipgram_dbs\\finnish_4B_parsebank_skgram.bin", 10000, 500000)
 
 
@@ -33,11 +34,51 @@ def find_baseform(word, v):
     return r[0]['BASEFORM']
 
 
+"""
+def process_frame(dataf):
+    for i, row in dataf.iterrows():
+        if word == dataf['Finnish-fi']:
+            return df.at[i, 'Valence'], df.at[i, 'Arousal'], df.at[i, 'Dominance']
+    return None, None, None
+"""
+
+
+def process_frame(dataf):
+    # process data frame
+    return dataf
+
+
+def test(datafr):
+    n = mp.cpu_count()  # seems to be 12
+    pool = mp.Pool(n)  # use n processes
+    dfs = np.array_split(datafr, n)  # split the dataframe into n separate tables (in a list)
+    print("eroigjerihjeh")
+    i = 0
+    results = []
+    for dataframe in dfs:
+        print(i)
+        r = pool.map_async(process_frame, dataframe)
+        print(r.get())
+        results.append(r)
+        i += 1
+    #pool.close()
+    print(f"Meni: {i}")
+    print(f"{results}")
+    i += 1
+    #pool.join()
+    print(f"{results}")
+    input()
+    print("There are %d rows of data")
+
+
+test(df)
+
+
 def rate(word):
     va = a = d = None
     if word is None:
         return va, a, d
-    for i, row in tqdm(df.iterrows()):
+    for i, row in df.iterrows():
         if word == row['Finnish-fi']:
             va = df.at[i, 'Valence']
             a = df.at[i, 'Arousal']
@@ -57,10 +98,9 @@ def rate(word):
 def findRatedSynonym(word, bf, library):
     if word is None or len(word) < 2 or bf is None:
         return {"original_text": word, "nearest": None, "similarity": None, "baseform": None, "rating": (None, None, None)}
-    nearest = library.nearest(word, 1000)
+    nearest = library.nearest(word, 25)
     if nearest is not None:
         for n in tqdm(nearest):  # Iterate through the words to find the first that we have ratings for
-            # print(n[1])
             if len(n[1]) > 1:
                 baseform = find_baseform(n[1], v)
                 ratingResult = rate(baseform)
@@ -132,8 +172,8 @@ def evaluate_text(text):
         else:
             textValues.append({'original_text': t.tokenText})
     # print("Sums of per word rated emotions in the text:")
-    print(f"textValues:\t{textValues}")
-    print(f"valence:\t{vsum:.3f}")
-    print(f"arousal:\t{asum:.3f}")
-    print(f"dominance:\t{dsum:.3f}")
+    # print(f"textValues:\t{textValues}")
+    # print(f"valence:\t{vsum:.3f}")
+    # print(f"arousal:\t{asum:.3f}")
+    # print(f"dominance:\t{dsum:.3f}")
     return textValues, round(vsum, 3), round(asum, 3), round(dsum, 3)

@@ -1,5 +1,4 @@
 from libvoikko import Voikko
-import libvoikko
 from flask import *  # render_template
 import emodim as em
 import os
@@ -28,4 +27,4 @@ def evaluate_word(word):  # Returns a python map with the rating data in JSON.
 
 @app.route('/evaluate_text/<string:text>')
 def evaluate_text(text):
-    return jsonify(em.evaluate_text(text))
+    return jsonify(em.evaluate_text(text)[0])

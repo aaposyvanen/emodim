@@ -22,6 +22,8 @@ with open("D:\\Work\\Data\\finsen-src\\FinnSentiment2020.tsv", 'r+', encoding='u
         print(values)
         output.append(values)
 
+print(output)
+input()
 
-with open(f"finnSentiment2020values.json", 'w', encoding='utf-8') as f:
+with open(f"data\\finnSentiment2020values.json", 'w', encoding='utf-8') as f:
     json.dump(output, f, indent=2, ensure_ascii=False)
