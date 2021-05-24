@@ -40,57 +40,35 @@ def process_frame(dataf):
         if word == dataf['Finnish-fi']:
             return df.at[i, 'Valence'], df.at[i, 'Arousal'], df.at[i, 'Dominance']
     return None, None, None
-"""
 
 
-def process_frame(dataf):
-    # process data frame
-    return dataf
 
 
-def test(datafr):
-    n = mp.cpu_count()  # seems to be 12
-    pool = mp.Pool(n)  # use n processes
-    dfs = np.array_split(datafr, n)  # split the dataframe into n separate tables (in a list)
-    print("eroigjerihjeh")
-    i = 0
-    results = []
-    for dataframe in dfs:
-        print(i)
-        r = pool.map_async(process_frame, dataframe)
-        print(r.get())
-        results.append(r)
-        i += 1
-    #pool.close()
-    print(f"Meni: {i}")
-    print(f"{results}")
-    i += 1
-    #pool.join()
-    print(f"{results}")
+
+def test(datafr, p):
+    n = mp.cpu_count() - 1
+    dfs = np.array_split(datafr, n)
+    print("1. ")
+    # apply our function to each chunk in the list
+    #pd.concat(
+    p.apply_async(process_frame, dfs)
+    print("3. ")
+    p.close()
+    print("4. ")
+    p.join()
+    print("5. ")
     input()
-    print("There are %d rows of data")
-
-
-test(df)
+"""
 
 
 def rate(word):
     va = a = d = None
     if word is None:
         return va, a, d
-    for i, row in df.iterrows():
-        if word == row['Finnish-fi']:
-            va = df.at[i, 'Valence']
-            a = df.at[i, 'Arousal']
-            d = df.at[i, 'Dominance']
-    """
-    for pattern in root.iter('pattern'):
-        if pattern.attrib['word'] == word:
-            # print(pattern.tag, pattern.attrib)
-            va = round(float(pattern.attrib['valence']), 3)
-            a = round(float(pattern.attrib['arousal']), 3)
-            d = round(float(pattern.attrib['dominance']), 3)
-    """
+    if word in df['Finnish-fi'].values:
+        return df.loc[df['Finnish-fi'] == word]['Valence'].values[0], \
+               df.loc[df['Finnish-fi'] == word]['Arousal'].values[0], \
+               df.loc[df['Finnish-fi'] == word]['Dominance'].values[0]
     return va, a, d
 
 
@@ -98,9 +76,9 @@ def rate(word):
 def findRatedSynonym(word, bf, library):
     if word is None or len(word) < 2 or bf is None:
         return {"original_text": word, "nearest": None, "similarity": None, "baseform": None, "rating": (None, None, None)}
-    nearest = library.nearest(word, 25)
+    nearest = library.nearest(word, 50)
     if nearest is not None:
-        for n in tqdm(nearest):  # Iterate through the words to find the first that we have ratings for
+        for n in nearest:  # Iterate through the words to find the first that we have ratings for
             if len(n[1]) > 1:
                 baseform = find_baseform(n[1], v)
                 ratingResult = rate(baseform)
@@ -177,3 +155,5 @@ def evaluate_text(text):
     # print(f"arousal:\t{asum:.3f}")
     # print(f"dominance:\t{dsum:.3f}")
     return textValues, round(vsum, 3), round(asum, 3), round(dsum, 3)
+
+

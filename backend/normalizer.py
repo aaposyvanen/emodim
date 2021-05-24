@@ -1,5 +1,11 @@
 import xml.etree.cElementTree as ET
 import pandas as pd
+import emodim as em
+import libvoikko
+import os
+
+
+v = libvoikko.Voikko(u"fi", f"{os.getcwd()}\\Voikko")
 
 
 def openFile(t):
@@ -18,7 +24,8 @@ def openFile(t):
     elif t == 'excel':
         while not found:
             try:
-                excel = input('Insert the name of the file to normalize (should be written as: "name_of_file.xlsx": ')
+                excel = input('Insert the name of the file to normalize (should be written as: '
+                              '"SaifMohammad_NRC_Valence_Arousal_Dominance_Lexicon.xlsx": ')
                 found = True
                 createNormalizedExel(f"data\\{excel}")
             except OSError:
@@ -60,6 +67,7 @@ def createNormalizedXML(xml, root):
 def createNormalizedExel(filename):
     df = pd.read_excel(filename, skiprows=5)
     for i, row in df.iterrows():
+        df.at[i, 'Finnish-bf'] = em.find_baseform(df.at[i, 'Finnish-fi'], v)
         df.at[i, 'Valence'] = round(normalize(df.at[i, 'Valence'], 0, 1), 3)
         df.at[i, 'Arousal'] = round(normalize(df.at[i, 'Arousal'], 0, 1), 3)
         df.at[i, 'Dominance'] = round(normalize(df.at[i, 'Dominance'], 0, 1), 3)

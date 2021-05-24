@@ -1,6 +1,7 @@
 import json
 import xml.etree.cElementTree as ET
 from tqdm import tqdm
+import multiprocessing as mp
 import emodim as em
 import os
 from datetime import datetime
@@ -11,9 +12,9 @@ import visualizer as vis
 The Suomi24 data can be classified with this script.
 """
 
-# path = "D:\\Work\\Data\\s24_2001.vrt"  # this file is 3,5Gb
+path = "D:\\Work\\Data\\s24_2001.vrt"  # this file is 3,5Gb
 # path = "D:\\Work\\Data\\s24_2017.vrt"  # this file is 17Gb
-path = "data\\test.vrt"
+# path = "data\\test.vrt"
 
 
 def createAnalyzationFiles():
@@ -35,9 +36,9 @@ def evaluate_s24_data(data, vsum, asum, dsum):
         paragraphValues.append(ev)
         JSONvalues.append({'word': word, 'valence': ev['rating'][0], 'arousal': ev['rating'][1],
                            'dominance': ev['rating'][2]})
-        #with open(ftxt, 'a+', encoding='utf8') as f:
-         #   f.write(f"{ev['original_text']}: {ev['rating']} \n")
-        vis.createRatings(ev['original_text'], ev['rating'])
+        with open(ftxt, 'a+', encoding='utf8') as f:
+            f.write(f"{ev['original_text']}: {ev['rating']} \n")
+            vis.createRatings(ev['original_text'], ev['rating'])
         try:
             vsum += float(ev['rating'][0])
             asum += float(ev['rating'][1])
@@ -71,9 +72,9 @@ def s24_parser(dpath):
             commentData['words'] = JSONvalues
             threadData['comments'].append(commentData.copy())
             threadList.append(threadData)
-            vis.plot()
-            #with open(fjson, 'w', encoding='utf8') as f:
-             #   json.dump(threadList, f, indent=2, ensure_ascii=False)
+            #vis.plot()
+            with open(fjson, 'w', encoding='utf8') as f:
+                json.dump(threadList, f, indent=2, ensure_ascii=False)
                 # json.dump(threadData, f, indent=2, ensure_ascii=False)
             break
         # a new text block starts
@@ -124,5 +125,5 @@ def s24_parser(dpath):
             wordlist.clear(), textData.clear(), r.clear()
 
 
-#ftxt, fjson = createAnalyzationFiles()
+ftxt, fjson = createAnalyzationFiles()
 s24_parser(path)
