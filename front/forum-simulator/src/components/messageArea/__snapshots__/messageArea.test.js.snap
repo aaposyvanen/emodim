@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MessageArea renders correctly 1`] = `
+exports[`MessageArea renders correctly with props 1`] = `
 <div>
   <div
     class="message-area"
@@ -9,11 +9,91 @@ exports[`MessageArea renders correctly 1`] = `
       class="thread-start"
     >
       <div
-        class="message"
+        class="message-box"
       >
-        This is the message component.
+        <div
+          class="metadata"
+        >
+          <div
+            class="author"
+          >
+            Author
+          </div>
+          <div
+            class="date"
+          >
+            2000-01-01 00:00:00
+          </div>
+        </div>
+        <div
+          class="message"
+        >
+           test
+        </div>
       </div>
     </div>
+    <div
+      class="comments"
+    >
+      <div
+        class="message-box"
+      >
+        <div
+          class="metadata"
+        >
+          <div
+            class="author"
+          >
+            Author
+          </div>
+          <div
+            class="date"
+          >
+            2000-01-01 00:00:00
+          </div>
+        </div>
+        <div
+          class="message"
+        >
+           test1
+        </div>
+      </div>
+      <div
+        class="message-box"
+      >
+        <div
+          class="metadata"
+        >
+          <div
+            class="author"
+          >
+            Author
+          </div>
+          <div
+            class="date"
+          >
+            2000-01-01 00:00:00
+          </div>
+        </div>
+        <div
+          class="message"
+        >
+           test2
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MessageArea renders correctly without props 1`] = `
+<div>
+  <div
+    class="message-area"
+  >
+    <div
+      class="thread-start"
+    />
     <div
       class="comments"
     />

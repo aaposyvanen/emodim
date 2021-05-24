@@ -1,15 +1,42 @@
-import React, { Component } from "react";
+import React from "react";
+import _ from "lodash";
 
 import "./message.css";
-class Message extends Component {
+const Message = ({ data }) => {
 
-    render() {
+    if (data && data.commentMetadata) {
+
+        const {
+            author,
+            datetime
+        } = data.commentMetadata;
+
+        const words = data.words;
+        const message = _.map(words, wordData => {
+            if (_.includes([",", ".", "...", ":"], wordData.word)) {
+                return wordData.word;
+            }
+            return " " + wordData.word;
+        });
+
         return (
-            <div className="message">
-                This is the message component.
+            <div className="message-box">
+                <div className="metadata">
+                    <div className="author">
+                        {author}
+                    </div>
+                    <div className="date">
+                        {datetime}
+                    </div>
+                </div>
+                <div className="message">
+                    {message}
+                </div>
             </div>
         );
     }
+    return null;
+
 }
 
 export default Message;

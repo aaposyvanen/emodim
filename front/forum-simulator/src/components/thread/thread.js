@@ -24,8 +24,8 @@ export class Thread extends Component {
     }
 
     getCurrentThreadTitle = () => {
-        if (this.props.currentThread && this.props.currentThread.threadMetadata) {
-            return this.props.currentThread.threadMetadata.title
+        if (this.props.currentThread && this.props.currentThread.metadata) {
+            return this.props.currentThread.metadata.title
         }
         return "Thread title";
     }
