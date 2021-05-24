@@ -1,26 +1,73 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import _ from "lodash";
 
-import testdata from "../../testData/threadData_s24_01.json";
+import testdata from "../../testData/threadData_s24_02.json";
 
 import "./thread.css";
 import {
-    updateAvailableThreads,
-    updateCurrentThread
-} from "../../actions/threadActions";
+    updateAvailableRawThreads,
+    updateCurrentRawThread
+} from "../../actions/rawDataActions";
+import { updateCurrentThread } from "../../actions/threadActions";
 
 import MessageArea from "../messageArea/messageArea";
 export class Thread extends Component {
 
     componentDidMount = async () => {
-        this.props.updateAvailableThreads(testdata);
+        this.props.updateAvailableRawThreads(testdata);
     }
 
     componentDidUpdate = (prevProps) => {
-        if (prevProps.availableThreads !== this.props.availableThreads
-            && this.props.availableThreads[0]) {
-            this.props.updateCurrentThread(this.props.availableThreads[1]);
+        if (prevProps.availableRawThreads !== this.props.availableRawThreads
+            && this.props.availableRawThreads[2]) {
+            this.props.updateCurrentRawThread(this.props.availableRawThreads[2]);
         }
+
+        if (prevProps.currentRawThread !== this.props.currentRawThread) {
+            this.handleNewRawData(this.props.currentRawThread);
+        }
+    }
+
+    handleNewRawData = (data) => {
+        const [comments, responses] = this.separateResponsesFromComments(data.comments)
+        const commentsWithResponses = this.moveResponsesToTheirParents(comments, responses);
+        data.comments = commentsWithResponses
+
+        this.props.updateCurrentThread(data);
+    }
+
+    separateResponsesFromComments = (rawComments) => {
+        const groupedComments = _.groupBy(rawComments, comment => {
+            return comment.commentMetadata.parent_comment_id === "0";
+        });
+
+        const comments = groupedComments["true"];
+        const responses = groupedComments["false"];
+        return [comments, responses];
+    }
+
+    moveResponsesToTheirParents = (comments, responses) => {
+        const messageChain = [];
+
+        _.forEach(comments, comment => {
+            // Find the children of each comment
+            const children = _.filter(responses, response => {
+                const parentId = response.commentMetadata.parent_comment_id;
+                const commentId = comment.commentMetadata.id.split(":")[1];
+                return parentId === commentId
+            });
+
+            if (!_.isEmpty(children)) {
+                if (_.has(comment, "children")) {
+                    _.concat(comment.children, children)
+                } else {
+                    comment.children = children;
+                }
+            }
+            messageChain.push(comment);
+        });
+        return messageChain;
     }
 
     getCurrentThreadTitle = () => {
@@ -44,13 +91,15 @@ export class Thread extends Component {
 
 const mapStateToProps = state => {
     return {
-        currentThread: state.threadReducer.currentThread,
-        availableThreads: state.threadReducer.availableThreads
+        currentRawThread: state.rawDataReducer.currentThread,
+        availableRawThreads: state.rawDataReducer.availableThreads,
+        currentThread: state.threadReducer.thread
     };
 }
 
 const mapDispatchToProps = {
-    updateAvailableThreads,
+    updateAvailableRawThreads,
+    updateCurrentRawThread,
     updateCurrentThread
 }
 

@@ -5,12 +5,12 @@ import { Thread } from "./thread";
 import threadData from "../../testData/threadData_s24_01.json";
 
 
-let mockUpdateAvailableThreads,
-    mockUpdateCurrentThread;
+let mockupdateAvailableRawThreads,
+    mockupdateCurrentRawThread;
 
 function mockDispatch() {
-    mockUpdateAvailableThreads = jest.fn();
-    mockUpdateCurrentThread = jest.fn();
+    mockupdateAvailableRawThreads = jest.fn();
+    mockupdateCurrentRawThread = jest.fn();
 }
 
 test("Thread renders correctly", () => {
@@ -19,8 +19,8 @@ test("Thread renders correctly", () => {
 
     const { container } = render(
         <Thread
-            updateCurrentThread={mockUpdateCurrentThread}
-            updateAvailableThreads={mockUpdateAvailableThreads}
+            updateCurrentRawThread={mockupdateCurrentRawThread}
+            updateAvailableRawThreads={mockupdateAvailableRawThreads}
             currentThread={threadData[0]}
         />
     );

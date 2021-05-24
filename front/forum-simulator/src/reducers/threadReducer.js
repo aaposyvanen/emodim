@@ -1,13 +1,9 @@
-import _ from "lodash";
-
 import {
-    UPDATE_AVAILABLE_THREADS,
-    UPDATE_CURRENT_THREAD
+    UPDATE_THREAD_DATA
 } from "../actions/threadActions";
 
 const initialState = {
-    availableThreads: [],
-    currentThread: {
+    thread: {
         threadID: "",
         startMessage: {},
         comments: [],
@@ -18,29 +14,10 @@ const initialState = {
 const threadReducer = (state = initialState, action) => {
 
     switch (action.type) {
-        case UPDATE_AVAILABLE_THREADS:
+        case UPDATE_THREAD_DATA:
             return {
                 ...state,
-                availableThreads: action.payload
-            };
-        case UPDATE_CURRENT_THREAD:
-
-            const {
-                threadID,
-                comments,
-                threadMetadata
-            } = action.payload;
-
-            const startMessage = comments[0];
-
-            return {
-                ...state,
-                currentThread: {
-                    threadID,
-                    startMessage,
-                    comments: _.drop(comments, 1),
-                    metadata: threadMetadata
-                }
+                thread: action.payload
             };
         default:
             return state;
