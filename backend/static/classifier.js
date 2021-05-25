@@ -106,7 +106,7 @@ function interpretValence(item){
 		// when there is a direct rating, it is used as reported in the source.	
 		return Math.round(item.direct_valence)
 	}else if ('parsebank_nearest_valence' in item){
-		// When there is no direct emotion rating, the result is multiplied by the strenght of association to make it milder because it is less certain.
+		// When there is no direct emotion rating, the result is multiplied by the strength of association to make it milder because it is less certain.
 		return Math.round(item.parsebank_nearest_distance*item.parsebank_nearest_valence);
 	}
 }

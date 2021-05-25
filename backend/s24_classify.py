@@ -1,7 +1,6 @@
 import json
 import xml.etree.cElementTree as ET
 from tqdm import tqdm
-import multiprocessing as mp
 import emodim as em
 import os
 from datetime import datetime
@@ -12,9 +11,9 @@ import visualizer as vis
 The Suomi24 data can be classified with this script.
 """
 
-path = "D:\\Work\\Data\\s24_2001.vrt"  # this file is 3,5Gb
+# path = "D:\\Work\\Data\\s24_2001.vrt"  # this file is 3,5Gb
 # path = "D:\\Work\\Data\\s24_2017.vrt"  # this file is 17Gb
-# path = "data\\test.vrt"
+path = "data\\test.vrt"
 
 
 def createAnalyzationFiles():
@@ -36,9 +35,9 @@ def evaluate_s24_data(data, vsum, asum, dsum):
         paragraphValues.append(ev)
         JSONvalues.append({'word': word, 'valence': ev['rating'][0], 'arousal': ev['rating'][1],
                            'dominance': ev['rating'][2]})
-        with open(ftxt, 'a+', encoding='utf8') as f:
-            f.write(f"{ev['original_text']}: {ev['rating']} \n")
-            vis.createRatings(ev['original_text'], ev['rating'])
+        #with open(ftxt, 'a+', encoding='utf8') as f:
+         #   f.write(f"{ev['original_text']}: {ev['rating']} \n")
+        #vis.createRatings(ev['original_text'], ev['rating'])
         try:
             vsum += float(ev['rating'][0])
             asum += float(ev['rating'][1])
@@ -55,7 +54,7 @@ def s24_parser(dpath):
     # Could be because the data is located in HDD not SSD. Saved JSON for the 2001 set will be around 160Gb
     threadList = []
     threadData = {'threadMetadata': {}, 'threadID': '', 'comments': []}
-    commentData = {'commentMetadata': {}, 'commentID': '', 'words': []}
+    commentData = {'commentMetadata': {}, 'words': []}
     textData = {}
     wordlist = []
     # get an iterable, turn it into an iterator and get the root element
@@ -66,20 +65,17 @@ def s24_parser(dpath):
     fix = False
     for event, element in tqdm(context):
         if event == 'end' and element.tag == 'root':
-            textData = element.attrib
-            commentData['commentMetadata'] = textData.copy()
-            pData, JSONvalues, pvsum, pasum, pdsum = evaluate_s24_data(commentData['words'], vsum, asum, dsum)
-            commentData['words'] = JSONvalues
-            threadData['comments'].append(commentData.copy())
-            threadList.append(threadData)
-            #vis.plot()
+            print(threadList)
+            input()
+            # vis.plot()
             with open(fjson, 'w', encoding='utf8') as f:
                 json.dump(threadList, f, indent=2, ensure_ascii=False)
                 # json.dump(threadData, f, indent=2, ensure_ascii=False)
+            r.clear()
             break
         # a new text block starts
-        if event == 'start' and element.tag == 'text':
-            # a new thread starts, save all of the new metadata in textData
+        elif event == 'start' and element.tag == 'text':
+            # a new thread OR COMMENT starts, save all of the new metadata in textData
             e = element.attrib
             textData = {'comment_id': e['comment_id'], 'datetime': e['datetime'], 'author': e['author'],
                         'parent_comment_id': e['parent_comment_id'], 'quoted_comment_id': e['quoted_comment_id'],
@@ -89,25 +85,16 @@ def s24_parser(dpath):
                         'topic_names_set': e['topic_names_set'], 'id': e['id'], 'author_v1': e['author_v1'],
                         'author_name_type': e['author_name_type'], 'thread_start_datetime': e['thread_start_datetime'],
                         'parent_datetime': e['parent_datetime']}
-            commentData['commentMetadata'] = textData.copy()
-            pData, JSONvalues, pvsum, pasum, pdsum = evaluate_s24_data(commentData['words'], vsum, asum, dsum)
-            commentData['words'] = JSONvalues
-            threadData['comments'].append(commentData.copy())
-            commentData = {'commentMetadata': {}, 'commentID': '', 'words': []}
-            # process the info of the last thread
+            # a new thread starts
             if element.attrib['comment_id'] == "0":
-                if fix is True:
-                    threadList.append(threadData)
-                    # with open(fjson, 'a+', encoding='utf8') as f:
-                    #    json.dump(threadData, f, indent=2, ensure_ascii=False)
-                threadData = {'threadMetadata': textData.copy(), 'threadID': element.attrib['thread_id'], 'comments': []}
-                fix = True
-            vsum = asum = dsum = 0
+                threadData = {'threadMetadata': textData.copy(), 'threadID': element.attrib['thread_id'],
+                              'comments': []}
+            commentData = {'commentMetadata': textData.copy(), 'words': []}
+            vsum, asum, dsum = 0, 0, 0
             # clear the root so memory management is reasonable
             r.clear()
-        # a new paragraph starts (only process the "body" part, not "title")
+        # a new paragraph starts (the "body" part)
         elif event == 'start' and element.tag == 'paragraph' and element.attrib['type'] == 'body':
-            commentData['commentID'] = textData['id']
             ev, el = next(context)
             # find where the paragraph ends and extract the text in between
             while el.tag != 'paragraph':
@@ -120,9 +107,13 @@ def s24_parser(dpath):
                     wordlist.clear()
                 ev, el = next(context)
             r.clear()
-        # do stuff to paragraphData here before it's emptied (and textData which contains metadata of the comment chain)
         elif event == 'end' and element.tag == 'text':
+            pData, JSONvalues, pvsum, pasum, pdsum = evaluate_s24_data(commentData['words'], vsum, asum, dsum)
+            commentData['words'] = JSONvalues
+            threadData['comments'].append(commentData.copy())
+            threadList.append(threadData)
             wordlist.clear(), textData.clear(), r.clear()
+
 
 
 ftxt, fjson = createAnalyzationFiles()

@@ -1,10 +1,8 @@
 import libvoikko
-import xml.etree.cElementTree as ET
 import os
 from wvlib_light import lwvlib
 from tqdm import tqdm
 import pandas as pd
-import numpy as np
 
 
 """
@@ -19,10 +17,7 @@ Consequently, bad things may happen if this is run in a production environment w
 path = f"{os.getcwd()}\\Voikko"
 libvoikko.Voikko.setLibrarySearchPath(path)
 v = libvoikko.Voikko(u"fi", path)
-# tree = ET.parse("soderholm_normalized.xml")
 df = pd.read_excel(f"data\\bigList_normalized.xlsx")
-# tree = ET.parse("soderholm_et_al.xml")
-# root = tree.getroot()
 wv = lwvlib.load("D:\\Work\\skipgram_dbs\\finnish_4B_parsebank_skgram.bin", 10000, 500000)
 
 
@@ -31,33 +26,6 @@ def find_baseform(word, v):
     if len(r) == 0:
         return None
     return r[0]['BASEFORM']
-
-
-"""
-def process_frame(dataf):
-    for i, row in dataf.iterrows():
-        if word == dataf['Finnish-fi']:
-            return df.at[i, 'Valence'], df.at[i, 'Arousal'], df.at[i, 'Dominance']
-    return None, None, None
-
-
-
-
-
-def test(datafr, p):
-    n = mp.cpu_count() - 1
-    dfs = np.array_split(datafr, n)
-    print("1. ")
-    # apply our function to each chunk in the list
-    #pd.concat(
-    p.apply_async(process_frame, dfs)
-    print("3. ")
-    p.close()
-    print("4. ")
-    p.join()
-    print("5. ")
-    input()
-"""
 
 
 def rate(word):
@@ -132,27 +100,30 @@ def evaluate_text(text):
     """text = "Ihana mutta hylkäyksen pelkoa aiheuttava rakkaus ja autuus tuhoaa minut täällä."
      """
     textValues = []
+    ratings = []
     # split the text into tokens
     tokens = v.tokens(text)
     # print(f"Text: \"{text}\"")
-    vsum = asum = dsum = 0
+    vsum, asum, dsum, wordcount = 0, 0, 0, 0
     for t in tokens:
         if t.tokenType == libvoikko.Token.WORD:
+            wordcount += 1
             evaluate = word_eval(t.tokenText)
+            va, a, d = evaluate['rating'][0], evaluate['rating'][1], evaluate['rating'][2]
             textValues.append(evaluate)
-            try:
-                vsum += float(evaluate['rating'][0])
-                asum += float(evaluate['rating'][1])
-                dsum += float(evaluate['rating'][2])
-            except TypeError:
-                continue
+            if va is not None:
+                vsum += va
+                asum += a
+                dsum += d
         else:
             textValues.append({'original_text': t.tokenText})
+    if wordcount == 0:
+        wordcount = 1
     # print("Sums of per word rated emotions in the text:")
     # print(f"textValues:\t{textValues}")
     # print(f"valence:\t{vsum:.3f}")
     # print(f"arousal:\t{asum:.3f}")
     # print(f"dominance:\t{dsum:.3f}")
-    return textValues, round(vsum, 3), round(asum, 3), round(dsum, 3)
+    return textValues, round(vsum / wordcount, 2), round(asum / wordcount, 2), round(dsum / wordcount, 2)
 
 
