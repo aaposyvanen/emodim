@@ -1,9 +1,7 @@
 import * as actions from "./rawDataActions";
 
-describe("thread actions", () => {
-
+describe("raw data actions", () => {
     it("should create an action to update available threads", () => {
-
         const payload = [
             {
                 threadID: "0"
@@ -16,12 +14,10 @@ describe("thread actions", () => {
             type: actions.UPDATE_RAW_THREAD_DATA,
             payload
         };
-
         expect(actions.updateAvailableRawThreads(payload)).toEqual(expectedAction);
     });
 
     it("should create an action to update current thread", () => {
-
         const payload = {
             threadID: "0",
             comments: [{ commentID: "1", words: "test" }]
@@ -30,7 +26,6 @@ describe("thread actions", () => {
             type: actions.UPDATE_CURRENT_RAW_THREAD,
             payload
         };
-
         expect(actions.updateCurrentRawThread(payload)).toEqual(expectedAction);
     });
 });

@@ -22,7 +22,7 @@ const Message = ({ data, response }) => {
         const hasChildren = data.children && !_.isEmpty(data.children);
 
         return (
-            <div className={`message-box ${response ? "response" : ""}`}>
+            <div className={`message-box${response ? " response" : ""}`}>
                 <div className="metadata">
                     <div className="author">
                         {author}

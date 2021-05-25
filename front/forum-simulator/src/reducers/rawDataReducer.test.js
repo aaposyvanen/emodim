@@ -1,7 +1,7 @@
 import rawDataReducer from "./rawDataReducer";
 import * as actions from "../actions/rawDataActions";
 
-describe("thread reducer", () => {
+describe("raw data reducer", () => {
 
     const initialState = {
         availableThreads: [],
@@ -17,7 +17,7 @@ describe("thread reducer", () => {
         expect(rawDataReducer(undefined, {})).toEqual(initialState);
     });
 
-    it("should update available threads", () => {
+    it("should update available raw threads", () => {
         const expectedAvailableThreads = [
             {
                 threadID: "1"
@@ -41,7 +41,7 @@ describe("thread reducer", () => {
         expect(returnedState).toEqual(expectedState);
     });
 
-    it("should update current thread", () => {
+    it("should update current raw thread", () => {
 
         const action = {
             type: actions.UPDATE_CURRENT_RAW_THREAD,
