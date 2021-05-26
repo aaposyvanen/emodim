@@ -65,28 +65,37 @@ function visualizeInHTML(json) {
 
 		switch (valence) {
 			case (valence <= -0.67):
-				valenceClass = -3
+				valenceClass = -3;
+				break;
 			case (valence <= -0.33):
-				valenceClass = -2
+				valenceClass = -2;
+				break;
 			case (valence <= 0):
-				valenceClass = -1
+				valenceClass = -1;
+				break;
 			case (valence <= 0.33):
-				valenceClass = 0
+				valenceClass = 0;
+				break;
 			case (valence <= 0.67):
-				valenceClass = 2
+				valenceClass = 2;
+				break;
 			case (valence <= 1):
-				valenceClass = 3
+				valenceClass = 3;
+				break;
 			default:
 				valenceClass = 0;
 		}
 
 		switch (arousal) {
 			case (arousal <= 0.33):
-				arousalClass = 0
+				arousalClass = 0;
+				break;
 			case (arousal <= 0.67):
-				arousalClass = 2
+				arousalClass = 2;
+				break;
 			case (arousal <= 1):
-				arousalClass = 3
+				arousalClass = 3;
+				break;
 			default:
 				arousalClass = 0;
 		}
