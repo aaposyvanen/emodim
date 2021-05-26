@@ -116,7 +116,6 @@ def evaluate_s24_data(data, ftxt):
             tokenized.append(f"{d}")
         else:
             tokenized.append(v.tokens(d)[0])
-    data.clear()
     wordcount, vsum, asum, dsum, JSONvalues, ev = evaluate(tokenized)
     for element in ev:
         with open(ftxt, 'a+', encoding='utf8') as f:
