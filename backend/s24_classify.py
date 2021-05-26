@@ -35,8 +35,8 @@ def evaluate_s24_data(data, vsum, asum, dsum):
         paragraphValues.append(ev)
         JSONvalues.append({'word': word, 'valence': ev['rating'][0], 'arousal': ev['rating'][1],
                            'dominance': ev['rating'][2]})
-        #with open(ftxt, 'a+', encoding='utf8') as f:
-         #   f.write(f"{ev['original_text']}: {ev['rating']} \n")
+        with open(ftxt, 'a+', encoding='utf8') as f:
+            f.write(f"{ev['original_text']}: {ev['rating']} \n")
         #vis.createRatings(ev['original_text'], ev['rating'])
         try:
             vsum += float(ev['rating'][0])
@@ -65,8 +65,7 @@ def s24_parser(dpath):
     fix = False
     for event, element in tqdm(context):
         if event == 'end' and element.tag == 'root':
-            print(threadList)
-            input()
+            threadList.append(threadData)
             # vis.plot()
             with open(fjson, 'w', encoding='utf8') as f:
                 json.dump(threadList, f, indent=2, ensure_ascii=False)
@@ -87,9 +86,12 @@ def s24_parser(dpath):
                         'parent_datetime': e['parent_datetime']}
             # a new thread starts
             if element.attrib['comment_id'] == "0":
+                if fix:
+                    threadList.append(threadData)
                 threadData = {'threadMetadata': textData.copy(), 'threadID': element.attrib['thread_id'],
                               'comments': []}
             commentData = {'commentMetadata': textData.copy(), 'words': []}
+            fix = True
             vsum, asum, dsum = 0, 0, 0
             # clear the root so memory management is reasonable
             r.clear()
@@ -111,9 +113,7 @@ def s24_parser(dpath):
             pData, JSONvalues, pvsum, pasum, pdsum = evaluate_s24_data(commentData['words'], vsum, asum, dsum)
             commentData['words'] = JSONvalues
             threadData['comments'].append(commentData.copy())
-            threadList.append(threadData)
             wordlist.clear(), textData.clear(), r.clear()
-
 
 
 ftxt, fjson = createAnalyzationFiles()
