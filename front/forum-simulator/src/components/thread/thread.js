@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import _ from "lodash";
 
-import testdata from "../../testData/threadData_s24_02.json";
+import testdata from "../../testData/threadData_s24_03.json";
 
 import "./thread.css";
 import {
@@ -19,9 +19,12 @@ export class Thread extends Component {
     }
 
     componentDidUpdate = (prevProps) => {
+
+        const threadIndex = 1;
+
         if (prevProps.availableRawThreads !== this.props.availableRawThreads
-            && this.props.availableRawThreads[2]) {
-            this.props.updateCurrentRawThread(this.props.availableRawThreads[2]);
+            && this.props.availableRawThreads[threadIndex]) {
+            this.props.updateCurrentRawThread(this.props.availableRawThreads[threadIndex]);
         }
 
         if (prevProps.currentRawThread !== this.props.currentRawThread) {
