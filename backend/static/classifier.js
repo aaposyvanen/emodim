@@ -1,6 +1,6 @@
 "use strict";
 async function analyzeWord(word){
-console.log(word);
+// console.log(word);
 
 // Get the emotional ratings from the sever
 await fetch('/evaluate/'+word)
@@ -9,23 +9,23 @@ await fetch('/evaluate/'+word)
 })
 .then(function(text){
 // format HTML according to the emotional ratings and append it to the result div.
-appendToResult(text+"<br>");	
-});	
+appendToResult(text+"<br>");
+});
 }
 
 
 async function analyzeText(text){
-console.log(text);
+// console.log(text);
 // Get the emotional ratings from the sever
 let response = await fetch('/evaluate_text/'+text);
 
 if (response.ok){
 	let json= await response.json();
-	console.log(json);
+	// console.log(json);
 	visualizeInHTML(json);
 } else{
-	appendToResult("HTTP-Error"+ response.status);	
-}	
+	appendToResult("HTTP-Error"+ response.status);
+}
 }
 
 function analyzeClicked(){
@@ -51,7 +51,7 @@ function appendToResult(text, span_class1, span_class2, tooltip){
 	newSpan.title=tooltip
 	newSpan.innerHTML=text;
 	outputparagraph.append(newSpan);
-	console.log(text);
+	// console.log(text);
 }
 
 function visualizeInHTML(json) {
@@ -63,48 +63,65 @@ function visualizeInHTML(json) {
 		let valenceClass,
 			arousalClass;
 
-		switch (valence) {
-			case (valence <= -0.67):
-				valenceClass = -3;
-				break;
-			case (valence <= -0.33):
-				valenceClass = -2;
-				break;
-			case (valence <= 0):
-				valenceClass = -1;
-				break;
-			case (valence <= 0.33):
-				valenceClass = 0;
-				break;
-			case (valence <= 0.67):
-				valenceClass = 2;
-				break;
-			case (valence <= 1):
-				valenceClass = 3;
-				break;
-			default:
-				valenceClass = 0;
+		console.log(valence, arousal)
+
+		if (valence <= -0.75) {
+			valenceClass = -3;
 		}
 
-		switch (arousal) {
-			case (arousal <= 0.33):
-				arousalClass = 0;
-				break;
-			case (arousal <= 0.67):
-				arousalClass = 2;
-				break;
-			case (arousal <= 1):
-				arousalClass = 3;
-				break;
-			default:
-				arousalClass = 0;
+		else if (valence <= -0.5) {
+			valenceClass = -2;
+		}
+
+		else if (valence <= -0.25) {
+			valenceClass = -1;
+		}
+
+		else if (-0.25 < valence && valence <= 0.25) {
+			valenceClass = 0;
+		}
+
+		else if (valence <= 0.5) {
+			valenceClass = 1;
+		}
+
+		else if (valence <= 0.75) {
+			valenceClass = 2;
+		}
+
+		else if (valence <= 1) {
+			valenceClass = 3;
+		}
+
+		else {
+			valenceClass = 0;
+		}
+
+		if (arousal <= 0.25) {
+			arousalClass = 0;
+		}
+
+		else if (arousal <= 0.5) {
+			arousalClass = 1;
+		}
+
+		else if (arousal <= 0.75) {
+			arousalClass = 2;
+		}
+
+		else if (arousal <= 1) {
+			arousalClass = 3;
+		}
+
+		else {
+			arousalClass = 0;
 		}
 
 		let span_class1 = "v" + valenceClass;
 		let span_class2 = "a" + arousalClass;
 		let tooltip = constructTooltip(item);
 		appendToResult(item.original_text, span_class1, span_class2, tooltip);
-		console.log(item, index);
+		// console.log(item, index);
 	});
 	debugparagraph.append(t);
 }

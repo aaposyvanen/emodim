@@ -99,31 +99,62 @@ def word_eval(word):
 def evaluate_text(text):
     """text = "Ihana mutta hylkäyksen pelkoa aiheuttava rakkaus ja autuus tuhoaa minut täällä."
      """
-    textValues = []
-    ratings = []
     # split the text into tokens
     tokens = v.tokens(text)
-    # print(f"Text: \"{text}\"")
+    wordcount, vsum, asum, dsum, _, ev = evaluate(tokens)
+    print("Sums of per word rated emotions in the text:")
+    print(f"valence:\t{vsum / wordcount:.3f}")
+    print(f"arousal:\t{asum / wordcount:.3f}")
+    print(f"dominance:\t{dsum / wordcount:.3f}")
+    return ev
+
+
+def evaluate_s24_data(data, ftxt):
+    tokenized = []
+    for d in data:
+        if v.tokens(d)[0].tokenType == libvoikko.Token.UNKNOWN:
+            tokenized.append(f"{d}")
+        else:
+            tokenized.append(v.tokens(d)[0])
+    data.clear()
+    wordcount, vsum, asum, dsum, JSONvalues, ev = evaluate(tokenized)
+    for element in ev:
+        with open(ftxt, 'a+', encoding='utf8') as f:
+            if len(element) > 1:
+                f.write(f"{element['original_text']}: "
+                        f"{(element['rating'][0], element['rating'][1], element['rating'][2])}\n")
+    """
+    # vis.createRatings(ev['original_text'], ev['rating'])
+    print("Sums of per word rated emotions in the text:")
+    print(f"JSONvalues:\t{JSONvalues}")
+    print(f"valence:\t{vsum / wordcount:.3f}")
+    print(f"arousal:\t{asum / wordcount:.3f}")
+    print(f"dominance:\t{dsum / wordcount:.3f}")
+    """
+    return JSONvalues
+
+
+def evaluate(data):
+    JSONvalues, textValues = [], []
     vsum, asum, dsum, wordcount = 0, 0, 0, 0
-    for t in tokens:
-        if t.tokenType == libvoikko.Token.WORD:
+    for word in data:
+        if type(word) != libvoikko.Token:
+            JSONvalues.append({'word': word, 'valence': None, 'arousal': None, 'dominance': None})
+            textValues.append({'original_text': word})
+            continue
+        if word.tokenType == libvoikko.Token.WORD:
             wordcount += 1
-            evaluate = word_eval(t.tokenText)
-            va, a, d = evaluate['rating'][0], evaluate['rating'][1], evaluate['rating'][2]
-            textValues.append(evaluate)
+            ev = word_eval(word.tokenText)
+            va, a, d = ev['rating'][0], ev['rating'][1], ev['rating'][2]
+            JSONvalues.append({'word': word.tokenText, 'valence': va, 'arousal': a, 'dominance': d})
+            textValues.append(ev)
             if va is not None:
                 vsum += va
                 asum += a
                 dsum += d
         else:
-            textValues.append({'original_text': t.tokenText})
+            JSONvalues.append({'word': word.tokenText, 'valence': None, 'arousal': None, 'dominance': None})
+            textValues.append({'original_text': word.tokenText})
     if wordcount == 0:
         wordcount = 1
-    # print("Sums of per word rated emotions in the text:")
-    # print(f"textValues:\t{textValues}")
-    # print(f"valence:\t{vsum:.3f}")
-    # print(f"arousal:\t{asum:.3f}")
-    # print(f"dominance:\t{dsum:.3f}")
-    return textValues, round(vsum / wordcount, 2), round(asum / wordcount, 2), round(dsum / wordcount, 2)
-
-
+    return wordcount, vsum, asum, dsum, JSONvalues, textValues

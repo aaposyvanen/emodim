@@ -25,29 +25,6 @@ def createAnalyzationFiles():
     return fname, tname
 
 
-def evaluate_s24_data(data, vsum, asum, dsum):
-    paragraphValues = []
-    JSONvalues = []
-    # print(f"datadict['words]: {datadict['words']}")
-    # this loop executes often < 10it/s
-    for word in data:
-        ev = em.word_eval(word)
-        paragraphValues.append(ev)
-        JSONvalues.append({'word': word, 'valence': ev['rating'][0], 'arousal': ev['rating'][1],
-                           'dominance': ev['rating'][2]})
-        with open(ftxt, 'a+', encoding='utf8') as f:
-            f.write(f"{ev['original_text']}: {ev['rating']} \n")
-        #vis.createRatings(ev['original_text'], ev['rating'])
-        try:
-            vsum += float(ev['rating'][0])
-            asum += float(ev['rating'][1])
-            dsum += float(ev['rating'][2])
-        # if the word that was processed had None values in the rating list
-        except TypeError:
-            continue
-    return paragraphValues, JSONvalues,  round(vsum, 3), round(asum, 3), round(dsum, 3)
-
-
 def s24_parser(dpath):
     # 2,748,069 iterations for s24 2001 dataset, around 4-10 it/s to process (around 130 hours), has to be optimized
     # the evaluate_s24_data function slows iteration down by over 75k it/s. word_eval function in emodim.py needs work.
@@ -57,11 +34,11 @@ def s24_parser(dpath):
     commentData = {'commentMetadata': {}, 'words': []}
     textData = {}
     wordlist = []
+    text = ""
     # get an iterable, turn it into an iterator and get the root element
     context = ET.iterparse(dpath, events=("start", "end"))
     context = iter(context)
     event, r = next(context)
-    vsum = asum = dsum = 0
     fix = False
     for event, element in tqdm(context):
         if event == 'end' and element.tag == 'root':
@@ -92,7 +69,6 @@ def s24_parser(dpath):
                               'comments': []}
             commentData = {'commentMetadata': textData.copy(), 'words': []}
             fix = True
-            vsum, asum, dsum = 0, 0, 0
             # clear the root so memory management is reasonable
             r.clear()
         # a new paragraph starts (the "body" part)
@@ -104,13 +80,25 @@ def s24_parser(dpath):
                     words = el.text.splitlines()[1:]
                     for word in words:
                         # get the first word of the string (this is what we want)
+                        text += word.split('\t')[0]
                         wordlist.append(word.split('\t')[0])
+                        # the third last element is if there are spaces or newlines after the word
+                        w = word.split('\t')[-3]
+                        # there was a space
+                        if w == '_':
+                            text += ' '
+                            wordlist.append(' ')
+                        else:
+                            w = w.split('=')[1]
+                            if w != "No":
+                                text += w
+                                wordlist.append(w)
                     commentData['words'].extend(wordlist.copy())
                     wordlist.clear()
                 ev, el = next(context)
             r.clear()
         elif event == 'end' and element.tag == 'text':
-            pData, JSONvalues, pvsum, pasum, pdsum = evaluate_s24_data(commentData['words'], vsum, asum, dsum)
+            JSONvalues = em.evaluate_s24_data(commentData['words'], ftxt)
             commentData['words'] = JSONvalues
             threadData['comments'].append(commentData.copy())
             wordlist.clear(), textData.clear(), r.clear()
