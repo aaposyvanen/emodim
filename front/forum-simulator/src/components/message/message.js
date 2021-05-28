@@ -57,7 +57,7 @@ const Message = ({ data, response }) => {
                 </span>
             const whitespace = <span> </span>
             if (!_.includes([",", ".", "..", "...", ":", "!", "?", "\"", "'"], wordData.word)) {
-                return <span>{whitespace}{styledWord}</span>;
+                return <span key={index} >{whitespace}{styledWord}</span>;
             }
             return styledWord;
         });
@@ -74,7 +74,7 @@ const Message = ({ data, response }) => {
                         {datetime}
                     </div>
                 </div>
-                <div className="message">
+                <div className="message" key={data.commentMetadata.id}>
                     {message}
                 </div>
                 {

@@ -4,10 +4,10 @@ import Message from "./message";
 
 test("Message renders correctly with props", () => {
     const data = {
-        commentID: "1",
         commentMetadata: {
             author: "Author",
-            datetime: "2000-01-01 00:00:00"
+            datetime: "2000-01-01 00:00:00",
+            id: "1"
         },
         words: [
             {
