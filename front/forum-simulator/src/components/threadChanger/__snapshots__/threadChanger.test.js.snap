@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThreadChanger renders correctly 1`] = `
+<div>
+  <div
+    class="thread-changer"
+  >
+    <button
+      class="thread-change-button"
+    >
+      Prev
+    </button>
+    <div
+      class="current-thread-label"
+    >
+      1
+    </div>
+    <button
+      class="thread-change-button"
+    >
+      Next
+    </button>
+  </div>
+</div>
+`;

@@ -5,6 +5,7 @@ describe("raw data reducer", () => {
 
     const initialState = {
         availableThreads: [],
+        currentIndex: 0,
         currentThread: {
             threadID: "",
             startMessage: {},

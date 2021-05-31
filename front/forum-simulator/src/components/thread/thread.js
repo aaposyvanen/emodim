@@ -7,11 +7,13 @@ import testdata from "../../testData/threadData_s24_03.json";
 import "./thread.css";
 import {
     updateAvailableRawThreads,
-    updateCurrentRawThread
+    updateCurrentRawThread,
+    updateCurrentRawThreadIndex
 } from "../../actions/rawDataActions";
 import { updateCurrentThread } from "../../actions/threadActions";
 
 import MessageArea from "../messageArea/messageArea";
+import ThreadChanger from "../threadChanger/threadChanger";
 export class Thread extends Component {
 
     componentDidMount = async () => {
@@ -20,11 +22,16 @@ export class Thread extends Component {
 
     componentDidUpdate = (prevProps) => {
 
-        const threadIndex = 1;
+        const threadRawDataChanged = prevProps.availableRawThreads !== this.props.availableRawThreads;
+        const threadIndexChanged = prevProps.currentRawThreadIndex !== this.props.currentRawThreadIndex;
 
-        if (prevProps.availableRawThreads !== this.props.availableRawThreads
-            && this.props.availableRawThreads[threadIndex]) {
-            this.props.updateCurrentRawThread(this.props.availableRawThreads[threadIndex]);
+        if ((threadRawDataChanged || threadIndexChanged)
+            && this.props.availableRawThreads[this.props.currentRawThreadIndex]) {
+            this.props.updateCurrentRawThread(
+                this.props.availableRawThreads[
+                this.props.currentRawThreadIndex
+                ]
+            );
         }
 
         if (prevProps.currentRawThread !== this.props.currentRawThread) {
@@ -83,6 +90,11 @@ export class Thread extends Component {
     render() {
         return (
             <div className="thread">
+                <ThreadChanger
+                    currentIndex={this.props.currentRawThreadIndex}
+                    updateIndex={(index) => this.props.updateCurrentRawThreadIndex(index)}
+                    maxIndex={this.props.availableRawThreads.length - 1}
+                />
                 <div className="title">
                     {this.getCurrentThreadTitle()}
                 </div>
@@ -95,6 +107,7 @@ export class Thread extends Component {
 const mapStateToProps = state => {
     return {
         currentRawThread: state.rawDataReducer.currentThread,
+        currentRawThreadIndex: state.rawDataReducer.currentIndex,
         availableRawThreads: state.rawDataReducer.availableThreads,
         currentThread: state.threadReducer.thread
     };
@@ -103,7 +116,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = {
     updateAvailableRawThreads,
     updateCurrentRawThread,
-    updateCurrentThread
+    updateCurrentThread,
+    updateCurrentRawThreadIndex
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Thread);
