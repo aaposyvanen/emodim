@@ -1,10 +1,9 @@
 from libvoikko import Voikko
 from flask import *  # render_template
 import emodim as em
-import os
 from wvlib_light import lwvlib
 
-path = f"{os.getcwd()}\\Voikko"
+path = "Voikko"
 Voikko.setLibrarySearchPath(path)
 v = Voikko(u"fi", path)
 wv = lwvlib.load("D:\\Work\\skipgram_dbs\\finnish_4B_parsebank_skgram.bin", 10000, 500000)

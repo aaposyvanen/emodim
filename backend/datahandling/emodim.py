@@ -1,8 +1,8 @@
 import libvoikko
-import os
 from wvlib_light import lwvlib
 from tqdm import tqdm
 import pandas as pd
+import os
 
 
 """
@@ -12,12 +12,13 @@ What follows with the Voikko and wvlib_light may be thread-unsafe.
 The libraries are loaded end kept in to increase responsiveness in a single user case 
 (no need to wait for the library to load).
 Consequently, bad things may happen if this is run in a production environment with many simultaneous users.
-
 """
-path = f"{os.getcwd()}\\Voikko"
+
+
+path = "Voikko"
 libvoikko.Voikko.setLibrarySearchPath(path)
 v = libvoikko.Voikko(u"fi", path)
-df = pd.read_excel(f"data\\bigList_normalized.xlsx")
+df = pd.read_excel(f"..\\data\\bigList_normalized.xlsx")
 wv = lwvlib.load("D:\\Work\\skipgram_dbs\\finnish_4B_parsebank_skgram.bin", 10000, 500000)
 
 

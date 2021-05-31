@@ -2,10 +2,9 @@ import xml.etree.cElementTree as ET
 import pandas as pd
 import emodim as em
 import libvoikko
-import os
 
 
-v = libvoikko.Voikko(u"fi", f"{os.getcwd()}\\Voikko")
+v = libvoikko.Voikko(u"fi", "Voikko")
 
 
 def openFile(t):
@@ -17,7 +16,7 @@ def openFile(t):
                 tree = ET.parse(xml)
                 root = tree.getroot()
                 found = True
-                createNormalizedXML(f"data\\{xml}", root)
+                createNormalizedXML(f"..\\data\\{xml}", root)
             except OSError:
                 print('Error accessing file. Check file name and path and try again. File should be located in the '
                       'same folder as this script file.')
@@ -58,7 +57,7 @@ def createNormalizedXML(xml, root):
         se = ET.SubElement(newroot, 'pattern', elem)
         se.tail = '\n'
     newtree = ET.ElementTree(newroot)
-    with open(f'data\\normalized_{xml}', 'wb') as f:
+    with open(f'..\\data\\normalized_{xml}', 'wb') as f:
         newtree.write(f, encoding='UTF-8', xml_declaration=True, short_empty_elements=True)
     print(f'File created as normalized_{xml}')
     return
@@ -71,8 +70,8 @@ def createNormalizedExel(filename):
         df.at[i, 'Valence'] = round(normalize(df.at[i, 'Valence'], 0, 1), 3)
         df.at[i, 'Arousal'] = round(normalize(df.at[i, 'Arousal'], 0, 1), 3)
         df.at[i, 'Dominance'] = round(normalize(df.at[i, 'Dominance'], 0, 1), 3)
-    df.to_excel('data\\bigList_normalized.xlsx', index=False, encoding='utf-8')
-    df.to_csv('data\\bigList_normalized.csv', index=False, sep=',', encoding='utf-8')
+    df.to_excel('..\\data\\bigList_normalized.xlsx', index=False, encoding='utf-8')
+    df.to_csv('..\\data\\bigList_normalized.csv', index=False, sep=',', encoding='utf-8')
 
 
 def main():

@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 from tqdm import tqdm
 
 
-path = "data\\s24_2001_classified_24-05-2021_13-35-19.txt"
+path = "..\\data\\s24_2001_classified_24-05-2021_13-35-19.txt"
 ratings = []
 words = []
 
@@ -15,11 +15,11 @@ def createRatings(word, rating):
 
 
 def plot():
-    # plt.plot(ratings)
+    plt.plot(ratings, antigravity='')
     x_val = [x[0] for x in ratings]
     y_val = [x[1] for x in ratings]
     plt.scatter(x_val, y_val)
-    plt.title('Scatter plot of Valence and Arousal tuples')
+    plt.title('Scatter plot of Valence and Arousal pairs')
     plt.xlabel('Valence')
     plt.ylabel('Arousal')
     plt.show()
@@ -35,4 +35,4 @@ def plotFromFile():
     plot()
 
 
-#plotFromFile()
+plotFromFile()
