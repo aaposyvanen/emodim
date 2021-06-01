@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import configureStore from "./configureStore";
 
 import "./index.css";
-import App from "./App";
+import Layout from "./components/layout/layout";
 
 import reportWebVitals from "./reportWebVitals";
 
@@ -15,7 +15,7 @@ ReactDOM.render(
 
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <Layout />
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

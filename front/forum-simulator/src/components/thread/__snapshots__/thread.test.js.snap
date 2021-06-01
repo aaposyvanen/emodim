@@ -6,25 +6,6 @@ exports[`Thread renders correctly 1`] = `
     class="thread"
   >
     <div
-      class="thread-changer"
-    >
-      <button
-        class="thread-change-button"
-      >
-        Prev
-      </button>
-      <div
-        class="current-thread-label"
-      >
-        1
-      </div>
-      <button
-        class="thread-change-button"
-      >
-        Next
-      </button>
-    </div>
-    <div
       class="title"
     >
       Thread title

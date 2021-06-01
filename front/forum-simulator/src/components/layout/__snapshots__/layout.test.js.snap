@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders correctly 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <div
+      class="forum-view"
+    >
+      <div
+        class="thread-changer"
+      >
+        <button
+          class="thread-change-button"
+        >
+          Prev
+        </button>
+        <div
+          class="current-thread-label"
+        >
+          1
+        </div>
+        <button
+          class="thread-change-button"
+        >
+          Next
+        </button>
+      </div>
+      <div
+        class="thread"
+      >
+        <div
+          class="title"
+        >
+          Hyvää uutta vuotta kaikille Hondailijoille
+        </div>
+        <div
+          class="message-area"
+        >
+          <div
+            class="thread-start"
+          >
+            <div
+              class="message-box"
+            >
+              <div
+                class="metadata"
+              >
+                <div
+                  class="author"
+                >
+                  Honda
+                </div>
+                <div
+                  class="date"
+                >
+                  2001-01-01 01:30:00
+                </div>
+              </div>
+              <div
+                class="message"
+              >
+                <span>
+                  <span>
+                     
+                  </span>
+                  <span
+                    class="arousal0 valence0"
+                  >
+                    Hyvää
+                  </span>
+                </span>
+                <span>
+                  <span>
+                     
+                  </span>
+                  <span
+                    class="arousal0 valence0"
+                  >
+                    uutta
+                  </span>
+                </span>
+                <span>
+                  <span>
+                     
+                  </span>
+                  <span
+                    class="arousal0 valence0"
+                  >
+                    vuotta
+                  </span>
+                </span>
+                <span>
+                  <span>
+                     
+                  </span>
+                  <span
+                    class="arousal0 valence0"
+                  >
+                    kaikille
+                  </span>
+                </span>
+                <span>
+                  <span>
+                     
+                  </span>
+                  <span
+                    class="arousal0 valence0"
+                  >
+                    Hondailijoille
+                  </span>
+                </span>
+                <span>
+                  <span>
+                     
+                  </span>
+                  <span
+                    class="arousal0 valence0"
+                  >
+                    ja
+                  </span>
+                </span>
+                <span>
+                  <span>
+                     
+                  </span>
+                  <span
+                    class="arousal0 valence0"
+                  >
+                    myös
+                  </span>
+                </span>
+                <span>
+                  <span>
+                     
+                  </span>
+                  <span
+                    class="arousal0 valence0"
+                  >
+                    muille
+                  </span>
+                </span>
+                <span>
+                  <span>
+                     
+                  </span>
+                  <span
+                    class="arousal0 valence0"
+                  >
+                    autoiluharrastajille
+                  </span>
+                </span>
+                <span
+                  class="arousal0 valence0"
+                >
+                  !
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="comments"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

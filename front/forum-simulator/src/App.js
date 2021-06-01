@@ -1,10 +1,9 @@
-import './App.css';
-import Thread from "./components/thread/thread";
+import Layout from "./components/layout/layout";
 
 function App() {
   return (
     <div className="App">
-      <Thread />
+      <Layout />
     </div>
   );
 }
