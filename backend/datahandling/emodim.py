@@ -92,13 +92,13 @@ def evaluate(data):
     vsum, asum, dsum, wordcount = 0, 0, 0, 0
     for token in data:
         if token.tokenType == libvoikko.Token.WORD:
-            wordcount += 1
             ev = word_eval(token)
             va, a, d = ev['rating'][0], ev['rating'][1], ev['rating'][2]
             JSONvalues.append({'word': token.tokenText, 'type': token.tokenTypeName,
                                'valence': va, 'arousal': a, 'dominance': d})
             textValues.append(ev)
             if va is not None:
+                wordcount += 1
                 vsum += va
                 asum += a
                 dsum += d
@@ -122,7 +122,7 @@ def evaluate_text(text):
     print(f"arousal:\t{asum / wordcount:.3f}")
     print(f"dominance:\t{dsum / wordcount:.3f}")
     """
-    return ev
+    return ev, wordcount, vsum, asum, dsum
 
 
 def evaluate_s24_data(data, ftxt):

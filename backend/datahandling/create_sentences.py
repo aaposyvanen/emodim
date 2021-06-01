@@ -1,12 +1,11 @@
-import json
 import xml.etree.cElementTree as ET
 from tqdm import tqdm
 from datetime import datetime
 
 
 # path = "D:\\Work\\Data\\s24_2001.vrt"  # this file is 3,5Gb
-path = "D:\\Work\\Data\\s24_2017.vrt"  # this file is 17Gb
-# path = "..\\data\\test.vrt"
+# path = "D:\\Work\\Data\\s24_2017.vrt"  # this file is 17Gb
+path = "..\\data\\test.vrt"
 
 
 def createAnalyzationFiles():
