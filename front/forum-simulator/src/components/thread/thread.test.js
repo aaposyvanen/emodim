@@ -16,12 +16,17 @@ function mockDispatch() {
 test("Thread renders correctly", () => {
 
     mockDispatch();
+    const mockAvailableRawThreads = [
+        { threadId: "1" }, { threadId: "2" }
+    ];
 
     const { container } = render(
         <Thread
             updateCurrentRawThread={mockupdateCurrentRawThread}
             updateAvailableRawThreads={mockupdateAvailableRawThreads}
             currentThread={threadData[0]}
+            availableRawThreads={mockAvailableRawThreads}
+            currentRawThreadIndex={0}
         />
     );
 

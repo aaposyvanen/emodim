@@ -33,7 +33,7 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
                
             </span>
             <span
-              class="arousal0 valence3"
+              class="arousal0 valence0"
             >
               test1
             </span>
@@ -69,7 +69,7 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
                
             </span>
             <span
-              class="arousal3 valence3"
+              class="arousal0 valence0"
             >
               test2
             </span>
@@ -100,7 +100,7 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
                  
               </span>
               <span
-                class="arousal3 valence-3"
+                class="arousal0 valence0"
               >
                 test4
               </span>
@@ -132,7 +132,7 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
                  
               </span>
               <span
-                class="arousal3 valence0"
+                class="arousal0 valence0"
               >
                 test5
               </span>
@@ -165,7 +165,7 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
                
             </span>
             <span
-              class="arousal3 valence-3"
+              class="arousal0 valence0"
             >
               test3
             </span>
@@ -210,7 +210,7 @@ exports[`MessageArea renders correctly with props 1`] = `
                
             </span>
             <span
-              class="arousal0 valence3"
+              class="arousal0 valence0"
             >
               test
             </span>
@@ -246,7 +246,7 @@ exports[`MessageArea renders correctly with props 1`] = `
                
             </span>
             <span
-              class="arousal3 valence3"
+              class="arousal0 valence0"
             >
               test1
             </span>
@@ -278,7 +278,7 @@ exports[`MessageArea renders correctly with props 1`] = `
                
             </span>
             <span
-              class="arousal3 valence-3"
+              class="arousal0 valence0"
             >
               test2
             </span>
