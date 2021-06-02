@@ -44,8 +44,8 @@ def s24_parser(dpath):
         if event == 'end' and element.tag == 'root':
             threadList.append(threadData)
             # vis.plot()
-            with open(fjson, 'w', encoding='utf8') as f:
-                json.dump(threadList, f, indent=2, ensure_ascii=False)
+            # with open(fjson, 'w', encoding='utf8') as f:
+              #   json.dump(threadList, f, indent=2, ensure_ascii=False)
                 # json.dump(threadData, f, indent=2, ensure_ascii=False)
             r.clear()
             break

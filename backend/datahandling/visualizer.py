@@ -35,4 +35,4 @@ def plotFromFile():
     plot()
 
 
-plotFromFile()
+# plotFromFile()
