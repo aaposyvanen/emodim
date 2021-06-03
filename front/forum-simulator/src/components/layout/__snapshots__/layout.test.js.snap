@@ -59,103 +59,130 @@ exports[`Layout renders correctly 1`] = `
                 </div>
               </div>
               <div
-                class="message"
+                class="outer-content"
               >
-                <span>
-                  <span>
-                     
-                  </span>
-                  <span
-                    class="arousal0 valence0"
-                  >
-                    Hyvää
-                  </span>
-                </span>
-                <span>
-                  <span>
-                     
-                  </span>
-                  <span
-                    class="arousal0 valence0"
-                  >
-                    uutta
-                  </span>
-                </span>
-                <span>
-                  <span>
-                     
-                  </span>
-                  <span
-                    class="arousal0 valence0"
-                  >
-                    vuotta
-                  </span>
-                </span>
-                <span>
-                  <span>
-                     
-                  </span>
-                  <span
-                    class="arousal0 valence0"
-                  >
-                    kaikille
-                  </span>
-                </span>
-                <span>
-                  <span>
-                     
-                  </span>
-                  <span
-                    class="arousal0 valence0"
-                  >
-                    Hondailijoille
-                  </span>
-                </span>
-                <span>
-                  <span>
-                     
-                  </span>
-                  <span
-                    class="arousal0 valence0"
-                  >
-                    ja
-                  </span>
-                </span>
-                <span>
-                  <span>
-                     
-                  </span>
-                  <span
-                    class="arousal0 valence0"
-                  >
-                    myös
-                  </span>
-                </span>
-                <span>
-                  <span>
-                     
-                  </span>
-                  <span
-                    class="arousal0 valence0"
-                  >
-                    muille
-                  </span>
-                </span>
-                <span>
-                  <span>
-                     
-                  </span>
-                  <span
-                    class="arousal0 valence0"
-                  >
-                    autoiluharrastajille
-                  </span>
-                </span>
-                <span
-                  class="arousal0 valence0"
+                <div
+                  class="inner-content"
                 >
-                  !
-                </span>
+                  <div
+                    class="message"
+                  >
+                    <span>
+                      <span>
+                         
+                      </span>
+                      <span
+                        class="arousal0 valence0"
+                      >
+                        Hyvää
+                      </span>
+                    </span>
+                    <span>
+                      <span>
+                         
+                      </span>
+                      <span
+                        class="arousal0 valence0"
+                      >
+                        uutta
+                      </span>
+                    </span>
+                    <span>
+                      <span>
+                         
+                      </span>
+                      <span
+                        class="arousal0 valence0"
+                      >
+                        vuotta
+                      </span>
+                    </span>
+                    <span>
+                      <span>
+                         
+                      </span>
+                      <span
+                        class="arousal0 valence0"
+                      >
+                        kaikille
+                      </span>
+                    </span>
+                    <span>
+                      <span>
+                         
+                      </span>
+                      <span
+                        class="arousal0 valence0"
+                      >
+                        Hondailijoille
+                      </span>
+                    </span>
+                    <span>
+                      <span>
+                         
+                      </span>
+                      <span
+                        class="arousal0 valence0"
+                      >
+                        ja
+                      </span>
+                    </span>
+                    <span>
+                      <span>
+                         
+                      </span>
+                      <span
+                        class="arousal0 valence0"
+                      >
+                        myös
+                      </span>
+                    </span>
+                    <span>
+                      <span>
+                         
+                      </span>
+                      <span
+                        class="arousal0 valence0"
+                      >
+                        muille
+                      </span>
+                    </span>
+                    <span>
+                      <span>
+                         
+                      </span>
+                      <span
+                        class="arousal0 valence0"
+                      >
+                        autoiluharrastajille
+                      </span>
+                    </span>
+                    <span
+                      class="arousal0 valence0"
+                    >
+                      !
+                    </span>
+                  </div>
+                  <span
+                    class="icon"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-circle fa-w-16 valence0"
+                      data-icon="circle"
+                      data-prefix="fas"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 512 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                </div>
               </div>
             </div>
           </div>

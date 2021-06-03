@@ -1,7 +1,10 @@
 import React from "react";
 import _ from "lodash";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import "./message.css";
+import "./annotationStyles.css"
+
 const Message = ({ data, response, styleWords = true }) => {
 
     if (data && data.commentMetadata) {
@@ -66,6 +69,25 @@ const Message = ({ data, response, styleWords = true }) => {
         });
 
         const hasChildren = data.children && !_.isEmpty(data.children);
+        let lowValenceCount = 0;
+        let highValenceCount = 0;
+        let messageValence;
+
+        _.forEach(words, (word) => {
+            if (word.valence < -0.5) {
+                lowValenceCount++;
+            } else if (word.valence > 0.5) {
+                highValenceCount++;
+            }
+        });
+
+        if (lowValenceCount / words.length > 0.05) {
+            messageValence = -1;
+        } else if (highValenceCount / words.length > 0.1) {
+            messageValence = 1;
+        } else {
+            messageValence = 0;
+        }
 
         return (
             <div className={`message-box${response ? " response" : ""}`}>
@@ -77,19 +99,28 @@ const Message = ({ data, response, styleWords = true }) => {
                         {datetime}
                     </div>
                 </div>
-                <div className="message" key={data.commentMetadata.id}>
-                    {message}
+                <div className="outer-content">
+                    <div className="inner-content">
+                        <div className="message" key={data.commentMetadata.id}>
+                            {message}
+                        </div>
+                        <span className="icon">
+                            <FontAwesomeIcon
+                                className={`valence${messageValence}`}
+                                icon={faCircle} />
+                        </span>
+                    </div>
+                    {
+                        hasChildren && data.children.map(child => {
+                            return < Message
+                                data={child}
+                                key={child.commentMetadata.id}
+                                response
+                                styleWords={styleWords}
+                            />
+                        })
+                    }
                 </div>
-                {
-                    hasChildren && data.children.map(child => {
-                        return < Message
-                            data={child}
-                            key={child.commentMetadata.id}
-                            response
-                            styleWords={styleWords}
-                        />
-                    })
-                }
             </div>
         );
     }
