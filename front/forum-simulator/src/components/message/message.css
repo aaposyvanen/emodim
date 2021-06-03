@@ -28,73 +28,20 @@
     border-bottom: solid 1px #0099ff;
 }
 
-.valence-3 {
-    background-color: rgba(255, 0, 0, 0.6);
-    border-radius: 3px;
-    padding-left: 2px;
-    padding-right: 2px;
-    margin-left: -2px;
-    margin-right: -2px;
-}
-.valence-2 {
-    background-color: rgba(255, 0, 0, 0.4);
-    border-radius: 3px;
-    padding-left: 2px;
-    padding-right: 2px;
-    margin-left: -2px;
-    margin-right: -2px;
-}
-.valence-1 {
-    background-color: rgba(255, 0, 0, 0.2);
-    border-radius: 3px;
-    padding-left: 2px;
-    padding-right: 2px;
-    margin-left: -2px;
-    margin-right: -2px;
+.message-box svg {
+    font-size: 6px;
 }
 
-.valence1 {
-    background-color: rgba(0, 255, 0, 0.2);
-    border-radius: 3px;
-    padding-left: 2px;
-    padding-right: 2px;
-    margin-left: -2px;
-    margin-right: -2px;
-}
-.valence2 {
-    background-color: rgba(0, 255, 0, 0.4);
-    border-radius: 3px;
-    padding-left: 2px;
-    padding-right: 2px;
-    margin-left: -2px;
-    margin-right: -2px;
-}
-.valence3 {
-    background-color: rgba(0, 255, 0, 0.6);
-    border-radius: 3px;
-    padding-left: 2px;
-    padding-right: 2px;
-    margin-left: -2px;
-    margin-right: -2px;
+.inner-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
-
-.arousal0 {
-    font-size: 18px;
-    /* font-weight: 200; */
-}
-
-.arousal1 {
-    font-size: 20px;
-    /* font-weight: 200 */
-}
-
-.arousal2 {
-    font-size: 22px;
-    /* font-weight: 500 */
-}
-
-.arousal3 {
-    font-size: 24px;
-    /* font-weight: 700; */
+.inner-content span.icon {
+    display: flex;
+    flex-direction: row;
+    margin-right: 5px;
+    margin-left: 10px;
 }

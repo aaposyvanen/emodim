@@ -26,18 +26,45 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
           </div>
         </div>
         <div
-          class="message"
+          class="outer-content"
         >
-          <span>
-            <span>
-               
-            </span>
-            <span
-              class="arousal0 valence0"
+          <div
+            class="inner-content"
+          >
+            <div
+              class="message"
             >
-              test1
+              <span>
+                <span>
+                   
+                </span>
+                <span
+                  class="arousal0 valence0"
+                >
+                  test1
+                </span>
+              </span>
+            </div>
+            <span
+              class="icon"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-circle fa-w-16 valence1"
+                data-icon="circle"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                  fill="currentColor"
+                />
+              </svg>
             </span>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -62,81 +89,162 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
           </div>
         </div>
         <div
-          class="message"
+          class="outer-content"
         >
-          <span>
-            <span>
-               
-            </span>
+          <div
+            class="inner-content"
+          >
+            <div
+              class="message"
+            >
+              <span>
+                <span>
+                   
+                </span>
+                <span
+                  class="arousal0 valence0"
+                >
+                  test2
+                </span>
+              </span>
+            </div>
             <span
-              class="arousal0 valence0"
+              class="icon"
             >
-              test2
-            </span>
-          </span>
-        </div>
-        <div
-          class="message-box response"
-        >
-          <div
-            class="metadata"
-          >
-            <div
-              class="author"
-            >
-              Author4
-            </div>
-            <div
-              class="date"
-            >
-              2000-01-01 00:04:00
-            </div>
-          </div>
-          <div
-            class="message"
-          >
-            <span>
-              <span>
-                 
-              </span>
-              <span
-                class="arousal0 valence0"
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-circle fa-w-16 valence1"
+                data-icon="circle"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                test4
-              </span>
+                <path
+                  d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                  fill="currentColor"
+                />
+              </svg>
             </span>
           </div>
-        </div>
-        <div
-          class="message-box response"
-        >
           <div
-            class="metadata"
+            class="message-box response"
           >
             <div
-              class="author"
+              class="metadata"
             >
-              Author5
-            </div>
-            <div
-              class="date"
-            >
-              2000-01-01 00:05:00
-            </div>
-          </div>
-          <div
-            class="message"
-          >
-            <span>
-              <span>
-                 
-              </span>
-              <span
-                class="arousal0 valence0"
+              <div
+                class="author"
               >
-                test5
-              </span>
-            </span>
+                Author4
+              </div>
+              <div
+                class="date"
+              >
+                2000-01-01 00:04:00
+              </div>
+            </div>
+            <div
+              class="outer-content"
+            >
+              <div
+                class="inner-content"
+              >
+                <div
+                  class="message"
+                >
+                  <span>
+                    <span>
+                       
+                    </span>
+                    <span
+                      class="arousal0 valence0"
+                    >
+                      test4
+                    </span>
+                  </span>
+                </div>
+                <span
+                  class="icon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-circle fa-w-16 valence-1"
+                    data-icon="circle"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 512 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="message-box response"
+          >
+            <div
+              class="metadata"
+            >
+              <div
+                class="author"
+              >
+                Author5
+              </div>
+              <div
+                class="date"
+              >
+                2000-01-01 00:05:00
+              </div>
+            </div>
+            <div
+              class="outer-content"
+            >
+              <div
+                class="inner-content"
+              >
+                <div
+                  class="message"
+                >
+                  <span>
+                    <span>
+                       
+                    </span>
+                    <span
+                      class="arousal0 valence0"
+                    >
+                      test5
+                    </span>
+                  </span>
+                </div>
+                <span
+                  class="icon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-circle fa-w-16 valence0"
+                    data-icon="circle"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 512 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -158,18 +266,45 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
           </div>
         </div>
         <div
-          class="message"
+          class="outer-content"
         >
-          <span>
-            <span>
-               
-            </span>
-            <span
-              class="arousal0 valence0"
+          <div
+            class="inner-content"
+          >
+            <div
+              class="message"
             >
-              test3
+              <span>
+                <span>
+                   
+                </span>
+                <span
+                  class="arousal0 valence0"
+                >
+                  test3
+                </span>
+              </span>
+            </div>
+            <span
+              class="icon"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-circle fa-w-16 valence-1"
+                data-icon="circle"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                  fill="currentColor"
+                />
+              </svg>
             </span>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -203,18 +338,45 @@ exports[`MessageArea renders correctly with props 1`] = `
           </div>
         </div>
         <div
-          class="message"
+          class="outer-content"
         >
-          <span>
-            <span>
-               
-            </span>
-            <span
-              class="arousal0 valence0"
+          <div
+            class="inner-content"
+          >
+            <div
+              class="message"
             >
-              test
+              <span>
+                <span>
+                   
+                </span>
+                <span
+                  class="arousal0 valence0"
+                >
+                  test
+                </span>
+              </span>
+            </div>
+            <span
+              class="icon"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-circle fa-w-16 valence1"
+                data-icon="circle"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                  fill="currentColor"
+                />
+              </svg>
             </span>
-          </span>
+          </div>
         </div>
       </div>
     </div>
@@ -239,18 +401,45 @@ exports[`MessageArea renders correctly with props 1`] = `
           </div>
         </div>
         <div
-          class="message"
+          class="outer-content"
         >
-          <span>
-            <span>
-               
-            </span>
-            <span
-              class="arousal0 valence0"
+          <div
+            class="inner-content"
+          >
+            <div
+              class="message"
             >
-              test1
+              <span>
+                <span>
+                   
+                </span>
+                <span
+                  class="arousal0 valence0"
+                >
+                  test1
+                </span>
+              </span>
+            </div>
+            <span
+              class="icon"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-circle fa-w-16 valence1"
+                data-icon="circle"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                  fill="currentColor"
+                />
+              </svg>
             </span>
-          </span>
+          </div>
         </div>
       </div>
       <div
@@ -271,18 +460,45 @@ exports[`MessageArea renders correctly with props 1`] = `
           </div>
         </div>
         <div
-          class="message"
+          class="outer-content"
         >
-          <span>
-            <span>
-               
-            </span>
-            <span
-              class="arousal0 valence0"
+          <div
+            class="inner-content"
+          >
+            <div
+              class="message"
             >
-              test2
+              <span>
+                <span>
+                   
+                </span>
+                <span
+                  class="arousal0 valence0"
+                >
+                  test2
+                </span>
+              </span>
+            </div>
+            <span
+              class="icon"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-circle fa-w-16 valence-1"
+                data-icon="circle"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                  fill="currentColor"
+                />
+              </svg>
             </span>
-          </span>
+          </div>
         </div>
       </div>
     </div>
