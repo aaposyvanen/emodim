@@ -72,6 +72,7 @@ const Message = ({ data, response, styleWords = true }) => {
         let lowValenceCount = 0;
         let highValenceCount = 0;
         let messageValence;
+        let iconTooltip;
 
         _.forEach(words, (word) => {
             if (word.valence < -0.5) {
@@ -83,10 +84,13 @@ const Message = ({ data, response, styleWords = true }) => {
 
         if (lowValenceCount / words.length > 0.05) {
             messageValence = -1;
+            iconTooltip = "Tästä viestistä on tunnistettu tavallista negatiivisempia tunteita.";
         } else if (highValenceCount / words.length > 0.1) {
             messageValence = 1;
+            iconTooltip = "Tästä viestistä on tunnistettu tavallista positiivisempia tunteita.";
         } else {
             messageValence = 0;
+            iconTooltip = "Tästä viestistä ei ole tunnistettu tavallisesta poikkeavaa tunnesisältöä.";
         }
 
         return (
@@ -104,7 +108,7 @@ const Message = ({ data, response, styleWords = true }) => {
                         <div className="message" key={data.commentMetadata.id}>
                             {message}
                         </div>
-                        <span className="icon">
+                        <span className="icon" title={iconTooltip}>
                             <FontAwesomeIcon
                                 className={`valence${messageValence}`}
                                 icon={faCircle} />

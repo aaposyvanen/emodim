@@ -42,6 +42,8 @@
 .inner-content span.icon {
     display: flex;
     flex-direction: row;
-    margin-right: 5px;
-    margin-left: 10px;
+    padding-right: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
