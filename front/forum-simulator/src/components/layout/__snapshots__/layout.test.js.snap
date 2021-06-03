@@ -165,6 +165,7 @@ exports[`Layout renders correctly 1`] = `
                   </div>
                   <span
                     class="icon"
+                    title="Tästä viestistä ei ole tunnistettu tavallisesta poikkeavaa tunnesisältöä."
                   >
                     <svg
                       aria-hidden="true"

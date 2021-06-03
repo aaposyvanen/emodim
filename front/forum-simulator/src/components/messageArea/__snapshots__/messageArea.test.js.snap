@@ -47,6 +47,7 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
             </div>
             <span
               class="icon"
+              title="Tästä viestistä on tunnistettu tavallista positiivisempia tunteita."
             >
               <svg
                 aria-hidden="true"
@@ -110,6 +111,7 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
             </div>
             <span
               class="icon"
+              title="Tästä viestistä on tunnistettu tavallista positiivisempia tunteita."
             >
               <svg
                 aria-hidden="true"
@@ -167,6 +169,7 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
                 </div>
                 <span
                   class="icon"
+                  title="Tästä viestistä on tunnistettu tavallista negatiivisempia tunteita."
                 >
                   <svg
                     aria-hidden="true"
@@ -226,6 +229,7 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
                 </div>
                 <span
                   class="icon"
+                  title="Tästä viestistä ei ole tunnistettu tavallisesta poikkeavaa tunnesisältöä."
                 >
                   <svg
                     aria-hidden="true"
@@ -287,6 +291,7 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
             </div>
             <span
               class="icon"
+              title="Tästä viestistä on tunnistettu tavallista negatiivisempia tunteita."
             >
               <svg
                 aria-hidden="true"
@@ -359,6 +364,7 @@ exports[`MessageArea renders correctly with props 1`] = `
             </div>
             <span
               class="icon"
+              title="Tästä viestistä on tunnistettu tavallista positiivisempia tunteita."
             >
               <svg
                 aria-hidden="true"
@@ -422,6 +428,7 @@ exports[`MessageArea renders correctly with props 1`] = `
             </div>
             <span
               class="icon"
+              title="Tästä viestistä on tunnistettu tavallista positiivisempia tunteita."
             >
               <svg
                 aria-hidden="true"
@@ -481,6 +488,7 @@ exports[`MessageArea renders correctly with props 1`] = `
             </div>
             <span
               class="icon"
+              title="Tästä viestistä on tunnistettu tavallista negatiivisempia tunteita."
             >
               <svg
                 aria-hidden="true"
