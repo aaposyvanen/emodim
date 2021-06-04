@@ -47,3 +47,18 @@
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
+.message-box svg.valence-1{
+    background-color: inherit;
+    color: #f00;
+}
+
+.message-box svg.valence0{
+    background-color: inherit;
+    color: #fff;
+}
+
+.message-box svg.valence1{
+    background-color: inherit;
+    color: #0f0;
+}

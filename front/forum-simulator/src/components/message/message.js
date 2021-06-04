@@ -3,7 +3,7 @@ import _ from "lodash";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import "./message.css";
-import "./annotationStyles.css"
+import "./annotationStyles2.css"
 
 const Message = ({ data, response, styleWords = true }) => {
 
@@ -57,8 +57,19 @@ const Message = ({ data, response, styleWords = true }) => {
                 }
             }
 
+            let wordTooltip;
+
+            if (valenceClass === -3 || valenceClass === 3) {
+                wordTooltip = "Tästä sanasta tunnistettiin vahvoja tunteita."
+            } else {
+                wordTooltip = null;
+            }
+
             const styledWord =
-                <span key={index} className={`arousal${arousalClass} valence${valenceClass}`}>
+                <span
+                    key={index}
+                    title={wordTooltip}
+                    className={`arousal${arousalClass} valence${valenceClass}`}>
                     {wordData.word}
                 </span>
             const whitespace = <span> </span>
@@ -75,9 +86,9 @@ const Message = ({ data, response, styleWords = true }) => {
         let iconTooltip;
 
         _.forEach(words, (word) => {
-            if (word.valence < -0.5) {
+            if (word.valence < -0.25) {
                 lowValenceCount++;
-            } else if (word.valence > 0.5) {
+            } else if (word.valence > 0.25) {
                 highValenceCount++;
             }
         });
