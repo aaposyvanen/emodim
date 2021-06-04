@@ -12,7 +12,7 @@ export class MessageArea extends Component {
                 <div className="thread-start">
                     <Message
                         data={this.props.startMessage}
-                        styleWords={false}
+                        styleWords={true}
                     />
                 </div>
                 <div className="comments">
@@ -21,7 +21,7 @@ export class MessageArea extends Component {
                             return < Message
                                 data={comment}
                                 key={comment.commentMetadata.id}
-                                styleWords={false}
+                                styleWords={true}
                             />
                         })
                     }

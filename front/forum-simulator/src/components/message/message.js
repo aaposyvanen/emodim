@@ -3,7 +3,7 @@ import _ from "lodash";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import "./message.css";
-import "./annotationStyles.css"
+import "./annotationStyles2.css"
 
 const Message = ({ data, response, styleWords = true }) => {
 
@@ -57,8 +57,19 @@ const Message = ({ data, response, styleWords = true }) => {
                 }
             }
 
+            let wordTooltip;
+
+            if (valenceClass === -3 || valenceClass === 3) {
+                wordTooltip = "Tästä sanasta tunnistettiin vahvoja tunteita."
+            } else {
+                wordTooltip = null;
+            }
+
             const styledWord =
-                <span key={index} className={`arousal${arousalClass} valence${valenceClass}`}>
+                <span
+                    key={index}
+                    title={wordTooltip}
+                    className={`arousal${arousalClass} valence${valenceClass}`}>
                     {wordData.word}
                 </span>
             const whitespace = <span> </span>
@@ -72,21 +83,25 @@ const Message = ({ data, response, styleWords = true }) => {
         let lowValenceCount = 0;
         let highValenceCount = 0;
         let messageValence;
+        let iconTooltip;
 
         _.forEach(words, (word) => {
-            if (word.valence < -0.5) {
+            if (word.valence < -0.25) {
                 lowValenceCount++;
-            } else if (word.valence > 0.5) {
+            } else if (word.valence > 0.25) {
                 highValenceCount++;
             }
         });
 
         if (lowValenceCount / words.length > 0.05) {
             messageValence = -1;
+            iconTooltip = "Tästä viestistä on tunnistettu tavallista negatiivisempia tunteita.";
         } else if (highValenceCount / words.length > 0.1) {
             messageValence = 1;
+            iconTooltip = "Tästä viestistä on tunnistettu tavallista positiivisempia tunteita.";
         } else {
             messageValence = 0;
+            iconTooltip = "Tästä viestistä ei ole tunnistettu tavallisesta poikkeavaa tunnesisältöä.";
         }
 
         return (
@@ -104,7 +119,7 @@ const Message = ({ data, response, styleWords = true }) => {
                         <div className="message" key={data.commentMetadata.id}>
                             {message}
                         </div>
-                        <span className="icon">
+                        <span className="icon" title={iconTooltip}>
                             <FontAwesomeIcon
                                 className={`valence${messageValence}`}
                                 icon={faCircle} />

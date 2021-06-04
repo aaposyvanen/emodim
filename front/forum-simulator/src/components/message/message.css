@@ -42,6 +42,23 @@
 .inner-content span.icon {
     display: flex;
     flex-direction: row;
-    margin-right: 5px;
-    margin-left: 10px;
+    padding-right: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.message-box svg.valence-1{
+    background-color: inherit;
+    color: #f00;
+}
+
+.message-box svg.valence0{
+    background-color: inherit;
+    color: #fff;
+}
+
+.message-box svg.valence1{
+    background-color: inherit;
+    color: #0f0;
 }

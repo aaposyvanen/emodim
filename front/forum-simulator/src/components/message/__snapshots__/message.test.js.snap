@@ -40,6 +40,7 @@ exports[`Message renders correctly with props 1`] = `
       </div>
       <span
         className="icon"
+        title="Tästä viestistä on tunnistettu tavallista negatiivisempia tunteita."
       >
         <svg
           aria-hidden="true"
