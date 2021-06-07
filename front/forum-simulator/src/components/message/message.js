@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import "./message.css";
 import "./annotationStyles2.css"
+import EmojiAnnotation from "../emojiAnnotation/emojiAnnotation";
 
 const Message = ({ data, response, styleWords = true }) => {
 
@@ -119,11 +120,17 @@ const Message = ({ data, response, styleWords = true }) => {
                         <div className="message" key={data.commentMetadata.id}>
                             {message}
                         </div>
-                        <span className="icon" title={iconTooltip}>
-                            <FontAwesomeIcon
-                                className={`valence${messageValence}`}
-                                icon={faCircle} />
-                        </span>
+                        <div className="decorations">
+                            <span className="icon" title={iconTooltip}>
+                                <FontAwesomeIcon
+                                    className={`valence${messageValence}`}
+                                    icon={faCircle} />
+                            </span>
+                            <EmojiAnnotation
+                                positiveValence={messageValence === 1}
+                                valenceIntensity={highValenceCount % 5} // this is to create consistent, pseudo-random inputs during lack of actual data
+                            />
+                        </div>
                     </div>
                     {
                         hasChildren && data.children.map(child => {

@@ -2,6 +2,8 @@ import React from 'react';
 import { render } from "@testing-library/react"
 import { MessageArea } from "./messageArea";
 
+jest.mock("../emojiAnnotation/emojiAnnotation", () => () => "EmojiAnnotation");
+
 test("MessageArea renders correctly with props", () => {
     const comments = [
         {

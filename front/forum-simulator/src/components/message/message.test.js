@@ -2,6 +2,8 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Message from "./message";
 
+jest.mock("../emojiAnnotation/emojiAnnotation", () => "EmojiAnnotation");
+
 test("Message renders correctly with props", () => {
     const data = {
         commentMetadata: {

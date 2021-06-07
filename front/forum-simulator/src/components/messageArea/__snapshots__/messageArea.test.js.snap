@@ -39,32 +39,38 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
                    
                 </span>
                 <span
-                  class="arousal0 valence0"
+                  class="arousal0 valence3"
+                  title="Tästä sanasta tunnistettiin vahvoja tunteita."
                 >
                   test1
                 </span>
               </span>
             </div>
-            <span
-              class="icon"
-              title="Tästä viestistä on tunnistettu tavallista positiivisempia tunteita."
+            <div
+              class="decorations"
             >
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-circle fa-w-16 valence1"
-                data-icon="circle"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="icon"
+                title="Tästä viestistä on tunnistettu tavallista positiivisempia tunteita."
               >
-                <path
-                  d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-circle fa-w-16 valence1"
+                  data-icon="circle"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              EmojiAnnotation
+            </div>
           </div>
         </div>
       </div>
@@ -103,32 +109,38 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
                    
                 </span>
                 <span
-                  class="arousal0 valence0"
+                  class="arousal3 valence3"
+                  title="Tästä sanasta tunnistettiin vahvoja tunteita."
                 >
                   test2
                 </span>
               </span>
             </div>
-            <span
-              class="icon"
-              title="Tästä viestistä on tunnistettu tavallista positiivisempia tunteita."
+            <div
+              class="decorations"
             >
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-circle fa-w-16 valence1"
-                data-icon="circle"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="icon"
+                title="Tästä viestistä on tunnistettu tavallista positiivisempia tunteita."
               >
-                <path
-                  d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-circle fa-w-16 valence1"
+                  data-icon="circle"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              EmojiAnnotation
+            </div>
           </div>
           <div
             class="message-box response"
@@ -161,32 +173,38 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
                        
                     </span>
                     <span
-                      class="arousal0 valence0"
+                      class="arousal3 valence-3"
+                      title="Tästä sanasta tunnistettiin vahvoja tunteita."
                     >
                       test4
                     </span>
                   </span>
                 </div>
-                <span
-                  class="icon"
-                  title="Tästä viestistä on tunnistettu tavallista negatiivisempia tunteita."
+                <div
+                  class="decorations"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="svg-inline--fa fa-circle fa-w-16 valence-1"
-                    data-icon="circle"
-                    data-prefix="fas"
-                    focusable="false"
-                    role="img"
-                    viewBox="0 0 512 512"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <span
+                    class="icon"
+                    title="Tästä viestistä on tunnistettu tavallista negatiivisempia tunteita."
                   >
-                    <path
-                      d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </span>
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-circle fa-w-16 valence-1"
+                      data-icon="circle"
+                      data-prefix="fas"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 512 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  EmojiAnnotation
+                </div>
               </div>
             </div>
           </div>
@@ -221,32 +239,37 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
                        
                     </span>
                     <span
-                      class="arousal0 valence0"
+                      class="arousal3 valence0"
                     >
                       test5
                     </span>
                   </span>
                 </div>
-                <span
-                  class="icon"
-                  title="Tästä viestistä ei ole tunnistettu tavallisesta poikkeavaa tunnesisältöä."
+                <div
+                  class="decorations"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="svg-inline--fa fa-circle fa-w-16 valence0"
-                    data-icon="circle"
-                    data-prefix="fas"
-                    focusable="false"
-                    role="img"
-                    viewBox="0 0 512 512"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <span
+                    class="icon"
+                    title="Tästä viestistä ei ole tunnistettu tavallisesta poikkeavaa tunnesisältöä."
                   >
-                    <path
-                      d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </span>
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-circle fa-w-16 valence0"
+                      data-icon="circle"
+                      data-prefix="fas"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 512 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  EmojiAnnotation
+                </div>
               </div>
             </div>
           </div>
@@ -283,32 +306,38 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
                    
                 </span>
                 <span
-                  class="arousal0 valence0"
+                  class="arousal3 valence-3"
+                  title="Tästä sanasta tunnistettiin vahvoja tunteita."
                 >
                   test3
                 </span>
               </span>
             </div>
-            <span
-              class="icon"
-              title="Tästä viestistä on tunnistettu tavallista negatiivisempia tunteita."
+            <div
+              class="decorations"
             >
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-circle fa-w-16 valence-1"
-                data-icon="circle"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="icon"
+                title="Tästä viestistä on tunnistettu tavallista negatiivisempia tunteita."
               >
-                <path
-                  d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-circle fa-w-16 valence-1"
+                  data-icon="circle"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              EmojiAnnotation
+            </div>
           </div>
         </div>
       </div>
@@ -356,32 +385,38 @@ exports[`MessageArea renders correctly with props 1`] = `
                    
                 </span>
                 <span
-                  class="arousal0 valence0"
+                  class="arousal0 valence3"
+                  title="Tästä sanasta tunnistettiin vahvoja tunteita."
                 >
                   test
                 </span>
               </span>
             </div>
-            <span
-              class="icon"
-              title="Tästä viestistä on tunnistettu tavallista positiivisempia tunteita."
+            <div
+              class="decorations"
             >
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-circle fa-w-16 valence1"
-                data-icon="circle"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="icon"
+                title="Tästä viestistä on tunnistettu tavallista positiivisempia tunteita."
               >
-                <path
-                  d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-circle fa-w-16 valence1"
+                  data-icon="circle"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              EmojiAnnotation
+            </div>
           </div>
         </div>
       </div>
@@ -420,32 +455,38 @@ exports[`MessageArea renders correctly with props 1`] = `
                    
                 </span>
                 <span
-                  class="arousal0 valence0"
+                  class="arousal3 valence3"
+                  title="Tästä sanasta tunnistettiin vahvoja tunteita."
                 >
                   test1
                 </span>
               </span>
             </div>
-            <span
-              class="icon"
-              title="Tästä viestistä on tunnistettu tavallista positiivisempia tunteita."
+            <div
+              class="decorations"
             >
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-circle fa-w-16 valence1"
-                data-icon="circle"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="icon"
+                title="Tästä viestistä on tunnistettu tavallista positiivisempia tunteita."
               >
-                <path
-                  d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-circle fa-w-16 valence1"
+                  data-icon="circle"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              EmojiAnnotation
+            </div>
           </div>
         </div>
       </div>
@@ -480,32 +521,38 @@ exports[`MessageArea renders correctly with props 1`] = `
                    
                 </span>
                 <span
-                  class="arousal0 valence0"
+                  class="arousal3 valence-3"
+                  title="Tästä sanasta tunnistettiin vahvoja tunteita."
                 >
                   test2
                 </span>
               </span>
             </div>
-            <span
-              class="icon"
-              title="Tästä viestistä on tunnistettu tavallista negatiivisempia tunteita."
+            <div
+              class="decorations"
             >
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-circle fa-w-16 valence-1"
-                data-icon="circle"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="icon"
+                title="Tästä viestistä on tunnistettu tavallista negatiivisempia tunteita."
               >
-                <path
-                  d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-circle fa-w-16 valence-1"
+                  data-icon="circle"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              EmojiAnnotation
+            </div>
           </div>
         </div>
       </div>

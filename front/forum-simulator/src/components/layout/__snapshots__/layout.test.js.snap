@@ -72,7 +72,8 @@ exports[`Layout renders correctly 1`] = `
                          
                       </span>
                       <span
-                        class="arousal0 valence0"
+                        class="arousal1 valence3"
+                        title="Tästä sanasta tunnistettiin vahvoja tunteita."
                       >
                         Hyvää
                       </span>
@@ -82,7 +83,7 @@ exports[`Layout renders correctly 1`] = `
                          
                       </span>
                       <span
-                        class="arousal0 valence0"
+                        class="arousal1 valence1"
                       >
                         uutta
                       </span>
@@ -92,7 +93,7 @@ exports[`Layout renders correctly 1`] = `
                          
                       </span>
                       <span
-                        class="arousal0 valence0"
+                        class="arousal1 valence1"
                       >
                         vuotta
                       </span>
@@ -102,7 +103,7 @@ exports[`Layout renders correctly 1`] = `
                          
                       </span>
                       <span
-                        class="arousal0 valence0"
+                        class="arousal2 valence0"
                       >
                         kaikille
                       </span>
@@ -142,7 +143,7 @@ exports[`Layout renders correctly 1`] = `
                          
                       </span>
                       <span
-                        class="arousal0 valence0"
+                        class="arousal2 valence0"
                       >
                         muille
                       </span>
@@ -163,26 +164,128 @@ exports[`Layout renders correctly 1`] = `
                       !
                     </span>
                   </div>
-                  <span
-                    class="icon"
-                    title="Tästä viestistä ei ole tunnistettu tavallisesta poikkeavaa tunnesisältöä."
+                  <div
+                    class="decorations"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="svg-inline--fa fa-circle fa-w-16 valence0"
-                      data-icon="circle"
-                      data-prefix="fas"
-                      focusable="false"
-                      role="img"
-                      viewBox="0 0 512 512"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      class="icon"
+                      title="Tästä viestistä on tunnistettu tavallista positiivisempia tunteita."
                     >
-                      <path
-                        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
+                      <svg
+                        aria-hidden="true"
+                        class="svg-inline--fa fa-circle fa-w-16 valence1"
+                        data-icon="circle"
+                        data-prefix="fas"
+                        focusable="false"
+                        role="img"
+                        viewBox="0 0 512 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                    <div
+                      class="emoji-annotation"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="svg-inline--fa fa-laugh fa-w-16 valence-emoji"
+                        data-icon="laugh"
+                        data-prefix="fas"
+                        focusable="false"
+                        role="img"
+                        viewBox="0 0 496 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm80 152c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm-160 0c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm88 272h-16c-73.4 0-134-55-142.9-126-1.2-9.5 6.3-18 15.9-18h270c9.6 0 17.1 8.4 15.9 18-8.9 71-69.5 126-142.9 126z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <div
+                        class="valence-intensity"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="svg-inline--fa fa-circle fa-w-16 valence-circle-on"
+                          data-icon="circle"
+                          data-prefix="fas"
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <svg
+                          aria-hidden="true"
+                          class="svg-inline--fa fa-circle fa-w-16 valence-circle-on"
+                          data-icon="circle"
+                          data-prefix="fas"
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <svg
+                          aria-hidden="true"
+                          class="svg-inline--fa fa-circle fa-w-16 valence-circle-on"
+                          data-icon="circle"
+                          data-prefix="fas"
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <svg
+                          aria-hidden="true"
+                          class="svg-inline--fa fa-circle fa-w-16 valence-circle-off"
+                          data-icon="circle"
+                          data-prefix="fas"
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <svg
+                          aria-hidden="true"
+                          class="svg-inline--fa fa-circle fa-w-16 valence-circle-off"
+                          data-icon="circle"
+                          data-prefix="fas"
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 512 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
