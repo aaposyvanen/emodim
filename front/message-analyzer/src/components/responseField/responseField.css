@@ -1,0 +1,30 @@
+.response-field {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    padding-left: 4px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #bdf;
+    border: 3px white solid;
+    border-radius: 5px;
+}
+
+.response-text-input {
+    width: 100%;
+    max-width: 100%;
+    min-height: 5em;
+    height: fit-content;
+    background-color: #b0d0ff;
+    border: 0;
+}
+
+.response-button {
+    background-color: #bdf;
+    margin: 5px;
+    border-color: #a8c8ff;
+}
+
+textarea:focus {
+    outline: none;
+}

@@ -1,15 +1,15 @@
 
 .thread-start {
     margin: 5px;
-    padding: 5px;
-    background-color: #202020;
-    border-bottom: 2px black solid;
+    background-color: #fff;
+    border: 3px white solid;
     font-size: 18px;
+    border-radius: 10px;
 }
 
 .thread-start .message-box {
     margin: 0;
-    border-bottom: 0;
+    border: 0;
 }
 
 .comments {

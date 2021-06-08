@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "../../test-utils";
 
 import { Thread } from "./thread";
-import threadData from "../../testData/threadData_s24_01.json";
+import threadData from "../../testData/threadData_s24_03.json";
 
 
 let mockupdateAvailableRawThreads,

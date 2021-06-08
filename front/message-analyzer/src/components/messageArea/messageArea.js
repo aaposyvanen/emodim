@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 
 import "./messageArea.css";
 import Message from "../message/message";
+import ResponseField from "../responseField/responseField";
 
 export class MessageArea extends Component {
 
@@ -14,6 +15,7 @@ export class MessageArea extends Component {
                         data={this.props.startMessage}
                     />
                 </div>
+                <ResponseField />
                 <div className="comments">
                     {
                         this.props.comments && this.props.comments.map(comment => {
