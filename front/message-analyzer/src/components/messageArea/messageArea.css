@@ -1,0 +1,18 @@
+
+.thread-start {
+    margin: 5px;
+    padding: 5px;
+    background-color: #202020;
+    border-bottom: 2px black solid;
+    font-size: 18px;
+}
+
+.thread-start .message-box {
+    margin: 0;
+    border-bottom: 0;
+}
+
+.comments {
+    margin: 5px 0px 5px 20px;
+    padding: 5px;
+}

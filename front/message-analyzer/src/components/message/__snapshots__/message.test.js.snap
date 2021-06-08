@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Message renders correctly with props 1`] = `
+<div
+  className="message-box"
+>
+  <div
+    className="metadata"
+  >
+    <div
+      className="author"
+    >
+      Author
+    </div>
+    <div
+      className="date"
+    >
+      2000-01-01 00:00:00
+    </div>
+  </div>
+  <div
+    className="message"
+  >
+    <span>
+      <span>
+         
+      </span>
+      <span>
+        test
+      </span>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Message renders correctly without props 1`] = `null`;

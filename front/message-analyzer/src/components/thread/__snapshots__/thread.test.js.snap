@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Thread renders correctly 1`] = `
+<div>
+  <div
+    class="thread"
+  >
+    <div
+      class="title"
+    >
+      Thread title
+    </div>
+    <div
+      class="message-area"
+    >
+      <div
+        class="thread-start"
+      />
+      <div
+        class="comments"
+      />
+    </div>
+  </div>
+</div>
+`;

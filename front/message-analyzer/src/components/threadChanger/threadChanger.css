@@ -1,0 +1,15 @@
+.thread-changer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+.thread-change-button {
+    margin: 0px 5px;
+    font-size: 14px;
+    background-color: #202020;
+    color: #cccccc;
+}
