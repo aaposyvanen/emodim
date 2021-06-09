@@ -133,11 +133,12 @@ def evaluate_s24_data(data, ftxt):
         else:
             tokenized.append(v.tokens(d)[0])
     wordcount, vsum, asum, dsum, JSONvalues, ev = evaluate(tokenized)
-    for element in ev:
-        with open(ftxt, 'a+', encoding='utf8') as f:
-            if len(element) > 1:
-                f.write(f"{element['original_text']}: "
-                        f"{(element['rating'][0], element['rating'][1], element['rating'][2])}\n")
+    if ftxt != '':
+        for element in ev:
+            with open(ftxt, 'a+', encoding='utf8') as f:
+                if len(element) > 1:
+                    f.write(f"{element['original_text']}: "
+                            f"{(element['rating'][0], element['rating'][1], element['rating'][2])}\n")
     
     """
     # vis.createRatings(ev['original_text'], ev['rating'])

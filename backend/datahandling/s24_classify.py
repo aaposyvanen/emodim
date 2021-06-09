@@ -5,6 +5,7 @@ import emodim as em
 import os
 from datetime import datetime
 import visualizer as vis
+import sys
 
 
 """
@@ -48,7 +49,7 @@ def s24_parser(dpath):
               #   json.dump(threadList, f, indent=2, ensure_ascii=False)
                 # json.dump(threadData, f, indent=2, ensure_ascii=False)
             r.clear()
-            break
+            sys.exit()
         # a new text block starts
         elif event == 'start' and element.tag == 'text':
             # a new thread OR COMMENT starts, save all of the new metadata in textData
@@ -98,11 +99,12 @@ def s24_parser(dpath):
                 ev, el = next(context)
             r.clear()
         elif event == 'end' and element.tag == 'text':
+            ftxt = ''
             JSONvalues = em.evaluate_s24_data(commentData['words'], ftxt)
             commentData['words'] = JSONvalues
             threadData['comments'].append(commentData.copy())
             wordlist.clear(), textData.clear(), r.clear()
 
 
-ftxt, fjson = createAnalyzationFiles()
+# ftxt, fjson = createAnalyzationFiles()
 s24_parser(path)
