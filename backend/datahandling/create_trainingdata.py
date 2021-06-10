@@ -1,8 +1,7 @@
 import PySimpleGUI as sg
 
 # path = f"D:\\Work\\Data\\s24_2017_sentences_31-05-2021_15-17-17.txt"
-# path = f"..\\data\\test_sentences_31-05-2021_15-06-45.txt"
-path = f"..\\data\\tst.txt"
+path = f"..\\data\\test_sentences_31-05-2021_15-06-45.txt"
 
 
 def dataFromS24(window):
@@ -63,4 +62,4 @@ def GUI():
 
 # dataFromFinnsentiment()
 # dataFromS24()
-GUI()
+# GUI()

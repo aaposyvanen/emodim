@@ -14,7 +14,7 @@ def dataFromS24(window):
                         window.Element('-ML_KEY-').Update(line)
                         event, values = window.Read()
                         print(event, line)
-                        if event == 'Exit':
+                        if event == 'Exit' or event == sg.WIN_CLOSED:
                             lines = contents[i:]
                             f = open(f'data\\data.txt', 'w', encoding='utf-8')
                             f.writelines(lines)
