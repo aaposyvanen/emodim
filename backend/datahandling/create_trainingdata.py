@@ -2,7 +2,7 @@ import PySimpleGUI as sg
 
 # path = f"D:\\Work\\Data\\s24_2017_sentences_31-05-2021_15-17-17.txt"
 # path = f"..\\data\\test_sentences_31-05-2021_15-06-45.txt"
-path = f'..\\data\\tst.txt'
+path = f"..\\data\\tst.txt"
 
 
 def dataFromS24(window):
@@ -17,9 +17,9 @@ def dataFromS24(window):
                         print(event, line)
                         if event == 'Exit':
                             lines = contents[i:]
-                            f = open(f'..\\data\\tst.txt', 'w', encoding='utf-8')
-                            f.writelines(lines)
-                            f.close()
+                            fw = open(path, 'w', encoding='utf-8')
+                            fw.writelines(lines)
+                            fw.close(), f.close(), neg.close(), pos.close(), neut.close()
                             return
                         if event == 'Neg':
                             neg.write(line)
