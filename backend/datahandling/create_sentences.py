@@ -3,8 +3,8 @@ from tqdm import tqdm
 from datetime import datetime
 
 hddpath = "D:\\Work\\Data\\"
-# path = f"{hddpath}s24_2001.vrt"  # this file is 3,5Gb
-path = f"{hddpath}s24_2017.vrt"  # this file is 17Gb
+path = f"{hddpath}s24_2001.vrt"  # this file is 3,5Gb
+# path = f"{hddpath}s24_2017.vrt"  # this file is 17Gb
 # path = "..\\data\\test.vrt"
 
 
