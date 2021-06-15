@@ -140,6 +140,21 @@ exports[`Layout renders correctly 1`] = `
             </div>
           </div>
           <div
+            class="response-field"
+          >
+            <textarea
+              class="response-text-input"
+              maxlength="500"
+              placeholder="Vastaa..."
+              type="text"
+            />
+            <button
+              class="response-button"
+            >
+              Lähetä
+            </button>
+          </div>
+          <div
             class="comments"
           />
         </div>
