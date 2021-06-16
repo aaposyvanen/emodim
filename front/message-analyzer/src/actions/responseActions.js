@@ -13,7 +13,7 @@ export const updateMessageText = text => ({
 });
 
 export const updateAnalysisData = analysisResults => ({
-    type: UPDATE_MESSAGE_TEXT,
+    type: UPDATE_ANALYSIS_DATA,
     payload: analysisResults
 });
 
@@ -24,16 +24,14 @@ export const sendMessageForAnalysis = () => {
         try {
             const state = getState();
             dispatch(setWaitingForAnalysis(true));
-            const res = await axios({
-                method: "post",
-                url: analysisEndpoint,
-                data: {
-                    text: state.responseReducer.responseText
-                }
+
+            const res = await axios.post(analysisEndpoint, {
+                text: state.responseReducer.responseText
             });
-            dispatch(setWaitingForAnalysis(false));
             const analysisData = parseAnalysisData(res.data);
+
             dispatch(updateAnalysisData(analysisData))
+            dispatch(setWaitingForAnalysis(false));
         } catch (error) {
             dispatch(setWaitingForAnalysis(false));
             console.log(error)

@@ -1,3 +1,5 @@
 export const parseAnalysisData = dataString => {
-    return { data: "data" };
+    const temp = dataString.replaceAll("'", "\"");
+    const data = JSON.parse(temp);
+    return data;
 }

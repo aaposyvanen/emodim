@@ -118,14 +118,14 @@ def evaluate_text(text):
      """
     # split the text into tokens
     tokens = v.tokens(text)
-    wordcount, vsum, asum, dsum, _, ev = evaluate(tokens)
+    wordcount, vsum, asum, dsum, JSONvalues, ev = evaluate(tokens)
     """
     print("Sums of per word rated emotions in the text:")
     print(f"valence:\t{vsum / wordcount:.3f}")
     print(f"arousal:\t{asum / wordcount:.3f}")
     print(f"dominance:\t{dsum / wordcount:.3f}")
     """
-    return ev, wordcount, vsum, asum, dsum
+    return JSONvalues
 
 
 def evaluate_s24_data(data, ftxt):

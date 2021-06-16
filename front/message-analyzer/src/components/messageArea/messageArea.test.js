@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from "@testing-library/react"
+import { render } from "../../test-utils";
 import { MessageArea } from "./messageArea";
 
 test("MessageArea renders correctly with props", () => {
