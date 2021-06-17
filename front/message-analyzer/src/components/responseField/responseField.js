@@ -1,19 +1,14 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {
-    updateMessageText,
-    sendMessageForAnalysis
-} from "../../actions/responseActions";
+import { updateMessageText } from "../../actions/responseActions";
 import "./responseField.css";
+import AnalysisReport from "../analysisReport/analysisReport";
 
 const ResponseField = () => {
 
     const dispatch = useDispatch()
     const handleChange = (event) => {
         dispatch(updateMessageText(event.target.value));
-    }
-    const sendResponse = () => {
-        dispatch(sendMessageForAnalysis());
     }
 
     const messageText = useSelector(state => state.responseReducer.messageText);
@@ -29,12 +24,7 @@ const ResponseField = () => {
                 value={messageText}
             >
             </textarea>
-            <button
-                className="response-button"
-                onClick={() => sendResponse()}
-            >
-                Lähetä
-            </button>
+            <AnalysisReport />
         </div>
     );
 }

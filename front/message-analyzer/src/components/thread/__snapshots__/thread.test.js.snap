@@ -25,11 +25,24 @@ exports[`Thread renders correctly 1`] = `
           placeholder="Vastaa..."
           type="text"
         />
-        <button
-          class="response-button"
+        <div
+          class="analysis-report"
         >
-          Lähetä
-        </button>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Reply
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
       </div>
       <div
         class="comments"
