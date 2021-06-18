@@ -3,9 +3,9 @@
     flex-direction: column;
     border: 3px white solid;
     border-radius: 5px;
-    /* color: white; */
     background-color: #f088f0;
     width: 40%;
+    max-width: 70ch;
     margin: 10px;
 }
 
@@ -17,5 +17,4 @@
     border-radius: 10px;
     font-size: 24px;
     font-weight: bold;
-    /* color: rgb(255, 255, 255); */
 }

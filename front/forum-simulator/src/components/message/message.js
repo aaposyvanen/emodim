@@ -59,25 +59,39 @@ const Message = ({ data, response, styleWords = true }) => {
             }
 
             let wordTooltip;
-
             if (valenceClass === -3 || valenceClass === 3) {
                 wordTooltip = "Tästä sanasta tunnistettiin vahvoja tunteita."
             } else {
                 wordTooltip = null;
             }
 
-            const styledWord =
-                <span
-                    key={index}
-                    title={wordTooltip}
-                    className={`arousal${arousalClass} valence${valenceClass}`}>
-                    {wordData.word}
-                </span>
-            const whitespace = <span> </span>
-            if (!_.includes([",", ".", "..", "...", ":", "!", "?", "\"", "'"], wordData.word)) {
-                return <span key={index} >{whitespace}{styledWord}</span>;
+            let renderedWord;
+            switch (wordData.type) {
+                case "WORD":
+                    renderedWord =
+                        <span
+                            key={index}
+                            title={wordTooltip}
+                            className={`arousal${arousalClass} valence${valenceClass}`}
+                        >
+                            {wordData.word}
+                        </span>
+                    break;
+                case "WHITESPACE":
+                    renderedWord = <span> </span>;
+                    break;
+                case "PUNCTUATION":
+                    renderedWord = <span>{wordData.word}</span>
+                    break;
+                case "UNKNOWN":
+                    if (wordData.word.endsWith("\\n")) {
+                        renderedWord = <br />;
+                    }
+                    break;
+                default:
+                    break;
             }
-            return styledWord;
+            return renderedWord;
         });
 
         const hasChildren = data.children && !_.isEmpty(data.children);

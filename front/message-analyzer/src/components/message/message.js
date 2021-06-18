@@ -14,15 +14,31 @@ const Message = ({ data, response }) => {
         const words = data.words;
         const message = _.map(words, (wordData, index) => {
 
-            const styledWord =
-                <span key={index}                   >
-                    {wordData.word}
-                </span>
-            const whitespace = <span> </span>
-            if (!_.includes([",", ".", "..", "...", ":", "!", "?", "\"", "'"], wordData.word)) {
-                return <span key={index} >{whitespace}{styledWord}</span>;
+            let renderedWord;
+            switch (wordData.type) {
+                case "WORD":
+                    renderedWord =
+                        <span
+                            key={index}
+                        >
+                            {wordData.word}
+                        </span>
+                    break;
+                case "WHITESPACE":
+                    renderedWord = <span> </span>;
+                    break;
+                case "PUNCTUATION":
+                    renderedWord = <span>{wordData.word}</span>
+                    break;
+                case "UNKNOWN":
+                    if (wordData.word.endsWith("\\n")) {
+                        renderedWord = <br />;
+                    }
+                    break;
+                default:
+                    break;
             }
-            return styledWord;
+            return renderedWord;
         });
 
         const hasChildren = data.children && !_.isEmpty(data.children);

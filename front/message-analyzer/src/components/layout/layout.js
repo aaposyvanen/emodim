@@ -7,7 +7,7 @@ import {
     updateCurrentRawThreadIndex
 } from "../../actions/rawDataActions";
 import { updateCurrentThread } from "../../actions/threadActions";
-import json from "../../testData/threadData_s24_03.json";
+import json from "../../testData/threadData_s24_04.json";
 import Thread from "../thread/thread";
 import ThreadChanger from "../threadChanger/threadChanger";
 import "./layout.css";
