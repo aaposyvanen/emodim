@@ -5,7 +5,7 @@ div .loading-icon {
     animation-timing-function: linear;
     color: black;
     font-size: 25px;
-    margin: 20px 15vw;
+    margin: 40px 15vw;
 }
 
 @keyframes rotation {
@@ -20,4 +20,39 @@ div .loading-icon {
     to {
         transform: rotate(360deg);
     }
+}
+
+.analysis-report button {
+    margin: 10px;
+    background-color: #404040;
+    color: white;
+    border: 0;
+}
+
+.MuiPaper-root.MuiDialog-paper {
+    min-width: min-content;
+    color: aqua;
+    background-color: #202020;
+}
+
+.MuiDialogTitle-root {
+    background-color: 202020;
+    color: white;
+}
+
+.MuiDialogContent-root {
+    display: flex;
+    background-color: #404040;
+    color: white;
+    justify-content: center;
+    /* min-width: fit-content; */
+}
+
+.MuiDialogActions-root {
+    background-color: #202020;
+}
+
+.MuiDialogActions-root button{
+    background-color: #404040;
+    color: white;
 }

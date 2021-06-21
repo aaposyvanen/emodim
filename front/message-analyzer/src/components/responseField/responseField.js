@@ -18,7 +18,7 @@ const ResponseField = () => {
             <textarea
                 type="text"
                 className="response-text-input"
-                placeholder="Vastaa..."
+                placeholder="Write an answer..."
                 maxLength={500}
                 onChange={(event) => handleChange(event)}
                 value={messageText}

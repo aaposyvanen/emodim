@@ -73,12 +73,12 @@ const AnalysisReport = () => {
 
     return (
         <div className="analysis-report">
-            <Button variant="outlined" color="primary" onClick={handleReplyClick}>
+            <Button onClick={handleReplyClick}>
                 Reply
             </Button>
             <Dialog onClose={handleClose} open={open}>
                 <DialogTitle onClose={handleClose}>
-                    Modal title
+                    Response Analysis
                 </DialogTitle>
                 <DialogContent dividers>
                     {

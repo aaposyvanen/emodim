@@ -2,12 +2,11 @@
     display: flex;
     flex-flow: column;
     align-items: flex-end;
-    padding-left: 4px;
+    padding: 8px 8px 8px 12px;
     margin-left: 5px;
     margin-right: 5px;
-    background-color: #bdf;
-    border: 3px white solid;
-    border-radius: 5px;
+    background-color: #303030;
+    border-radius: 10px 10px 0 0;
 }
 
 .response-text-input {
@@ -15,14 +14,14 @@
     max-width: 100%;
     min-height: 8em;
     height: fit-content;
-    background-color: #b0d0ff;
+    background-color: #202020;
+    color:  white;
     border: 0;
-}
-
-.response-button {
-    background-color: #bdf;
-    margin: 5px;
-    border-color: #a8c8ff;
+    border-bottom: 2px #0099ff solid;
+    border-radius: 5px 5px 0 0;
+    font-family: inherit;
+    font-size: 16px;
+    resize: vertical;
 }
 
 textarea:focus {
