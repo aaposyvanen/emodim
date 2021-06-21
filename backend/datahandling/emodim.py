@@ -111,18 +111,10 @@ def evaluate(data):
 
 
 def evaluate_text(text):
-    """text = "Ihana mutta hylkäyksen pelkoa aiheuttava rakkaus ja autuus tuhoaa minut täällä."
-     """
     # split the text into tokens
     tokens = v.tokens(text)
-    wordcount, vsum, asum, dsum, _, ev = evaluate(tokens)
-    """
-    print("Sums of per word rated emotions in the text:")
-    print(f"valence:\t{vsum / wordcount:.3f}")
-    print(f"arousal:\t{asum / wordcount:.3f}")
-    print(f"dominance:\t{dsum / wordcount:.3f}")
-    """
-    return ev, wordcount, vsum, asum, dsum
+    wordcount, vsum, asum, dsum, tmp, ev = evaluate(tokens)
+    return ev, wordcount, vsum, asum, dsum, tmp
 
 
 def evaluate_s24_data(data, ftxt):
