@@ -20,16 +20,7 @@ exports[`Message renders correctly with props 1`] = `
   </div>
   <div
     className="message"
-  >
-    <span>
-      <span>
-         
-      </span>
-      <span>
-        test
-      </span>
-    </span>
-  </div>
+  />
 </div>
 `;
 

@@ -6,9 +6,18 @@ exports[`ThreadChanger renders correctly 1`] = `
     class="thread-changer"
   >
     <button
-      class="thread-change-button"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text"
+      tabindex="0"
+      type="button"
     >
-      Prev
+      <span
+        class="MuiButton-label"
+      >
+        Prev
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
     </button>
     <div
       class="current-thread-label"
@@ -16,9 +25,18 @@ exports[`ThreadChanger renders correctly 1`] = `
       1
     </div>
     <button
-      class="thread-change-button"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text"
+      tabindex="0"
+      type="button"
     >
-      Next
+      <span
+        class="MuiButton-label"
+      >
+        Next
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
     </button>
   </div>
 </div>
