@@ -72,20 +72,20 @@ const Message = ({ data, response, styleWords = true }) => {
                         <span
                             key={index}
                             title={wordTooltip}
-                            className={`arousal${arousalClass} valence${valenceClass}`}
+                            className={`word arousal${arousalClass} valence${valenceClass}`}
                         >
                             {wordData.word}
                         </span>
                     break;
                 case "WHITESPACE":
-                    renderedWord = <span> </span>;
+                    renderedWord = <span className="whitespace"> </span>;
                     break;
                 case "PUNCTUATION":
-                    renderedWord = <span>{wordData.word}</span>
+                    renderedWord = <span className="punctuation">{wordData.word}</span>
                     break;
                 case "UNKNOWN":
                     if (wordData.word.endsWith("\\n")) {
-                        renderedWord = <br />;
+                        renderedWord = <div className="line-break">{"\n"}</div>;
                     }
                     break;
                 default:

@@ -12,9 +12,18 @@ exports[`Layout renders correctly 1`] = `
         class="thread-changer"
       >
         <button
-          class="thread-change-button"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text"
+          tabindex="0"
+          type="button"
         >
-          Prev
+          <span
+            class="MuiButton-label"
+          >
+            Prev
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
         </button>
         <div
           class="current-thread-label"
@@ -22,156 +31,21 @@ exports[`Layout renders correctly 1`] = `
           1
         </div>
         <button
-          class="thread-change-button"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text"
+          tabindex="0"
+          type="button"
         >
-          Next
+          <span
+            class="MuiButton-label"
+          >
+            Next
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
         </button>
       </div>
-      <div
-        class="thread"
-      >
-        <div
-          class="title"
-        >
-          Hyvää uutta vuotta kaikille Hondailijoille
-        </div>
-        <div
-          class="message-area"
-        >
-          <div
-            class="thread-start"
-          >
-            <div
-              class="message-box"
-            >
-              <div
-                class="metadata"
-              >
-                <div
-                  class="author"
-                >
-                  Honda
-                </div>
-                <div
-                  class="date"
-                >
-                  2001-01-01 01:30:00
-                </div>
-              </div>
-              <div
-                class="message"
-              >
-                <span>
-                  <span>
-                     
-                  </span>
-                  <span>
-                    Hyvää
-                  </span>
-                </span>
-                <span>
-                  <span>
-                     
-                  </span>
-                  <span>
-                    uutta
-                  </span>
-                </span>
-                <span>
-                  <span>
-                     
-                  </span>
-                  <span>
-                    vuotta
-                  </span>
-                </span>
-                <span>
-                  <span>
-                     
-                  </span>
-                  <span>
-                    kaikille
-                  </span>
-                </span>
-                <span>
-                  <span>
-                     
-                  </span>
-                  <span>
-                    Hondailijoille
-                  </span>
-                </span>
-                <span>
-                  <span>
-                     
-                  </span>
-                  <span>
-                    ja
-                  </span>
-                </span>
-                <span>
-                  <span>
-                     
-                  </span>
-                  <span>
-                    myös
-                  </span>
-                </span>
-                <span>
-                  <span>
-                     
-                  </span>
-                  <span>
-                    muille
-                  </span>
-                </span>
-                <span>
-                  <span>
-                     
-                  </span>
-                  <span>
-                    autoiluharrastajille
-                  </span>
-                </span>
-                <span>
-                  !
-                </span>
-              </div>
-            </div>
-          </div>
-          <div
-            class="response-field"
-          >
-            <textarea
-              class="response-text-input"
-              maxlength="500"
-              placeholder="Vastaa..."
-              type="text"
-            />
-            <div
-              class="analysis-report"
-            >
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary"
-                tabindex="0"
-                type="button"
-              >
-                <span
-                  class="MuiButton-label"
-                >
-                  Reply
-                </span>
-                <span
-                  class="MuiTouchRipple-root"
-                />
-              </button>
-            </div>
-          </div>
-          <div
-            class="comments"
-          />
-        </div>
-      </div>
+      Thread
     </div>
   </div>
 </div>

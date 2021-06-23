@@ -1,29 +1,33 @@
 .message-box {
     margin: 3px 0px 10px 20px;
-    padding: 3px;
-    background-color: #bdf;
-    border: 3px white solid;
-    border-radius: 10px;
-    font-size: 18px;
+    padding: 10px;
+    background-color: #202020;
+    border-radius: 10px 10px 0 0;
+    font-size: 16px;
+}
+
+.message .line-break {
+    min-height: 1ch;
 }
 
 .metadata {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    background-color: #70f040;
+    background-color: #404040;
     margin-bottom: 10px;
-    padding: 3px;
-    border-radius: 5px;
+    padding: 5px;
+    border-bottom: 2px #0099ff solid;
+    border-radius: 10px 10px 0 0;
 }
 
 .date {
     font-size: 12px;
-    color: #333;
+    color: #dddddd;
 }
 
 .response {
-    background-color: #add;
+    background-color: #303030;
+    border-left: solid 1px #0099ff;
+    border-bottom: solid 1px #0099ff;
 }
-
-

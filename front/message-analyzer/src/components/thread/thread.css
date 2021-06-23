@@ -1,9 +1,10 @@
 .thread {
     display: flex;
     flex-direction: column;
-    border: 3px white solid;
-    border-radius: 5px;
-    background-color: #f088f0;
+    border: 3px 0099ff solid;
+    border-radius: 10px;
+    color: white;
+    background-color: #404040;
     width: 40%;
     max-width: 70ch;
     margin: 10px;
@@ -12,9 +13,9 @@
 .title {
     margin: 5px;
     padding: 5px;
-    background-color: #bdf;
-    border: 2px white solid;
-    border-radius: 10px;
+    background-color: #707070;
+    border-bottom: 2px #0099ff solid;
+    border-radius: 10px 10px 0 0;
     font-size: 24px;
     font-weight: bold;
 }

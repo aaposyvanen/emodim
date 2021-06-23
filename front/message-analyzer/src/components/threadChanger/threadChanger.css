@@ -1,17 +1,16 @@
 .thread-changer {
     display: flex;
     justify-content: center;
-    margin: 5px 0 0 0;
-    padding: 4px;
+    align-items: center;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 5px;
     font-size: 20px;
-    background-color: #f088f0;
-    border-radius: 5px;
-    border: 2px white solid;
 }
 
-.thread-change-button {
-    margin: 0px 5px;
-    font-size: 14px;
-    background-color: #ff50ff;
-    border-color: #f0a0f0;
+.thread-changer button {
+    margin: 10px;
+    background-color: #404040;
+    color: white;
+    border: 0;
 }

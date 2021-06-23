@@ -22,14 +22,14 @@ exports[`Thread renders correctly 1`] = `
         <textarea
           class="response-text-input"
           maxlength="500"
-          placeholder="Vastaa..."
+          placeholder="Write an answer..."
           type="text"
         />
         <div
           class="analysis-report"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text"
             tabindex="0"
             type="button"
           >

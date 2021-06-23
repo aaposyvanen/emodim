@@ -6,7 +6,7 @@ exports[`AnalysisReport renders correctly 1`] = `
     class="analysis-report"
   >
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text"
       tabindex="0"
       type="button"
     >

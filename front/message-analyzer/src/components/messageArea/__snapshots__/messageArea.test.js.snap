@@ -27,16 +27,7 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
         </div>
         <div
           class="message"
-        >
-          <span>
-            <span>
-               
-            </span>
-            <span>
-              test1
-            </span>
-          </span>
-        </div>
+        />
       </div>
     </div>
     <div
@@ -45,14 +36,14 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
       <textarea
         class="response-text-input"
         maxlength="500"
-        placeholder="Vastaa..."
+        placeholder="Write an answer..."
         type="text"
       />
       <div
         class="analysis-report"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text"
           tabindex="0"
           type="button"
         >
@@ -89,16 +80,7 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
         </div>
         <div
           class="message"
-        >
-          <span>
-            <span>
-               
-            </span>
-            <span>
-              test2
-            </span>
-          </span>
-        </div>
+        />
         <div
           class="message-box response"
         >
@@ -118,16 +100,7 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
           </div>
           <div
             class="message"
-          >
-            <span>
-              <span>
-                 
-              </span>
-              <span>
-                test4
-              </span>
-            </span>
-          </div>
+          />
         </div>
         <div
           class="message-box response"
@@ -148,16 +121,7 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
           </div>
           <div
             class="message"
-          >
-            <span>
-              <span>
-                 
-              </span>
-              <span>
-                test5
-              </span>
-            </span>
-          </div>
+          />
         </div>
       </div>
       <div
@@ -179,16 +143,7 @@ exports[`MessageArea renders correctly with nested comments 1`] = `
         </div>
         <div
           class="message"
-        >
-          <span>
-            <span>
-               
-            </span>
-            <span>
-              test3
-            </span>
-          </span>
-        </div>
+        />
       </div>
     </div>
   </div>
@@ -222,16 +177,7 @@ exports[`MessageArea renders correctly with props 1`] = `
         </div>
         <div
           class="message"
-        >
-          <span>
-            <span>
-               
-            </span>
-            <span>
-              test
-            </span>
-          </span>
-        </div>
+        />
       </div>
     </div>
     <div
@@ -240,14 +186,14 @@ exports[`MessageArea renders correctly with props 1`] = `
       <textarea
         class="response-text-input"
         maxlength="500"
-        placeholder="Vastaa..."
+        placeholder="Write an answer..."
         type="text"
       />
       <div
         class="analysis-report"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text"
           tabindex="0"
           type="button"
         >
@@ -284,16 +230,7 @@ exports[`MessageArea renders correctly with props 1`] = `
         </div>
         <div
           class="message"
-        >
-          <span>
-            <span>
-               
-            </span>
-            <span>
-              test1
-            </span>
-          </span>
-        </div>
+        />
       </div>
       <div
         class="message-box"
@@ -314,16 +251,7 @@ exports[`MessageArea renders correctly with props 1`] = `
         </div>
         <div
           class="message"
-        >
-          <span>
-            <span>
-               
-            </span>
-            <span>
-              test2
-            </span>
-          </span>
-        </div>
+        />
       </div>
     </div>
   </div>
@@ -344,14 +272,14 @@ exports[`MessageArea renders correctly without props 1`] = `
       <textarea
         class="response-text-input"
         maxlength="500"
-        placeholder="Vastaa..."
+        placeholder="Write an answer..."
         type="text"
       />
       <div
         class="analysis-report"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text"
           tabindex="0"
           type="button"
         >

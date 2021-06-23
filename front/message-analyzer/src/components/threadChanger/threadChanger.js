@@ -1,4 +1,5 @@
 import React from "react";
+import Button from '@material-ui/core/Button';
 import "./threadChanger.css";
 
 const ThreadChanger = (props) => {
@@ -17,19 +18,13 @@ const ThreadChanger = (props) => {
 
     return (
         <div className="thread-changer">
-            <button
-                className="thread-change-button"
-                onClick={decreaseIndex}
-            >
+            <Button onClick={decreaseIndex} >
                 Prev
-            </button>
+            </Button>
             <div className="current-thread-label">{props.currentIndex + 1}</div>
-            <button
-                className="thread-change-button"
-                onClick={increaseIndex}
-            >
+            <Button onClick={increaseIndex} >
                 Next
-            </button>
+            </Button>
         </div>
     )
 }
