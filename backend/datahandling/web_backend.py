@@ -1,5 +1,6 @@
 from libvoikko import Voikko
 from flask import *  # render_template
+from flask_cors import CORS, cross_origin
 import emodim as em
 from wvlib_light import lwvlib
 
@@ -10,6 +11,7 @@ v = Voikko(u"fi", path)
 wv = lwvlib.load("D:\\Work\\skipgram_dbs\\finnish_s24_skgram.bin", 10000, 500000)
 # wv = lwvlib.load("data\\finnish_s24_skgram.bin", 10000, 500000)
 app = Flask(__name__, static_folder='')
+cors = CORS(app)
 
 
 @app.route('/')
@@ -26,5 +28,6 @@ def evaluate_word(word):  # Returns a python map with the rating data in JSON.
 
 
 @app.route('/evaluate_text/<string:text>')
+@cross_origin(origins=["http://localhost:3000"])
 def evaluate_text(text):
     return jsonify(em.evaluate_text(text))

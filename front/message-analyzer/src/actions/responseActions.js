@@ -1,6 +1,5 @@
 import axios from "axios";
 import { analysisEndpoint } from "../constants";
-import { parseAnalysisData } from "./helpers";
 
 export const UPDATE_MESSAGE_TEXT = "UPDATE_MESSAGE_TEXT";
 export const UPDATE_ANALYSIS_DATA = "UPDATE_ANALYSIS_DATA";
@@ -23,18 +22,17 @@ export const sendMessageForAnalysis = () => {
 
         try {
             const state = getState();
+            if (!state.responseReducer.responseText) {
+                throw new Error("No response to send");
+            }
+
             dispatch(setWaitingForAnalysis(true));
-
-            const res = await axios.post(analysisEndpoint, {
-                text: state.responseReducer.responseText
-            });
-            const analysisData = parseAnalysisData(res.data);
-
-            dispatch(updateAnalysisData(analysisData))
+            const res = await axios.get(`${analysisEndpoint}/evaluate_text/${state.responseReducer.responseText}`)
+            dispatch(updateAnalysisData(res.data[0]));
             dispatch(setWaitingForAnalysis(false));
         } catch (error) {
             dispatch(setWaitingForAnalysis(false));
-            console.log(error)
+            console.error(error)
         }
     }
 }

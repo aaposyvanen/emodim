@@ -3,7 +3,7 @@ div .loading-icon {
     animation-name: rotation;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    color: black;
+    color: white;
     font-size: 25px;
     margin: 40px 15vw;
 }
@@ -30,7 +30,9 @@ div .loading-icon {
 }
 
 .MuiPaper-root.MuiDialog-paper {
-    min-width: min-content;
+    min-width: 40%;
+    max-width: 60%;
+    width: fit-content;
     color: aqua;
     background-color: #202020;
 }
@@ -45,7 +47,6 @@ div .loading-icon {
     background-color: #404040;
     color: white;
     justify-content: center;
-    /* min-width: fit-content; */
 }
 
 .MuiDialogActions-root {

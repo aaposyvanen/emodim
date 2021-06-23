@@ -1,1 +1,1 @@
-export const analysisEndpoint = "http://localhost:3001";
+export const analysisEndpoint = "http://localhost:5000";
