@@ -11,7 +11,7 @@ async function analyzeText(text) {
 
 	if (response.ok) {
 		const json = await response.json();
-		visualizeInHTML(json);
+		visualizeInHTML(json[0]);
 	} else {
 		appendToResult("HTTP-Error" + response.status);
 	}
@@ -79,7 +79,6 @@ function visualizeInHTML(json) {
 
 // returns an integer that can have positive or negative values.
 function interpretValence(item) {
-	console.log(item)
 	if ('direct_valence' in item) {
 		// when there is a direct rating, it is used as reported in the source.
 		return Math.round(item.direct_valence)
