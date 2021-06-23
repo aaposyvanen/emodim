@@ -5,7 +5,7 @@
 5 = derivedSentiment
 6 = pre-annotated sentiment smiley
 7 = pre-annotated sentiment product review
-8 = number of rated words (shows 1 if 0), sums are then 0.00
+8 = number of rated words (shows 1 if no rated words), sums are then 0.00
 9 = ratings summed (valence, arousal)
 10 = text
 
