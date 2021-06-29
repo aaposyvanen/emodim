@@ -74,7 +74,6 @@ def word_eval(token):
         # print(resultString)
         if ratedSynonym is None:
             print(f"None found. (Word: {token.tokenText})")
-        # word_eval at this moment ends in this else statement most often (> 90% of the cases)
         else:
             # finding ratedSynonym makes the iteration 70 times slower
             rs = ratedSynonym
