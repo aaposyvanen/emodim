@@ -1,5 +1,6 @@
 import {
-    UPDATE_THREAD_DATA
+    UPDATE_THREAD_DATA,
+    ADD_MESSAGE_TO_CURRENT_THREAD
 } from "../actions/threadActions";
 
 const initialState = {
@@ -19,6 +20,17 @@ const threadReducer = (state = initialState, action) => {
                 ...state,
                 thread: action.payload
             };
+        case ADD_MESSAGE_TO_CURRENT_THREAD:
+            return {
+                ...state,
+                thread: {
+                    ...state.thread,
+                    comments: [
+                        action.payload,
+                        ...state.thread.comments
+                    ]
+                }
+            }
         default:
             return state;
     }
