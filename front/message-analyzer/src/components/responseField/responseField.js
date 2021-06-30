@@ -6,12 +6,12 @@ import AnalysisReport from "../analysisReport/analysisReport";
 
 const ResponseField = () => {
 
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
     const handleChange = (event) => {
         dispatch(updateMessageText(event.target.value));
-    }
+    };
 
-    const messageText = useSelector(state => state.responseReducer.messageText);
+    const responseText = useSelector(state => state.responseReducer.responseText);
 
     return (
         <div className="response-field">
@@ -21,7 +21,7 @@ const ResponseField = () => {
                 placeholder="Write an answer..."
                 maxLength={500}
                 onChange={(event) => handleChange(event)}
-                value={messageText}
+                value={responseText}
             >
             </textarea>
             <AnalysisReport />
