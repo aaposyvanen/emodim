@@ -26,14 +26,14 @@ const Message = ({ data, response }) => {
                         </span>
                     break;
                 case "WHITESPACE":
-                    renderedWord = <span className="whitespace"> </span>;
+                    renderedWord = <span key={index} className="whitespace"> </span>;
                     break;
                 case "PUNCTUATION":
-                    renderedWord = <span className="punctuation">{wordData.word}</span>
+                    renderedWord = <span key={index} className="punctuation">{wordData.word}</span>
                     break;
                 case "UNKNOWN":
                     if (wordData.word.endsWith("\\n")) {
-                        renderedWord = <div className="line-break">{"\n"}</div>;
+                        renderedWord = <div key={index} className="line-break">{"\n"}</div>;
                     }
                     break;
                 default:

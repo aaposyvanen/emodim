@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import * as dayjs from "dayjs";
+import socketIOClient from "socket.io-client";
+import { chatEndpoint } from "../../constants";
 import { useDispatch, useSelector } from "react-redux";
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -61,9 +63,24 @@ const DialogActions = withStyles((theme) => ({
 const AnalysisReport = () => {
     const dispatch = useDispatch();
     const [open, setOpen] = React.useState(false);
+    const socketRef = useRef(null)
+
     const currentThread = useSelector(state => state.threadReducer.thread);
     const analysisResults = useSelector(state => state.responseReducer.analysisResults)
     const isWaitingForAnalysis = useSelector(state => state.responseReducer.isWaitingForAnalysis);
+
+    useEffect(() => {
+        const socket = socketIOClient(chatEndpoint);
+        socketRef.current = socket;
+
+        socket.on("message", message => {
+            console.log("new message", message);
+            dispatch(addMessageToCurrentThread(message));
+        });
+
+        return () => socket.disconnect();
+    }, []);
+
     const handleClose = () => {
         setOpen(false);
     };
@@ -92,6 +109,7 @@ const AnalysisReport = () => {
         };
         dispatch(addMessageToCurrentThread(newMessage));
         dispatch(updateMessageText(""));
+        socketRef.current.emit("message", newMessage);
         handleClose();
     }
 
