@@ -22,6 +22,11 @@ div .loading-icon {
     }
 }
 
+.analysis-report {
+    display: flex;
+    align-self: flex-end;
+}
+
 .analysis-report button {
     margin: 10px;
     background-color: #404040;
@@ -33,11 +38,16 @@ div .loading-icon {
     min-width: 40%;
     max-width: 60%;
     width: fit-content;
-    color: aqua;
     background-color: #202020;
 }
 
-.MuiDialogTitle-root {
+.MuiDialogTitle-root .MuiIconButton-root {
+    color: white;
+}
+
+.MuiDialogTitle-root  {
+    display: flex;
+    justify-content: space-between;
     background-color: 202020;
     color: white;
 }

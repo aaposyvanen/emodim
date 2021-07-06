@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { updateMessageText } from "../../actions/responseActions";
 import "./responseField.css";
-import AnalysisReport from "../analysisReport/analysisReport";
 
 const ResponseField = () => {
 
@@ -22,9 +21,7 @@ const ResponseField = () => {
                 maxLength={500}
                 onChange={(event) => handleChange(event)}
                 value={responseText}
-            >
-            </textarea>
-            <AnalysisReport />
+            />
         </div>
     );
 }

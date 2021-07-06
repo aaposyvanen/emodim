@@ -1,11 +1,8 @@
 .response-field {
     display: flex;
-    flex-flow: column;
     align-items: flex-end;
-    padding: 8px 8px 8px 12px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: #303030;
+    padding: 8px 8px 0;
+    background-color: #202020;
     border-radius: 10px 10px 0 0;
 }
 
@@ -14,7 +11,7 @@
     max-width: 100%;
     min-height: 8em;
     height: fit-content;
-    background-color: #202020;
+    background-color: #404040;
     color:  white;
     border: 0;
     border-bottom: 2px #0099ff solid;
@@ -22,6 +19,10 @@
     font-family: inherit;
     font-size: 16px;
     resize: vertical;
+}
+
+::placeholder {
+    color: #e0e0e0
 }
 
 textarea:focus {

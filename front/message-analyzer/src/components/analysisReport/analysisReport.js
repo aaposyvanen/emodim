@@ -1,9 +1,8 @@
 import React, { useEffect, useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 import * as dayjs from "dayjs";
 import socketIOClient from "socket.io-client";
-import { chatEndpoint } from "../../constants";
-import { useDispatch, useSelector } from "react-redux";
-import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
@@ -15,50 +14,11 @@ import Typography from '@material-ui/core/Typography';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 
+import { chatEndpoint } from "../../constants";
 import { updateMessageText } from "../../actions/responseActions";
 import { sendMessageForAnalysis } from "../../actions/responseActions";
 import { addMessageToCurrentThread } from "../../actions/threadActions";
 import "./analysisReport.css"
-
-const styles = (theme) => ({
-    root: {
-        margin: 0,
-        padding: theme.spacing(2),
-    },
-    closeButton: {
-        position: 'absolute',
-        right: theme.spacing(1),
-        top: theme.spacing(1),
-        color: theme.palette.grey[500],
-    },
-});
-
-const DialogTitle = withStyles(styles)((props) => {
-    const { children, classes, onClose, ...other } = props;
-    return (
-        <MuiDialogTitle disableTypography className={classes.root} {...other}>
-            <Typography variant="h6">{children}</Typography>
-            {onClose ? (
-                <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
-                    <CloseIcon />
-                </IconButton>
-            ) : null}
-        </MuiDialogTitle>
-    );
-});
-
-const DialogContent = withStyles((theme) => ({
-    root: {
-        padding: theme.spacing(2),
-    },
-}))(MuiDialogContent);
-
-const DialogActions = withStyles((theme) => ({
-    root: {
-        margin: 0,
-        padding: theme.spacing(1),
-    },
-}))(MuiDialogActions);
 
 const AnalysisReport = () => {
     const dispatch = useDispatch();
@@ -74,12 +34,11 @@ const AnalysisReport = () => {
         socketRef.current = socket;
 
         socket.on("message", message => {
-            console.log("new message", message);
             dispatch(addMessageToCurrentThread(message));
         });
 
         return () => socket.disconnect();
-    }, []);
+    }, [dispatch]);
 
     const handleClose = () => {
         setOpen(false);
@@ -140,29 +99,29 @@ const AnalysisReport = () => {
             <Button onClick={handleReplyClick}>
                 Reply
             </Button>
+
             <Dialog onClose={handleClose} open={open}>
-                <DialogTitle onClose={handleClose}>
-                    Response Analysis
-                </DialogTitle>
-                <DialogContent dividers>
-                    {
-                        isWaitingForAnalysis
-                            ?
-                            <FontAwesomeIcon icon={faCircleNotch} className="loading-icon" />
-                            :
-                            <Typography gutterBottom>
-                                {JSON.stringify(analysisResults)}
-                            </Typography>
-                    }
-                </DialogContent>
-                <DialogActions>
-                    <Button autoFocus onClick={handleClose} color="primary">
-                        Cancel
-                    </Button>
+                <MuiDialogTitle disableTypography >
+                    <Typography variant="h6">Response Analysis</Typography>
+                    <IconButton aria-label="close" onClick={handleClose}>
+                        <CloseIcon />
+                    </IconButton>
+                </MuiDialogTitle>
+
+                <MuiDialogContent dividers>
+                    {isWaitingForAnalysis
+                        ? <FontAwesomeIcon icon={faCircleNotch} className="loading-icon" />
+                        : <Typography gutterBottom>{JSON.stringify(analysisResults)}</Typography>}
+                </MuiDialogContent>
+
+                <MuiDialogActions>
                     <Button autoFocus onClick={handleSend} color="primary">
                         Send
                     </Button>
-                </DialogActions>
+                    <Button autoFocus onClick={handleClose} color="primary">
+                        Cancel
+                    </Button>
+                </MuiDialogActions>
             </Dialog>
         </div>
     );
