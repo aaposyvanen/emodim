@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import "./messageArea.css";
 import Message from "../message/message";
 import ResponseField from "../responseField/responseField";
-import AnalysisReport from "../analysisReport/analysisReport";
+import ResponseAnalysisDialog from "../responseAnalysisDialog/responseAnalysisDialog";
 
 export class MessageArea extends Component {
 
@@ -18,7 +18,7 @@ export class MessageArea extends Component {
                 </div>
                 <div className="response-section">
                     <ResponseField />
-                    <AnalysisReport />
+                    <ResponseAnalysisDialog />
                 </div>
                 <div className="comments">
                     {

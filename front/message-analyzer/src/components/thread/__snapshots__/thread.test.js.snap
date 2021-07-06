@@ -17,14 +17,18 @@ exports[`Thread renders correctly 1`] = `
         class="thread-start"
       />
       <div
-        class="response-field"
+        class="response-section"
       >
-        <textarea
-          class="response-text-input"
-          maxlength="500"
-          placeholder="Write an answer..."
-          type="text"
-        />
+        <div
+          class="response-field"
+        >
+          <textarea
+            class="response-text-input"
+            maxlength="500"
+            placeholder="Write an answer..."
+            type="text"
+          />
+        </div>
         <div
           class="analysis-report"
         >

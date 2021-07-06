@@ -18,9 +18,9 @@ import { chatEndpoint } from "../../constants";
 import { updateMessageText } from "../../actions/responseActions";
 import { sendMessageForAnalysis } from "../../actions/responseActions";
 import { addMessageToCurrentThread } from "../../actions/threadActions";
-import "./analysisReport.css"
+import "./responseAnalysisDialog.css"
 
-const AnalysisReport = () => {
+const ResponseAnalysisDialog = () => {
     const dispatch = useDispatch();
     const [open, setOpen] = React.useState(false);
     const socketRef = useRef(null)
@@ -127,4 +127,4 @@ const AnalysisReport = () => {
     );
 }
 
-export default AnalysisReport;
+export default ResponseAnalysisDialog;
