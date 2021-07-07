@@ -11,6 +11,7 @@ def normalize(value, minimum, maximum):
 
 time = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
 path = "D:\\Work\\Data\\finsen-src\\FinnSentiment2020.tsv"
+parsepath = f"..\\data\\finnSentiment2020values_29-06-2021_10-50-44.txt"
 output = []
 
 
@@ -41,9 +42,9 @@ def ratingAlgorithm():
                           f"\t|\tvsum: {vsum:.2f}\t|\tvsum/wc: {vsum / wc:.2f}\t|\tasum: {asum:.2f}\t|\t" \
                           f"asum/wc: {asum / wc:.2f}\t|\tgt: {int(l[3])}\t|\ttext: {text}\n"
                 out.write(alldata)
-                if (posVwc / wc >= 0.25 and posVwc >= 2) or vsum / wc >= 0.25:
+                if (posVwc / wc >= 0.5 and posVwc >= 2) or vsum / wc >= 0.55:
                     valences.append({text: '1'})
-                elif (negVwc / wc >= 0.25 and negVwc >= 2) or vsum <= -0.2:
+                elif (negVwc / wc >= 0.5 and negVwc >= 2) or vsum <= -0.2:
                     valences.append({text: '-1'})
                 else:
                     valences.append({text: '0'})
@@ -66,9 +67,9 @@ def ratingLoop(ev):
         if 'rating' in e:
             # e['rating'][0] is valence, [1] is arousal
             if e['rating'][0] is not None and e['rating'][1]:
-                if e['rating'][0] <= -0.5:
+                if e['rating'][0] <= -0.7:
                     negVwc += 1
-                if e['rating'][0] >= 0.5:
+                if e['rating'][0] >= 0.7:
                     posVwc += 1
                 if e['rating'][1] <= -0.3:
                     lowAwc += 1
@@ -99,10 +100,10 @@ def writeFile():
                     text = l[-1].strip('\n')
                     ev, wc, vsum, asum, dsum, tmp = em.evaluate_text(text)
                     negVwc, posVwc, lowAwc, highAwc = ratingLoop(ev)
-                    if (posVwc / wc >= 0.25 and posVwc >= 2) or vsum / wc >= 0.25:
+                    if (posVwc / wc >= 0.5 and posVwc >= 2) or vsum / wc >= 0.33:
                         predV = 1
                         predVposCount += 1
-                    elif (negVwc / wc >= 0.25 and negVwc >= 2) or vsum <= -0.2:
+                    elif (negVwc / wc >= 0.5 and negVwc >= 2) or vsum <= -0.2:
                         predV = -1
                         predVnegCount += 1
                     else:
@@ -148,5 +149,49 @@ def writeFile():
                 # json.dump(output, outjson, indent=2, ensure_ascii=False)
 
 
+def parseResults():
+    positivesasneutrals, positivesasnegatives, correctpositives = 0, 0, 0
+    neutralsaspositives, neutralsasnegatives, correctneutrals = 0, 0, 0
+    negativesasneutrals, negativesaspositives, correctnegatives = 0, 0, 0
+    with open(f"..\\data\\finnSentiment2020values_{time}.txt", 'r', encoding='utf-8', buffering=1) as f:
+        lines = f.readlines()
+        for line in lines[17:-7]:
+            data = line.split("\t")
+            gt = data[-5].split()[0][1:-1]
+            pred = data[-5].split()[1][:-2]
+            if gt == '1' and pred == '1':
+                correctpositives += 1
+            if gt == '0' and pred == '0':
+                correctneutrals += 1
+            if gt == '-1' and pred == '-1':
+                correctnegatives += 1
+            if gt == '1' and pred == '0':
+                positivesasneutrals += 1
+            if gt == '1' and pred == '-1':
+                positivesasnegatives += 1
+            if gt == '0' and pred == '-1':
+                neutralsasnegatives += 1
+            if gt == '0' and pred == '1':
+                neutralsaspositives += 1
+            if gt == '-1' and pred == '0':
+                negativesasneutrals += 1
+            if gt == '-1' and pred == '1':
+                negativesaspositives += 1
+    print(f"Number of negative sentences labeled correctly: {correctnegatives}, {correctnegatives / (correctnegatives + negativesasneutrals + negativesaspositives) * 100:.2f}%\n"
+          f"Number of negative sentences labeled as neutrals: {negativesasneutrals}, {negativesasneutrals / (correctnegatives + negativesasneutrals + negativesaspositives) * 100:.2f}%\n"
+          f"Number of negative sentences labeled as positives: {negativesaspositives}, {negativesaspositives / (correctnegatives + negativesasneutrals + negativesaspositives) * 100:.2f}%\n"
+          f"Number of neutral sentences labeled correctly: {correctneutrals}, {correctneutrals / (correctneutrals + neutralsasnegatives + neutralsaspositives) * 100:.2f}%\n"
+          f"Number of neutral sentences labeled as negatives: {neutralsasnegatives}, {neutralsasnegatives / (correctneutrals + neutralsasnegatives + neutralsaspositives) * 100:.2f}%\n"
+          f"Number of neutral sentences labeled as positives: {neutralsaspositives}, {neutralsaspositives / (correctneutrals + neutralsasnegatives + neutralsaspositives) * 100:.2f}%\n"
+          f"Number of positive sentences labeled correctly: {correctpositives}, {correctpositives / (correctpositives + positivesasnegatives + positivesasneutrals) * 100:.2f}%\n"
+          f"Number of positive sentences labeled as negatives: {positivesasnegatives}, {positivesasnegatives / (correctpositives + positivesasnegatives + positivesasneutrals) * 100:.2f}%\n"
+          f"Number of positive sentences labeled as neutrals: {positivesasneutrals}, {positivesasneutrals / (correctpositives + positivesasnegatives + positivesasneutrals) * 100:.2f}%\n"
+          f"Number of overall correct predictions: {correctnegatives + correctneutrals + correctpositives}, {(correctnegatives + correctneutrals + correctpositives) / 27000 * 100:.2f}%\n"
+          f"Number of mislabeled negatives: {negativesasneutrals + negativesaspositives}\n"
+          f"Number of mislabeled neutrals: {neutralsasnegatives + neutralsaspositives}\n"
+          f"Number of mislabeled positives: {positivesasnegatives + positivesasneutrals}")
+
+
 writeFile()
-v, a = ratingAlgorithm()
+# v, a = ratingAlgorithm()
+parseResults()

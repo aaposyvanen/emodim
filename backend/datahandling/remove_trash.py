@@ -4,8 +4,11 @@ import libvoikko
 path = "Voikko"
 libvoikko.Voikko.setLibrarySearchPath(path)
 v = libvoikko.Voikko(u"fi", path)
+"""
 check = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '...', '---', ',,,', '>', '???', '!!!', ':', '_',
          "jeesus", "paavali", "jumala", "raamattu", "http", "www.", '&gt;', '"', '-', '\'', '(', ')']
+"""
+check = ["http", "www.", '>', '...', ',,,', '???', '!!!']
 
 
 def deleteTrash(trash):
@@ -20,8 +23,10 @@ def deleteTrash(trash):
             for token in tok:
                 if token.tokenTypeName == 'WORD':
                     count += 1
-            if len(tok) <= 5 or any(i in line for i in check) or count <= 3:
+            if len(tok) <= 5 or any(i in line for i in check) or count <= 2 or count >= 10:
                 continue
+            # if len(tok) <= 5 or count <= 3:
+            #    continue
             else:
                 new.append(line)
     f.close()
@@ -48,13 +53,27 @@ def untrashifySentences():
 
 def untrashifyTrainingdata():
     directory = f"..\\data\\tr\\"
-    untrashify = [f"{directory}neutralsentences.txt",
-                  f"{directory}positivesentences.txt",
-                  f"{directory}negativesentences.txt"]
+    untrashify = [#f"{directory}neutralsentences.txt",
+                  #f"{directory}positivesentences.txt",
+                  #f"{directory}negativesentences.txt",
+                  #f"{directory}neg.txt",
+                  #f"{directory}negative_valence_sentences.txt",
+                  # f"{directory}neu_fi.txt",
+                  #f"{directory}neutralsentences.txt",
+                  #f"{directory}pos.txt"
+                  #f"{directory}fi-annotated_pos.txt",
+                  #f"{directory}fi-annotated_neg.txt",
+                  #f"{directory}FinnSentiment2020_neg_05-07-2021_10-23-33.txt",
+                  #f"{directory}FinnSentiment2020_neut_05-07-2021_10-23-33.txt",
+                  #f"{directory}FinnSentiment2020_pos_05-07-2021_10-23-33.txt",
+                  f"{directory}combinedneg.txt",
+                  f"{directory}combinedneut.txt",
+                  #f"{directory}combinedpos.txt"
+                  ]
     for trash in untrashify:
         deleteTrash(trash)
 
 
-untrashifySentences()
-# untrashifyTrainingdata()
+# untrashifySentences()
+untrashifyTrainingdata()
 # deleteTrash(f"..\\data\\tr\\neutralsentences.txt")

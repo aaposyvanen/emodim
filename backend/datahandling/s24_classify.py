@@ -57,12 +57,8 @@ def s24_parser(dpath):
                 e = element.attrib
                 textData = {'comment_id': e['comment_id'], 'datetime': e['datetime'], 'author': e['author'],
                             'parent_comment_id': e['parent_comment_id'], 'quoted_comment_id': e['quoted_comment_id'],
-                            'nick_type': e['nick_type'], 'thread_id': e['thread_id'], 'title': e['title'],
-                            'msg_type': e['msg_type'], 'topic_name_leaf': e['topic_name_leaf'],
-                            'topic_name_top': e['topic_name_top'], 'topic_names': e['topic_names'],
-                            'topic_names_set': e['topic_names_set'], 'id': e['id'], 'author_v1': e['author_v1'],
-                            'author_name_type': e['author_name_type'], 'thread_start_datetime': e['thread_start_datetime'],
-                            'parent_datetime': e['parent_datetime']}
+                            'thread_id': e['thread_id'], 'msg_type': e['msg_type'], 'id': e['id']
+                            }
                 # a new thread starts
                 if element.attrib['comment_id'] == "0":
                     if fix:

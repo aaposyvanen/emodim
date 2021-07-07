@@ -2,8 +2,10 @@ import xml.etree.cElementTree as ET
 import pandas as pd
 import emodim as em
 import libvoikko
+from datetime import datetime
 
 
+time = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
 v = libvoikko.Voikko(u"fi", "Voikko")
 
 
@@ -19,17 +21,17 @@ def openFile(t):
                 createNormalizedXML(f"..\\data\\{xml}", root)
             except OSError:
                 print('Error accessing file. Check file name and path and try again. File should be located in the '
-                      'same folder as this script file.')
+                      'data folder.')
     elif t == 'excel':
         while not found:
             try:
                 excel = input('Insert the name of the file to normalize (should be written as: '
                               '"SaifMohammad_NRC_Valence_Arousal_Dominance_Lexicon.xlsx": ')
                 found = True
-                createNormalizedExel(f"data\\{excel}")
+                createNormalizedExel(f"..\\data\\{excel}")
             except OSError:
                 print('Error accessing file. Check file name and path and try again. File should be located in the '
-                      'same folder as this script file.')
+                      'data folder.')
     else:
         filetype = input('Incorrect format. Type "xml" or "excel": ')
         openFile(filetype)
@@ -64,14 +66,14 @@ def createNormalizedXML(xml, root):
 
 
 def createNormalizedExel(filename):
-    df = pd.read_excel(filename, skiprows=5)
+    df = pd.read_excel(filename, skiprows=5, sheet_name='Sheet5')
     for i, row in df.iterrows():
         df.at[i, 'Finnish-bf'] = em.find_baseform(df.at[i, 'Finnish-fi'], v)
         df.at[i, 'Valence'] = round(normalize(df.at[i, 'Valence'], 0, 1), 3)
         df.at[i, 'Arousal'] = round(normalize(df.at[i, 'Arousal'], 0, 1), 3)
         df.at[i, 'Dominance'] = round(normalize(df.at[i, 'Dominance'], 0, 1), 3)
-    df.to_excel('..\\data\\bigList_normalized.xlsx', index=False, encoding='utf-8')
-    df.to_csv('..\\data\\bigList_normalized.csv', index=False, sep=',', encoding='utf-8')
+    df.to_excel(f'..\\data\\bigList_normalized_{time}.xlsx', index=False, encoding='utf-8')
+    df.to_csv(f'..\\data\\bigList_normalized_{time}.csv', index=False, sep=',', encoding='utf-8')
 
 
 def main():
