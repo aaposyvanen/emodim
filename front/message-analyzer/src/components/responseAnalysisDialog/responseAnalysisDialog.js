@@ -14,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 
+import ResponseAnalysis from "../responseAnalysis/responseAnalysis";
 import { chatEndpoint } from "../../constants";
 import { updateMessageText } from "../../actions/responseActions";
 import { sendMessageForAnalysis } from "../../actions/responseActions";
@@ -75,21 +76,23 @@ const ResponseAnalysisDialog = () => {
     const formWordArray = (analysisData) => {
         const wordArray = [];
 
-        for (const data of analysisData) {
-            let word = {
-                word: data.original_text
+        if (Array.isArray(analysisData)) {
+            for (const data of analysisData) {
+                let word = {
+                    word: data.original_text
+                }
+                if (data.rating) {
+                    word.type = "WORD";
+                    word.valence = data.rating[0];
+                    word.arousal = data.rating[1];
+                    word.dominance = data.rating[2];
+                } else if (data.original_text === " ") {
+                    word.type = "WHITESPACE";
+                } else {
+                    word.type = "PUNCTUATION"
+                }
+                wordArray.push(word);
             }
-            if (data.rating) {
-                word.type = "WORD";
-                word.valence = data.rating[0];
-                word.arousal = data.rating[1];
-                word.dominance = data.rating[2];
-            } else if (data.original_text === " ") {
-                word.type = "WHITESPACE";
-            } else {
-                word.type = "PUNCTUATION"
-            }
-            wordArray.push(word);
         }
         return wordArray;
     }
@@ -111,15 +114,15 @@ const ResponseAnalysisDialog = () => {
                 <MuiDialogContent dividers>
                     {isWaitingForAnalysis
                         ? <FontAwesomeIcon icon={faCircleNotch} className="loading-icon" />
-                        : <Typography gutterBottom>{JSON.stringify(analysisResults)}</Typography>}
+                        : <ResponseAnalysis analysisResults={formWordArray(analysisResults)} />}
                 </MuiDialogContent>
 
                 <MuiDialogActions>
+                    <Button autoFocus onClick={handleClose} color="secondary">
+                        Cancel
+                    </Button>
                     <Button autoFocus onClick={handleSend} color="primary">
                         Send
-                    </Button>
-                    <Button autoFocus onClick={handleClose} color="primary">
-                        Cancel
                     </Button>
                 </MuiDialogActions>
             </Dialog>

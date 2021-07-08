@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnnotatedWord renders correctly with line end word 1`] = `
+<div>
+  <div
+    class="line-break"
+  >
+    
+
+  </div>
+</div>
+`;
+
+exports[`AnnotatedWord renders correctly with punctuation word 1`] = `
+<div>
+  <span
+    class="punctuation"
+  >
+    ,
+  </span>
+</div>
+`;
+
+exports[`AnnotatedWord renders correctly with regular word 1`] = `
+<div>
+  <span
+    class="word"
+  >
+    test
+  </span>
+</div>
+`;
+
+exports[`AnnotatedWord renders correctly with unknown word 1`] = `<div />`;
+
+exports[`AnnotatedWord renders correctly with whitespace word 1`] = `
+<div>
+  <span
+    class="whitespace"
+  >
+     
+  </span>
+</div>
+`;

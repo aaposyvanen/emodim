@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResponseAnalysis renders correctly 1`] = `
+<div>
+  <div
+    class="response-analysis"
+  >
+    <div />
+    <div
+      class="response-field"
+    >
+      <textarea
+        class="response-text-input"
+        maxlength="500"
+        placeholder="Write an answer..."
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+`;

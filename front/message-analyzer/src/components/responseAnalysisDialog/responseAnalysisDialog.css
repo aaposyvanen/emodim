@@ -52,11 +52,9 @@ div .loading-icon {
     color: white;
 }
 
-.MuiDialogContent-root {
-    display: flex;
+.MuiPaper-root .MuiDialogContent-root {
     background-color: #404040;
     color: white;
-    justify-content: center;
 }
 
 .MuiDialogActions-root {
@@ -64,6 +62,13 @@ div .loading-icon {
 }
 
 .MuiDialogActions-root button{
-    background-color: #404040;
     color: white;
+}
+
+.MuiDialogActions-root .MuiButton-textPrimary {
+    background-color: #0099ff;
+}
+
+.MuiDialogActions-root .MuiButton-textSecondary {
+    border: 2px solid #0099ff;
 }
