@@ -1,15 +1,15 @@
 import PySimpleGUI as sg
 
 # path = f"D:\\Work\\Data\\s24_2017_sentences_31-05-2021_15-17-17.txt"
-path = f"..\\data\\test_sentences_31-05-2021_15-06-45.txt"
+path = f"..\\..\\data\\test_sentences_31-05-2021_15-06-45.txt"
 
 
 def dataFromS24(window):
     with open(path, 'r+', encoding='utf-8') as f:
         contents = f.readlines()
-        with open(f"..\\data\\tr\\neg.txt", 'a', encoding='utf-8', buffering=1) as neg:
-            with open(f"..\\data\\tr\\pos.txt", 'a', encoding='utf-8', buffering=1) as pos:
-                with open(f"..\\data\\tr\\neut.txt", 'a', encoding='utf-8', buffering=1) as neut:
+        with open(f"..\\..\\data\\tr\\neg.txt", 'a', encoding='utf-8', buffering=1) as neg:
+            with open(f"..\\..\\data\\tr\\pos.txt", 'a', encoding='utf-8', buffering=1) as pos:
+                with open(f"..\\..\\data\\tr\\neut.txt", 'a', encoding='utf-8', buffering=1) as neut:
                     for i, line in enumerate(contents):
                         window.Element('-ML_KEY-').Update(line)
                         event, values = window.Read()
@@ -32,9 +32,9 @@ def dataFromS24(window):
 
 def dataFromFinnsentiment():
     with open("D:\\Work\\Data\\finsen-src\\FinnSentiment2020.tsv", 'r', encoding='utf-8') as f:
-        with open(f"..\\data\\tr\\negativesentences.txt", 'w', encoding='utf-8') as neg:
-            with open(f"..\\data\\tr\\positivesentences.txt", 'w', encoding='utf-8') as pos:
-                with open(f"..\\data\\tr\\neutralsentences.txt", 'w', encoding='utf-8') as neut:
+        with open(f"..\\..\\data\\tr\\negativesentences.txt", 'w', encoding='utf-8') as neg:
+            with open(f"..\\..\\data\\tr\\positivesentences.txt", 'w', encoding='utf-8') as pos:
+                with open(f"..\\..\\data\\tr\\neutralsentences.txt", 'w', encoding='utf-8') as neut:
                     lines = f.readlines()
                     for line in lines:
                         l = line.split('\t')

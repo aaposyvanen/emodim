@@ -1,26 +1,22 @@
 import xml.etree.cElementTree as ET
 from tqdm import tqdm
-import emodim as em
 from datetime import datetime
 
 
 path = "D:\\Work\\Data\\s24_2001.vrt"  # this file is 3,5Gb
 # path = "D:\\Work\\Data\\s24_2017.vrt"  # this file is 17Gb
-# path = "../data/test.vrt"
+# path = "..\\..\\data\\test.vrt"
 
 
 def createAnalyzationFiles(i):
     # time = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
-    tmp = path.replace('D:\\Work\\Data\\', "..\\data\\train\\neg\\")
+    tmp = path.replace('D:\\Work\\Data\\', "..\\..\\data\\")
     fname = f"{tmp.replace('.vrt', f'_paragraphs_{i}.txt')}"
     open(fname, 'w').close()
     return fname
 
 
 def s24_parser(dpath):
-    # 2,748,069 iterations for s24 2001 dataset, around 4-10 it/s to process (around 130 hours), has to be optimized
-    # the evaluate_s24_data function slows iteration down by over 75k it/s. word_eval function in emodim.py needs work.
-    # Could be because the data is located in HDD not SSD. Saved JSON for the 2001 set will be around 160Gb
     paragraphList = []
     # get an iterable, turn it into an iterator and get the root element
     context = ET.iterparse(dpath, events=("start", "end"))

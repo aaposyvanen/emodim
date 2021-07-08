@@ -5,10 +5,11 @@ time = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
 
 
 def parseTSV():
-    path = f"..\\data\\fi-annotated.tsv"
+    path = f"..\\..\\data\\fi-annotated.tsv"
     pos, neg = [], []
     novotes = 0
-    """classes = "anger": '1', "anticipation": '2', "disgust": '3', "fear": '4', "joy": '5', "sadness": '6', "surprise": '7', "trust": '8'"""
+    """classes = "anger": '1', "anticipation": '2', "disgust": '3', 
+    "fear": '4', "joy": '5', "sadness": '6', "surprise": '7', "trust": '8'"""
     positives = {"anticipation": '2', "joy": '5', "trust": '8'}
     negatives = {"anger": '1', "disgust": '3', "fear": '4', "sadness": '6'}
     with open(path, 'r', encoding='utf-8') as f:

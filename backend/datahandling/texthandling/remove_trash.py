@@ -1,7 +1,7 @@
 import libvoikko
 
 
-path = "Voikko"
+path = "..\\Voikko"
 libvoikko.Voikko.setLibrarySearchPath(path)
 v = libvoikko.Voikko(u"fi", path)
 """
@@ -25,8 +25,6 @@ def deleteTrash(trash):
                     count += 1
             if len(tok) <= 5 or any(i in line for i in check) or count <= 2 or count >= 10:
                 continue
-            # if len(tok) <= 5 or count <= 3:
-            #    continue
             else:
                 new.append(line)
     f.close()
@@ -37,7 +35,7 @@ def deleteTrash(trash):
 
 
 def untrashifySentences():
-    directory = "..\\data\\sentences\\"
+    directory = "..\\..\\data\\sentences\\"
     untrashify = [f"{directory}ArousalSentences.txt", f"{directory}ValenceSentences.txt",
                   f"{directory}negative_valence_sentences.txt",
                   f"{directory}positive_valence_sentences.txt", f"{directory}positive_valence_sentences2.txt",
@@ -52,13 +50,13 @@ def untrashifySentences():
 
 
 def untrashifyTrainingdata():
-    directory = f"..\\data\\tr\\"
+    directory = f"..\\..\\data\\tr\\"
     untrashify = [#f"{directory}neutralsentences.txt",
                   #f"{directory}positivesentences.txt",
                   #f"{directory}negativesentences.txt",
                   #f"{directory}neg.txt",
                   #f"{directory}negative_valence_sentences.txt",
-                  # f"{directory}neu_fi.txt",
+                  #f"{directory}neu_fi.txt",
                   #f"{directory}neutralsentences.txt",
                   #f"{directory}pos.txt"
                   #f"{directory}fi-annotated_pos.txt",
@@ -76,4 +74,3 @@ def untrashifyTrainingdata():
 
 # untrashifySentences()
 untrashifyTrainingdata()
-# deleteTrash(f"..\\data\\tr\\neutralsentences.txt")

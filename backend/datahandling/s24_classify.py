@@ -2,17 +2,16 @@ import json
 import xml.etree.cElementTree as ET
 from tqdm import tqdm
 import emodim as em
-import os
 from datetime import datetime
-import visualizer as vis
 import sys
-
 
 """
 The Suomi24 data can be classified with this script.
 """
 
 path = "D:\\Work\\Data\\s24_2001.vrt"  # this file is 3,5Gb
+
+
 # path = "D:\\Work\\Data\\s24_2017.vrt"  # this file is 17Gb
 # path = "..\\data\\test.vrt"
 
@@ -47,7 +46,7 @@ def s24_parser(dpath):
                 # threadList.append(threadData)
                 # vis.plot()
                 # with open(fjson, 'w', encoding='utf8') as f:
-                    #  json.dump(threadList, f, indent=2, ensure_ascii=False)
+                #    json.dump(threadList, f, indent=2, ensure_ascii=False)
                 json.dump(threadData, f, indent=2, ensure_ascii=False)
                 r.clear()
                 sys.exit()

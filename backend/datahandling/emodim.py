@@ -2,7 +2,6 @@ import libvoikko
 from wvlib_light import lwvlib
 from tqdm import tqdm
 import pandas as pd
-import os
 
 
 """
