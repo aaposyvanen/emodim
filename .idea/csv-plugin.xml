@@ -17,6 +17,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\backend\data\bigList_normalized_09-07-2021_13-16-54.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\backend\data\bigList_normalized_09-07-2021_13-23-16.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

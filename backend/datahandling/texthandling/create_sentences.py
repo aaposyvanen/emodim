@@ -1,17 +1,33 @@
 import xml.etree.cElementTree as ET
 from tqdm import tqdm
-from datetime import datetime
+from datetime import datetime   # for dynamic filename generation
 
-hddpath = "D:\\Work\\Data\\"
-path = f"{hddpath}s24_2001.vrt"  # this file is 3,5Gb
-# path = f"{hddpath}s24_2017.vrt"  # this file is 17Gb
-# path = "..\\..\\data\\test.vrt"
+
+"""
+With this script one can parse through the s24 corpus .vrt files and extract complete sentences. To change the file 
+to parse, just change the path variable to the correct one. 
+Should not be used unless for some reason one wants to create more sentences from the corpus data.
+
+The 'createAnalyzationFile' function either creates a new dynamically named file, or uses the template one (creates 
+the template if one does not already exists). THE CONTENTS OF THE TEMPLATE FILE ARE REMOVED IF THIS IS NOT COMMENTED 
+OUT AND THE TEMPLATE FILE ALREADY CONTAINS SENTENCES! Dynamically created textfilenames always keep the previous 
+instances of the sentence files, unlike the template file.
+
+The 's24_parser' function parses through the s24 corpus .vrt file and extracts whole sentences from the file. All 
+other data is disregarded within this script (use s24_classify.py for the metadata).
+
+"""
+
+time = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
+# path = f"D:\\Work\\Data\\s24\\s24_2001.vrt"  # this file is 3,5Gb
+# path = f"D:\\Work\\Data\\s24\\s24_2017.vrt"  # this file is 17Gb
+path = "..\\..\\data\\test.vrt"
 
 
 def createAnalyzationFile():
-    # time = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
-    fname = f"{path.replace('.vrt', f'_sentences.txt')}"
-    open(fname, 'w').close()
+    fname = f"{path.replace('.vrt', f'_sentences_{time}.txt')}"   # use for dynamic filenames
+    # fname = f"{path.replace('.vrt', f'_sentences.txt')}"
+    open(fname, 'w').close()    # by this action, the former .txt file is emptied.
     return fname
 
 

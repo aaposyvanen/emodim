@@ -1,7 +1,22 @@
 import PySimpleGUI as sg
 
-# path = f"D:\\Work\\Data\\s24_2017_sentences_31-05-2021_15-17-17.txt"
-path = f"..\\..\\data\\test_sentences_31-05-2021_15-06-45.txt"
+"""
+With this script one can classify sentences. The .txt file that is parsed must be formatted in way of: sentence\n
+so, sentence followed by a newline character. There is a GUI that pops up with buttons and the text to analyse. 
+There are four buttons - Neg, Neut, Pos, Skip and Exit. To classify a sentence, click one of these buttons. 
+Neg corresponds to a 'negative' review of the sentence, Neut corresponds to a 'neutral' review of the sentence and 
+Pos corresponds to a 'positive' review of the sentence. With Skip, one can skip labeling a sentence (rating is too 
+ambiguous and would not give good classification). The Exit button closes the application and deletes sentences from 
+the text file that got rated or skipped. Exiting the application with the X (close) button also does this functionality.
+
+The 'dataFromS24' function parses through the file containing the sentences to classify and with the GUI function 
+prompts the user to classify a sentence in some way. 
+
+The GUI function operates the PySimpleGUI Graphical User Interface.
+"""
+
+# path = f"D:\\Work\\Data\\..\\s24_2017_sentences_31-05-2021_15-17-17.txt"
+path = f"..\\..\\data\\test_sentences_09-07-2021_12-42-40.txt"
 
 
 def dataFromS24(window):
@@ -14,6 +29,8 @@ def dataFromS24(window):
                         window.Element('-ML_KEY-').Update(line)
                         event, values = window.Read()
                         print(event, line)
+                        # upon pressing exit, the sentences file is rewritten with only sentences not yet rated
+                        # (rated sentences are removed from the file, so huge sentence files might take time & memory)
                         if event == 'Exit':
                             lines = contents[i:]
                             fw = open(path, 'w', encoding='utf-8')
@@ -30,24 +47,6 @@ def dataFromS24(window):
                             pass
 
 
-def dataFromFinnsentiment():
-    with open("D:\\Work\\Data\\finsen-src\\FinnSentiment2020.tsv", 'r', encoding='utf-8') as f:
-        with open(f"..\\..\\data\\tr\\negativesentences.txt", 'w', encoding='utf-8') as neg:
-            with open(f"..\\..\\data\\tr\\positivesentences.txt", 'w', encoding='utf-8') as pos:
-                with open(f"..\\..\\data\\tr\\neutralsentences.txt", 'w', encoding='utf-8') as neut:
-                    lines = f.readlines()
-                    for line in lines:
-                        l = line.split('\t')
-                        if int(l[3]) == -1:
-                            neg.write(l[-1])
-                        elif int(l[3]) == 1:
-                            pos.write(l[-1])
-                        else:
-                            neut.write(l[-1])
-                    f.close(), neg.close(), neut.close(), pos.close()
-    return
-
-
 def GUI():
     layout = [[sg.Text("Label this text as negative (Neg), neutral (Neut), positive (Pos) or skip (Skip): ")],
               [sg.Multiline(default_text='First line\nSecond line',
@@ -60,6 +59,4 @@ def GUI():
     window.Close()
 
 
-# dataFromFinnsentiment()
-# dataFromS24()
-# GUI()
+GUI()
