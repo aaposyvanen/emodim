@@ -5,7 +5,9 @@ exports[`ResponseAnalysis renders correctly 1`] = `
   <div
     class="response-analysis"
   >
-    <div />
+    <div
+      class="original-response"
+    />
     <div
       class="response-field"
     >

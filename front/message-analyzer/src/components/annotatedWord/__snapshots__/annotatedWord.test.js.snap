@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AnnotatedWord renders correctly with high arousal 1`] = `
+<div>
+  <span
+    class="word arousal2 valence0"
+  >
+    test
+  </span>
+</div>
+`;
+
 exports[`AnnotatedWord renders correctly with line end word 1`] = `
 <div>
   <div
@@ -11,22 +21,52 @@ exports[`AnnotatedWord renders correctly with line end word 1`] = `
 </div>
 `;
 
+exports[`AnnotatedWord renders correctly with negative valence 1`] = `
+<div>
+  <span
+    class="word arousal0 valence-2"
+  >
+    test
+  </span>
+</div>
+`;
+
+exports[`AnnotatedWord renders correctly with neutral rating 1`] = `
+<div>
+  <span
+    class="word arousal0 valence0"
+  >
+    test
+  </span>
+</div>
+`;
+
+exports[`AnnotatedWord renders correctly with non-neutral rating without annotations 1`] = `
+<div>
+  <span
+    class="word arousal0 valence0"
+  >
+    test
+  </span>
+</div>
+`;
+
+exports[`AnnotatedWord renders correctly with positive valence 1`] = `
+<div>
+  <span
+    class="word arousal0 valence2"
+  >
+    test
+  </span>
+</div>
+`;
+
 exports[`AnnotatedWord renders correctly with punctuation word 1`] = `
 <div>
   <span
     class="punctuation"
   >
     ,
-  </span>
-</div>
-`;
-
-exports[`AnnotatedWord renders correctly with regular word 1`] = `
-<div>
-  <span
-    class="word"
-  >
-    test
   </span>
 </div>
 `;

@@ -7,12 +7,11 @@ import "./responseAnalysis.css";
 const ResponseAnalysis = ({ analysisResults }) => {
 
     const message = _.map(analysisResults, (wordData, index) => {
-        console.log(wordData)
-        return <AnnotatedWord key={index} wordData={wordData} />
+        return <AnnotatedWord key={index} wordData={wordData} annotations />
     });
     return (
         <div className="response-analysis">
-            <div>
+            <div className="original-response">
                 {message}
             </div>
             <ResponseField />
