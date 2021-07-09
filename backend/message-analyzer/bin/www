@@ -2,6 +2,7 @@
 const app = require('../app');
 const debug = require('debug')('message-analyzer:server');
 const http = require('http');
+const axios = require('axios');
 
 const port = normalizePort(process.env.PORT || '3010');
 app.set('port', port);
@@ -18,18 +19,28 @@ httpServer.listen(port);
 httpServer.on('error', onError);
 httpServer.on('listening', onListening);
 
-io.on("connection", socket => {
+io.on("connection", async socket => {
   console.log("new connection", socket.id);
 
-  socket.on("message", (data) => {
-    console.log("new message from", socket.id);
-    socket.broadcast.emit("message", data);
+  socket.on("message", async (data) => {
+    const { editedMessage } = data;
+    const analysisResults = await getAnalysis(editedMessage);
+    const messageToBroadcast = {
+      commentMetadata: data.metadata,
+      words: analysisResults
+    }
+    io.emit("message", messageToBroadcast);
   });
 
   socket.on("disconnect", () => {
     console.log("client disconnected", socket.id);
   });
 });
+
+async function getAnalysis(message) {
+  const res = await axios.get(`http://localhost:5000/evaluate_text/${message}`)
+  return res.data[0];
+}
 
 function normalizePort(val) {
   const port = parseInt(val, 10);

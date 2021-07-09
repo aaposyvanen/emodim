@@ -17,13 +17,7 @@
 .valence-1 {
     background-color: rgba(255, 0, 0, 0.4);
 }
-.valence-1x {
-    background-color: rgba(255, 0, 0, 0.2);
-}
 
-.valence1x {
-    background-color: rgba(0, 255, 0, 0.2);
-}
 .valence1 {
     background-color: rgba(0, 255, 0, 0.4);
 }
@@ -31,22 +25,10 @@
     background-color: rgba(0, 255, 0, 0.6);
 }
 
-.arousal0 {
-    font-size: 14px;
-    /* font-weight: 200; */
-}
-
 .arousal1 {
     font-size: 16px;
-    /* font-weight: 200 */
 }
 
 .arousal2 {
     font-size: 18px;
-    /* font-weight: 500 */
-}
-
-.arousal3 {
-    font-size: 22px;
-    /* font-weight: 700; */
 }

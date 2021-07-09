@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import _ from "lodash";
 
 import * as dayjs from "dayjs";
 import socketIOClient from "socket.io-client";
@@ -16,18 +17,21 @@ import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 
 import ResponseAnalysis from "../responseAnalysis/responseAnalysis";
 import { chatEndpoint } from "../../constants";
-import { updateMessageText } from "../../actions/responseActions";
-import { sendMessageForAnalysis } from "../../actions/responseActions";
+import {
+    sendMessageForAnalysis,
+    updateMessageText
+} from "../../actions/responseActions";
 import { addMessageToCurrentThread } from "../../actions/threadActions";
 import "./responseAnalysisDialog.css"
 
 const ResponseAnalysisDialog = () => {
     const dispatch = useDispatch();
     const [open, setOpen] = React.useState(false);
-    const socketRef = useRef(null)
+    const socketRef = useRef(null);
 
+    const analysisResults = useSelector(state => state.responseReducer.analysisResults);
+    const currentResponseText = useSelector(state => state.responseReducer.responseText);
     const currentThread = useSelector(state => state.threadReducer.thread);
-    const analysisResults = useSelector(state => state.responseReducer.analysisResults)
     const isWaitingForAnalysis = useSelector(state => state.responseReducer.isWaitingForAnalysis);
 
     useEffect(() => {
@@ -35,6 +39,7 @@ const ResponseAnalysisDialog = () => {
         socketRef.current = socket;
 
         socket.on("message", message => {
+            message.words = formWordArrayFromAnalyzedData(message.words);
             dispatch(addMessageToCurrentThread(message));
         });
 
@@ -46,13 +51,38 @@ const ResponseAnalysisDialog = () => {
     };
 
     const handleReplyClick = () => {
-        setOpen(true);
-        dispatch(sendMessageForAnalysis());
+        if (currentResponseText) {
+            setOpen(true);
+            dispatch(sendMessageForAnalysis());
+        }
     };
 
     const handleSend = () => {
+        const message = constructMessage();
+        sendMessageDataToServer(message);
+        dispatch(updateMessageText(""));
+        handleClose();
+    }
 
-        const metadata = {
+    const constructMessage = () => {
+        const words = formWordArrayFromAnalyzedData(analysisResults);
+        const metadata = constructMetadata();
+        return {
+            commentMetadata: metadata,
+            words
+        };
+    }
+
+    const sendMessageDataToServer = (constructedMessage) => {
+        const messageData = {};
+        messageData.metadata = constructedMessage.commentMetadata
+        messageData.originalMessage = constructedMessage.words;
+        messageData.editedMessage = currentResponseText;
+        socketRef.current.emit("message", messageData);
+    }
+
+    const constructMetadata = () => {
+        return {
             ...currentThread.startMessage.commentMetadata,
             author: "user",
             datetime: dayjs().format("YYYY-MM-DD HH:mm:ss").toString(),
@@ -60,20 +90,10 @@ const ResponseAnalysisDialog = () => {
             msg_type: "comment",
             parent_comment_id: currentThread.startMessage.commentMetadata.comment_id,
             parent_datetime: currentThread.startMessage.commentMetadata.datetime,
-        };
-        const words = formWordArray(analysisResults);
-
-        const newMessage = {
-            commentMetadata: metadata,
-            words
-        };
-        dispatch(addMessageToCurrentThread(newMessage));
-        dispatch(updateMessageText(""));
-        socketRef.current.emit("message", newMessage);
-        handleClose();
+        }
     }
 
-    const formWordArray = (analysisData) => {
+    const formWordArrayFromAnalyzedData = (analysisData) => {
         const wordArray = [];
 
         if (Array.isArray(analysisData)) {
@@ -114,7 +134,7 @@ const ResponseAnalysisDialog = () => {
                 <MuiDialogContent dividers>
                     {isWaitingForAnalysis
                         ? <FontAwesomeIcon icon={faCircleNotch} className="loading-icon" />
-                        : <ResponseAnalysis analysisResults={formWordArray(analysisResults)} />}
+                        : <ResponseAnalysis analysisResults={formWordArrayFromAnalyzedData(analysisResults)} />}
                 </MuiDialogContent>
 
                 <MuiDialogActions>
