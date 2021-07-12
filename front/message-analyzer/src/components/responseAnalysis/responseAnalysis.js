@@ -3,11 +3,12 @@ import _ from "lodash";
 import ResponseField from "../responseField/responseField";
 import AnnotatedWord from "../annotatedWord/annotatedWord";
 import "./responseAnalysis.css";
+import { annotations } from "../../constants";
 
 const ResponseAnalysis = ({ analysisResults }) => {
 
     const message = _.map(analysisResults, (wordData, index) => {
-        return <AnnotatedWord key={index} wordData={wordData} annotations />
+        return <AnnotatedWord key={index} wordData={wordData} annotations={annotations} />
     });
     return (
         <div className="response-analysis">

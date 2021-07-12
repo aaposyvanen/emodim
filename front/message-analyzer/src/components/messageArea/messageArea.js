@@ -3,10 +3,13 @@ import { connect } from "react-redux";
 
 import "./messageArea.css";
 import Message from "../message/message";
+import AnnotatedMessage from "../annotatedMessage/annotatedMessage";
 import ResponseField from "../responseField/responseField";
 import ResponseAnalysisDialog from "../responseAnalysisDialog/responseAnalysisDialog";
+import { annotations } from "../../constants";
 
 export class MessageArea extends Component {
+
 
     render() {
         return (
@@ -23,10 +26,17 @@ export class MessageArea extends Component {
                 <div className="comments">
                     {
                         this.props.comments && this.props.comments.map(comment => {
-                            return < Message
-                                data={comment}
-                                key={comment.commentMetadata.id}
-                            />
+                            if (annotations) {
+                                return <AnnotatedMessage
+                                    data={comment}
+                                    key={comment.commentMetadata.id}
+                                />
+                            } else {
+                                return < Message
+                                    data={comment}
+                                    key={comment.commentMetadata.id}
+                                />
+                            }
                         })
                     }
                 </div>

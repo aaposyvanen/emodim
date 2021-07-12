@@ -7,6 +7,7 @@ const AnnotatedWord = ({ wordData, annotations }) => {
     const { arousal, valence } = wordData;
     let valenceClass = 0;
     let arousalClass = 0;
+    let wordTooltip = null;
 
 
     if (annotations) {
@@ -25,6 +26,10 @@ const AnnotatedWord = ({ wordData, annotations }) => {
         } else if (arousal > 0.5) {
             arousalClass = 1;
         }
+
+        if (valenceClass === -2 || valenceClass === 2) {
+            wordTooltip = "Tästä sanasta tunnistettiin vahvoja tunteita."
+        }
     }
 
     switch (wordData.type) {
@@ -32,6 +37,7 @@ const AnnotatedWord = ({ wordData, annotations }) => {
             renderedWord =
                 <span
                     className={`word arousal${arousalClass} valence${valenceClass}`}
+                    title={wordTooltip}
                 >
                     {wordData.word}
                 </span>

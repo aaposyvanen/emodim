@@ -25,6 +25,7 @@ exports[`AnnotatedWord renders correctly with negative valence 1`] = `
 <div>
   <span
     class="word arousal0 valence-2"
+    title="Tästä sanasta tunnistettiin vahvoja tunteita."
   >
     test
   </span>
@@ -55,6 +56,7 @@ exports[`AnnotatedWord renders correctly with positive valence 1`] = `
 <div>
   <span
     class="word arousal0 valence2"
+    title="Tästä sanasta tunnistettiin vahvoja tunteita."
   >
     test
   </span>
