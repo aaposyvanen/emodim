@@ -42,7 +42,7 @@ io.on("connection", async socket => {
 });
 
 async function getAnalysis(message) {
-  const res = await axios.get(`http://localhost:5000/evaluate_text/${message}`)
+  const res = await axios.get(`http://localhost:5000/evaluateSentence/${message}`)
   return res.data[0];
 }
 
