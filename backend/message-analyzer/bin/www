@@ -1,11 +1,12 @@
 #!/usr/bin/env node
-const app = require('../app');
-const debug = require('debug')('message-analyzer:server');
-const http = require('http');
-const axios = require('axios');
+const app = require("../app");
+const debug = require("debug")("message-analyzer:server");
+const http = require("http");
+const axios = require("axios");
+const fs = require("fs")
 
-const port = normalizePort(process.env.PORT || '3010');
-app.set('port', port);
+const port = normalizePort(process.env.PORT || "3010");
+app.set("port", port);
 
 const httpServer = http.createServer(app);
 const io = require("socket.io")(httpServer, {
@@ -16,8 +17,8 @@ const io = require("socket.io")(httpServer, {
 });
 
 httpServer.listen(port);
-httpServer.on('error', onError);
-httpServer.on('listening', onListening);
+httpServer.on("error", onError);
+httpServer.on("listening", onListening);
 
 io.on("connection", async socket => {
   console.log("new connection", socket.id);
@@ -29,7 +30,10 @@ io.on("connection", async socket => {
       commentMetadata: data.metadata,
       words: analysisResults
     }
+    console.log(data);
+    console.log(analysisResults);
     io.emit("message", messageToBroadcast);
+    writeToFile(socket.id, data.originalMessage, analysisResults);
   });
 
   socket.on("disconnect", () => {
@@ -40,6 +44,14 @@ io.on("connection", async socket => {
 async function getAnalysis(message) {
   const res = await axios.get(`http://localhost:5000/evaluate_text/${message}`)
   return res.data[0];
+}
+
+function writeToFile(socketId, originalMessage, editedMessage) {
+  const stream = fs.createWriteStream("./log.txt", { flags: "a" });
+  const originalString = JSON.stringify(originalMessage);
+  const editedString = JSON.stringify(editedMessage);
+  stream.write(`id: ${socketId}\n\toriginal: ${originalString}\n\tedited: ${editedString}\n`);
+  stream.end();
 }
 
 function normalizePort(val) {
@@ -59,22 +71,22 @@ function normalizePort(val) {
 }
 
 function onError(error) {
-  if (error.syscall !== 'listen') {
+  if (error.syscall !== "listen") {
     throw error;
   }
 
-  const bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port;
+  const bind = typeof port === "string"
+    ? "Pipe " + port
+    : "Port " + port;
 
   // handle specific listen errors with friendly messages
   switch (error.code) {
-    case 'EACCES':
-      console.error(bind + ' requires elevated privileges');
+    case "EACCES":
+      console.error(bind + " requires elevated privileges");
       process.exit(1);
       break;
-    case 'EADDRINUSE':
-      console.error(bind + ' is already in use');
+    case "EADDRINUSE":
+      console.error(bind + " is already in use");
       process.exit(1);
       break;
     default:
@@ -84,8 +96,8 @@ function onError(error) {
 
 function onListening() {
   const addr = httpServer.address();
-  const bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+  const bind = typeof addr === "string"
+    ? "pipe " + addr
+    : "port " + addr.port;
+  debug("Listening on " + bind);
 }

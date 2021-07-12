@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import _ from "lodash";
 
 import * as dayjs from "dayjs";
 import socketIOClient from "socket.io-client";
