@@ -4,12 +4,12 @@ import libvoikko
 With this script one can remove sentences containing words or characters of their choosing. Sentences containing too few 
 rated words (sentences that are too short to give any valuable information) may also be removed. 
 
-The deleteTrash function takes a path to a .txt file of which one wants to remove lines. The function goes over the 
+The 'deleteTrash' function takes a path to a .txt file of which one wants to remove lines. The function goes over the 
 file line by line and removes the line if it contains an element in the "check" list. It also removes lines that contain 
 an unwanted amount of rated words. The lines that are not to be removed are added to a list and afterwards the list is 
 written onto a file.
 
-The untrashify function defines which .txt files are to be untrashified, within is a list of files that can 
+The 'untrashify' function defines which .txt files are to be untrashified, within is a list of files that can 
 be adjusted accordingly. 
 """
 

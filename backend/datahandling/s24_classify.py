@@ -13,7 +13,7 @@ path = "D:\\Work\\Data\\s24_2001.vrt"  # this file is 3,5Gb
 
 
 # path = "D:\\Work\\Data\\s24_2017.vrt"  # this file is 17Gb
-# path = "..\\data\\test.vrt"
+# path = "..\\data\\legacy\\test.vrt"
 
 
 def createAnalyzationFiles():
@@ -27,7 +27,7 @@ def createAnalyzationFiles():
 
 def s24_parser(dpath):
     # 2,748,069 iterations for s24 2001 dataset, around 4-10 it/s to process (around 130 hours), has to be optimized
-    # the evaluate_s24_data function slows iteration down by over 75k it/s. word_eval function in emodim.py needs work.
+    # the evaluateS24Data function slows iteration down by over 75k it/s. wordEval function in emodim.py needs work.
     # Could be because the data is located in HDD not SSD. Saved JSON for the 2001 set will be around 160Gb
     # threadList = []
     threadData = {'threadMetadata': {}, 'threadID': '', 'comments': []}
@@ -97,8 +97,8 @@ def s24_parser(dpath):
                     ev, el = next(context)
                 r.clear()
             elif event == 'end' and element.tag == 'text':
-                ftxt = ''
-                JSONvalues = em.evaluate_s24_data(commentData['words'], ftxt)
+                ftxt = ''   # comment out if you want to write a .txt containing ratings for each word (kinda useless)
+                JSONvalues = em.evaluateS24Data(commentData['words'], ftxt)
                 commentData['words'] = JSONvalues
                 threadData['comments'].append(commentData.copy())
                 wordlist.clear(), textData.clear(), r.clear()

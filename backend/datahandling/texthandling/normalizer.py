@@ -9,13 +9,13 @@ are formatted the same way the wordlists are.
 SHOULD NOT BE USED WITHOUT EDITING (SOME OF THE EXCELS ARE FORMATTED VERY POORLY). The usable and best version of the 
 wordlist is 'final_wordlist.xlsx', use that. 
 
-The openFile function keeps asking the user for the correct filename until it finds a suitable file to open. 
+The 'openFile' function keeps asking the user for the correct filename until it finds a suitable file to open. 
 
-The normalize function normalizes values to fit in between -1, 1 (requires the maximum and minimum values in the data).
+The 'normalize' function normalizes values to fit in between -1, 1 (requires the maximum and minimum values in the data).
 
-The createNormalizedXML function parses the given xml file and normalizes the values.
+The 'createNormalizedXML' function parses the given xml file and normalizes the values.
 
-The createNormalizedExel function parses the given excel file, normalizes the values and calculates means for duplicate 
+The 'createNormalizedExel' function parses the given excel file, normalizes the values and calculates means for duplicate 
 words. The final product is saved to a .csv and a .xlsx files.
 """
 
@@ -29,7 +29,7 @@ def openFile(t):
         while not found:
             xml = input('Insert the name of the file to normalize (should be written as: "name_of_file.xml"): ')
             try:
-                createNormalizedXML(f"..\\..\\data\\{xml}")
+                createNormalizedXML(f"..\\..\\data\\legacy\\{xml}")
                 found = True
             except OSError as e:
                 print(f"Error: {e}")
@@ -41,7 +41,7 @@ def openFile(t):
             excel = input('Insert the name of the file to normalize (should be written as: '
                           '"name_of_file.xlsx"): ')
             try:
-                createNormalizedExel(f"..\\..\\data\\{excel}")
+                createNormalizedExel(f"..\\..\\data\\xlsxs\\{excel}")
                 found = True
             except OSError:
                 print('Error accessing file. Check file name and path and try again. File should be located in the '
@@ -91,8 +91,8 @@ def createNormalizedExel(filename):
     dfn = df.groupby("Finnish-fi").mean().round(3).reset_index()
     dfn['Finnish-fi'] = dfn['Finnish-fi'].str.lower()
     dfn = dfn.sort_values('Finnish-fi')
-    dfn.to_excel("..\\..\\data\\final_wordlist.xlsx", index=False, encoding='utf-8')
-    df.to_csv(f'..\\..\\data\\bigList_normalized_{time}.csv', index=False, sep=',', encoding='utf-8')
+    dfn.to_excel("..\\..\\data\\xlsxs\\final_wordlist.xlsx", index=False, encoding='utf-8')
+    df.to_csv(f'..\\..\\data\\xlsxs\\bigList_normalized_{time}.csv', index=False, sep=',', encoding='utf-8')
     return
 
 

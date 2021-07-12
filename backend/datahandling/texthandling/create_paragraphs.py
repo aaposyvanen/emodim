@@ -21,13 +21,13 @@ other data is disregarded within this script (use s24_classify.py for the metada
 
 path = "D:\\Work\\Data\\s24\\s24_2001.vrt"  # this file is 3,5Gb
 # path = "D:\\Work\\Data\\s24\\s24_2017.vrt"  # this file is 17Gb
-# path = "..\\..\\data\\test.vrt"
+# path = "..\\..\\data\\legacy\\test.vrt"
 
 
 def createAnalyzationFiles():
     time = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
     # uncomment these next two lines to save into 'data' folder
-    # tmp = path.replace('D:\\Work\\Data\\', "..\\..\\data\\")    # used to relocate where the file is saved
+    # tmp = path.replace('D:\\Work\\Data\\', "..\\..\\data\\txts\\")    # used to relocate where the file is saved
     # fname = f"{tmp.replace('.vrt', f'_paragraphs_{time}.txt')}"
     # fname = f"{path.replace('.vrt', f'_paragraphs.txt')}"       # uncomment this to always overwrite the same file
     fname = f"{path.replace('.vrt', f'_paragraphs_{time}.txt')}"

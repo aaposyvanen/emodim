@@ -24,7 +24,7 @@ time = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
 
 
 def parseTSV():
-    path = f"..\\..\\data\\fi-annotated.tsv"
+    path = f"..\\..\\data\\legacy\\fi-annotated.tsv"
     pos, neg = [], []
     novotes = 0
     """classes = "anger": '1', "anticipation": '2', "disgust": '3', 

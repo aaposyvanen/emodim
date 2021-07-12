@@ -7,7 +7,7 @@ function analyzeClicked() {
 
 async function analyzeText(text) {
 	// Get the emotional ratings from the sever
-	const response = await fetch('/evaluate_text/' + text);
+	const response = await fetch('/evaluateSentence/' + text);
 
 	if (response.ok) {
 		const json = await response.json();

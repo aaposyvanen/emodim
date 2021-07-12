@@ -12,11 +12,11 @@ the text file that got rated or skipped. Exiting the application with the X (clo
 The 'dataFromS24' function parses through the file containing the sentences to classify and with the GUI function 
 prompts the user to classify a sentence in some way. 
 
-The GUI function operates the PySimpleGUI Graphical User Interface.
+The 'GUI' function operates the PySimpleGUI Graphical User Interface.
 """
 
 # path = f"D:\\Work\\Data\\..\\s24_2017_sentences_31-05-2021_15-17-17.txt"
-path = f"..\\..\\data\\test_sentences_09-07-2021_12-42-40.txt"
+path = f"..\\..\\data\\txts\\test_sentences_09-07-2021_12-42-40.txt"
 
 
 def dataFromS24(window):

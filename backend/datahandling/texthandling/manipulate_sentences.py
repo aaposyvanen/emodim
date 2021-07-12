@@ -6,9 +6,9 @@ With this script one can slice trainingdata (sentences) from a file and create a
 Uncomment the function calls to perform one of the actions. The slice length can be adjusted by changing the readlines 
 indexing (for example, lines = f.readlines()[:50000] takes 50k sentences and lines = f.readlines()[:100] takes 100).
 
-The sliceTrainingdata function takes a slice of a desired length of a textfile and then writes it into a new .txt file. 
+The 'sliceTrainingdata' function takes a slice of a desired length of a textfile and then writes it into a new .txt file. 
 
-The shuffleSentences function makes a shuffled copy of a .txt file and then writes it into a new .txt file.
+The 'shuffleSentences' function makes a shuffled copy of a .txt file and then writes it into a new .txt file.
 """
 
 

@@ -11,14 +11,14 @@ def normalize(value, minimum, maximum):
 
 time = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
 path = "D:\\Work\\Data\\finsen-src\\FinnSentiment2020.tsv"
-parsepath = f"..\\data\\finnSentiment2020values_29-06-2021_10-50-44.txt"
+parsepath = f"..\\data\\txts\\finnSentiment2020values_29-06-2021_10-50-44.txt"
 output = []
 
 
 def ratingAlgorithm():
     valences, arousals = [], []
     with open(path, 'r', encoding='utf-8') as f:
-        with open(f"..\\data\\alldata_{time}.txt", 'w', encoding='utf-8', buffering=1) as out:
+        with open(f"..\\data\\txts\\alldata_{time}.txt", 'w', encoding='utf-8', buffering=1) as out:
             out.write("wc = word count (number of rated words within a sentence)\n"
                       "lowAwc = low Arousal word count (number of low rated words within a sentence[-0.5 or lower])\n"
                       "highAwc = high Arousal word count (number of high rated words within a sentence[0.5 or higher])\n"
@@ -33,7 +33,7 @@ def ratingAlgorithm():
             # for line in lines:
                 l = line.split('\t')
                 text = l[-1].strip('\n')
-                ev, wc, vsum, asum, _, _ = em.evaluate_text(text)
+                ev, wc, vsum, asum, _, _ = em.evaluateText(text)
                 # word counts for high values of arousal and valence within a sentence
                 negVwc, posVwc, lowAwc, highAwc = ratingLoop(ev)
                 alldata = f"wc: {wc}\t|\tlowAwc: {lowAwc}\t|\thighAwc: {highAwc}\t|\tlowAwc / wc: {lowAwc / wc:.2f}" \
@@ -81,8 +81,8 @@ def ratingLoop(ev):
 def writeFile():
     with open(path, 'r+', encoding='utf-8') as f:
         lines = f.readlines()
-        with open(f"..\\data\\finnSentiment2020values_{time}.txt", 'w', encoding='utf-8', buffering=1) as out:
-            with open(f"..\\data\\finnSentiment2020_all_data_{time}.json", 'w', encoding='utf-8', buffering=1) as outjson:
+        with open(f"..\\data\\txts\\finnSentiment2020values_{time}.txt", 'w', encoding='utf-8', buffering=1) as out:
+            with open(f"..\\data\\jsons\\finnSentiment2020_all_data_{time}.json", 'w', encoding='utf-8', buffering=1) as outjson:
                 out.write(f"1 = sentimentA\n2 = sentimentB\n3 = sentimentC\n4 = majoritySentiment\n"
                           f"5 = derivedSentiment\n6 = pre-annotated sentiment smiley\n"
                           f"7 = pre-annotated sentiment product review\n"
@@ -94,11 +94,18 @@ def writeFile():
                           f"14 = text\n")
                 out.write(f"\n1\t|\t2\t|\t3\t|\t4\t|\t5\t|\t6\t|\t7\t|\t8\t|\t9\t\t|\t10\t|\t11\t|\t12\t\t|\t13\t\t|\t14\n")
                 out.write(250 * '=' + '\n')
+                # count = number of correctly classified sentences,
+                # predVposCount = number of 'positive' valence predicted sentences,
+                # predVnegCount = number of 'negative' valence predicted sentences,
+                # predVneutCount = number of 'neutral' valence predicted sentences,
+                # predAlowCount = number of 'low' arousal predicted sentences,
+                # predAhighCount = number of 'high' arousal predicted sentences,
+                # predAneutCount = number of 'neutral' arousal predicted sentences
                 count, predVposCount, predVnegCount, predVneutCount, predAlowCount, predAhighCount, predAneutCount = 0, 0, 0, 0, 0, 0, 0
                 for i, line in enumerate(tqdm(lines)):
                     l = line.split('\t')
                     text = l[-1].strip('\n')
-                    ev, wc, vsum, asum, dsum, tmp = em.evaluate_text(text)
+                    ev, wc, vsum, asum, dsum, tmp = em.evaluateText(text)
                     negVwc, posVwc, lowAwc, highAwc = ratingLoop(ev)
                     if (posVwc / wc >= 0.5 and posVwc >= 2) or vsum / wc >= 0.33:
                         predV = 1
@@ -118,20 +125,6 @@ def writeFile():
                     else:
                         predA = 0
                         predAneutCount += 1
-                    """
-                    if posVwc / wc >= 0.25 and posVwc >= 2:
-                        predV = 1
-                    elif negVwc / wc >= 0.25 and negVwc >= 2 or vsum <= -0.2:
-                        predV = -1
-                    else:
-                        predV = 0
-                    if highAwc / wc >= 0.25 and highAwc >= 2 or asum / wc >= 0.25:
-                        predA = 1
-                    elif lowAwc / wc >= 0.25 and lowAwc >= 2 or asum / wc <= -0.25:
-                        predA = -1
-                    else:
-                        predA = 0
-                        """
                     if predV == int(l[3]):
                         count += 1
                     out.write(f"{int(l[0])}\t|\t{int(l[1])}\t|\t{int(l[2])}\t|\t{int(l[3])}\t|\t"
@@ -153,7 +146,7 @@ def parseResults():
     positivesasneutrals, positivesasnegatives, correctpositives = 0, 0, 0
     neutralsaspositives, neutralsasnegatives, correctneutrals = 0, 0, 0
     negativesasneutrals, negativesaspositives, correctnegatives = 0, 0, 0
-    with open(f"..\\data\\finnSentiment2020values_{time}.txt", 'r', encoding='utf-8', buffering=1) as f:
+    with open(f"..\\data\\txts\\finnSentiment2020values_{time}.txt", 'r', encoding='utf-8', buffering=1) as f:
         lines = f.readlines()
         for line in lines[17:-7]:
             data = line.split("\t")

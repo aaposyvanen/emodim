@@ -21,7 +21,7 @@ other data is disregarded within this script (use s24_classify.py for the metada
 time = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
 # path = f"D:\\Work\\Data\\s24\\s24_2001.vrt"  # this file is 3,5Gb
 # path = f"D:\\Work\\Data\\s24\\s24_2017.vrt"  # this file is 17Gb
-path = "..\\..\\data\\test.vrt"
+path = "..\\..\\data\\legacy\\test.vrt"
 
 
 def createAnalyzationFile():

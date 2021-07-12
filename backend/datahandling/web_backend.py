@@ -15,19 +15,23 @@ cors = CORS(app)
 
 
 @app.route('/')
-def start_page():
+def startPage():
     # 'To ask for a rating for a word, use URL ending evaluate/<word>.'
     message = url_for("static", filename="style.css")
     return render_template('index.html', message=message)
 
 
 @app.route('/evaluate/<string:word>')
-def evaluate_word(word):  # Returns a python map with the rating data in JSON.
-    resultMap = em.word_eval(word)
+def evaluateWord(word):  # Returns a python map with the rating data in JSON.
+    resultMap = em.wordEval(word)
+    # note: jsonify sorts the dict keys alphabetically (correct values might be lost when
+    # fetching ratings if they aren't fetched by key, for example if fetched by index [0] instead of ['direct_valence'])
     return jsonify(resultMap)
 
 
-@app.route('/evaluate_text/<string:text>')
+@app.route('/evaluateSentence/<string:text>')
 @cross_origin(origins=["http://localhost:3000"])
-def evaluate_text(text):
-    return jsonify(em.evaluate_text(text))
+def evaluateSentence(text):
+    # note: jsonify sorts the dict keys alphabetically (correct values might be lost when
+    # fetching ratings if they aren't fetched by key, for example if fetched by index [0] instead of ['direct_valence'])
+    return jsonify(em.evaluateText(text))

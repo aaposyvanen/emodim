@@ -6,7 +6,7 @@ import random
 
 # path = "D:\\Work\\Data\\s24_2001_sentences_shuffled.txt"
 path = "D:\\Work\\Data\\s24_2017_sentences_shuffled.txt"
-# path = "..\\data\\test_sentences_31-05-2021_15-06-45.txt"
+# path = "..\\data\\txts\\test_sentences_31-05-2021_15-06-45.txt"
 time = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
 
 
@@ -18,7 +18,7 @@ with open(f'..\\data\\sentences\\negative_valence_sentences_{time}.txt', 'w', en
                     lines = f.readlines()
                     random.shuffle(lines)
                     for line in tqdm(lines):
-                        ev, wc, vsum, asum, _ = em.evaluate_text(line.replace('\n', ''))
+                        ev, wc, vsum, asum, _ = em.evaluateText(line.replace('\n', ''))
                         # word counts for high values of arousal and valence within a sentence
                         negVwc, posVwc, lowAwc, highAwc = 0, 0, 0, 0
                         for e in ev:
