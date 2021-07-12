@@ -28,7 +28,8 @@ export const Layout = () => {
         if (currentRawThread && currentRawThread.comments) {
             const [comments, responses] = separateResponsesFromComments(currentRawThread.comments)
             const commentsWithResponses = moveResponsesToTheirParents(comments, responses);
-            currentRawThread.comments = commentsWithResponses
+            const reverseOrderedComments = _.reverse(commentsWithResponses); // newest comments are shown first
+            currentRawThread.comments = reverseOrderedComments;
             dispatch(updateCurrentThread(currentRawThread));
         }
     }, [currentRawThread, dispatch]);

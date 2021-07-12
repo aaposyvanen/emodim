@@ -3,7 +3,10 @@ import { logger } from "redux-logger";
 import thunk from "redux-thunk";
 import createRootReducer from "./reducer"
 
-const middleware = [logger, thunk];
+const middleware = [thunk];
+if (process.env.NODE_ENV !== "production") {
+    middleware.push(logger);
+}
 
 const configureStore = () => {
     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

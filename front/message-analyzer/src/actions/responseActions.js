@@ -27,7 +27,7 @@ export const sendMessageForAnalysis = () => {
             }
 
             dispatch(setWaitingForAnalysis(true));
-            const res = await axios.get(`${analysisEndpoint}/evaluate_text/${state.responseReducer.responseText}`)
+            const res = await axios.get(`${analysisEndpoint}/evaluateSentence/${state.responseReducer.responseText}`)
             dispatch(updateAnalysisData(res.data[0]));
             dispatch(setWaitingForAnalysis(false));
         } catch (error) {

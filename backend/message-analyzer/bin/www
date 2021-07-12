@@ -42,8 +42,12 @@ io.on("connection", async socket => {
 });
 
 async function getAnalysis(message) {
-  const res = await axios.get(`http://localhost:5000/evaluateSentence/${message}`)
-  return res.data[0];
+  try {
+    const res = await axios.get(`http://localhost:5000/evaluateSentence/${message}`);
+    return res.data[0];
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 function writeToFile(socketId, originalMessage, editedMessage) {
