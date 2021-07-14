@@ -6,46 +6,38 @@ exports[`Layout renders correctly 1`] = `
     class="layout"
   >
     <div
-      class="forum-view"
+      class="user-selection"
     >
+      Select a nickname
       <div
-        class="thread-changer"
+        class="MuiFormControl-root MuiTextField-root"
       >
-        <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text"
-          tabindex="0"
-          type="button"
-        >
-          <span
-            class="MuiButton-label"
-          >
-            Prev
-          </span>
-          <span
-            class="MuiTouchRipple-root"
-          />
-        </button>
         <div
-          class="current-thread-label"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
         >
-          1
-        </div>
-        <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text"
-          tabindex="0"
-          type="button"
-        >
-          <span
-            class="MuiButton-label"
-          >
-            Next
-          </span>
-          <span
-            class="MuiTouchRipple-root"
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiInput-input"
+            type="text"
+            value=""
           />
-        </button>
+        </div>
+        
       </div>
-      Thread
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Ready
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
     </div>
   </div>
 </div>

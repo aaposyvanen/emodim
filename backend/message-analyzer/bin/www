@@ -33,7 +33,7 @@ io.on("connection", async socket => {
     console.log(data);
     console.log(analysisResults);
     io.emit("message", messageToBroadcast);
-    writeToFile(socket.id, data.originalMessage, analysisResults);
+    writeToFile(data.metadata.author, data.originalMessage, analysisResults);
   });
 
   socket.on("disconnect", () => {
@@ -50,11 +50,11 @@ async function getAnalysis(message) {
   }
 }
 
-function writeToFile(socketId, originalMessage, editedMessage) {
+function writeToFile(author, originalMessage, editedMessage) {
   const stream = fs.createWriteStream("./log.txt", { flags: "a" });
   const originalString = JSON.stringify(originalMessage);
   const editedString = JSON.stringify(editedMessage);
-  stream.write(`id: ${socketId}\n\toriginal: ${originalString}\n\tedited: ${editedString}\n`);
+  stream.write(`author: ${author}\n\toriginal: ${originalString}\n\tedited: ${editedString}\n`);
   stream.end();
 }
 

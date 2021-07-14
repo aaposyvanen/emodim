@@ -32,6 +32,7 @@ const ResponseAnalysisDialog = () => {
     const currentResponseText = useSelector(state => state.responseReducer.responseText);
     const currentThread = useSelector(state => state.threadReducer.thread);
     const isWaitingForAnalysis = useSelector(state => state.responseReducer.isWaitingForAnalysis);
+    const username = useSelector(state => state.userReducer.username);
 
     useEffect(() => {
         const socket = socketIOClient(chatEndpoint);
@@ -83,7 +84,7 @@ const ResponseAnalysisDialog = () => {
     const constructMetadata = () => {
         return {
             ...currentThread.startMessage.commentMetadata,
-            author: "user",
+            author: username,
             datetime: dayjs().format("YYYY-MM-DD HH:mm:ss").toString(),
             id: dayjs().unix().toString(),
             msg_type: "comment",

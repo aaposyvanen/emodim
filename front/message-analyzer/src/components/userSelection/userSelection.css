@@ -1,0 +1,38 @@
+.user-selection {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 22px;
+    height: 7em;
+    margin-top: 40px;
+    width: 30%;
+
+    background-color: #444;
+    border-radius: 10px 10px 0 0;
+    border: 2px solid black;
+    border-bottom: 3px solid #0099ff;
+    color: white;
+}
+
+.MuiInputBase-input.MuiInput-input {
+    margin-top: 10px;
+    height: 2em;
+    background-color: #202020;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 3px solid #0099ff;
+    color: white;
+}
+
+p.MuiFormHelperText-root {
+    color: white;
+}
+
+.MuiButtonBase-root.MuiButton-root {
+    margin: 10px;
+    background-color: #202020;
+    color: white;
+    /* border: 1px solid black; */
+    border-bottom: 2px solid #0099ff;
+}
