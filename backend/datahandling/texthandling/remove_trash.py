@@ -37,7 +37,7 @@ def deleteTrash(trash):
                     count += 1
             # check for the number of tokens within a sentence (whitespaces, words, punctuation, None or unknown) and
             # check if the sentence contains unwanted words or characters, also check for the amount of rated words
-            if len(tok) <= 5 or any(i in line for i in check) or count <= 2 or count >= 10:
+            if len(tok) <= 5 or any(i in line for i in check) or count <= 2 or count >= 20:
                 continue
             else:
                 new.append(line)
@@ -51,7 +51,8 @@ def deleteTrash(trash):
 def untrashify():
     dir = "..\\..\\data\\sentences\\"
     dir2 = f"..\\..\\data\\tr\\"
-    untrashify = [  # f"{dir}ArousalSentences.txt", f"{dir}ValenceSentences.txt",
+    untrashify = [  f"E:\\OneDrive - TUNI.fi\\Emodim\\backend\\data\\txts\\FinnSentiment2020_neut_13-07-2021_09-39-26.txt"
+                    # f"{dir}ArousalSentences.txt", f"{dir}ValenceSentences.txt",
                     # f"{dir}negative_valence_sentences.txt",
                     # f"{dir}positive_valence_sentences.txt", f"{dir}positive_valence_sentences2.txt",
                     # f"{dir}high_arousal_sentences.txt", f"{dir}high_arousal_sentences2.txt",
@@ -66,9 +67,9 @@ def untrashify():
                     # f"{dir2}fi-annotated_neg.txt", f"{dir2}FinnSentiment2020_neg_05-07-2021_10-23-33.txt",
                     # f"{dir2}FinnSentiment2020_neut_05-07-2021_10-23-33.txt",
                     # f"{dir2}FinnSentiment2020_pos_05-07-2021_10-23-33.txt",
-                    f"{dir2}combinedneg.txt",
-                    f"{dir2}combinedneut.txt",
-                    f"{dir2}combinedpos.txt"
+                    # f"{dir2}combinedneg.txt",
+                    # f"{dir2}combinedneut.txt",
+                    # f"{dir2}combinedpos.txt"
     ]
     for trash in untrashify:
         deleteTrash(trash)

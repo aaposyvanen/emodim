@@ -1,15 +1,9 @@
-from libvoikko import Voikko
 from flask import *  # render_template
 from flask_cors import CORS, cross_origin
 import emodim as em
-from wvlib_light import lwvlib
+import predict as pred
 
-path = "Voikko"
-Voikko.setLibrarySearchPath(path)
-v = Voikko(u"fi", path)
-# wv = lwvlib.load("D:\\Work\\skipgram_dbs\\finnish_4B_parsebank_skgram.bin", 10000, 500000)
-wv = lwvlib.load("D:\\Work\\skipgram_dbs\\finnish_s24_skgram.bin", 10000, 500000)
-# wv = lwvlib.load("data\\finnish_s24_skgram.bin", 10000, 500000)
+
 app = Flask(__name__, static_folder='')
 cors = CORS(app)
 
@@ -34,4 +28,10 @@ def evaluateWord(word):  # Returns a python map with the rating data in JSON.
 def evaluateSentence(text):
     # note: jsonify sorts the dict keys alphabetically (correct values might be lost when
     # fetching ratings if they aren't fetched by key, for example if fetched by index [0] instead of ['direct_valence'])
+    # print(em.evaluateText(text)[0])
     return jsonify(em.evaluateText(text))
+
+
+def predictSentence(text):
+    return jsonify(pred.makePrediction([text]))
+
