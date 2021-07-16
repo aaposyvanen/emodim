@@ -1,6 +1,7 @@
 import React from "react";
 import _ from "lodash";
 import AnnotatedWord from "../annotatedWord/annotatedWord";
+import EmojiAnnotation from "../emojiAnnotation/emojiAnnotation";
 import "./annotatedMessage.css";
 
 const AnnotatedMessage = ({ data, response }) => {
@@ -18,6 +19,29 @@ const AnnotatedMessage = ({ data, response }) => {
         });
 
         const hasChildren = data.children && !_.isEmpty(data.children);
+        let lowValenceCount = 0;
+        let highValenceCount = 0;
+        let messageValence;
+        let analysisMessage;
+
+        for (const word of data.words) {
+            if (word.valence > 0.75) {
+                highValenceCount++;
+            } else if (word.valence < -0.75) {
+                lowValenceCount++;
+            }
+        }
+
+        if (lowValenceCount / words.length > 0.05) {
+            messageValence = -1;
+            analysisMessage = "Tästä viestistä on tunnistettu negatiivisia tunteita.";
+        } else if (highValenceCount / words.length > 0.1) {
+            messageValence = 1;
+            analysisMessage = "Tästä viestistä on tunnistettu positiivisia tunteita.";
+        } else {
+            messageValence = 0;
+            analysisMessage = "Viestin tunnesisältö on neutraali.";
+        }
 
         return (
             <div className={`message-box${response ? " response" : ""}`}>
@@ -29,8 +53,16 @@ const AnnotatedMessage = ({ data, response }) => {
                         {datetime}
                     </div>
                 </div>
-                <div className="message" key={data.commentMetadata.id}>
-                    {message}
+                <div className={`analysis-message message-valence${messageValence}`}>
+                    {analysisMessage}
+                </div>
+                <div className="content">
+                    <div className="message" key={data.commentMetadata.id}>
+                        {message}
+                    </div>
+                    <EmojiAnnotation
+                        messageValence={messageValence}
+                    />
                 </div>
                 {
                     hasChildren && data.children.map(child => {

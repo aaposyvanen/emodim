@@ -15,7 +15,7 @@
     flex-flow: row;
     justify-content: space-between;
     background-color: #404040;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding: 5px;
     border-bottom: 2px #0099ff solid;
     border-radius: 10px 10px 0 0;
@@ -30,4 +30,28 @@
     background-color: #303030;
     border-left: solid 1px #0099ff;
     border-bottom: solid 1px #0099ff;
+}
+
+.message-box .content {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.analysis-message {
+    font-size: small;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.analysis-message.message-valence-1 {
+    color: rgba(255, 55, 55, 0.8);
+}
+
+.analysis-message.message-valence0 {
+
+}
+
+.analysis-message.message-valence1 {
+    color: rgba(55, 255, 55, 0.8);
 }

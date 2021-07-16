@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Layout renders correctly 1`] = `
+exports[`Layout renders correctly with no username 1`] = `
 <div>
   <div
     class="layout"
@@ -38,6 +38,57 @@ exports[`Layout renders correctly 1`] = `
           class="MuiTouchRipple-root"
         />
       </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Layout renders correctly with username 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <div
+      class="forum-view"
+    >
+      <div
+        class="thread-changer"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Prev
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+        <div
+          class="current-thread-label"
+        >
+          1
+        </div>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Next
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+      Thread
     </div>
   </div>
 </div>
