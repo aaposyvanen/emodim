@@ -1,11 +1,10 @@
+import os
 import tensorflow as tf
 import numpy as np
 import random
-import os
 
 
-# os.environ['CUDA_VISIBLE_DEVICES'] = '-1'     # uncomment to use CPU, comment to use GPU
-
+# os.environ['CUDA_VISIBLE_DEVICES'] = '-1'     # uncomment to use CPU, comment out to use GPU
 config = tf.compat.v1.ConfigProto()             # comment out to use CPU, uncomment to use GPU
 config.gpu_options.allow_growth = True          # comment out to use CPU, uncomment to use GPU
 session = tf.compat.v1.Session(config=config)   # comment out to use CPU, uncomment to use GPU
@@ -35,11 +34,11 @@ def makePrediction(inps):
     for i, (inp, label) in enumerate(zip(inps, predicted_labels)):
         values = {}
         lab = label.numpy()
-        # values['Text'] = inp
-        values["Label"] = lab
+        # values['Text'] = inp  # the full text predictions are performed for
+        values["Label"] = str(lab)
         tmp = []
         for x in predicted_scores[i]:
-            tmp.append(round(x, 4))
+            tmp.append(str(round(x, 4)))
         values['Confidences'] = tmp
         ret.append(values)
     return ret
