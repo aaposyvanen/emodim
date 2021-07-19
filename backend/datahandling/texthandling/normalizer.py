@@ -11,12 +11,12 @@ wordlist is 'final_wordlist.xlsx', use that.
 
 The 'openFile' function keeps asking the user for the correct filename until it finds a suitable file to open. 
 
-The 'normalize' function normalizes values to fit in between -1, 1 (requires the maximum and minimum values in the data).
+The 'normalize' function normalizes values to fit between -1, 1 (requires the maximum and minimum values in the data).
 
 The 'createNormalizedXML' function parses the given xml file and normalizes the values.
 
-The 'createNormalizedExel' function parses the given excel file, normalizes the values and calculates means for duplicate 
-words. The final product is saved to a .csv and a .xlsx files.
+The 'createNormalizedExel' function parses the given excel file, normalizes the values and calculates means for 
+duplicate words. The final product is saved to a .csv and a .xlsx files.
 """
 
 
