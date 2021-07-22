@@ -1,8 +1,6 @@
 from flask import *  # render_template
 from flask_cors import CORS, cross_origin
 import emodim as em
-import predict as pred
-
 
 app = Flask(__name__, static_folder='')
 cors = CORS(app)
@@ -30,8 +28,3 @@ def evaluateSentence(text):
     # fetching ratings if they aren't fetched by key, for example if fetched by index [0] instead of ['direct_valence'])
     # print(em.evaluateText(text)[0])
     return jsonify(em.evaluateText(text))
-
-
-def predictSentence(text):
-    return jsonify(pred.makePrediction([text]))
-

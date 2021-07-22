@@ -1,7 +1,7 @@
 import libvoikko
 from wvlib_light import lwvlib
-from tqdm import tqdm
 import pandas as pd
+
 
 """
 With this script one can classify words' valence, arousal or dominance values, ranging from (-1, 1). A baseform for 
