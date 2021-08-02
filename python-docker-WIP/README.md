@@ -1,10 +1,10 @@
 # Running the word classifier in Docker
 ## PLEASE NOTE, THIS IS WIP AND REQUIRES FURTHER DEVELOPMENT!!! WILL NOT WORK IN CURRENT CONDITION!!!!!
-######For this container to run, you need to have docker installed on your computer. 
-######Please follow the instructions here: [Installing Docker Desktop for Windows.](https://docs.docker.com/docker-for-windows/install/)
+###### For this container to run, you need to have docker installed on your computer. 
+###### Please follow the instructions here: [Installing Docker Desktop for Windows.](https://docs.docker.com/docker-for-windows/install/)
 
 ## Setting up
-######After making sure that the Docker service is running, please open cmd.exe from this folder (or navigate here).
+###### After making sure that the Docker service is running, please open cmd.exe from this folder (or navigate here).
 
 
 ## Build and run the Dockerfile

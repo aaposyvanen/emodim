@@ -12,10 +12,10 @@ config = tf.compat.v1.ConfigProto()             # comment out to use CPU, uncomm
 config.gpu_options.allow_growth = True          # comment out to use CPU, uncomment to use GPU
 session = tf.compat.v1.Session(config=config)   # comment out to use CPU, uncomment to use GPU
 
-modelpath = f"..\\data\\others\\rnn_15-07-2021_12-31-46"
+modelpath = f"..\\data\\others\\rnn_15-07-2021_12-31-46"    # testdata to visualize predictions
 model = tf.keras.models.load_model(modelpath)
 model.summary()
-testpath = f"E:\\OneDrive - TUNI.fi\\Emodim\\backend\\data\\txts\\test_paragraphs_01-06-2021_15-31-18.txt"
+testpath = f"..\\data\\txts\\test_paragraphs_01-06-2021_15-31-18.txt"
 
 
 def test(path):

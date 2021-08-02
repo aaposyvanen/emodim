@@ -1,13 +1,12 @@
 # Running the sentence Classifier on Docker
-######For this model to run, you need to have docker installed on your computer. 
-######Please follow the instructions here: [Installing Docker Desktop for Windows.](https://docs.docker.com/docker-for-windows/install/)
+###### For this model to run, you need to have docker installed on your computer. 
+###### Please follow the instructions here: [Installing Docker Desktop for Windows.](https://docs.docker.com/docker-for-windows/install/)
 
 ## Setting up
-######After making sure that the Docker service is running, please open cmd.exe and navigate into the /classifier folder in the 
-######cloned [repository](https://www.github.com/aaposyvanen/emodim). The folder contains the pre-trained RNN-model for sentiment classifying. 
+###### After making sure that the Docker service is running, please open cmd.exe and navigate into the /classifier folder in the cloned [repository](https://www.github.com/aaposyvanen/emodim). The folder contains the pre-trained RNN-model for sentiment classifying. 
 
 ## Serving the model
-######Fetch the latest version of the TensorFlow serving image running the following command in cmd: 
+###### Fetch the latest version of the TensorFlow serving image running the following command in cmd: 
 ```
 docker pull tensorflow/serving
 ```
