@@ -6,6 +6,7 @@ import random
 """
 REDUNDANT PREDCITING SCRIPT IF DOCKER CONTAINER IS USED TO PREDICT
 """
+
 # os.environ['CUDA_VISIBLE_DEVICES'] = '-1'     # uncomment to use CPU, comment out to use GPU
 config = tf.compat.v1.ConfigProto()             # comment out to use CPU, uncomment to use GPU
 config.gpu_options.allow_growth = True          # comment out to use CPU, uncomment to use GPU

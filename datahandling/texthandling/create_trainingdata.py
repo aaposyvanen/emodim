@@ -31,7 +31,7 @@ def dataFromS24(window):
                         print(event, line)
                         # upon pressing exit, the sentences file is rewritten with only sentences not yet rated
                         # (rated sentences are removed from the file, so huge sentence files might take time & memory)
-                        if event == 'Exit':
+                        if event == 'Exit' or event == sg.WIN_CLOSED:
                             lines = contents[i:]
                             fw = open(path, 'w', encoding='utf-8')
                             fw.writelines(lines)
@@ -57,6 +57,5 @@ def GUI():
     window = sg.Window('My Application', layout, size=(640, 320), finalize=True)
     dataFromS24(window)
     window.Close()
-
 
 GUI()

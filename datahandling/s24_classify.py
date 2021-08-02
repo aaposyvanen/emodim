@@ -6,30 +6,41 @@ from datetime import datetime
 import sys
 
 """
-The Suomi24 data can be classified with this script.
+The Suomi24 data can be classified with this script. Somewhat redundant after discovering the script by Sampo Pyysalo: 
+https://github.com/spyysalo/suomi24-corpus/blob/master/convert_vrt.py
+
+Can still be used to extract .json data for the forum-simulator front-end in the Emodim project.
+The 's24_parser' script parses through the suomi24 .vrt corpus file, extracts relevant metadata and comments. Since the 
+.vrt architecture is very similiar to a .xml file, it can be parsed with xml itertools. Though, A ROOT ELEMENT MUST BE 
+ADDED TO THE .vrt FILE PRIOR TO PARSING!! So, the block which is to be parsed through, must be wrapped with 
+    <root>
+    X amount of threads
+    </root>
+elements. 
+
+The .json file is built in to the 'threadData' dict, which is dumped into .json after executing the script. 
+NOTE: If the code doesn't exit via the 'root' exit condition, the structure of the .json is compromised and must be 
+adjusted by hand (if, for example, parsing through the 17Gb .vrt and the script is terminated). If a </root> is 
+added in to the correct spot in the .vrt and the script is let finish, there .json is the correct structure. The 
+</root> is to be added after the last </text> element of the last comment of a thread to get the threads before.
 """
 
-path = "D:\\Work\\Data\\s24_2001.vrt"  # this file is 3,5Gb
-
-
+# path = "D:\\Work\\Data\\s24_2001.vrt"  # this file is 3,5Gb
 # path = "D:\\Work\\Data\\s24_2017.vrt"  # this file is 17Gb
-# path = "..\\data\\legacy\\test.vrt"
+path = "..\\data\\others\\test.vrt"
 
 
 def createAnalyzationFiles():
+    fname = ''
     time = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
-    fname = f"{path.replace('.vrt', f'_classified_{time}.txt')}"
+    # fname = f"{path.replace('.vrt', f'_classified_{time}.txt')}"  # uncomment if ratings for words is wanted in a .txt
     tname = f"{path.replace('.vrt', f'_threadData_{time}.json')}"
-    open(fname, 'w').close()
+    # open(fname, 'w').close()  # uncomment if ratings for words is wanted in a .txt
     open(tname, 'w').close()
     return fname, tname
 
 
 def s24_parser(dpath):
-    # 2,748,069 iterations for s24 2001 dataset, around 4-10 it/s to process (around 130 hours), has to be optimized
-    # the evaluateS24Data function slows iteration down by over 75k it/s. wordEval function in emodim.py needs work.
-    # Could be because the data is located in HDD not SSD. Saved JSON for the 2001 set will be around 160Gb
-    # threadList = []
     threadData = {'threadMetadata': {}, 'threadID': '', 'comments': []}
     commentData = {'commentMetadata': {}, 'words': []}
     textData = {}
@@ -41,26 +52,21 @@ def s24_parser(dpath):
     event, r = next(context)
     fix = False
     with open(fjson, 'a', encoding='utf8') as f:
-        for event, element in tqdm(context):
-            if event == 'end' and element.tag == 'root':
-                # threadList.append(threadData)
-                # vis.plot()
-                # with open(fjson, 'w', encoding='utf8') as f:
-                #    json.dump(threadList, f, indent=2, ensure_ascii=False)
+        f.write('[\n')
+        for event, element in tqdm(context):    # parse the .vrt file
+            if event == 'end' and element.tag == 'root':    # end element reached
                 json.dump(threadData, f, indent=2, ensure_ascii=False)
+                f.write('\n]')
                 r.clear()
-                sys.exit()
-            # a new text block starts
-            elif event == 'start' and element.tag == 'text':
+            elif event == 'start' and element.tag == 'text':    # a new text block starts
                 # a new thread OR COMMENT starts, save all of the new metadata in textData
                 e = element.attrib
                 textData = {'comment_id': e['comment_id'], 'datetime': e['datetime'], 'author': e['author'],
                             'parent_comment_id': e['parent_comment_id'], 'quoted_comment_id': e['quoted_comment_id'],
                             'thread_id': e['thread_id'], 'msg_type': e['msg_type'], 'id': e['id']
                             }
-                # a new thread starts
-                if element.attrib['comment_id'] == "0":
-                    if fix:
+                if element.attrib['comment_id'] == "0":  # a new thread starts
+                    if fix:     # this condition is needed to add the threads in the correct order
                         # threadList.append(threadData)
                         json.dump(threadData, f, indent=2, ensure_ascii=False)
                         f.write(f',\n')
@@ -97,7 +103,7 @@ def s24_parser(dpath):
                     ev, el = next(context)
                 r.clear()
             elif event == 'end' and element.tag == 'text':
-                ftxt = ''   # comment out if you want to write a .txt containing ratings for each word (kinda useless)
+                # ftxt = ''   # uncomment if you want to write a .txt containing ratings for each word (kind of useless)
                 JSONvalues = em.evaluateS24Data(commentData['words'], ftxt)
                 commentData['words'] = JSONvalues
                 threadData['comments'].append(commentData.copy())
@@ -106,3 +112,4 @@ def s24_parser(dpath):
 
 ftxt, fjson = createAnalyzationFiles()
 s24_parser(path)
+sys.exit()

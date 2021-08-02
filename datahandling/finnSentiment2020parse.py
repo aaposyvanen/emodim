@@ -4,6 +4,11 @@ import json
 from datetime import datetime
 
 
+"""
+REDUNDANT PREDCITING SCRIPT IF DOCKER CONTAINER IS USED TO PREDICT
+"""
+
+
 def normalize(value, minimum, maximum):
     normalized = 2 * ((value - minimum) / (maximum - minimum)) - 1
     return normalized

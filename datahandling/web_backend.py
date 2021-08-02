@@ -2,6 +2,11 @@ from flask import *  # render_template
 from flask_cors import CORS, cross_origin
 import emodim as em
 
+
+"""
+This app is the front for the Emodim word classifier demo and is used for the word-based evaluation in the front-end.
+"""
+
 app = Flask(__name__, static_folder='')
 cors = CORS(app)
 
