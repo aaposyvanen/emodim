@@ -8,7 +8,7 @@ Frontend components can be found in [this repo](https://github.com/JokkeT/emodim
 
 If the scripts in 'datahandling' or the RNN-model training script in 'classifier' are to be run, a development environment can be set up in the following way:
 
-### Using a Anaconda environment
+### Using an Anaconda environment
 Anaconda can be installed by following [this guide](https://docs.anaconda.com/anaconda/install/windows/). After Anaconda is installed, an environment can be set up in the following way:
 ```
 conda create -n myenv python=3.8
@@ -21,7 +21,7 @@ After creating the environment, open cmd.exe and navigate in the folder containi
 ```
 pip install -r requirements.txt
 ```
-If the scripts dealin with word-based annotation, the finnish_s24_skgram.bin parsebank file(s) must be downloaded. These files are quite large (6Gb), therefore not in the github repository. The files can be downloaded from
+If the scripts dealing with word-based annotation, the finnish_s24_skgram.bin parsebank file(s) must be downloaded. These files are quite large (6Gb), therefore not in the github repository. The files can be downloaded from
 http://dl.turkunlp.org/finnish-embeddings/.
 
 Another large file used in this project is the Suomi24-corpus, which contains all threads posted in the Suomi24 forum in 2001-2017. The corpus can be downloaded from [here](https://metashare.csc.fi/repository/browse/the-suomi24-corpus-2001-2017-vrt-version-11/10d23b2a522911eaae85005056be118e1399c95f81c24248a0b11a6953398218/).
@@ -43,7 +43,13 @@ jupyter-lab
 which will open a browser with a jupyter server running.
 ## Structure
 
-The 'datahandling' folder contains scripts and apps to manipulate the s24-data. Most of the scripts to extract or modify the .vrt, .xlsx, .csv or .tsv files and should only be used if new data needs to be acquired from the corpus (or other text files in 'data' folder). The 'build' and 'dist' folders contain files for the sentence classifying app, which can be run by executing the 'trainingdata.exe' file. By running 'run.bat', the flask server for the word-based classifier demo is ran in localhost:5000.
+The 'datahandling' folder contains scripts and apps to manipulate the s24-data. Most of the scripts are used to extract or modify the .vrt, .xlsx, .csv or .tsv files and should only be used if new data needs to be acquired from the corpus (or other text files in 'data' folder). The 'build' and 'dist' folders contain files for the sentence classifying app, which can be run by executing the 'trainingdata.exe' file.
+
+## Running the word-based classifier
+
+Executing the 'run.bat' script in /datahandling runs a python server in localhost:5000. **This server needs to be running during system operation**, because the chatServer component uses it for real-time word analysis. **Unlike all other services required for system operation, this server is not included in any Docker containers and always needs to be started separately!**
+
+The server also provides a simple browser UI for demo purposes at the same address.
 
 # NOTE!
 If running the scripts is needed, one should edit the paths to the files to be parsed that are hard-coded inside the .py files.
