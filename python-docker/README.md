@@ -1,5 +1,6 @@
 # Running the word classifier in Docker
-######For this model to run, you need to have docker installed on your computer. 
+## PLEASE NOTE, THIS IS WIP AND REQUIRES FURTHER DEVELOPMENT!!! WILL NOT WORK IN CURRENT CONDITION!!!!!
+######For this container to run, you need to have docker installed on your computer. 
 ######Please follow the instructions here: [Installing Docker Desktop for Windows.](https://docs.docker.com/docker-for-windows/install/)
 
 ## Setting up
