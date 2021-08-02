@@ -21,6 +21,11 @@ After creating the environment, open cmd.exe and navigate in the folder containi
 ```
 pip install -r requirements.txt
 ```
+If the scripts dealin with word-based annotation, the finnish_s24_skgram.bin parsebank file(s) must be downloaded. These files are quite large (6Gb), therefore not in the github repository. The files can be downloaded from
+http://dl.turkunlp.org/finnish-embeddings/.
+
+Another large file used in this project is the Suomi24-corpus, which contains all threads posted in the Suomi24 forum in 2001-2017. The corpus can be downloaded from [here](https://metashare.csc.fi/repository/browse/the-suomi24-corpus-2001-2017-vrt-version-11/10d23b2a522911eaae85005056be118e1399c95f81c24248a0b11a6953398218/).
+
 When pip is ready, the scripts can be run either from commandline with:
 ```
 python scriptname.py
