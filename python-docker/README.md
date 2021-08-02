@@ -11,7 +11,7 @@
 
 ###### Build the Dockerfile with the build command
 ```
-docker build -t <container-name> .
+docker build -t python-docker .
 ```
 
 ###### Run the container with the run command
