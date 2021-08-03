@@ -130,4 +130,4 @@ dmypy.json
 .pyre/
 
 node_modules/
-backend/message-analyzer/log.txt
+chatServer/log.json
