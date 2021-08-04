@@ -12,9 +12,7 @@ function ensureLogFileExists() {
             if (err) {
                 console.error(err);
             } else {
-                console.log("no err in log.json")
                 if (data.toString() === "") {
-                    console.log("data is empty")
                     const initialData = JSON.stringify([]);
                     fs.writeFileSync(LOGFILE, initialData);
                 }
@@ -23,14 +21,7 @@ function ensureLogFileExists() {
     }
 }
 
-function handleMessageLogging(metadata, originalMessage, analyzedEditedMessage) {
-
-    const objectToLog = {
-        commentMetadata: metadata,
-        words: analyzedEditedMessage,
-        originalMessage
-    }
-
+function handleMessageLogging(objectToLog) {
     try {
         fs.readFile(LOGFILE, (err, data) => {
             if (err) {
@@ -38,13 +29,11 @@ function handleMessageLogging(metadata, originalMessage, analyzedEditedMessage) 
                 console.log(err)
             } else {
                 const json = JSON.parse(data.toString());
-                console.log("JSON:", json)
                 if (_.isEmpty(json)) {
                     json.push(objectToLog);
                     writeJsonToLog(json);
                 } else {
                     if (Array.isArray(json)) {
-                        console.log("array")
                         json.push(objectToLog);
                         writeJsonToLog(json);
                     } else {

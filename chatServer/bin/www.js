@@ -5,6 +5,7 @@ const http = require("http");
 const axios = require("axios");
 
 const logHelper = require("./logHelper");
+const analysisHelper = require("./analysisHelper");
 
 logHelper.ensureLogFileExists();
 
@@ -32,35 +33,29 @@ io.on("connection", async socket => {
             metadata,
             originalMessage
         } = data;
-        const analyzedEditedMessage = await getAnalysis(editedMessage);
 
-        console.log(data);
-        console.log(analyzedEditedMessage);
-
+        const analyzedEditedMessage = await analysisHelper.getWordLevelAnalysis(editedMessage);
+        const sentenceValencePredictions = await analysisHelper.getSentenceValencePredictions(editedMessage);
         const messageToBroadcast = {
             commentMetadata: metadata,
-            words: analyzedEditedMessage
+            words: analyzedEditedMessage,
+            sentenceValencePredictions
         };
+        const dataToLog = {
+            commentMetadata: metadata,
+            words: analyzedEditedMessage,
+            originalMessage,
+            sentenceValencePredictions
+        }
 
         io.emit("message", messageToBroadcast);
-        logHelper.handleMessageLogging(metadata, originalMessage, analyzedEditedMessage);
-
+        logHelper.handleMessageLogging(dataToLog);
     });
 
     socket.on("disconnect", () => {
         console.log("client disconnected", socket.id);
     });
 });
-
-async function getAnalysis(message) {
-    try {
-        const res = await axios.get(`http://localhost:5000/evaluateSentence/${message}`);
-        return res.data[0];
-    } catch (error) {
-        // console.error(error);
-        console.log("Analysis server didn't respond.");
-    }
-}
 
 function normalizePort(val) {
     const port = parseInt(val, 10);
