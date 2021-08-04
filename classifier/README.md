@@ -20,6 +20,6 @@ docker run -t --rm -p 8501:8501 -v "%cd%/model/rnnmodel:/models/rnnmodel" -e MOD
 ## Feed the model sentences
 To feed the model a sentence (or multiple sentences), use the following command:
 ```
-curl -d "{\"signature_name\": \"serving_default\", \"instances\": [[\"Your sentence here.\"], [\"Possibly another sentence!\"]]}" -X POST
+curl -d "{\"signature_name\": \"serving_default\", \"instances\": [[\"Your sentence here.\"], [\"Possibly another sentence!\"]]}" -X POST http://localhost:8501/v1/models/rnnmodel:predict
 ```
 Please note that these commands are run on a cmd.exe, other CLI's like Powershell may require different syntax.
