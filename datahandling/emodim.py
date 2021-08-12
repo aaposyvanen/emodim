@@ -164,7 +164,3 @@ def evaluateS24Data(data, ftxt):
                     f.write(f"{element['original_text']}: "
                             f"{(element['rating'][0], element['rating'][1], element['rating'][2])}\n")
     return JSONvalues
-
-
-def rateSentence(text):
-    modelpath = f"..\\classifier\\model\\rnn_05-07-2021_10-52-17.h5"

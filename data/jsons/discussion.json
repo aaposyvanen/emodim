@@ -1,0 +1,283 @@
+[
+  {
+    "comments": [
+      {
+        "commentMetadata": {
+          "comment_id": "0",
+          "datetime": "2021-08-12 14:43:51",
+          "author": "iveetek",
+          "parent_comment_id": "0",
+          "quoted_comment_id": "0",
+          "thread_id": "0",
+          "title": "test",
+          "msg_type": "thread_start"
+        },
+        "words": [
+          {
+            "word": "mulle",
+            "type": "WORD",
+            "valence": null,
+            "arousal": null,
+            "dominance": null
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "vaan",
+            "type": "WORD",
+            "valence": 0.34,
+            "arousal": -0.52,
+            "dominance": 0.108
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "maksetaan",
+            "type": "WORD",
+            "valence": 0.028,
+            "arousal": 0.176,
+            "dominance": 0.184
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "vähemmän",
+            "type": "WORD",
+            "valence": 0.52,
+            "arousal": -0.1,
+            "dominance": 0.392
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "palkkaa",
+            "type": "WORD",
+            "valence": 0.27,
+            "arousal": -0.04,
+            "dominance": 0.13
+          },
+          {
+            "word": ",",
+            "type": "PUNCTUATION"
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "kun",
+            "type": "WORD",
+            "valence": 0.25,
+            "arousal": -0.352,
+            "dominance": 0.038
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "en",
+            "type": "WORD",
+            "valence": 0.408,
+            "arousal": -0.26,
+            "dominance": 0.0
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "jaksa",
+            "type": "WORD",
+            "valence": 0.354,
+            "arousal": 0.576,
+            "dominance": 0.368
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "olla",
+            "type": "WORD",
+            "valence": 0.34,
+            "arousal": -0.52,
+            "dominance": 0.108
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "8h",
+            "type": "WORD",
+            "valence": null,
+            "arousal": null,
+            "dominance": null
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "päivässä",
+            "type": "WORD",
+            "valence": 0.02,
+            "arousal": -0.538,
+            "dominance": -0.298
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "täällä",
+            "type": "WORD",
+            "valence": 0.438,
+            "arousal": 0.02,
+            "dominance": 0.434
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": ":",
+            "type": "PUNCTUATION"
+          },
+          {
+            "word": "-D",
+            "type": "WORD",
+            "valence": 0.46,
+            "arousal": -0.26,
+            "dominance": 0.38
+          },
+          {
+            "word": "\n\n",
+            "type": "WHITESPACE"
+          }
+        ]
+      },
+      {
+        "commentMetadata": {
+          "comment_id": "0",
+          "datetime": "2021-08-12 14:43:51",
+          "author": "iveetek",
+          "parent_comment_id": "0",
+          "quoted_comment_id": "0",
+          "thread_id": "0",
+          "title": "test",
+          "msg_type": "thread_start"
+        },
+        "words": [
+          {
+            "word": "ai",
+            "type": "WORD",
+            "valence": 0.408,
+            "arousal": 0.22,
+            "dominance": -0.368
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "sulla",
+            "type": "WORD",
+            "valence": null,
+            "arousal": null,
+            "dominance": null
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "on",
+            "type": "WORD",
+            "valence": 0.34,
+            "arousal": -0.52,
+            "dominance": 0.108
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "tuntisoppari",
+            "type": "WORD",
+            "valence": null,
+            "arousal": null,
+            "dominance": null
+          },
+          {
+            "word": "?",
+            "type": "PUNCTUATION"
+          },
+          {
+            "word": "\n",
+            "type": "WHITESPACE"
+          }
+        ]
+      },
+      {
+        "commentMetadata": {
+          "comment_id": "0",
+          "datetime": "2021-08-12 14:43:51",
+          "author": "iveetek",
+          "parent_comment_id": "0",
+          "quoted_comment_id": "0",
+          "thread_id": "0",
+          "title": "test",
+          "msg_type": "thread_start"
+        },
+        "words": [
+          {
+            "word": "joo",
+            "type": "WORD",
+            "valence": 0.124,
+            "arousal": -0.16,
+            "dominance": -0.216
+          },
+          {
+            "word": "\n",
+            "type": "WHITESPACE"
+          }
+        ]
+      },
+      {
+        "commentMetadata": {
+          "comment_id": "0",
+          "datetime": "2021-08-12 14:43:51",
+          "author": "iveetek",
+          "parent_comment_id": "0",
+          "quoted_comment_id": "0",
+          "thread_id": "0",
+          "title": "test",
+          "msg_type": "thread_start"
+        },
+        "words": [
+          {
+            "word": "Villiä",
+            "type": "WORD",
+            "valence": -0.376,
+            "arousal": 0.844,
+            "dominance": 0.5
+          },
+          {
+            "word": "\n",
+            "type": "WHITESPACE"
+          }
+        ]
+      }
+    ]
+  }
+]
