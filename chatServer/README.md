@@ -47,6 +47,14 @@ If you want to see the console output from the server, attach to the server like
 
 You can detach from the server with CTRL + p, CTRL + q. CTRL + z will close the whole container.
 
+### 4. Retrieve logs from docker
+
+The log file written by the chat server can be copied to machine running the Docker container with this command:
+
+    docker container cp chat-server:./app/log.json ./log.json
+
+The last parameter is the destination of the copy and can be changed if needed to. Before that is the source path for the log file which should never be changed.
+
 ## Using without docker
 
 To run the server without docker you need to have [node](https://nodejs.org/en/) installed. Using the latest LTS version is recommended.

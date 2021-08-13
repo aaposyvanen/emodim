@@ -14,7 +14,7 @@ docker pull tensorflow/serving
 ## Build and run the Dockerfile
 Run the container with the run command and open the port for the web server
 ```
-docker run -t --rm -p 8501:8501 -v "%cd%/model/rnnmodel:/models/rnnmodel" -e MODEL_NAME=rnnmodel tensorflow/serving
+docker run -t --rm -p 8501:8501 -v "%cd%/model/rnnmodel:/models/rnnmodel" -e MODEL_NAME=rnnmodel --network emodim --name sentence-analyzer tensorflow/serving
 ```
 
 ## Feed the model sentences
