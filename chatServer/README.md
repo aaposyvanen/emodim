@@ -46,3 +46,19 @@ If you want to see the console output from the server, attach to the server like
     docker attach chat-server
 
 You can detach from the server with CTRL + p, CTRL + q. CTRL + z will close the whole container.
+
+## Using without docker
+
+To run the server without docker you need to have [node](https://nodejs.org/en/) installed. Using the latest LTS version is recommended.
+
+1. Install dependencies
+
+        npm install
+
+2. Run the server
+
+        npm start
+
+## Logs
+
+The server writes every message and their analysis data to a log.json file in this folder. If the file doesn't exist when the server starts, it will be created. This is the only permanent way the data is stored. If the server is run in a Docker container, the data will need to be copied somewhere outside the container before shutting it down.
