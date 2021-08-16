@@ -41,11 +41,11 @@ The 'evaluateS24Data' function writes into a .txt file the ratings for individua
 returns the whole JSONvalues dict from the 'evaluate' function. 
 """
 
-path = "Voikko"
+path = "voikko"
 libvoikko.Voikko.setLibrarySearchPath(path)
+wv = lwvlib.load("skipgram_dbs/finnish_4B_parsebank_skgram.bin", 10000, 500000)
 v = libvoikko.Voikko(u"fi", path)
-df = pd.read_excel(f"final_wordlist.xlsx")
-wv = lwvlib.load("D:\\Work\\skipgram_dbs\\finnish_4B_parsebank_skgram.bin", 10000, 500000)
+df = pd.read_excel("final_wordlist.xlsx")
 
 
 def findBaseform(word, v):
