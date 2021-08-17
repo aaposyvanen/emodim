@@ -11,10 +11,9 @@ textData = {"comment_id": "0",
             "datetime": f"{time}",
             "author": "",
             "parent_comment_id": "0",
-            "quoted_comment_id": "0",
             "thread_id": "0",
             "title": "",
-            "msg_type": "thread_start",
+            "msg_type": "thread_start"
             }
 commentData = {'commentMetadata': {}, 'words': []}
 threadData = {'comments': []}

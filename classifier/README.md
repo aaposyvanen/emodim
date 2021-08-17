@@ -14,7 +14,7 @@ docker pull tensorflow/serving
 ## Build and run the Dockerfile
 Run the container with the run command and open the port for the web server
 ```
-docker run -t --rm -p 8501:8501 -v "%cd%/model/rnnmodel:/models/rnnmodel" -e MODEL_NAME=rnnmodel --network emodim --name sentence-analyzer tensorflow/serving
+docker run -t --rm -dp 8501:8501 -v "%cd%/model/rnnmodel:/models/rnnmodel" -e MODEL_NAME=rnnmodel --network emodim --name sentence-analyzer tensorflow/serving
 ```
 
 ## Feed the model sentences
@@ -22,4 +22,4 @@ To feed the model a sentence (or multiple sentences), use the following command:
 ```
 curl -d "{\"signature_name\": \"serving_default\", \"instances\": [[\"Your sentence here.\"], [\"Possibly another sentence!\"]]}" -X POST http://localhost:8501/v1/models/rnnmodel:predict
 ```
-Please note that these commands are run on a cmd.exe, other CLI's like Powershell may require different syntax.
+Please note that these commands are run on a cmd.exe, other CLI's like Powershell or bash may require different syntax.
