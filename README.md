@@ -4,6 +4,26 @@ This repository contains the backend components for Emodim project.
 
 Frontend components can be found in [this repo](https://github.com/JokkeT/emodim-front).
 
+## Setting up the Docker environment
+
+The whole project can be run by running the command
+
+```
+docker-compose up -d
+```
+
+or by running the following commands
+```
+Emodim> docker pull tensorflow/serving
+Emodim> docker build -t python-docker ./python-docker
+Emodim> docker build -t chat-server ./chatServer
+Emodim> docker build -t front ./emodim-front
+Emodim/classifier> docker run -dp 8501:8501 --rm --network emodim --name sentence-analyzer -v "%cd%/model/rnnmodel:/models/rnnmodel" -e MODEL_NAME=rnnmodel tensorflow/serving # cmd
+Emodim/python-docker> docker run -dp 5000:5000 --rm --network emodim --name word-analyzer -v "%cd%/skipgram_dbs":"/app/skipgram_dbs" python-docker # cmd
+Emodim/chatServer> docker run -dp 3010:3010 --rm --network emodim --name chat-server chat-server
+Emodim/emodim-front> docker run -dp 3000:3000 --rm --network emodim --name front front
+```
+
 ## Setting up the development environment
 
 If the scripts in 'datahandling' or the RNN-model training script in 'classifier' are to be run, a development environment can be set up in the following way:
@@ -26,7 +46,7 @@ http://dl.turkunlp.org/finnish-embeddings/.
 
 Another large file used in this project is the Suomi24-corpus, which contains all threads posted in the Suomi24 forum in 2001-2017. The corpus can be downloaded from [here](https://metashare.csc.fi/repository/browse/the-suomi24-corpus-2001-2017-vrt-version-11/10d23b2a522911eaae85005056be118e1399c95f81c24248a0b11a6953398218/).
 
-When pip is ready, the scripts can be run either from commandline with:
+When pip is ready, the scripts can be run from commandline with:
 ```
 python scriptname.py
 ```
@@ -36,7 +56,7 @@ If the RNN model needs for some reason to be retrained, installing Tensorflow ca
 ```
 pip install -r requirements.txt
 ```
-in the classifier/trainmodel folder. These requirement files are separated if Tensorflow is not needed, since it is a big install. The jupyter notebook can be run with this command:
+in the /classifier folder. These requirement files are separated if Tensorflow is not needed, since it is a big install. The jupyter notebook can be run with this command:
 ```
 jupyter-lab
 ```

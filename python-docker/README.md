@@ -1,5 +1,4 @@
 # Running the word classifier in Docker
-## PLEASE NOTE, THIS IS WIP AND REQUIRES FURTHER DEVELOPMENT!!! WILL NOT WORK IN CURRENT CONDITION!!!!!
 ###### For this container to run, you need to have docker installed on your computer. 
 ###### Please follow the instructions here: [Installing Docker Desktop for Windows.](https://docs.docker.com/docker-for-windows/install/)
 
@@ -16,7 +15,7 @@ docker build -t python-docker .
 
 ###### Run the container with the run command
 ```
-docker run --publish 5000:5000 python-docker
+docker run -dp 5000:5000 --rm --network emodim --name word-analyzer -v "%cd%/skipgram_dbs":"/app/skipgram_dbs" python-docker
 ```
 ###### Now, a web-server in the port 5000 should be reserved for the flask app in localhost:5000.
 #

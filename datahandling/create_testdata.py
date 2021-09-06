@@ -75,7 +75,7 @@ def GUI():
     sg.theme('DarkGrey9')
     layout = [[sg.Text("Insert the discussion starting paragraph. Start by inputting Username and title: ")],
               [sg.Text('Username', size=(15, 1)), sg.InputText(key='author')],
-              [sg.Text('Add title to opening message', size=(15, 1), key='titletext'), sg.InputText(key='titleinput')],
+              [sg.Text('Title', size=(15, 1), key='titletext'), sg.InputText(key='titleinput')],
               [sg.Button('Save username', key='username'), sg.Button('Save title', key='title', disabled=True)],
               [sg.Multiline(size=(120, 10), key='textbox', disabled=True)],
               [sg.Button('Add an opening message', key='opener', disabled=True), sg.Button('Add a comment', key='comment', disabled=True),
