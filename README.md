@@ -6,7 +6,7 @@ Frontend components can be found in [this repo](https://github.com/JokkeT/emodim
 
 ## Setting up the Docker environment
 
-The backend components require two large database files to be downloaded, which can be found from [here](http://dl.turkunlp.org/finnish-embeddings/) and [here](https://metashare.csc.fi/repository/browse/the-suomi24-corpus-2001-2017-vrt-version-11/10d23b2a522911eaae85005056be118e1399c95f81c24248a0b11a6953398218/).
+The backend components requires a large database file to be downloaded, which can be found from [here](http://dl.turkunlp.org/finnish-embeddings/).
 
 The whole project can be run by running the command
 
