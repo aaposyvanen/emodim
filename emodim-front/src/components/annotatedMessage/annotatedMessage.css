@@ -1,0 +1,43 @@
+.message-box {
+    margin: 3px 0px 10px 20px;
+    padding: 10px;
+    background-color: #202020;
+    border-radius: 10px 10px 0 0;
+    font-size: 16px;
+}
+
+.message .line-break {
+    min-height: 1ch;
+}
+
+.metadata {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.response {
+    background-color: #303030;
+}
+
+.message-box .content {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.analysis-message {
+    font-size: small;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.analysis-message.message-valence-1 {
+    color: rgba(255, 55, 55, 0.8);
+}
+
+.analysis-message.message-valence1 {
+    color: rgba(55, 255, 55, 0.8);
+}

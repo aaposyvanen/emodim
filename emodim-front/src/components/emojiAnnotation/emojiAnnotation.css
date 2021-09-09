@@ -1,0 +1,29 @@
+.emoji-annotation {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.message-box .valence-emoji {
+    font-size: 18px;
+    color: #ff0;
+    margin: 5px;
+}
+
+.valence-intensity {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.message-box .valence-circle-on {
+    color: #fff;
+}
+
+.message-box .valence-circle-off {
+    color: #888;
+}
+
+.message-box .valence-circle-off,
+.message-box .valence-circle-on {
+    margin-top: 1px;
+}

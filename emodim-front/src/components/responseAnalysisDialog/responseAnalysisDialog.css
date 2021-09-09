@@ -1,0 +1,70 @@
+div .loading-icon {
+    animation-duration: 1.5s;
+    animation-name: rotation;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    color: white;
+    font-size: 25px;
+    margin: 40px 15vw;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.analysis-report {
+    display: flex;
+    align-self: flex-end;
+}
+
+.analysis-report button {
+    margin: 10px;
+    background-color: #404040;
+    color: white;
+    border: 0;
+}
+
+.MuiPaper-root.MuiDialog-paper {
+    min-width: 40%;
+    max-width: 60%;
+    width: fit-content;
+    background-color: #202020;
+}
+
+.MuiDialogTitle-root .MuiIconButton-root {
+    color: white;
+}
+
+.MuiDialogTitle-root  {
+    display: flex;
+    justify-content: space-between;
+    background-color: 202020;
+    color: white;
+}
+
+.MuiPaper-root .MuiDialogContent-root {
+    background-color: #404040;
+    color: white;
+}
+
+.MuiDialogActions-root {
+    background-color: #202020;
+}
+
+.MuiDialogActions-root button{
+    color: white;
+}
+
+.MuiDialogActions-root .MuiButton-textPrimary {
+    background-color: #404040;
+}

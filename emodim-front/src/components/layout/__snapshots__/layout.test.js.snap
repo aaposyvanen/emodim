@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders correctly with no username 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <div
+      class="user-selection"
+    >
+      Select a nickname
+      <div
+        class="MuiFormControl-root MuiTextField-root"
+      >
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiInput-input"
+            type="text"
+            value=""
+          />
+        </div>
+        
+      </div>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Ready
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Layout renders correctly with username 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <div
+      class="forum-view"
+    >
+      Thread
+    </div>
+  </div>
+</div>
+`;

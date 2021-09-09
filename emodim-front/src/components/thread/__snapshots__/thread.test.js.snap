@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Thread renders correctly 1`] = `
+<div>
+  <div
+    class="thread"
+  >
+    <div
+      class="title"
+    >
+      Thread title
+    </div>
+    <div
+      class="message-area"
+    >
+      <div
+        class="thread-start"
+      />
+      <div
+        class="comments"
+      />
+      <div
+        class="response-section"
+      >
+        <div
+          class="response-field"
+        >
+          <textarea
+            class="response-text-input"
+            maxlength="500"
+            placeholder="Write an answer..."
+            type="text"
+          />
+        </div>
+        <div
+          class="analysis-report"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Reply
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
