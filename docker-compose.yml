@@ -8,14 +8,12 @@ services:
   tensorflow-serving:
     image: tensorflow/serving
     container_name: sentence-analyzer
-    build:
-      context: ./classifier
     networks: 
       - emodim
     ports:
       - "8501:8501"
     volumes:
-      - ".\\classifier\\model\\rnnmodel:/models/rnnmodel"
+      -  "./classifier/model/rnnmodel:/models/rnnmodel"
     environment: 
       - MODEL_NAME=rnnmodel
   python-docker:
@@ -28,8 +26,7 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - "D:\\Work\\skipgram_dbs:/app/skipgram_dbs"
-#       - ".\\python-docker\\skipgram_dbs:/app/skipgram_dbs"
+      - "./skipgram_dbs:/app/skipgram_dbs"
   chat-server:
     container_name: chat-server
     build:

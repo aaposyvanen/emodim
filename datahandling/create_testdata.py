@@ -4,9 +4,9 @@ import emodim as em
 import os
 from datetime import datetime
 
-path = 'E:\\OneDrive - TUNI.fi\\Emodim\\data\\jsons\\discussion.json'
-# path = 'discussion.json'
+
 time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+path = os.path.split(os.path.dirname(__file__))[0]
 textData = {"comment_id": "0",
             "datetime": f"{time}",
             "author": "",
@@ -20,7 +20,7 @@ threadData = {'comments': []}
 
 
 def createDiscussion(window):
-    with open(path, 'w', encoding='utf-8') as f:
+    with open(fr"{path}/data/jsons/discussion.json", 'w', encoding='utf-8') as f:
         f.write('[\n')
         event, values = window.Read()
         while event != 'Exit' and event != sg.WIN_CLOSED:
@@ -36,8 +36,8 @@ def createDiscussion(window):
                 commentData['words'] = JSONvalues
                 commentData['commentMetadata'] = textData
                 threadData['comments'].append(commentData.copy())
-                # json.dump(commentData, f, indent=2, ensure_ascii=False)
-                # f.write(f',\n')
+                json.dump(commentData, f, indent=2, ensure_ascii=False)
+                f.write(f',\n')
             elif event == 'restart':
                 window['opener'].update(disabled=False)
                 f.truncate(0)
@@ -54,8 +54,8 @@ def createDiscussion(window):
                 commentData['words'] = JSONvalues
                 commentData['commentMetadata'] = textData
                 threadData['comments'].append(commentData.copy())
-                # json.dump(commentData, f, indent=2, ensure_ascii=False)
-                # f.write(f',\n')
+                json.dump(commentData, f, indent=2, ensure_ascii=False)
+                f.write(f',\n')
             elif event == 'username':
                 values = values['author']
                 window['username'].update(disabled=True), window['title'].update(disabled=False)
