@@ -133,3 +133,4 @@ dmypy.json
 node_modules/
 chatServer/log.json
 docker-compose.yml
+skipgram_dbs/
