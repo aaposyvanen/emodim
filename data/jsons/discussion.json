@@ -1,0 +1,78 @@
+[
+{
+  "comments": [
+    {
+      "commentMetadata": {
+        "comment_id": "0",
+        "datetime": "2021-09-29 18:06:20",
+        "author": "asd3",
+        "parent_comment_id": "0",
+        "thread_id": "0",
+        "title": "testi",
+        "msg_type": "thread_start"
+      },
+      "words": [
+        {
+          "word": "asd1",
+          "type": "WORD",
+          "valence": null,
+          "arousal": null,
+          "dominance": null
+        },
+        {
+          "word": "\n",
+          "type": "WHITESPACE"
+        }
+      ]
+    },
+    {
+      "commentMetadata": {
+        "comment_id": "0",
+        "datetime": "2021-09-29 18:06:20",
+        "author": "asd3",
+        "parent_comment_id": "0",
+        "thread_id": "0",
+        "title": "testi",
+        "msg_type": "thread_start"
+      },
+      "words": [
+        {
+          "word": "as2",
+          "type": "WORD",
+          "valence": null,
+          "arousal": null,
+          "dominance": null
+        },
+        {
+          "word": "\n",
+          "type": "WHITESPACE"
+        }
+      ]
+    },
+    {
+      "commentMetadata": {
+        "comment_id": "0",
+        "datetime": "2021-09-29 18:06:20",
+        "author": "asd3",
+        "parent_comment_id": "0",
+        "thread_id": "0",
+        "title": "testi",
+        "msg_type": "thread_start"
+      },
+      "words": [
+        {
+          "word": "asd3",
+          "type": "WORD",
+          "valence": null,
+          "arousal": null,
+          "dominance": null
+        },
+        {
+          "word": "\n",
+          "type": "WHITESPACE"
+        }
+      ]
+    }
+  ]
+}
+]
