@@ -34,7 +34,7 @@ def createDiscussion(window):
                 window['titleinput'].update('', disabled=True)
                 JSONvalues = em.evaluateText(values)[-1]
                 commentData['words'] = JSONvalues
-                commentData['commentMetadata'] = textData
+                commentData['commentMetadata'] = textData.copy()
                 threadData['comments'].append(commentData.copy())
                 # json.dump(commentData, f, indent=2, ensure_ascii=False)
                 # f.write(f',\n')
@@ -52,12 +52,13 @@ def createDiscussion(window):
                 window['username'].update(disabled=False)
                 JSONvalues = em.evaluateText(values)[-1]
                 commentData['words'] = JSONvalues
-                commentData['commentMetadata'] = textData
+                commentData['commentMetadata'] = textData.copy()
                 threadData['comments'].append(commentData.copy())
                 # json.dump(commentData, f, indent=2, ensure_ascii=False)
                 # f.write(f',\n')
             elif event == 'username':
                 values = values['author']
+                print(values)
                 window['username'].update(disabled=True), window['title'].update(disabled=False)
                 textData['author'] = values
             elif event == 'title':
