@@ -36,8 +36,8 @@ def createDiscussion(window):
                 commentData['words'] = JSONvalues
                 commentData['commentMetadata'] = textData
                 threadData['comments'].append(commentData.copy())
-                json.dump(commentData, f, indent=2, ensure_ascii=False)
-                f.write(f',\n')
+                # json.dump(commentData, f, indent=2, ensure_ascii=False)
+                # f.write(f',\n')
             elif event == 'restart':
                 window['opener'].update(disabled=False)
                 f.truncate(0)
@@ -54,8 +54,8 @@ def createDiscussion(window):
                 commentData['words'] = JSONvalues
                 commentData['commentMetadata'] = textData
                 threadData['comments'].append(commentData.copy())
-                json.dump(commentData, f, indent=2, ensure_ascii=False)
-                f.write(f',\n')
+                # json.dump(commentData, f, indent=2, ensure_ascii=False)
+                # f.write(f',\n')
             elif event == 'username':
                 values = values['author']
                 window['username'].update(disabled=True), window['title'].update(disabled=False)

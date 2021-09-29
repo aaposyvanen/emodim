@@ -4,7 +4,7 @@
     {
       "commentMetadata": {
         "comment_id": "0",
-        "datetime": "2021-09-09 10:41:43",
+        "datetime": "2021-09-29 17:57:06",
         "author": "Joni",
         "parent_comment_id": "0",
         "thread_id": "0",
@@ -189,7 +189,7 @@
           "type": "PUNCTUATION"
         },
         {
-          "word": " \n",
+          "word": " ",
           "type": "WHITESPACE"
         },
         {
@@ -330,7 +330,7 @@
           "type": "PUNCTUATION"
         },
         {
-          "word": " \n",
+          "word": " ",
           "type": "WHITESPACE"
         },
         {
@@ -499,7 +499,7 @@
           "type": "PUNCTUATION"
         },
         {
-          "word": " \n",
+          "word": "\n",
           "type": "WHITESPACE"
         }
       ]
@@ -507,8 +507,8 @@
     {
       "commentMetadata": {
         "comment_id": "0",
-        "datetime": "2021-09-09 10:41:43",
-        "author": "Jani",
+        "datetime": "2021-09-29 17:57:06",
+        "author": "Joni",
         "parent_comment_id": "0",
         "thread_id": "0",
         "title": "Onko teillä kokemuksia kissan sairastamisesta",
@@ -833,7 +833,7 @@
           "type": "PUNCTUATION"
         },
         {
-          "word": " \n",
+          "word": "\n",
           "type": "WHITESPACE"
         }
       ]
@@ -841,7 +841,7 @@
     {
       "commentMetadata": {
         "comment_id": "0",
-        "datetime": "2021-09-09 10:41:43",
+        "datetime": "2021-09-29 17:57:06",
         "author": "Joni",
         "parent_comment_id": "0",
         "thread_id": "0",
@@ -964,7 +964,7 @@
           "type": "PUNCTUATION"
         },
         {
-          "word": " \n",
+          "word": "\n\n",
           "type": "WHITESPACE"
         }
       ]
@@ -972,8 +972,8 @@
     {
       "commentMetadata": {
         "comment_id": "0",
-        "datetime": "2021-09-09 10:41:43",
-        "author": "Jani",
+        "datetime": "2021-09-29 17:57:06",
+        "author": "Joni",
         "parent_comment_id": "0",
         "thread_id": "0",
         "title": "Onko teillä kokemuksia kissan sairastamisesta",
