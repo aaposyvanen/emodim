@@ -3,7 +3,7 @@ const _ = require("lodash");
 
 async function getWordLevelAnalysis(message) {
     try {
-        const res = await axios.get(`http://host.docker.internal:5000/evaluateSentence/${message}`);
+        const res = await axios.get(`http://word-analyzer:5000/evaluateSentence/${message}`);
         return res.data[0];
     } catch (error) {
         console.log("Word analysis server didn't respond.");

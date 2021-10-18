@@ -65,7 +65,7 @@ export const ForumView = () => {
 
     useEffect(() => {
         if (!_.isEmpty(availableRawThreads)) {
-            dispatch(updateCurrentRawThread(availableRawThreads[2]));
+            dispatch(updateCurrentRawThread(availableRawThreads[1]));
         }
     }, [availableRawThreads, dispatch]);
 
