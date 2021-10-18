@@ -6,8 +6,7 @@ import {
     updateCurrentRawThread,
 } from "../../actions/rawDataActions";
 import { updateCurrentThread } from "../../actions/threadActions";
-// import json from "../../testData/threadData_s24_04.json";
-import json from "../../testData/discussion_tst.json";
+import json from "../../testData/threadData_s24_04.json";
 import Thread from "../thread/thread";
 import "./forumView.css";
 

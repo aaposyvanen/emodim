@@ -69,9 +69,9 @@ The 'datahandling' folder contains scripts and apps to manipulate the s24-data. 
 
 ## Running the word-based classifier
 
-Executing the 'run.bat' script in /datahandling runs a python server in localhost:5000. **This server needs to be running during system operation**, because the chatServer component uses it for real-time word analysis. **Unlike all other services required for system operation, this server is not included in any Docker containers and always needs to be started separately!**
+Executing the 'run.bat' script in /datahandling runs a python server in localhost:5000. **This server needs to be running during system operation**, because the chatServer component uses it for real-time word analysis.
 
 The server also provides a simple browser UI for demo purposes at the same address.
 
 # NOTE!
-If running the scripts is needed, one should edit the paths to the files to be parsed that are hard-coded inside the .py files.
+If running the scripts are needed, one should edit the paths to the files to be parsed that are hard-coded inside the .py files.

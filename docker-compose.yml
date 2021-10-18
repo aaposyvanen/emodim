@@ -27,6 +27,7 @@ services:
       - "5000:5000"
     volumes:
       - "./skipgram_dbs:/app/skipgram_dbs"
+#     - "D:\\Work\\skipgram_dbs:/app/skipgram_dbs"
   chat-server:
     container_name: chat-server
     build:
