@@ -6,7 +6,7 @@ from datetime import datetime
 
 
 time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-path = os.path.split(os.path.dirname(__file__))[0]
+path = os.path.split(os.path.dirname(os.path.abspath(__file__)))[0]
 textData = {"comment_id": "0",
             "datetime": f"{time}",
             "author": "",
