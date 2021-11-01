@@ -1,0 +1,835 @@
+[
+{
+  "threadMetadata": {
+    "comment_id": "0",
+    "datetime": "2021-11-01 10:48:34",
+    "author": "Jorma",
+    "parent_comment_id": "0",
+    "thread_id": "0",
+    "title": "Kokkolaan uusi päivittäistavarakauppa",
+    "msg_type": "thread_start"
+  },
+  "comments": [
+    {
+      "commentMetadata": {
+        "comment_id": "0",
+        "datetime": "2021-11-01 10:48:34",
+        "author": "Anonyymi",
+        "parent_comment_id": "0",
+        "thread_id": "0",
+        "title": "Kokkolaan uusi päivittäistavarakauppa",
+        "msg_type": "thread_start"
+      },
+      "words": [
+        {
+          "word": "Tanskalaisen",
+          "type": "WORD",
+          "valence": null,
+          "arousal": null,
+          "dominance": null
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "halpisketju",
+          "type": "WORD",
+          "valence": null,
+          "arousal": null,
+          "dominance": null
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "Normalin",
+          "type": "WORD",
+          "valence": null,
+          "arousal": null,
+          "dominance": null
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "myymälä",
+          "type": "WORD",
+          "valence": 0.45,
+          "arousal": 0.264,
+          "dominance": 0.13
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "ollaan",
+          "type": "WORD",
+          "valence": 0.34,
+          "arousal": -0.52,
+          "dominance": 0.108
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "avaamassa",
+          "type": "WORD",
+          "valence": 0.24,
+          "arousal": -0.04,
+          "dominance": 0.138
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "myös",
+          "type": "WORD",
+          "valence": -0.082,
+          "arousal": -0.12,
+          "dominance": -0.148
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "Kokkolaan",
+          "type": "WORD",
+          "valence": 0.332,
+          "arousal": 0.41,
+          "dominance": 0.24
+        },
+        {
+          "word": ".",
+          "type": "PUNCTUATION"
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "Täällähän",
+          "type": "WORD",
+          "valence": null,
+          "arousal": null,
+          "dominance": null
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "on",
+          "type": "WORD",
+          "valence": 0.34,
+          "arousal": -0.52,
+          "dominance": 0.108
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "myymälätiloja",
+          "type": "WORD",
+          "valence": null,
+          "arousal": null,
+          "dominance": null
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "tuollekin",
+          "type": "WORD",
+          "valence": 0.084,
+          "arousal": -0.416,
+          "dominance": -0.26
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "myymälälle",
+          "type": "WORD",
+          "valence": 0.45,
+          "arousal": 0.264,
+          "dominance": 0.13
+        },
+        {
+          "word": ",",
+          "type": "PUNCTUATION"
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "tulee",
+          "type": "WORD",
+          "valence": 0.058,
+          "arousal": -0.462,
+          "dominance": 0.116
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "kilpailua",
+          "type": "WORD",
+          "valence": 0.16,
+          "arousal": 0.58,
+          "dominance": 0.596
+        },
+        {
+          "word": ".",
+          "type": "PUNCTUATION"
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "\\",
+          "type": "UNKNOWN"
+        },
+        {
+          "word": "nVähän",
+          "type": "WORD",
+          "valence": null,
+          "arousal": null,
+          "dominance": null
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "arveluttaa",
+          "type": "WORD",
+          "valence": -0.23,
+          "arousal": 0.434,
+          "dominance": -0.366
+        },
+        {
+          "word": ",",
+          "type": "PUNCTUATION"
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "onko",
+          "type": "WORD",
+          "valence": 0.34,
+          "arousal": -0.52,
+          "dominance": 0.108
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "tuotteet",
+          "type": "WORD",
+          "valence": 0.292,
+          "arousal": -0.166,
+          "dominance": 0.296
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "valmistettu",
+          "type": "WORD",
+          "valence": 0.448,
+          "arousal": 0.056,
+          "dominance": 0.386
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "halpatyömaissa",
+          "type": "WORD",
+          "valence": null,
+          "arousal": null,
+          "dominance": null
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "lapsityövoimalla",
+          "type": "WORD",
+          "valence": 0.224,
+          "arousal": -0.058,
+          "dominance": -0.456
+        },
+        {
+          "word": ",",
+          "type": "PUNCTUATION"
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "jos",
+          "type": "WORD",
+          "valence": 0.742,
+          "arousal": -0.294,
+          "dominance": 0.296
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "ovat",
+          "type": "WORD",
+          "valence": 0.34,
+          "arousal": -0.52,
+          "dominance": 0.108
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "merkittävän",
+          "type": "WORD",
+          "valence": 0.654,
+          "arousal": 0.298,
+          "dominance": 0.572
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "halpoja",
+          "type": "WORD",
+          "valence": 0.224,
+          "arousal": -0.058,
+          "dominance": -0.456
+        },
+        {
+          "word": ".",
+          "type": "PUNCTUATION"
+        },
+        {
+          "word": "\n",
+          "type": "WHITESPACE"
+        }
+      ]
+    },
+    {
+      "commentMetadata": {
+        "comment_id": "0",
+        "datetime": "2021-11-01 10:48:34",
+        "author": "Ville",
+        "parent_comment_id": "0",
+        "thread_id": "0",
+        "title": "Kokkolaan uusi päivittäistavarakauppa",
+        "msg_type": "thread_start"
+      },
+      "words": [
+        {
+          "word": "No",
+          "type": "WORD",
+          "valence": null,
+          "arousal": null,
+          "dominance": null
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "mitäpä",
+          "type": "WORD",
+          "valence": 0.142,
+          "arousal": -0.38,
+          "dominance": -0.036
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "luulisit",
+          "type": "WORD",
+          "valence": 0.142,
+          "arousal": -0.38,
+          "dominance": -0.036
+        },
+        {
+          "word": ",",
+          "type": "PUNCTUATION"
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "noin",
+          "type": "WORD",
+          "valence": -0.25,
+          "arousal": -0.344,
+          "dominance": -0.416
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "niinkus",
+          "type": "WORD",
+          "valence": null,
+          "arousal": null,
+          "dominance": null
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "ihan",
+          "type": "WORD",
+          "valence": 0.46,
+          "arousal": -0.26,
+          "dominance": 0.38
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "järjellä",
+          "type": "WORD",
+          "valence": -0.12,
+          "arousal": -0.066,
+          "dominance": 0.24
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "ajatellen",
+          "type": "WORD",
+          "valence": 0.572,
+          "arousal": -0.184,
+          "dominance": 0.236
+        },
+        {
+          "word": ".",
+          "type": "PUNCTUATION"
+        },
+        {
+          "word": ".",
+          "type": "PUNCTUATION"
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "mahtaiskohan",
+          "type": "WORD",
+          "valence": null,
+          "arousal": null,
+          "dominance": null
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "ne",
+          "type": "WORD",
+          "valence": -0.02,
+          "arousal": -0.58,
+          "dominance": -0.5
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "olla",
+          "type": "WORD",
+          "valence": 0.34,
+          "arousal": -0.52,
+          "dominance": 0.108
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "ihan",
+          "type": "WORD",
+          "valence": 0.46,
+          "arousal": -0.26,
+          "dominance": 0.38
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "siellä",
+          "type": "WORD",
+          "valence": 0.438,
+          "arousal": 0.02,
+          "dominance": 0.434
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "kaikista",
+          "type": "WORD",
+          "valence": 0.524,
+          "arousal": 0.229,
+          "dominance": 0.665
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "halvimmissa",
+          "type": "WORD",
+          "valence": 0.224,
+          "arousal": -0.058,
+          "dominance": -0.456
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "mahdollisissa",
+          "type": "WORD",
+          "valence": 0.376,
+          "arousal": -0.368,
+          "dominance": 0.096
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "hikipajoissa",
+          "type": "WORD",
+          "valence": 0.52,
+          "arousal": -0.216,
+          "dominance": 0.508
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "tehty",
+          "type": "WORD",
+          "valence": 0.34,
+          "arousal": 0.096,
+          "dominance": 0.072
+        },
+        {
+          "word": ".",
+          "type": "PUNCTUATION"
+        },
+        {
+          "word": "\n",
+          "type": "WHITESPACE"
+        }
+      ]
+    },
+    {
+      "commentMetadata": {
+        "comment_id": "0",
+        "datetime": "2021-11-01 10:48:34",
+        "author": "Anonyymi",
+        "parent_comment_id": "0",
+        "thread_id": "0",
+        "title": "Kokkolaan uusi päivittäistavarakauppa",
+        "msg_type": "thread_start"
+      },
+      "words": [
+        {
+          "word": "Mutta",
+          "type": "WORD",
+          "valence": null,
+          "arousal": null,
+          "dominance": null
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "sehän",
+          "type": "WORD",
+          "valence": 0.396,
+          "arousal": 0.058,
+          "dominance": 0.32
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "on",
+          "type": "WORD",
+          "valence": 0.34,
+          "arousal": -0.52,
+          "dominance": 0.108
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "hyvä",
+          "type": "WORD",
+          "valence": 0.876,
+          "arousal": -0.264,
+          "dominance": 0.068
+        },
+        {
+          "word": ",",
+          "type": "PUNCTUATION"
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "että",
+          "type": "WORD",
+          "valence": 0.438,
+          "arousal": 0.02,
+          "dominance": 0.434
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "on",
+          "type": "WORD",
+          "valence": 0.34,
+          "arousal": -0.52,
+          "dominance": 0.108
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "kilpailua",
+          "type": "WORD",
+          "valence": 0.16,
+          "arousal": 0.58,
+          "dominance": 0.596
+        },
+        {
+          "word": ",",
+          "type": "PUNCTUATION"
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "niin",
+          "type": "WORD",
+          "valence": 0.124,
+          "arousal": -0.16,
+          "dominance": -0.216
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "saa",
+          "type": "WORD",
+          "valence": 0.288,
+          "arousal": 0.036,
+          "dominance": 0.295
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "aloittajakin",
+          "type": "WORD",
+          "valence": null,
+          "arousal": null,
+          "dominance": null
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "flanellipaitansa",
+          "type": "WORD",
+          "valence": null,
+          "arousal": null,
+          "dominance": null
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "ostettua",
+          "type": "WORD",
+          "valence": 0.32,
+          "arousal": -0.312,
+          "dominance": 0.182
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "euron",
+          "type": "WORD",
+          "valence": 0.36,
+          "arousal": -0.118,
+          "dominance": 0.042
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "halavemmalla",
+          "type": "WORD",
+          "valence": null,
+          "arousal": null,
+          "dominance": null
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "...",
+          "type": "PUNCTUATION"
+        },
+        {
+          "word": " \n",
+          "type": "WHITESPACE"
+        }
+      ]
+    },
+    {
+      "commentMetadata": {
+        "comment_id": "0",
+        "datetime": "2021-11-01 10:48:34",
+        "author": "Jorma",
+        "parent_comment_id": "0",
+        "thread_id": "0",
+        "title": "Kokkolaan uusi päivittäistavarakauppa",
+        "msg_type": "thread_start"
+      },
+      "words": [
+        {
+          "word": "Hyvä",
+          "type": "WORD",
+          "valence": 0.876,
+          "arousal": -0.264,
+          "dominance": 0.068
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "että",
+          "type": "WORD",
+          "valence": 0.438,
+          "arousal": 0.02,
+          "dominance": 0.434
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "S",
+          "type": "WORD",
+          "valence": null,
+          "arousal": null,
+          "dominance": null
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "ryhmän",
+          "type": "WORD",
+          "valence": 0.002,
+          "arousal": -0.015,
+          "dominance": 0.16
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "monopoli",
+          "type": "WORD",
+          "valence": -0.102,
+          "arousal": 0.018,
+          "dominance": 0.28
+        },
+        {
+          "word": " ",
+          "type": "WHITESPACE"
+        },
+        {
+          "word": "kutistuu",
+          "type": "WORD",
+          "valence": -0.23,
+          "arousal": -0.094,
+          "dominance": -0.456
+        },
+        {
+          "word": ".",
+          "type": "PUNCTUATION"
+        },
+        {
+          "word": "\n",
+          "type": "WHITESPACE"
+        }
+      ]
+    }
+  ]
+}
+]
