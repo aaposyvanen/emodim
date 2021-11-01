@@ -16,7 +16,7 @@ textData = {"comment_id": "0",
             "msg_type": "thread_start"
             }
 commentData = {'commentMetadata': {}, 'words': []}
-threadData = {'comments': []}
+threadData = {'threadMetadata': {}, 'comments': []}
 
 
 def createDiscussion(window):
@@ -66,6 +66,7 @@ def createDiscussion(window):
                 window['title'].update(disabled=True),  window['opener'].update(disabled=False)
                 window['textbox'].update(disabled=False)
                 textData['title'] = values
+                threadData['threadMetadata'] = textData
             print(event, values)
             event, values = window.Read()
         json.dump(threadData, f, indent=2, ensure_ascii=False)
