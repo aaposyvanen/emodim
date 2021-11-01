@@ -12,7 +12,7 @@ textData = {"comment_id": "0",
             "author": "",
             "parent_comment_id": "0",
             "thread_id": "0",
-            "title": "",
+            "title": "Empty title",
             "msg_type": "thread_start"
             }
 commentData = {'commentMetadata': {}, 'words': []}
