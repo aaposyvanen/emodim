@@ -1,6 +1,7 @@
 import PySimpleGUI as sg
 import json
 import emodim as em
+import sentence_evaluation as rating
 import os
 from datetime import datetime
 
@@ -15,7 +16,7 @@ textData = {"comment_id": "0",
             "title": "Empty title",
             "msg_type": "thread_start"
             }
-commentData = {'commentMetadata': {}, 'words': []}
+commentData = {'commentMetadata': {}, 'sentenceValencePredictions' : [], 'words': []}
 threadData = {'threadMetadata': {}, 'comments': []}
 
 
@@ -32,6 +33,7 @@ def createDiscussion(window):
                 window['titleinput'].update('', disabled=True), window['textbox'].update('', disabled=False)
                 window['comment'].update(disabled=False), window['author'].update('')
                 window['titleinput'].update('', disabled=True)
+                commentData['sentenceValencePredictions'] = rating.evaluation(values)
                 JSONvalues = em.evaluateText(values)[-1]
                 commentData['words'] = JSONvalues
                 commentData['commentMetadata'] = textData.copy()
@@ -52,13 +54,13 @@ def createDiscussion(window):
                 window['username'].update(disabled=False)
                 JSONvalues = em.evaluateText(values)[-1]
                 commentData['words'] = JSONvalues
+                commentData['sentenceValencePredictions'] = rating.evaluation(values)
                 commentData['commentMetadata'] = textData.copy()
                 threadData['comments'].append(commentData.copy())
                 # json.dump(commentData, f, indent=2, ensure_ascii=False)
                 # f.write(f',\n')
             elif event == 'username':
                 values = values['author']
-                print(values)
                 window['username'].update(disabled=True), window['title'].update(disabled=False)
                 textData['author'] = values
             elif event == 'title':
@@ -67,7 +69,6 @@ def createDiscussion(window):
                 window['textbox'].update(disabled=False)
                 textData['title'] = values
                 threadData['threadMetadata'] = textData
-            print(event, values)
             event, values = window.Read()
         json.dump(threadData, f, indent=2, ensure_ascii=False)
         f.write('\n]')

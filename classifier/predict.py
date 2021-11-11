@@ -3,19 +3,17 @@ import tensorflow as tf
 import numpy as np
 import random
 
-"""
-REDUNDANT PREDCITING SCRIPT IF DOCKER CONTAINER IS USED TO PREDICT
-"""
 
 # os.environ['CUDA_VISIBLE_DEVICES'] = '-1'     # uncomment to use CPU, comment out to use GPU
 config = tf.compat.v1.ConfigProto()             # comment out to use CPU, uncomment to use GPU
 config.gpu_options.allow_growth = True          # comment out to use CPU, uncomment to use GPU
 session = tf.compat.v1.Session(config=config)   # comment out to use CPU, uncomment to use GPU
 
-modelpath = f"{os.getcwd()}/classifier/model/rnnmodel/1"   # testdata to visualize predictions
+modelpath = f"{os.getcwd()}/model/rnn_11-11-2021_12-31-13"   # testdata to visualize predictions
 model = tf.keras.models.load_model(modelpath)
-# model.summary()
-testpath = f"{os.getcwd()}/data/txts/test_paragraphs_01-06-2021_15-31-18.txt"
+model.summary()
+testpath = f"../data/txts/test_paragraphs_01-06-2021_15-31-18.txt"
+
 
 
 def test(path):
@@ -48,4 +46,4 @@ def makePrediction(inps):
     return ret
 
 
-print(makePrediction(test(testpath)))
+# print(makePrediction(test(testpath)))
