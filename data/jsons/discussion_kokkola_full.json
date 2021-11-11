@@ -3,10 +3,10 @@
   "threadMetadata": {
     "comment_id": "0",
     "datetime": "2021-11-01 10:48:34",
-    "author": "Jorma",
+    "author": "Anonyymi",
     "parent_comment_id": "0",
     "thread_id": "0",
-    "title": "Kokkolaan uusi päivittäistavarakauppa",
+    "title": "Husin potilaista jo 23 prosenttia rokotettuja",
     "msg_type": "thread_start"
   },
   "comments": [
@@ -20,6 +20,8 @@
         "title": "Kokkolaan uusi päivittäistavarakauppa",
         "msg_type": "thread_start"
       },
+      "sentenceValencePredictions":
+        [[0.2, 0.55, 0.25]],
       "words": [
         {
           "word": "Tanskalaisen",
