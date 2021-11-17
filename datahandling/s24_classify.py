@@ -2,6 +2,7 @@ import json
 import xml.etree.cElementTree as ET
 from tqdm import tqdm
 import emodim as em
+import sentence_evaluation as rating
 from datetime import datetime
 import sys
 
@@ -42,9 +43,10 @@ def createAnalyzationFiles():
 
 def s24_parser(dpath):
     threadData = {'threadMetadata': {}, 'threadID': '', 'comments': []}
-    commentData = {'commentMetadata': {}, 'words': []}
+    commentData = {'commentMetadata': {}, "sentenceValencePredictions": [], 'words': []}
     textData = {}
     wordlist = []
+    sentence = []
     text = ""
     # get an iterable, turn it into an iterator and get the root element
     context = ET.iterparse(dpath, events=("start", "end"))
@@ -72,7 +74,7 @@ def s24_parser(dpath):
                         f.write(f',\n')
                     threadData = {'threadMetadata': textData.copy(), 'threadID': element.attrib['thread_id'],
                                   'comments': []}
-                commentData = {'commentMetadata': textData.copy(), 'words': []}
+                commentData = {'commentMetadata': textData.copy(), "sentenceValencePredictions": [], 'words': []}
                 fix = True
                 # clear the root so memory management is reasonable
                 r.clear()
@@ -87,18 +89,22 @@ def s24_parser(dpath):
                             # get the first word of the string (this is what we want)
                             text += word.split('\t')[0]
                             wordlist.append(word.split('\t')[0])
+                            sentence.append(word.split('\t')[0])
                             # the third last element is if there are spaces or newlines after the word
                             w = word.split('\t')[-3]
                             # there was a space
                             if w == '_':
                                 text += ' '
                                 wordlist.append(' ')
+                                sentence.append(' ')
                             else:
                                 w = w.split('=')[1]
                                 if w != "No":
                                     text += w
                                     wordlist.append(w)
                         commentData['words'].extend(wordlist.copy())
+                        commentData['sentenceValencePredictions'].append(rating.evaluation(''.join(sentence))[0])
+                        sentence.clear()
                         wordlist.clear()
                     ev, el = next(context)
                 r.clear()
@@ -107,7 +113,7 @@ def s24_parser(dpath):
                 JSONvalues = em.evaluateS24Data(commentData['words'], ftxt)
                 commentData['words'] = JSONvalues
                 threadData['comments'].append(commentData.copy())
-                wordlist.clear(), textData.clear(), r.clear()
+                wordlist.clear(), sentence.clear(), textData.clear(), r.clear()
 
 
 ftxt, fjson = createAnalyzationFiles()

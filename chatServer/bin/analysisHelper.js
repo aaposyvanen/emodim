@@ -31,13 +31,15 @@ function splitMessageToSentences(message) {
     // "Match any whitespace that has one of [.!?] immediately before it."
     const regex = /(?<=[.!?])\s/;
     let sentences = message.split(regex);
-
+    return sentences;
+    /*
     // The prediction service requires input as an array of arrays,
     // each of the inner arrays containing an individual sentence.
     const sentenceArrays = _.map(sentences, sentence => {
         return [sentence];
     });
     return sentenceArrays;
+    */
 }
 
 module.exports = {

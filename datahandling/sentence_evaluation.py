@@ -36,6 +36,7 @@ def evaluation(inps):
 
 
 def split_into_sentences(inputs):
+    if isinstance(inputs, list):
+        return inputs
     sentences = tokenize.sent_tokenize(inputs, language='finnish')
-    print(sentences)
     return sentences
