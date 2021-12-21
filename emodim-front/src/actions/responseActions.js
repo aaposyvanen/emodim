@@ -27,7 +27,7 @@ export const sendMessageForAnalysis = () => {
             }
 
             dispatch(setWaitingForAnalysis(true));
-            const res = await axios.post(`${analysisEndpoint}/evaluateSentence`, {
+            const res = await axios.post(`${analysisEndpoint}/evaluateSentence/`, {
                 instances: state.responseReducer.responseText
             });
             dispatch(updateAnalysisData(res.data[0]));

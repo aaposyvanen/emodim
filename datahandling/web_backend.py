@@ -17,7 +17,7 @@ def startPage():
     return render_template('index.html', message=message)
 
 
-@app.route('/evaluateSentence', methods=['POST'])
+@app.route('/evaluateSentence/', methods=['POST'])
 @cross_origin(origins=["http://localhost:3000", "http://localhost:3001"])
 def evaluateSentence():
     text = request.json['instances']

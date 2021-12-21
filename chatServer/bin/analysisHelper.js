@@ -3,7 +3,7 @@ const _ = require("lodash");
 
 async function getWordLevelAnalysis(message) {
     try {
-        const res = await axios.post("http://word-analyzer:5000/evaluateSentence", {
+        const res = await axios.post("http://word-analyzer:5000/evaluateSentence/", {
             instances: message
         });
 
@@ -37,14 +37,6 @@ function splitMessageToSentences(message) {
     const regex = /(?<=[.!?])\s/;
     let sentences = message.split(regex);
     return sentences;
-    /*
-    // The prediction service requires input as an array of arrays,
-    // each of the inner arrays containing an individual sentence.
-    const sentenceArrays = _.map(sentences, sentence => {
-        return [sentence];
-    });
-    return sentenceArrays;
-    */
 }
 
 module.exports = {
