@@ -72,7 +72,7 @@ def findRatedSynonym(word, bf, library):
     if word is None or len(word) < 2 or bf is None:
         return {"original_text": word, "nearest": None, "similarity": None, "baseform": None,
                 "rating": (None, None, None)}
-    n = 50  # number of neighbors to take into consideration
+    n = 10  # number of neighbors to take into consideration
     nearest = library.nearest(word, n)
     if nearest is not None:
         for n in nearest:  # Iterate through the words to find the first that we have ratings for

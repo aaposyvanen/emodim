@@ -1,0 +1,32 @@
+Total evaluated sentences = 18286
+
+negative = 2453---> 10,1334%
+neutral = 15199---> 76,4355%
+positive = 634 ---> 13,4310%
+
+negative w/ confidence of 30%-40% = 116  
+negative w/ confidence of 40%-50% = 168  
+negative w/ confidence of 50%-60% = 120  
+negative w/ confidence of 60%-70% = 79   
+negative w/ confidence of 70%-80% = 64   
+negative w/ confidence of 80%-90% = 66   
+negative w/ confidence of    >90% = 21   
+
+neutral w/ confidence of 30%-40% = 2    
+neutral w/ confidence of 40%-50% = 1546  
+neutral w/ confidence of 50%-60% = 2022  
+neutral w/ confidence of 60%-70% = 2540  
+neutral w/ confidence of 70%-80% = 3173  
+neutral w/ confidence of 80%-90% = 4050  
+neutral w/ confidence of    >90% = 1866 
+
+positive w/ confidence of 30%-40% = 116  
+positive w/ confidence of 40%-50% = 168  
+positive w/ confidence of 50%-60% = 120  
+positive w/ confidence of 60%-70% = 79   
+positive w/ confidence of 70%-80% = 64 
+positive w/ confidence of 80%-90% = 66 
+positive w/ confidence of    >90% = 21  
+
+check which sentences have 30-40% confidence ratings (find correlation why)
+check which sentences have   >90% confidence ratings (find correlation why)

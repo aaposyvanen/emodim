@@ -6,7 +6,7 @@ app = Flask(__name__, static_folder='')
 cors = CORS(app)
 
 
-@app.route('/evaluateSentence/<string:text>')
+@app.route('/evaluateSentence/<string:text>', methods = ['GET', 'POST'])
 @cross_origin(origins=["http://localhost:3000"])
 def evaluateSentence(text):
     # note: jsonify sorts the dict keys alphabetically (correct values might be lost when

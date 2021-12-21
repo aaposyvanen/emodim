@@ -26,7 +26,7 @@ def evaluateWord(word):  # Returns a python map with the rating data in JSON.
     return jsonify(resultMap)
 
 
-@app.route('/evaluateSentence/<string:text>')
+@app.route('/evaluateSentence/<string:text>', methods=['GET', 'POST'])
 @cross_origin(origins=["http://localhost:3000", "http://localhost:3001"])
 def evaluateSentence(text):
     # note: jsonify sorts the dict keys alphabetically (correct values might be lost when

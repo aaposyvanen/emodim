@@ -13,7 +13,11 @@ The 'shuffleSentences' function makes a shuffled copy of a .txt file and then wr
 
 
 # path = f"D:\\Work\\Data\\s24_2017_sentences_31-05-2021_15-17-17.txt"
-path = f"D:\\Work\\Data\\s24_2001_sentences.txt"
+# path = f"D:\\Work\\Data\\s24_2001_sentences.txt"
+#path = "E:\\OneDrive - TUNI.fi\\Emodim\\data\\tr\\combinedpos.txt"
+path = "E:\\OneDrive - TUNI.fi\\Emodim\\data\\tr\\combinedneg.txt"
+#path = "E:\\OneDrive - TUNI.fi\\Emodim\\data\\tr\\combinedneut2.txt"
+
 
 
 def sliceTrainingdata():
@@ -30,6 +34,16 @@ def shuffleSentences():
     with open(path.replace(".txt", "_shuffled.txt"), "w", encoding='utf-8') as f:
         f.writelines(lines)
 
-
+def removeLongSentences():
+    with open(path, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+        keep = []
+        for line in lines:
+            if len(line) <= 140:
+                keep.append(line)
+    print(len(keep), len(lines))
+    with open(path, "w", encoding='utf-8') as f:
+        f.writelines(keep)
 # sliceTrainingdata()
 # shuffleSentences()
+removeLongSentences()

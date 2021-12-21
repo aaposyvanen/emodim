@@ -9,7 +9,9 @@ config = tf.compat.v1.ConfigProto()             # comment out to use CPU, uncomm
 config.gpu_options.allow_growth = True          # comment out to use CPU, uncomment to use GPU
 session = tf.compat.v1.Session(config=config)   # comment out to use CPU, uncomment to use GPU
 
-modelpath = f"../data/others/rnnmodel"   # testdata to visualize predictions
+#modelpath = f"../data/others/rnnmodel"
+#modelpath = f"../data/others/rnn_09-12-2021_14-34-21"
+modelpath = f"../data/others/rnn_09-12-2021_15-33-44"
 model = tf.keras.models.load_model(modelpath)
 # model.summary()
 
@@ -27,7 +29,7 @@ def evaluation(inps):
         values["Label"] = str(lab)
         tmp = []
         for x in predicted_scores[i]:
-            tmp.append(str(round(x, 4)))
+            tmp.append(f"{x:.4f}")
         values['Confidences'] = tmp
         ret.append(tmp)
         debug.append(values)
