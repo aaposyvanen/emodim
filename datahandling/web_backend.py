@@ -18,7 +18,7 @@ def startPage():
 
 
 @app.route('/evaluateSentence', methods=['POST'])
-@cross_origin(origins=["http://localhost:3000"])
+@cross_origin(origins=["http://localhost:3000", "http://localhost:3001"])
 def evaluateSentence():
     text = request.json['instances']
     # note: jsonify sorts the dict keys alphabetically (correct values might be lost when
