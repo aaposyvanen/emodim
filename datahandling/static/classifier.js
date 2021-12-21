@@ -1,13 +1,20 @@
 
 "use strict";
 function analyzeClicked() {
+	clearOutput();
 	const textToAnalyze = inputarea.value;
 	analyzeText(textToAnalyze);
 }
 
 async function analyzeText(text) {
-	// Get the emotional ratings from the sever
-	const response = await fetch('/evaluateSentence/' + text);
+	// Get the emotional ratings from the server
+	const response = await fetch('/evaluateSentence', {
+		method: 'POST', 
+		headers: {
+			'Content-Type': 'application/json'
+		  },
+		body: JSON.stringify({instances: text})});
+
 
 	if (response.ok) {
 		const json = await response.json();
@@ -15,18 +22,6 @@ async function analyzeText(text) {
 	} else {
 		appendToResult("HTTP-Error" + response.status);
 	}
-}
-
-async function analyzeWord(word) {
-	// Get the emotional ratings from the sever
-	await fetch('/evaluate/' + word)
-		.then(function(response) {
-			return response.text();
-		})
-		.then(function(text) {
-			// format HTML according to the emotional ratings and append it to the result div.
-			appendToResult(text + "<br>");
-		});
 }
 
 function visualizeInHTML(json) {

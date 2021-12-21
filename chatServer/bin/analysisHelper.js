@@ -3,10 +3,14 @@ const _ = require("lodash");
 
 async function getWordLevelAnalysis(message) {
     try {
-        const res = await axios.post(`http://word-analyzer:5000/evaluateSentence/${message}`);
+        const res = await axios.post("http://word-analyzer:5000/evaluateSentence", {
+            instances: message
+        });
+
         return res.data[0];
     } catch (error) {
-        console.log("Word analysis server didn't respond.");
+        console.log(error);
+        console.log("Word analysis server didn't respond, error above.");
     }
 }
 
@@ -18,6 +22,7 @@ async function getSentenceValencePredictions(message) {
             signature_name: "serving_default",
             instances: sentences
         });
+
         return ("res", res.data.predictions);
     } catch (error) {
         console.log(error);
