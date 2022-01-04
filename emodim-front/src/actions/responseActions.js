@@ -1,5 +1,6 @@
 import axios from "axios";
-import { analysisEndpoint, valenceAnalysisEndpoint } from "../constants";
+import { analysisEndpoint } from "../constants";
+import analysisHelper from "../../../chatServer/bin/analysisHelper.js";
 
 export const UPDATE_MESSAGE_TEXT = "UPDATE_MESSAGE_TEXT";
 export const UPDATE_ANALYSIS_DATA = "UPDATE_ANALYSIS_DATA";
@@ -25,16 +26,12 @@ export const sendMessageForAnalysis = () => {
             if (!state.responseReducer.responseText) {
                 throw new Error("No response to send");
             }
-
+            
             dispatch(setWaitingForAnalysis(true));
             const res = await axios.post(`${analysisEndpoint}/evaluateSentence/`, {
                 instances: state.responseReducer.responseText
             });
-            const regex = /(?<=[.!?])\s/;
-            let sentences = state.responseReducer.responseText.split(regex);
-            const resValence = await axios.post(`${valenceAnalysisEndpoint}/v1/models/rnnmodel:predict/`, {
-                instances: sentences
-            });
+            const resValence = analysisHelper.getSentenceValencePredictions(state.responseReducer.responseText);
             console.log(resValence);
             dispatch(updateAnalysisData(res.data[0]));
             dispatch(updateAnalysisData(resValence.data.predictions));

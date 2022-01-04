@@ -3,14 +3,15 @@ const _ = require("lodash");
 
 async function getWordLevelAnalysis(message) {
     try {
-        /*
+        
         const res = await axios.post("http://word-analyzer:5000/evaluateSentence/", {
             instances: message
         });
-        */
+        /*
         const res = await axios.post("http://localhost:5000/evaluateSentence/", {
             instances: message
         });
+        */
         return res.data[0];
     } catch (error) {
         console.log(error);
@@ -22,17 +23,17 @@ async function getSentenceValencePredictions(message) {
 
     const sentences = splitMessageToSentences(message);
     try {
-        /*
+        
         const res = await axios.post("http://sentence-analyzer:8501/v1/models/rnnmodel:predict", {
             signature_name: "serving_default",
             instances: sentences
         });
-        */
+        /*
         const res = await axios.post("http://localhost:8501/v1/models/rnnmodel:predict", {
             signature_name: "serving_default",
             instances: sentences
         });
-
+        */
         return ("res", res.data.predictions);
     } catch (error) {
         console.log(error);

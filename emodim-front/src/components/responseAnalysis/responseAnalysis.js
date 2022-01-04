@@ -2,11 +2,9 @@ import React from "react";
 import _ from "lodash";
 import ResponseField from "../responseField/responseField";
 import AnnotatedWord from "../annotatedWord/annotatedWord";
-import AnnotatedMessage from "../annotatedMessage/annotatedMessage";
 import "./responseAnalysis.css";
 
 const ResponseAnalysis = ({ analysisResults, annotations }) => {
-    console.log(annotations);
     const message = _.map(analysisResults, (wordData, index) => {
         return <AnnotatedWord key={index} wordData={wordData} highlights={annotations} />
     });

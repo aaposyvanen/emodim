@@ -31,9 +31,7 @@ const ResponseAnalysisDialog = ({ annotations }) => {
     const dispatch = useDispatch();
     const [open, setOpen] = React.useState(false);
     const socketRef = useRef(null);
-
     const analysisResults = useSelector(state => state.responseReducer.analysisResults);
-    console.log(analysisResults);
     const currentResponseText = useSelector(state => state.responseReducer.responseText);
     const currentThread = useSelector(state => state.threadReducer.thread);
     const isWaitingForAnalysis = useSelector(state => state.responseReducer.isWaitingForAnalysis);
