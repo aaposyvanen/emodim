@@ -37,6 +37,7 @@ export const sendMessageForAnalysis = () => {
             });
             console.log(resValence);
             dispatch(updateAnalysisData(res.data[0]));
+            dispatch(updateAnalysisData(resValence.data.predictions));
             dispatch(setWaitingForAnalysis(false));
         } catch (error) {
             dispatch(setWaitingForAnalysis(false));
