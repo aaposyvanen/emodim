@@ -1,5 +1,5 @@
 import axios from "axios";
-import { analysisEndpoint } from "../constants";
+import { analysisEndpoint, valenceAnalysisEndpoint } from "../constants";
 
 export const UPDATE_MESSAGE_TEXT = "UPDATE_MESSAGE_TEXT";
 export const UPDATE_ANALYSIS_DATA = "UPDATE_ANALYSIS_DATA";
@@ -30,6 +30,12 @@ export const sendMessageForAnalysis = () => {
             const res = await axios.post(`${analysisEndpoint}/evaluateSentence/`, {
                 instances: state.responseReducer.responseText
             });
+            const regex = /(?<=[.!?])\s/;
+            let sentences = state.responseReducer.responseText.split(regex);
+            const resValence = await axios.post(`${valenceAnalysisEndpoint}/v1/models/rnnmodel:predict/`, {
+                instances: sentences
+            });
+            console.log(resValence);
             dispatch(updateAnalysisData(res.data[0]));
             dispatch(setWaitingForAnalysis(false));
         } catch (error) {

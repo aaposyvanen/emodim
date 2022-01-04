@@ -1,4 +1,5 @@
 export const analysisEndpoint = "http://127.0.0.1:5000";
+export const valenceAnalysisEndpoint = "http://127.0.0.1:8501";
 export const chatEndpoint = "http://127.0.0.1:3010";
 export const annotations = !!process.env.REACT_APP_ANNOTATIONS;
 export const messageFeedbackStrings = {

@@ -7,7 +7,6 @@ import "./annotatedMessage.css";
 import { messageFeedbackStrings as feedback } from "../../constants";
 
 const AnnotatedMessage = ({ data, wordLevelAnnotations, messageLevelAnnotations, response }) => {
-
     const { author } = data.commentMetadata;
     const words = data.words;
     const hasChildren = data.children && !_.isEmpty(data.children);

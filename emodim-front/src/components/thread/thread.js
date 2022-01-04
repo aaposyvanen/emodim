@@ -51,7 +51,7 @@ export class Thread extends Component {
                         <MessageArea feedbackHighlighting={true} messageHighlighting={true} messageAnnotations={true} />
                     </Route>
                     <Route path="/">
-                        <Redirect to="/1" />
+                        <Redirect to="/8" />
                     </Route>
                 </Switch>
             </div>
