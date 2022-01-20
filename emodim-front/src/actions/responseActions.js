@@ -1,6 +1,5 @@
 import axios from "axios";
-import { analysisEndpoint } from "../constants";
-import analysisHelper from "../../../chatServer/bin/analysisHelper.js";
+import { analysisEndpoint, valenceAnalysisEndpoint } from "../constants";
 
 export const UPDATE_MESSAGE_TEXT = "UPDATE_MESSAGE_TEXT";
 export const UPDATE_ANALYSIS_DATA = "UPDATE_ANALYSIS_DATA";
@@ -26,15 +25,33 @@ export const sendMessageForAnalysis = () => {
             if (!state.responseReducer.responseText) {
                 throw new Error("No response to send");
             }
-            
             dispatch(setWaitingForAnalysis(true));
             const res = await axios.post(`${analysisEndpoint}/evaluateSentence/`, {
                 instances: state.responseReducer.responseText
             });
-            const resValence = analysisHelper.getSentenceValencePredictions(state.responseReducer.responseText);
+
+            // Attempting to fetch valence predictions for the message directly from Tensorflow serving
+            /*
+            const regex = /(?<=[.!?])\s/;
+            let sentences = state.responseReducer.responseText.split(regex);
+            const resValence = await axios.post(`${valenceAnalysisEndpoint}/v1/models/rnnmodel:predict/`, {
+                signature_name: "serving_default",
+                instances: sentences
+            });
             console.log(resValence);
+            */
+
+            // Attempting to fetch valence predictions for the message indirectly via localhost:5000 (python-docker)
+
+            /*
+            const resValence = await axios.post(`${analysisEndpoint}/fetchPredictions/`, {
+                signature_name: "serving_default",
+                instances: sentences
+            });
+            console.log(resValence);
+            */
             dispatch(updateAnalysisData(res.data[0]));
-            dispatch(updateAnalysisData(resValence.data.predictions));
+            //dispatch(updateAnalysisData(resValence));
             dispatch(setWaitingForAnalysis(false));
         } catch (error) {
             dispatch(setWaitingForAnalysis(false));

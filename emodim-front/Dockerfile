@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:16
 COPY ["package.json", "package-lock.json", "./"]
 WORKDIR /app
 RUN npm install --production

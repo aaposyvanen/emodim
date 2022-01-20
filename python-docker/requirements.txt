@@ -4,3 +4,4 @@ numpy==1.19.5
 libvoikko
 pandas==1.3.0
 openpyxl==3.0.7
+requests

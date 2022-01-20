@@ -41,9 +41,12 @@ def openFile(t):
             excel = input('Insert the name of the file to normalize (should be written as: '
                           '"name_of_file.xlsx"): ')
             try:
-                createNormalizedExel(f"..\\..\\data\\xlsxs\\{excel}")
+                import os
+                path = f"{os.path.abspath(os.path.join(os.path.split(os.path.dirname(os.path.abspath(__file__)))[0], os.pardir))}\\data\\xlsxs\\"
+                createNormalizedExel(path, excel)
                 found = True
-            except OSError:
+            except OSError as e:
+                print(f'Error: {e}')
                 print('Error accessing file. Check file name and path and try again. File should be located in the '
                       '"data" folder.')
                 continue
@@ -82,8 +85,9 @@ def createNormalizedXML(xml):
     return
 
 
-def createNormalizedExel(filename):
-    df = pd.read_excel(filename, skiprows=5, sheet_name='Sheet5', usecols=lambda x: 'Unnamed' not in x)
+def createNormalizedExel(path, filename):
+    input(f"{path}{filename}")
+    df = pd.read_excel(f"{path}{filename}", sheet_name='Sheet1', usecols=lambda x: 'Unnamed' not in x)
     for i, row in df.iterrows():
         df.at[i, 'Valence'] = round(normalize(df.at[i, 'Valence'], 0, 1), 3)
         df.at[i, 'Arousal'] = round(normalize(df.at[i, 'Arousal'], 0, 1), 3)
@@ -91,8 +95,8 @@ def createNormalizedExel(filename):
     dfn = df.groupby("Finnish-fi").mean().round(3).reset_index()
     dfn['Finnish-fi'] = dfn['Finnish-fi'].str.lower()
     dfn = dfn.sort_values('Finnish-fi')
-    dfn.to_excel("..\\..\\data\\xlsxs\\final_wordlist.xlsx", index=False, encoding='utf-8')
-    df.to_csv(f'..\\..\\data\\xlsxs\\bigList_normalized_{time}.csv', index=False, sep=',', encoding='utf-8')
+    dfn.to_excel(f"{path}final_wordlist.xlsx", index=False, encoding='utf-8')
+    df.to_csv(f"{path}bigList_normalized_{time}.csv", index=False, sep=',', encoding='utf-8')
     return
 
 
