@@ -1,5 +1,5 @@
 import axios from "axios";
-import { analysisEndpoint, valenceAnalysisEndpoint } from "../constants";
+import { analysisEndpoint } from "../constants";
 
 export const UPDATE_MESSAGE_TEXT = "UPDATE_MESSAGE_TEXT";
 export const UPDATE_ANALYSIS_DATA = "UPDATE_ANALYSIS_DATA";
@@ -31,27 +31,16 @@ export const sendMessageForAnalysis = () => {
             });
 
             // Attempting to fetch valence predictions for the message directly from Tensorflow serving
-            /*
             const regex = /(?<=[.!?])\s/;
             let sentences = state.responseReducer.responseText.split(regex);
-            const resValence = await axios.post(`${valenceAnalysisEndpoint}/v1/models/rnnmodel:predict/`, {
+            console.log(sentences);
+            const resValence = await axios.post("http://localhost:8501/v1/models/rnnmodel:predict", {
                 signature_name: "serving_default",
                 instances: sentences
             });
-            console.log(resValence);
-            */
-
-            // Attempting to fetch valence predictions for the message indirectly via localhost:5000 (python-docker)
-
-            /*
-            const resValence = await axios.post(`${analysisEndpoint}/fetchPredictions/`, {
-                signature_name: "serving_default",
-                instances: sentences
-            });
-            console.log(resValence);
-            */
-            dispatch(updateAnalysisData(res.data[0]));
-            //dispatch(updateAnalysisData(resValence));
+            console.log(resValence.data.predictions);
+            dispatch(updateAnalysisData({"words" : res.data[0], "sentenceValencePredictions" :resValence['data']['predictions']}));
+           // dispatch(updateAnalysisData(resValence['data']['predictions']));
             dispatch(setWaitingForAnalysis(false));
         } catch (error) {
             dispatch(setWaitingForAnalysis(false));

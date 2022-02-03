@@ -3,12 +3,20 @@
     padding-bottom: 10px;
     border-radius: 10px 10px 0 0;
 }
-.original-response-valence {
+.analysis-message.message-valence-1 {
     font-size: small;
-    color: #aaa;
     margin-left: 20px;
     padding-top: 15px;
     padding-bottom: 5px;
+    color: rgba(255, 55, 55, 0.8);
+}
+
+.analysis-message.message-valence1 {
+    font-size: small;
+    margin-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    color: rgba(55, 255, 55, 0.8);
 }
 
 .original-response {

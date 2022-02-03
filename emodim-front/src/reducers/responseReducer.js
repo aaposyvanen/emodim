@@ -21,7 +21,8 @@ const responseReducer = (state = initialState, action) => {
         case UPDATE_ANALYSIS_DATA:
             return {
                 ...state,
-                analysisResults: action.payload
+                analysisResults: action.payload.words,
+                valenceResults: action.payload.sentenceValencePredictions
             }
         case SET_WAITING_FOR_ANALYSIS:
             return {
