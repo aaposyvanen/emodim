@@ -27,6 +27,3 @@ positive w/ confidence of 60%-70% = 277  ---> 1.51482%
 positive w/ confidence of 70%-80% = 283  ---> 1.54763%
 positive w/ confidence of 80%-90% = 298  ---> 1.62966%
 positive w/ confidence of    >90% = 1028 ---> 5.62178%
-
-check which sentences have 30-40% confidence ratings (find correlation why)
-check which sentences have   >90% confidence ratings (find correlation why)

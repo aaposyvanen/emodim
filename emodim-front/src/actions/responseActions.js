@@ -33,7 +33,7 @@ export const sendMessageForAnalysis = () => {
             // Attempting to fetch valence predictions for the message directly from Tensorflow serving
             const regex = /(?<=[.!?])\s/;
             let sentences = state.responseReducer.responseText.split(regex);
-            console.log(sentences);
+            // console.log(sentences);
             const resValence = await axios.post("http://localhost:8501/v1/models/rnnmodel:predict", {
                 signature_name: "serving_default",
                 instances: sentences
