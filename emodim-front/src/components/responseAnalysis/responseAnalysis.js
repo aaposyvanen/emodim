@@ -8,7 +8,7 @@ import "./responseAnalysis.css";
 
 const ResponseAnalysis = ({ analysisResults, valenceResults, annotations }) => {
 
-    // TODO: FIX THIS MESS (utilize annotatedMessage, should provide ready, well-formed valence prediction strings)
+    // TODO: FIX THIS MESS (utilize annotatedMessage, should provide ready and well-formed valence prediction strings)
     const results = useSelector(state => state.responseReducer.valenceResults);
     let analysisMessage = null;
     let messageValence = 0;
