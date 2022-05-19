@@ -40,7 +40,14 @@ Alkukommenttia ennen "uutinen" mitä on kommentoitu
 
 Käyttöliittymä on "valmis", toisen henkilön tekemä kokonaisuus johon on perehdyttävä jonkin aikaa
 
+Teksti tunnesisällöstä vain jos se on positiivinen tai negatiivinen (ei "Viestin tunnesisältö on neutraali")
+
+Hymiö lähetettävän viestin analyysiin
+
+Keskusteluiden selaamiseen nuoli-painikkeet
+
 # Jatkokehitysideoita
 
 Viestiketjun kokonaisuuden / siinä olevien sisäisten jännitteiden visualisointi / havainnointi jollakin tavalla?
 
+Käyttöliittymä myös englanniksi
