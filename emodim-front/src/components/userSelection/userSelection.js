@@ -30,6 +30,7 @@ const UserSelection = () => {
                 value={inputValue}
                 onChange={handleChange}
                 helperText={helperText}
+                autoFocus
             />
             <Button
                 onClick={() => handleClick(inputValue)}
