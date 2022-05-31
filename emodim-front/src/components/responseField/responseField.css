@@ -1,9 +1,6 @@
 .response-field {
     display: flex;
     align-items: flex-end;
-    padding: 8px 8px 0;
-    background-color: #202020;
-    border-radius: 10px 10px 0 0;
 }
 
 .response-text-input {
@@ -11,17 +8,14 @@
     max-width: 100%;
     min-height: 8em;
     height: fit-content;
-    background-color: #404040;
-    color:  white;
+    background-color: #DFDFDF;
     border: 0;
-    border-radius: 5px 5px 0 0;
+    border-radius: 6px;
     font-family: inherit;
     font-size: 16px;
     resize: vertical;
-}
-
-::placeholder {
-    color: #e0e0e0
+    padding: 1em;
+    margin-top: 0.5em;
 }
 
 textarea:focus {

@@ -1,12 +1,12 @@
 import React from "react";
 import _ from "lodash";
 import AnnotatedWord from "../annotatedWord/annotatedWord";
-import EmojiAnnotation from "../emojiAnnotation/emojiAnnotation";
 import "./annotatedMessage.css";
+import MessageHeader from "../messageHeader/messageHeader";
 
 import { messageFeedbackStrings as feedback } from "../../constants";
 
-const AnnotatedMessage = ({ data, wordLevelAnnotations, messageLevelAnnotations, response, isNew }) => {
+const AnnotatedMessage = ({ data, wordLevelAnnotations, messageLevelAnnotations, response }) => {
     const { author } = data.commentMetadata;
     const words = data.words;
     const hasChildren = data.children && !_.isEmpty(data.children);
@@ -94,32 +94,21 @@ const AnnotatedMessage = ({ data, wordLevelAnnotations, messageLevelAnnotations,
     handleValencePredictions()
 
     return (
-        <div className={`message-box${response ? " response" : ""}`}>
-            <div className="metadata">
-                <div className="author">
-                    {author}
-                </div>
-            </div>
-            {
-                messageLevelAnnotations &&
-                <div className={`analysis-message message-valence${messageValence}`}>
-                    {analysisMessage}
-                </div>
-            }
+        <div className={`message-box${response ? " response" : ""} message-valence${messageValence} ${messageLevelAnnotations ? "annotations" : ""}`}>
+            <MessageHeader
+                author={author}
+                analysisMessage={analysisMessage}
+                messageLevelAnnotations={messageLevelAnnotations}
+                messageValence={messageValence}
+            />
             <div className="content">
                 <div className="message" key={data.commentMetadata.id}>
                     {message}
                 </div>
-                {
-                    messageLevelAnnotations &&
-                    <EmojiAnnotation
-                        messageValence={messageValence}
-                    />
-                }
             </div>
             {
                 hasChildren && data.children.map(child => {
-                    return < AnnotatedMessage
+                    return <AnnotatedMessage
                         data={child}
                         key={child.commentMetadata.id}
                         response

@@ -1,18 +1,17 @@
 .thread {
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
-    color: white;
-    background-color: #404040;
-    max-width: 80ch;
-    margin: 10px;
+    background-color: #F3F3F3;
+    max-width: 90ch;
+    padding: 2em;
+    height: 100%;
+    min-height: 100vh;
 }
 
 .title {
-    margin: 5px;
-    padding: 5px;
-    background-color: #707070;
-    border-radius: 10px 10px 0 0;
+    padding: 0.5em;
+    background-color: white;
     font-size: 24px;
     font-weight: bold;
+    margin-bottom: 1em;
 }

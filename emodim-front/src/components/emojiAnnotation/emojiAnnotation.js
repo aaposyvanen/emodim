@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngry, faLaugh, faMeh } from "@fortawesome/free-solid-svg-icons";
+import { faAngry, faLaugh, faMeh } from "@fortawesome/free-regular-svg-icons";
 import "./emojiAnnotation.css"
 
 const EmojiAnnotation = ({ messageValence }) => {
@@ -18,7 +18,7 @@ const EmojiAnnotation = ({ messageValence }) => {
         <div className="emoji-annotation">
             <FontAwesomeIcon
                 icon={valenceEmoji}
-                className="valence-emoji"
+                className={`valence-emoji message-valence${messageValence}`}
             />
         </div>
     )

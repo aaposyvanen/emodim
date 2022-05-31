@@ -1,0 +1,22 @@
+.message-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+    align-items: flex-start;
+}
+
+.message-header .analysis {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.message-header .author {
+    margin-right: 1em;
+}
+
+.analysis-message {
+    font-size: small;
+    color: #202020;
+}

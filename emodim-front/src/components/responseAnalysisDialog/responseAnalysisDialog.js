@@ -25,7 +25,8 @@ import {
     updateMessageText
 } from "../../actions/responseActions";
 import { addMessageToCurrentThread } from "../../actions/threadActions";
-import "./responseAnalysisDialog.css"
+import "./responseAnalysisDialog.css";
+import "../buttons.css";
 
 const ResponseAnalysisDialog = ({ annotations }) => {
     const dispatch = useDispatch();
@@ -122,7 +123,11 @@ const ResponseAnalysisDialog = ({ annotations }) => {
 
     return (
         <div className="analysis-report">
-            <Button onClick={handleReplyClick}>
+            <Button
+                className="button-primary"
+                onClick={handleReplyClick}
+                disabled={!currentResponseText}
+            >
                 {buttonTexts.reply}
             </Button>
 
@@ -136,7 +141,7 @@ const ResponseAnalysisDialog = ({ annotations }) => {
                     </IconButton>
                 </MuiDialogTitle>
 
-                <MuiDialogContent dividers>
+                <MuiDialogContent className="dialog-content">
                     {isWaitingForAnalysis
                         ? <FontAwesomeIcon icon={faCircleNotch} className="loading-icon" />
                         : <ResponseAnalysis
@@ -147,10 +152,20 @@ const ResponseAnalysisDialog = ({ annotations }) => {
                 </MuiDialogContent>
 
                 <MuiDialogActions>
-                    <Button autoFocus onClick={handleClose} color="secondary">
+                    <Button 
+                        autoFocus 
+                        onClick={handleClose}
+                        className="button-secondary"
+                        variant="outlined"
+                    >
                         {buttonTexts.cancel}
                     </Button>
-                    <Button autoFocus onClick={handleSend} color="primary" disabled={isWaitingForAnalysis}>
+                    <Button 
+                        autoFocus 
+                        onClick={handleSend} 
+                        className="button-primary" 
+                        disabled={isWaitingForAnalysis||!currentResponseText}
+                    >
                         {buttonTexts.send}
                     </Button>
                 </MuiDialogActions>

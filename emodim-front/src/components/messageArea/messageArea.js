@@ -31,7 +31,7 @@ export class MessageArea extends Component {
                             if (comment && comment.commentMetadata) {
                                 return <AnnotatedMessage
                                     data={comment}
-                                    key={comment.commentMetadata.id}
+                                    key={comment.commentMetadata.comment_id}
                                     wordLevelAnnotations={this.props.messageHighlighting}
                                     messageLevelAnnotations={this.props.messageAnnotations}
                                 />

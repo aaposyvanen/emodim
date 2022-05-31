@@ -12,17 +12,17 @@
 }
 
 .valence-2 {
-    background-color: rgba(255, 0, 0, 0.6);
+    background-color: rgba(189, 62, 62, 0.6);
 }
 .valence-1 {
-    background-color: rgba(255, 0, 0, 0.4);
+    background-color: rgba(189, 62, 62, 0.4);
 }
 
 .valence1 {
-    background-color: rgba(0, 255, 0, 0.4);
+    background-color: rgba(145, 214, 145, 0.4);
 }
 .valence2 {
-    background-color: rgba(0, 255, 0, 0.6);
+    background-color: rgba(145, 214, 145, 0.6);
 }
 
 .arousal1 {

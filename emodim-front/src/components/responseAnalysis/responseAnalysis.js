@@ -38,7 +38,6 @@ const ResponseAnalysis = ({ analysisResults, annotations }) => {
                 data={constructMessage()}
                 wordLevelAnnotations={annotations}
                 messageLevelAnnotations={annotations}
-                isNew={true}
             />
             <ResponseField />
         </div>
