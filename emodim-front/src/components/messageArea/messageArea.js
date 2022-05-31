@@ -43,7 +43,10 @@ export class MessageArea extends Component {
                 </div>
                 <div className="response-section">
                     <ResponseField />
-                    <ResponseAnalysisDialog annotations={this.props.feedbackHighlighting} />
+                    <ResponseAnalysisDialog 
+                        wordLevelAnnotations={this.props.feedbackHighlighting}
+                        messageLevelAnnotations={this.props.feedbackAnnotations}
+                    />
                 </div>
             </div>
         );

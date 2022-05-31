@@ -28,7 +28,7 @@ import { addMessageToCurrentThread } from "../../actions/threadActions";
 import "./responseAnalysisDialog.css";
 import "../buttons.css";
 
-const ResponseAnalysisDialog = ({ annotations }) => {
+const ResponseAnalysisDialog = ({ wordLevelAnnotations, messageLevelAnnotations }) => {
     const dispatch = useDispatch();
     const [open, setOpen] = React.useState(false);
     const socketRef = useRef(null);
@@ -134,7 +134,7 @@ const ResponseAnalysisDialog = ({ annotations }) => {
             <Dialog onClose={handleClose} open={open}>
                 <MuiDialogTitle disableTypography >
                     <Typography variant="h6">
-                        {annotations ? titles.annotated : titles.regular}
+                        {wordLevelAnnotations || messageLevelAnnotations ? titles.annotated : titles.regular}
                     </Typography>
                     <IconButton aria-label="close" onClick={handleClose}>
                         <CloseIcon />
@@ -146,7 +146,8 @@ const ResponseAnalysisDialog = ({ annotations }) => {
                         ? <FontAwesomeIcon icon={faCircleNotch} className="loading-icon" />
                         : <ResponseAnalysis
                             analysisResults={formWordArrayFromAnalyzedData(analysisResults)}
-                            annotations={annotations}
+                            wordLevelAnnotations={wordLevelAnnotations}
+                            messageLevelAnnotations={messageLevelAnnotations}
                         />
                     }
                 </MuiDialogContent>

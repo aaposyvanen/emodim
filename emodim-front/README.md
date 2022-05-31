@@ -6,25 +6,34 @@ The app shows a message thread with different kinds of annotations for the emoti
 
 ## Annotation options
 
-There are three different kinds of annotations:
+There are four different kinds of annotations:
 - message-level analysis for messages in thread
 - word highlighting for messages in thread
+- message-level analysis in reply intervention
 - word highlighting in reply intervention
 
-Each can be turned on or off separately from the others. The three options allow 8 different combinations of annotations shown, as shown in the table below.
+Each can be turned on or off separately from the others. The four options allow 16 different combinations of annotations shown, as shown in the table below.
 
-|#| Reply Highlights|Thread Highlights|Message-level analysis|
-|---|---|---|---|
-|1|0|0|0|
-|2|0|0|1|
-|3|0|1|0|
-|4|0|1|1|
-|5|1|0|0|
-|6|1|0|1|
-|7|1|1|0|
-|8|1|1|1|
+|#| Reply Highlights|Reply analysis|Thread Highlights|Message-level analysis|
+|---|---|---|---|---|
+|1|0|0|0|0|
+|2|0|0|0|1|
+|3|0|0|1|0|
+|4|0|0|1|1|
+|5|0|1|0|1|
+|6|0|1|0|1|
+|7|0|1|1|0|
+|8|0|1|1|1|
+|9|1|0|0|0|
+|10|1|0|0|1|
+|11|1|0|1|0|
+|12|1|0|1|1|
+|13|1|1|0|1|
+|14|1|1|0|1|
+|15|1|1|1|0|
+|16|1|1|1|1|
 
- To control which annotations are shown navigate to a different path on the page, according to the first column in the table. For example, to show no annoatations navigate to [localhost:3000/1](http://localhost:3000/1). To show all annotations, instead go to [localhost:3000/8](http://localhost:3000/8). If no specific path is specified, the app will reroute to /1.
+ To control which annotations are shown navigate to a different path on the page, according to the first column in the table. For example, to show no annoatations navigate to [localhost:3000/1](http://localhost:3000/1). To show all annotations, instead go to [localhost:3000/16](http://localhost:3000/16). If no specific path is specified, the app will reroute to /16.
 
  ## Good to know
 

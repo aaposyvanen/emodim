@@ -6,7 +6,7 @@ import "./responseAnalysis.css";
 import { useSelector } from "react-redux";
 import * as dayjs from "dayjs";
 
-const ResponseAnalysis = ({ analysisResults, annotations }) => {
+const ResponseAnalysis = ({ analysisResults, wordLevelAnnotations, messageLevelAnnotations }) => {
     const currentThread = useSelector(state => state.threadReducer.thread);
     const username = useSelector(state => state.userReducer.username);
     const results = useSelector(state => state.responseReducer.valenceResults);
@@ -36,8 +36,8 @@ const ResponseAnalysis = ({ analysisResults, annotations }) => {
         <div className="response-analysis">
             <AnnotatedMessage
                 data={constructMessage()}
-                wordLevelAnnotations={annotations}
-                messageLevelAnnotations={annotations}
+                wordLevelAnnotations={wordLevelAnnotations}
+                messageLevelAnnotations={messageLevelAnnotations}
             />
             <ResponseField />
         </div>
