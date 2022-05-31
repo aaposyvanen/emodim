@@ -20,7 +20,7 @@ Each can be turned on or off separately from the others. The four options allow 
 |2|0|0|0|1|
 |3|0|0|1|0|
 |4|0|0|1|1|
-|5|0|1|0|1|
+|5|0|1|0|0|
 |6|0|1|0|1|
 |7|0|1|1|0|
 |8|0|1|1|1|
@@ -28,7 +28,7 @@ Each can be turned on or off separately from the others. The four options allow 
 |10|1|0|0|1|
 |11|1|0|1|0|
 |12|1|0|1|1|
-|13|1|1|0|1|
+|13|1|1|0|0|
 |14|1|1|0|1|
 |15|1|1|1|0|
 |16|1|1|1|1|
