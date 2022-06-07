@@ -18,10 +18,10 @@ services:
       - MODEL_NAME=rnnmodel
     command:
       - "--rest_api_enable_cors_support"
-  python-docker:
+  word-analysis:
     container_name: word-analysis
     build:
-      context: ./python-docker
+      context: ./word-analysis
       dockerfile: Dockerfile
     networks: 
       - emodim
