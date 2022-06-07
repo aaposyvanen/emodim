@@ -7,19 +7,19 @@ networks:
 services:
   tensorflow-serving:
     image: tensorflow/serving:latest
-    container_name: sentence-analyzer
+    container_name: sentence-analysis
     networks: 
       - emodim
     ports:
       - "8501:8501"
     volumes:
-      - "./classifier/model/rnnmodel:/models/rnnmodel"
+      - "./sentence-analysis/model/rnnmodel:/models/rnnmodel"
     environment: 
       - MODEL_NAME=rnnmodel
     command:
       - "--rest_api_enable_cors_support"
   python-docker:
-    container_name: word-analyzer
+    container_name: word-analysis
     build:
       context: ./python-docker
       dockerfile: Dockerfile

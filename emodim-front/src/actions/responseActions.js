@@ -26,21 +26,23 @@ export const sendMessageForAnalysis = () => {
                 throw new Error("No response to send");
             }
             dispatch(setWaitingForAnalysis(true));
-            const res = await axios.post(`${analysisEndpoint}/evaluateSentence/`, {
-                instances: state.responseReducer.responseText
-            });
 
-            // Attempting to fetch valence predictions for the message directly from Tensorflow serving
-            const regex = /(?<=[.!?])\s/;
-            let sentences = state.responseReducer.responseText.split(regex);
-            // console.log(sentences);
-            const resValence = await axios.post("http://localhost:8501/v1/models/rnnmodel:predict", {
-                signature_name: "serving_default",
-                instances: sentences
-            });
-            console.log(resValence.data.predictions);
-            dispatch(updateAnalysisData({"words" : res.data[0], "sentenceValencePredictions" :resValence['data']['predictions']}));
-           // dispatch(updateAnalysisData(resValence['data']['predictions']));
+            // TODO this block of code is done in a function in analysisHelper.js (getSentenceValencePredictions and getWordLevelAnalysis)
+            // and should be tidied to utilize the ready functionality
+                const res = await axios.post(`${analysisEndpoint}/evaluateSentence/`, {
+                    instances: state.responseReducer.responseText
+                });
+                // Attempting to fetch valence predictions for the message directly from Tensorflow serving
+                const regex = /(?<=[.!?])\s/;
+                let sentences = state.responseReducer.responseText.split(regex);
+                // console.log(sentences);
+                const resValence = await axios.post("http://localhost:8501/v1/models/rnnmodel:predict", {
+                    signature_name: "serving_default",
+                    instances: sentences
+                });
+                console.log(resValence.data.predictions);
+                dispatch(updateAnalysisData({"words" : res.data[0], "sentenceValencePredictions" :resValence['data']['predictions']}));
+            // end TODO clean up lines 32-45
             dispatch(setWaitingForAnalysis(false));
         } catch (error) {
             dispatch(setWaitingForAnalysis(false));

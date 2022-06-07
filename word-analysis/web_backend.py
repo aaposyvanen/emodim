@@ -16,7 +16,7 @@ def evaluateSentence():
     # print(em.evaluateText(text)[0])
     return jsonify(em.evaluateText(text))
 
-
+'''
 @app.route('/fetchPredictions/', methods = ['POST'])
 @cross_origin(origins=["http://localhost:3000", "http://localhost:8501"])
 def predictions():
@@ -28,4 +28,4 @@ def predictions():
     # print(em.evaluateText(text)[0])
     # print(text)
     return #jsonify(em.evaluateText(text))
-
+'''

@@ -6,7 +6,7 @@ The frontend components are done by [Tomi](https://github.com/JokkeT).
 
 ## Setting up the Docker environment
 
-The backend components requires a large database file to be downloaded, which can be found from [here](http://dl.turkunlp.org/finnish-embeddings/).
+The backend components require a large database file to be downloaded, which can be found [here](http://dl.turkunlp.org/finnish-embeddings/).
 
 The whole project can be run by running the command
 
@@ -17,18 +17,18 @@ docker-compose up -d
 or by running the following commands
 ```
 Emodim> docker pull tensorflow/serving
-Emodim> docker build -t python-docker ./python-docker
+Emodim> docker build -t word-analysis ./word-analysis
 Emodim> docker build -t chat-server ./chatServer
 Emodim> docker build -t front ./emodim-front
-Emodim/classifier> docker run -dp 8501:8501 --rm --network emodim --name sentence-analyzer -v "%cd%/model/rnnmodel:/models/rnnmodel" -e MODEL_NAME=rnnmodel tensorflow/serving # cmd
-Emodim/python-docker> docker run -dp 5000:5000 --rm --network emodim --name word-analyzer -v "%cd%/skipgram_dbs":"/app/skipgram_dbs" python-docker # cmd
+Emodim/sentence-analysis> docker run -dp 8501:8501 --rm --network emodim --name sentence-analysis -v "%cd%/model/rnnmodel:/models/rnnmodel" -e MODEL_NAME=rnnmodel tensorflow/serving # cmd
+Emodim/word-analysis> docker run -dp 5000:5000 --rm --network emodim --name word-analysis -v "%cd%/skipgram_dbs":"/app/skipgram_dbs" word-analysis # cmd
 Emodim/chatServer> docker run -dp 3010:3010 --rm --network emodim --name chat-server chat-server
 Emodim/emodim-front> docker run -dp 3000:3000 --rm --network emodim --name front front
 ```
 
 ## Setting up the development environment
 
-If the scripts in 'datahandling' or the RNN-model training script in 'classifier' are to be run, a development environment can be set up in the following way:
+If the scripts in 'datahandling' or the RNN-model training script in 'sentence-analysis' are to be run, a development environment can be set up in the following way:
 
 ### Using an Anaconda environment
 Anaconda can be installed by following [this guide](https://docs.anaconda.com/anaconda/install/windows/). After Anaconda is installed, an environment can be set up in the following way:
@@ -58,7 +58,7 @@ If the RNN model needs for some reason to be retrained, installing Tensorflow ca
 ```
 pip install -r requirements.txt
 ```
-in the /classifier folder. These requirement files are separated if Tensorflow is not needed, since it is a big install. The jupyter notebook can be run with this command:
+in the /sentence-analysis folder. These requirement files are separated if Tensorflow is not needed, since it is a big install. The jupyter notebook can be run with this command:
 ```
 jupyter-lab
 ```
