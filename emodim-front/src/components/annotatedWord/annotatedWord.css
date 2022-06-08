@@ -4,25 +4,34 @@
 .valence1,
 .valence2,
 .valence3 {
-    border-radius: 3px;
     padding-left: 2px;
     padding-right: 2px;
+
     margin-left: -1px;
     margin-right: -1px;
+
+    /*border-radius: 3px;*/
+    
+    /* border-width: 2px;
+    border-style: solid; */
 }
 
 .valence-2 {
     background-color: rgba(189, 62, 62, 0.6);
+    /* border-color: rgba(189, 62, 62, 0.4); */
 }
 .valence-1 {
     background-color: rgba(189, 62, 62, 0.4);
+    /* border-color: rgba(189, 62, 62, 0.4); */
 }
 
 .valence1 {
     background-color: rgba(145, 214, 145, 0.4);
+    /* border-color: rgba(145, 214, 145, 0.4); */
 }
 .valence2 {
     background-color: rgba(145, 214, 145, 0.6);
+    /* border-color: rgba(145, 214, 145, 0.6); */
 }
 
 .arousal1 {

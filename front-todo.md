@@ -25,7 +25,7 @@ viestitason analyysin palautteen muotoilu?
 
 highlightien värin muutos? paremmat hymiöt?
 
-Näkymän muodon muutokset, leveyttä lisää
+~~Näkymän muodon muutokset, leveyttä lisää~~
 
 Sanatason analyysiin pienempi "scope", eli väritykset harvemmalle sanalle (isommat valencearvot, esim. yli 0.5?)
 
@@ -42,7 +42,7 @@ Käyttöliittymä on "valmis", toisen henkilön tekemä kokonaisuus johon on per
 
 Teksti tunnesisällöstä vain jos se on positiivinen tai negatiivinen (ei "Viestin tunnesisältö on neutraali")
 
-Hymiö lähetettävän viestin analyysiin
+~~Hymiö lähetettävän viestin analyysiin~~
 
 Keskusteluiden selaamiseen nuoli-painikkeet
 

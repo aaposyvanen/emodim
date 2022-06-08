@@ -2,7 +2,7 @@ import React from "react";
 import "./messageHeader.css";
 import EmojiAnnotation from "../emojiAnnotation/emojiAnnotation";
 
-const MessageHeader = ({ author, messageLevelAnnotations, analysisMessage, messageValence }) => {
+const MessageHeader = ({ author, messageLevelAnnotations, analysisMessage, messageValence, emoji }) => {
     return (
         <div className="message-header">
             <div className="author">{author}</div>
@@ -14,7 +14,7 @@ const MessageHeader = ({ author, messageLevelAnnotations, analysisMessage, messa
                     </div>
                 }
                 {
-                    messageLevelAnnotations &&
+                    emoji &&
                     <EmojiAnnotation
                         messageValence={messageValence}
                     />

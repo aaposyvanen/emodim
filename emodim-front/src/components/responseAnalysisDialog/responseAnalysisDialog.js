@@ -28,7 +28,8 @@ import { addMessageToCurrentThread } from "../../actions/threadActions";
 import "./responseAnalysisDialog.css";
 import "../buttons.css";
 
-const ResponseAnalysisDialog = ({ wordLevelAnnotations, messageLevelAnnotations }) => {
+const ResponseAnalysisDialog = ({ wordLevelAnnotations, messageLevelAnnotations, parentId }) => {
+    console.log('parentId', parentId)
     const dispatch = useDispatch();
     const [open, setOpen] = React.useState(false);
     const socketRef = useRef(null);
@@ -37,6 +38,7 @@ const ResponseAnalysisDialog = ({ wordLevelAnnotations, messageLevelAnnotations 
     const currentThread = useSelector(state => state.threadReducer.thread);
     const isWaitingForAnalysis = useSelector(state => state.responseReducer.isWaitingForAnalysis);
     const username = useSelector(state => state.userReducer.username);
+    const annotations = useSelector(state => state.annotationsReducer.annotations.feedback);
 
     useEffect(() => {
         const socket = socketIOClient(chatEndpoint);
@@ -90,9 +92,9 @@ const ResponseAnalysisDialog = ({ wordLevelAnnotations, messageLevelAnnotations 
             ...currentThread.startMessage.commentMetadata,
             author: username,
             datetime: dayjs().format("YYYY-MM-DD HH:mm:ss").toString(),
-            id: dayjs().unix().toString(),
+            comment_id: dayjs().unix().toString(),
             msg_type: "comment",
-            parent_comment_id: currentThread.startMessage.commentMetadata.comment_id,
+            parent_comment_id: parentId ? parentId : currentThread.startMessage.commentMetadata.comment_id,
             parent_datetime: currentThread.startMessage.commentMetadata.datetime,
         }
     }
@@ -134,7 +136,7 @@ const ResponseAnalysisDialog = ({ wordLevelAnnotations, messageLevelAnnotations 
             <Dialog onClose={handleClose} open={open}>
                 <MuiDialogTitle disableTypography >
                     <Typography variant="h6">
-                        {wordLevelAnnotations || messageLevelAnnotations ? titles.annotated : titles.regular}
+                        {Object.values(annotations).some(Boolean) ? titles.annotated : titles.regular}
                     </Typography>
                     <IconButton aria-label="close" onClick={handleClose}>
                         <CloseIcon />
@@ -146,8 +148,6 @@ const ResponseAnalysisDialog = ({ wordLevelAnnotations, messageLevelAnnotations 
                         ? <FontAwesomeIcon icon={faCircleNotch} className="loading-icon" />
                         : <ResponseAnalysis
                             analysisResults={formWordArrayFromAnalyzedData(analysisResults)}
-                            wordLevelAnnotations={wordLevelAnnotations}
-                            messageLevelAnnotations={messageLevelAnnotations}
                         />
                     }
                 </MuiDialogContent>

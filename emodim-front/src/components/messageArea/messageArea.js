@@ -17,8 +17,10 @@ export class MessageArea extends Component {
                             ?
                             <AnnotatedMessage
                                 data={this.props.startMessage}
-                                wordLevelAnnotations={this.props.messageHighlighting}
-                                messageLevelAnnotations={this.props.messageAnnotations}
+                                wordLevelAnnotations={this.props.currentAnnotations.message.wordHighlights}
+                                messageLevelAnnotations={this.props.currentAnnotations.message.messageAnalysis}
+                                emoji={this.props.currentAnnotations.message.emoji}
+                                sidebar={this.props.currentAnnotations.message.sidebar}
                             />
                             :
                             null
@@ -32,8 +34,10 @@ export class MessageArea extends Component {
                                 return <AnnotatedMessage
                                     data={comment}
                                     key={comment.commentMetadata.comment_id}
-                                    wordLevelAnnotations={this.props.messageHighlighting}
-                                    messageLevelAnnotations={this.props.messageAnnotations}
+                                    wordLevelAnnotations={this.props.currentAnnotations.message.wordHighlights}
+                                    messageLevelAnnotations={this.props.currentAnnotations.message.messageAnalysis}
+                                    emoji={this.props.currentAnnotations.message.emoji}
+                                    sidebar={this.props.currentAnnotations.message.sidebar}
                                 />
                             } else {
                                 return null;
@@ -44,8 +48,8 @@ export class MessageArea extends Component {
                 <div className="response-section">
                     <ResponseField />
                     <ResponseAnalysisDialog 
-                        wordLevelAnnotations={this.props.feedbackHighlighting}
-                        messageLevelAnnotations={this.props.feedbackAnnotations}
+                        wordLevelAnnotations={this.props.currentAnnotations.feedback.wordHighlights}
+                        messageLevelAnnotations={this.props.currentAnnotations.feedback.messageAnalysis}
                     />
                 </div>
             </div>
@@ -56,7 +60,8 @@ export class MessageArea extends Component {
 const mapStateToProps = state => {
     return {
         startMessage: state.threadReducer.thread.startMessage,
-        comments: state.threadReducer.thread.comments
+        comments: state.threadReducer.thread.comments,
+        currentAnnotations: state.annotationsReducer.annotations,
     };
 }
 

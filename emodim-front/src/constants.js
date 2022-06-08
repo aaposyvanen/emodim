@@ -18,6 +18,21 @@ export const buttonTexts = {
     ready: "Valmis",
     reply: "Vastaa",
     send: "Lähetä",
-    cancel: "Peruuta"
+    cancel: "Peruuta",
+    comment_reply: "Vastaa viestiin",
+    confirm: "Vahvista",
 }
 export const responseFieldPlaceHolder = "Kirjoita vastaus..."
+
+export const annotationType = {
+    messageAnalysis: "Tunneanalyysi",
+    emoji: "Hymiö",
+    sidebar: "Värillinen sivupalkki",
+    sentenceHighlighs: "Lausekorostus",
+    wordHighlights: "Sanakorostus",
+}
+
+export const elementSelectionTitles = {
+    messageElements: "Viestiketjun viestit",
+    feedbackElements: "Lähetettävä viesti"
+}

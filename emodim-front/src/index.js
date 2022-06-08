@@ -5,20 +5,17 @@ import {
 } from "react-router-dom";
 import { Provider } from "react-redux";
 import configureStore from "./configureStore";
-
 import "./index.css";
-import Layout from "./components/layout/layout";
-
 import reportWebVitals from "./reportWebVitals";
+import App from "./components/app";
 
 const store = configureStore();
 
 ReactDOM.render(
-
   <React.StrictMode>
     <Provider store={store}>
       <Router>
-        <Layout />
+        <App />
       </Router>
     </Provider>
   </React.StrictMode>,

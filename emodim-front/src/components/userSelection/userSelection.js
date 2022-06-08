@@ -12,7 +12,7 @@ const UserSelection = () => {
     const [inputValue, setInputValue] = useState("");
     const [helperText, setHelperText] = useState("");
 
-    const handleClick = username => {
+    const handleSubmit = username => {
         if (username) {
             dispatch(updateUsername(username));
             setHelperText("");
@@ -26,9 +26,10 @@ const UserSelection = () => {
     }
 
     return (
-        <div className="user-selection">
+        <form className="user-selection" onSubmit={() => handleSubmit(inputValue)}>
             {userSelectionStrings.primaryInstruction}
             <TextField
+                type="text"
                 value={inputValue}
                 onChange={handleChange}
                 helperText={helperText}
@@ -36,13 +37,13 @@ const UserSelection = () => {
                 InputProps={{ disableUnderline: true }}
             />
             <Button
+                type="submit"
                 className="button-primary"
-                onClick={() => handleClick(inputValue)}
                 disabled={!inputValue}
             >
                 {buttonTexts.ready}
             </Button>
-        </div>
+        </form>
     )
 }
 
