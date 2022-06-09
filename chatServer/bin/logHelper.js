@@ -1,9 +1,9 @@
 const fs = require("fs");
 const _ = require("lodash");
 
-const LOGFILE = "./log.json";
-
-function ensureLogFileExists() {
+function ensureLogFileExists(fileName) {
+    console.log('fileName', fileName)
+    const LOGFILE = fileName;
     if (!fs.existsSync(LOGFILE)) {
         const initialData = JSON.stringify([]);
         fs.writeFileSync(LOGFILE, initialData);
@@ -21,7 +21,9 @@ function ensureLogFileExists() {
     }
 }
 
-function handleMessageLogging(objectToLog) {
+function handleMessageLogging(objectToLog, fileName) {
+    const LOGFILE = fileName;
+    console.log('objectToLog', objectToLog)
     try {
         fs.readFile(LOGFILE, (err, data) => {
             if (err) {
@@ -31,11 +33,11 @@ function handleMessageLogging(objectToLog) {
                 const json = JSON.parse(data.toString());
                 if (_.isEmpty(json)) {
                     json.push(objectToLog);
-                    writeJsonToLog(json);
+                    writeJsonToLog(json, fileName);
                 } else {
                     if (Array.isArray(json)) {
                         json.push(objectToLog);
-                        writeJsonToLog(json);
+                        writeJsonToLog(json, fileName);
                     } else {
                         console.log("Existing log.json file has invalid format, should be a legal JSON array!");
                         console.log(json);
@@ -48,7 +50,8 @@ function handleMessageLogging(objectToLog) {
     }
 }
 
-function writeJsonToLog(json) {
+function writeJsonToLog(json, fileName) {
+    const LOGFILE = fileName;
     const jsonString = JSON.stringify(json);
     fs.writeFile(LOGFILE, jsonString, error => {
         if (error) console.error(error);
