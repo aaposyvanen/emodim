@@ -2,14 +2,13 @@ import libvoikko
 from wvlib_light import lwvlib
 import pandas as pd
 
-
 """
 With this script one can classify words' valence, arousal or dominance values, ranging from (-1, 1). A baseform for 
 the evaluated word is acquired with the Voikko library, then the baseform is compared to the wordlist entries and if it 
 exists (the words' baseform has a human-made evaluation), the values associated with the word are then returned. If 
-the baseform does not have a rating in the wordlist, 50 nearest neighbors for the word are retrieved with the wvlib 
+the baseform does not have a rating in the wordlist, n nearest neighbors for the word are retrieved with the wvlib 
 library. For each of these neighbors the same word evaluation is executed: find baseform - check if it is in the list - 
-check the next word or return ratings. If the word is not rated or any of the 50 neighbors are not rated, a null rating 
+check the next word or return ratings. If the word is not rated or any of the n neighbors are not rated, a null rating 
 is given. 
 
 The 'findBaseform' function returns the baseform for the word. If no baseform is found, returns None.
@@ -42,6 +41,7 @@ The 'evaluateS24Data' function writes into a .txt file the ratings for individua
 returns the whole JSONvalues dict from the 'evaluate' function. 
 """
 
+
 path = "Voikko"
 libvoikko.Voikko.setLibrarySearchPath(path)
 v = libvoikko.Voikko(u"fi", path)
@@ -72,11 +72,12 @@ def findRatedSynonym(word, bf, library):
     if word is None or len(word) < 2 or bf is None:
         return {"original_text": word, "nearest": None, "similarity": None, "baseform": None,
                 "rating": (None, None, None)}
-    n = 10  # number of neighbors to take into consideration
+    n = 5  # number of neighbors to take into consideration
     nearest = library.nearest(word, n)
+    print(word, nearest)
     if nearest is not None:
         for n in nearest:  # Iterate through the words to find the first that we have ratings for
-            if len(n[1]) > 1:
+            if len(n[1]) > 1: # exclude commas, periods, etc and far away neigbors
                 baseform = findBaseform(n[1], v)
                 ratingResult = rate(baseform)
                 if ratingResult[0] is not None:

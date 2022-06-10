@@ -3,17 +3,19 @@ import tensorflow as tf
 import numpy as np
 from nltk import tokenize
 
+print(tf.__version__)
+
 
 # os.environ['CUDA_VISIBLE_DEVICES'] = '-1'     # uncomment to use CPU, comment out to use GPU
 config = tf.compat.v1.ConfigProto()             # comment out to use CPU, uncomment to use GPU
 config.gpu_options.allow_growth = True          # comment out to use CPU, uncomment to use GPU
 session = tf.compat.v1.Session(config=config)   # comment out to use CPU, uncomment to use GPU
 
-#modelpath = f"../data/others/rnnmodel"
-#modelpath = f"../data/others/rnn_09-12-2021_14-34-21"
-modelpath = f"../data/others/rnn_09-12-2021_15-33-44"
+modelpath = f"../data/others/rnn_10-06-2022_10-09-51"
+# modelpath = f"../data/others/rnnmodel"
 model = tf.keras.models.load_model(modelpath)
-# model.summary()
+model.summary()
+
 
 def evaluation(inps):
     inps = split_into_sentences(inps)
