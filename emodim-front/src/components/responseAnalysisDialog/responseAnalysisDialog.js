@@ -13,7 +13,6 @@ import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
-import ResponseField from "../responseField/responseField";
 
 import ResponseAnalysis from "../responseAnalysis/responseAnalysis";
 import {
@@ -25,37 +24,14 @@ import {
     sendMessageForAnalysis,
     updateMessageText
 } from "../../actions/responseActions";
+import { addMessageToCurrentThread } from "../../actions/threadActions";
 import "./responseAnalysisDialog.css";
 import "../buttons.css";
 
-export const formWordArrayFromAnalyzedData = (analysisData) => {
-    const wordArray = [];
-
-    if (Array.isArray(analysisData)) {
-        for (const data of analysisData) {
-            let word = {
-                word: data.original_text
-            }
-            if (data.rating) {
-                word.type = "WORD";
-                word.valence = data.rating[0];
-                word.arousal = data.rating[1];
-                word.dominance = data.rating[2];
-            } else if (data.original_text === " ") {
-                word.type = "WHITESPACE";
-            } else {
-                word.type = "PUNCTUATION"
-            }
-            wordArray.push(word);
-        }
-    }
-    return wordArray;
-}
-
-const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggleResponsefield }) => {
+const ResponseAnalysisDialog = ({ wordLevelAnnotations, messageLevelAnnotations, parentId }) => {
+    console.log('parentId', parentId)
     const dispatch = useDispatch();
     const [open, setOpen] = React.useState(false);
-
     const socketRef = useRef(null);
     const analysisResults = useSelector(state => state.responseReducer.analysisResults);
     const currentResponseText = useSelector(state => state.responseReducer.responseText);
@@ -67,35 +43,31 @@ const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggl
     useEffect(() => {
         const socket = socketIOClient(chatEndpoint);
         socketRef.current = socket;
-    }, []);
+
+        socket.on("message", message => {
+            message.words = formWordArrayFromAnalyzedData(message.words);
+            dispatch(addMessageToCurrentThread(message));
+        });
+
+        return () => socket.disconnect();
+    }, [dispatch]);
 
     const handleClose = () => {
         setOpen(false);
-    }
+    };
 
     const handleReplyClick = () => {
-        if (inputText) {
-            console.log('inputText', inputText)
-            dispatch(updateMessageText(inputText));
+        if (currentResponseText) {
             setOpen(true);
             dispatch(sendMessageForAnalysis());
-            clearResponseField();
         }
-    }
-
-    const handleReplyChange = (event) => {
-        dispatch(updateMessageText(event.target.value));
-    }
+    };
 
     const handleSend = () => {
         const message = constructMessage();
         sendMessageDataToServer(message);
         dispatch(updateMessageText(""));
         handleClose();
-
-        if (toggleResponsefield) {
-            toggleResponsefield();
-        }
     }
 
     const constructMessage = () => {
@@ -104,7 +76,7 @@ const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggl
         return {
             commentMetadata: metadata,
             words
-        }
+        };
     }
 
     const sendMessageDataToServer = (constructedMessage) => {
@@ -127,12 +99,36 @@ const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggl
         }
     }
 
+    const formWordArrayFromAnalyzedData = (analysisData) => {
+        const wordArray = [];
+
+        if (Array.isArray(analysisData)) {
+            for (const data of analysisData) {
+                let word = {
+                    word: data.original_text
+                }
+                if (data.rating) {
+                    word.type = "WORD";
+                    word.valence = data.rating[0];
+                    word.arousal = data.rating[1];
+                    word.dominance = data.rating[2];
+                } else if (data.original_text === " ") {
+                    word.type = "WHITESPACE";
+                } else {
+                    word.type = "PUNCTUATION"
+                }
+                wordArray.push(word);
+            }
+        }
+        return wordArray;
+    }
+
     return (
         <div className="analysis-report">
             <Button
                 className="button-primary"
                 onClick={handleReplyClick}
-                disabled={!inputText}
+                disabled={!currentResponseText}
             >
                 {buttonTexts.reply}
             </Button>
@@ -150,15 +146,9 @@ const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggl
                 <MuiDialogContent className="dialog-content">
                     {isWaitingForAnalysis
                         ? <FontAwesomeIcon icon={faCircleNotch} className="loading-icon" />
-                        : <div>
-                            <ResponseAnalysis
-                                analysisResults={formWordArrayFromAnalyzedData(analysisResults)}
-                            />
-                            <ResponseField 
-                                input={currentResponseText}
-                                handleChange={handleReplyChange}
-                                />
-                          </div>
+                        : <ResponseAnalysis
+                            analysisResults={formWordArrayFromAnalyzedData(analysisResults)}
+                        />
                     }
                 </MuiDialogContent>
 

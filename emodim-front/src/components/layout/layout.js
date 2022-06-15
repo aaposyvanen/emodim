@@ -7,7 +7,7 @@ import "./layout.css";
 export const Layout = () => {
 
     const username = useSelector(state => state.userReducer.username);
-    const usernameIsChosen = username !== "";    
+    const usernameIsChosen = username !== "";
 
     return (
         <div className="layout">

@@ -8,6 +8,7 @@ import {
     useHistory,
   } from "react-router-dom";
 import { loadState } from "../../localStorage";
+import { connect } from "react-redux";
 
 const AnnotationSelection = () => {
     const dispatch = useDispatch();
@@ -19,7 +20,6 @@ const AnnotationSelection = () => {
 
     const [checkedAnnotations, setCheckedAnnotations] = useState(annotations);
 
-    // Save selected annotations to redux state and push user to username selection.
     const handleSubmit = (event) => {
         event.preventDefault();
         dispatch(updateAnnotations(checkedAnnotations));

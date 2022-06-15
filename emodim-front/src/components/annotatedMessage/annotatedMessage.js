@@ -4,13 +4,18 @@ import AnnotatedWord from "../annotatedWord/annotatedWord";
 import "./annotatedMessage.css";
 import "../buttons.css";
 import MessageHeader from "../messageHeader/messageHeader";
-import ReplyArea from "../replyArea/replyArea";
+import { Button } from "@material-ui/core";
 
-import { messageFeedbackStrings as feedback } from "../../constants";
+import { messageFeedbackStrings as feedback, buttonTexts } from "../../constants";
+import ResponseField from "../responseField/responseField";
+import ResponseAnalysisDialog from "../responseAnalysisDialog/responseAnalysisDialog";
 
-const AnnotatedMessage = ({ data, wordLevelAnnotations, messageLevelAnnotations, response, emoji, sidebar, responseOpen, toggleResponsefield }) => {
+const AnnotatedMessage = ({ data, wordLevelAnnotations, messageLevelAnnotations, response, emoji, sidebar }) => {
+    console.log('data', data)
     const { author } = data.commentMetadata;
     const words = data.words;
+    const hasChildren = data.children && !_.isEmpty(data.children);
+    const [responseOpen, setResponseOpen] = React.useState(false);
 
     let analysisMessage = null;
     let messageValence = 0;
@@ -18,6 +23,11 @@ const AnnotatedMessage = ({ data, wordLevelAnnotations, messageLevelAnnotations,
         negative: 0,
         neutral: 0,
         positive: 0
+    }
+
+    // Opens responsefield for comment reply
+    const openResponsefield = () => {
+        setResponseOpen(true)
     }
 
     // Constructs an array of AnnotatedWords based on wordData to be rendered
@@ -78,6 +88,7 @@ const AnnotatedMessage = ({ data, wordLevelAnnotations, messageLevelAnnotations,
     // sets analysisMessage and messageValence to their correct values so they
     // can be easily used in rendering
     const setFeedback = () => {
+        console.log('sentenceValences', sentenceValences)
         messageValence = sentenceValences.positive - sentenceValences.negative;
         if (messageValence < 0) {
             analysisMessage = feedback.negative;
@@ -98,29 +109,53 @@ const AnnotatedMessage = ({ data, wordLevelAnnotations, messageLevelAnnotations,
     handleValencePredictions()
 
     return (
-        <div>
-            <div className={`message-box${response ? " response" : ""} message-valence${messageValence} ${sidebar ? "sidebar" : ""}`}>
-                <MessageHeader
-                    author={author}
-                    analysisMessage={analysisMessage}
-                    messageLevelAnnotations={messageLevelAnnotations}
-                    messageValence={messageValence}
-                    emoji={emoji}
-                />
-                <div className="content">
-                    <div className="message" key={data.commentMetadata.id}>
-                        {message}
-                    </div>
+        <div className={`message-box${response ? " response" : ""} message-valence${messageValence} ${sidebar ? "sidebar" : ""}`}>
+            <MessageHeader
+                author={author}
+                analysisMessage={analysisMessage}
+                messageLevelAnnotations={messageLevelAnnotations}
+                messageValence={messageValence}
+                emoji={emoji}
+            />
+            <div className="content">
+                <div className="message" key={data.commentMetadata.id}>
+                    {message}
                 </div>
-                
-                {!response
-                    ? <ReplyArea
-                            commentId={data.commentMetadata.comment_id}
-                            responseOpen={responseOpen}
-                            toggleResponsefield={toggleResponsefield}
-                        />
-                    : null}
             </div>
+            <div>
+                {/* {
+                    responseOpen 
+                    ?
+                    <div>
+                        <ResponseField/>
+                        <ResponseAnalysisDialog
+                            parentId={data.commentMetadata.comment_id}
+                        />
+                    </div>
+                    :
+                    <Button 
+                        size="small" 
+                        variant="text"
+                        className="button-small"
+                        onClick={openResponsefield}
+                    >
+                        {buttonTexts.comment_reply}
+                    </Button>
+                } */}
+            </div>
+            {
+                hasChildren && data.children.map(child => {
+                    return <AnnotatedMessage
+                        data={child}
+                        key={child.commentMetadata.id}
+                        response
+                        wordLevelAnnotations={wordLevelAnnotations}
+                        messageLevelAnnotations={messageLevelAnnotations}
+                        emoji={emoji}
+                        sidebar={sidebar}
+                    />
+                })
+            }
         </div>
     );
 }

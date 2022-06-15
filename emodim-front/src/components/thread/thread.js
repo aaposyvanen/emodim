@@ -18,10 +18,7 @@ export class Thread extends Component {
                 <div className="title">
                     {this.getCurrentThreadTitle()}
                 </div>
-                <MessageArea
-                    separateResponsesFromComments={this.props.separateResponsesFromComments}
-                    moveResponsesToTheirParents={this.props.moveResponsesToTheirParents}
-                />
+                <MessageArea/>
             </div>
         );
     }
