@@ -1,6 +1,5 @@
 import React from "react";
 import _ from "lodash";
-import ResponseField from "../responseField/responseField";
 import AnnotatedMessage from "../annotatedMessage/annotatedMessage";
 import "./responseAnalysis.css";
 import { useSelector } from "react-redux";
@@ -41,8 +40,8 @@ const ResponseAnalysis = ({ analysisResults }) => {
                 messageLevelAnnotations={currentAnnotations.messageAnalysis}
                 emoji={currentAnnotations.emoji}
                 sidebar={currentAnnotations.sidebar}
+                response={true}
             />
-            <ResponseField />
         </div>
     )
 }

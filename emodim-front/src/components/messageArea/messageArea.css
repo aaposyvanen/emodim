@@ -3,14 +3,21 @@
     border: 0;
 }
 
+.comments {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 3px solid #B7B7B7;
+}
+
+.replies {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 3px solid #B7B7B7;
+}
+
 .response-section {
     display: flex;
     flex-flow: column;
-}
-
-.comments {
-    margin: 10px 0px 5px 20px;
-
 }
 
 .author {
