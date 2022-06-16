@@ -46,7 +46,7 @@ path = "Voikko"
 libvoikko.Voikko.setLibrarySearchPath(path)
 v = libvoikko.Voikko(u"fi", path)
 df = pd.read_excel(f"..\\data\\xlsxs\\final_wordlist.xlsx")
-wv = lwvlib.load("D:\\Work\\skipgram_dbs\\finnish_4B_parsebank_skgram.bin", 10000, 500000)
+wv = lwvlib.load("..\\skipgram_dbs\\finnish_4B_parsebank_skgram.bin", 10000, 500000)
 
 
 def findBaseform(word, v):

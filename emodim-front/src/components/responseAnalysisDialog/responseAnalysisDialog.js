@@ -64,10 +64,13 @@ const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggl
     const username = useSelector(state => state.userReducer.username);
     const annotations = useSelector(state => state.annotationsReducer.annotations.feedback);
 
-    useEffect(() => {
-        const socket = socketIOClient(chatEndpoint);
-        socketRef.current = socket;
-    }, []);
+    const socket = socketIOClient(chatEndpoint);
+    socketRef.current = socket;
+
+    // useEffect(() => {
+    //     const socket = socketIOClient(chatEndpoint);
+    //     socketRef.current = socket;
+    // }, []);
 
     const handleClose = () => {
         setOpen(false);

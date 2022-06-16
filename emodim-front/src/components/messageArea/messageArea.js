@@ -27,6 +27,7 @@ export const MessageArea = () => {
         socketRef.current = socket;
 
         socket.on("message", message => {
+            console.log('message received')
             message.words = formWordArrayFromAnalyzedData(message.words);
             dispatch(addMessageToCurrentThread(message));
         });
