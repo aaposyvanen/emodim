@@ -1,7 +1,10 @@
-.button-primary.MuiButtonBase-root.MuiButton-root{
-    margin: 10px;
+.MuiButtonBase-root.MuiButton-root {
+    margin-top: 10px;
     padding-left: 1em;
     padding-right: 1em;
+}
+
+.button-primary.MuiButtonBase-root.MuiButton-root{
     background-color: #4A4A4A;
     color: white;
 }
@@ -17,8 +20,6 @@
 }
 
 .button-secondary.MuiButtonBase-root.MuiButton-root {
-    padding-left: 1em;
-    padding-right: 1em;
     border: 1px solid #404040;
     color: #404040;
 }
@@ -30,4 +31,5 @@
 
 .button-small.MuiButtonBase-root.MuiButton-root {
     text-transform: none;
+    color: #A5A5A5;
 }

@@ -21,6 +21,7 @@ export const buttonTexts = {
     cancel: "Peruuta",
     comment_reply: "Vastaa viestiin",
     confirm: "Vahvista",
+    save: "Tallenna viestiketju"
 }
 export const responseFieldPlaceHolder = "Kirjoita vastaus..."
 

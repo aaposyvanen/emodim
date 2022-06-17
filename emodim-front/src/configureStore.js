@@ -19,8 +19,8 @@ const configureStore = () => {
 
     store.subscribe(throttle(() => {
         saveState({
-        annotationsReducer: store.getState().annotationsReducer,
-        });
+            annotationsReducer: store.getState().annotationsReducer,
+            });
     }, 1000));
 
     return store;

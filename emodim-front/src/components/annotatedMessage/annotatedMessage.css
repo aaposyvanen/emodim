@@ -1,6 +1,6 @@
 .message-box {
-    margin: 3px 0px 10px 0px;
-    padding: 1em;
+    margin: 1em 0px 10px 0px;
+    padding: 1em 1em 0.5em 1em;
     background-color: white;
     border-radius: 6px;
     font-size: 16px;
@@ -11,6 +11,7 @@
 .message .line-break {
     min-height: 1ch;
 }
+
 .response {
     background-color: white;
 }
@@ -19,8 +20,16 @@
     display: flex;
     flex-flow: row;
     justify-content: space-between;
+    margin-bottom: 0.5em;
 }
 
+.message {
+    display: inline-block;
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+/* Sidebar styles based on message valence (neutral, negative, positive) */
 .message-box.sidebar {
     border-right: 1em solid #787878;
 }
