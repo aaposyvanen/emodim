@@ -22,6 +22,12 @@
     margin-bottom: 0.5em;
 }
 
+.message {
+    display: inline-block;
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
 /* Sidebar styles based on message valence (neutral, negative, positive) */
 .message-box.sidebar {
     border-right: 1em solid #787878;
