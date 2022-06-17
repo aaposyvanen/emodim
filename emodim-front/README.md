@@ -6,44 +6,23 @@ The app shows a message thread with different kinds of annotations for the emoti
 
 ## Annotation options
 
-There are four different kinds of annotations:
-- message-level analysis for messages in thread
-- word highlighting for messages in thread
-- message-level analysis in reply intervention
-- word highlighting in reply intervention
+There are four kinds of annotations available:
+- message-level analysis (e.g. "Positive emotions have been detected in this message.")
+- emoji based on message-level analysis
+- colored sidebar based on message-level analysis
+- word higlighting
 
-Each can be turned on or off separately from the others. The four options allow 16 different combinations of annotations shown, as shown in the table below.
-
-|#| Reply Highlights|Reply analysis|Thread Highlights|Message-level analysis|
-|---|---|---|---|---|
-|1|0|0|0|0|
-|2|0|0|0|1|
-|3|0|0|1|0|
-|4|0|0|1|1|
-|5|0|1|0|0|
-|6|0|1|0|1|
-|7|0|1|1|0|
-|8|0|1|1|1|
-|9|1|0|0|0|
-|10|1|0|0|1|
-|11|1|0|1|0|
-|12|1|0|1|1|
-|13|1|1|0|0|
-|14|1|1|0|1|
-|15|1|1|1|0|
-|16|1|1|1|1|
-
- To control which annotations are shown navigate to a different path on the page, according to the first column in the table. For example, to show no annoatations navigate to [localhost:3000/1](http://localhost:3000/1). To show all annotations, instead go to [localhost:3000/16](http://localhost:3000/16). If no specific path is specified, the app will reroute to /16.
+All of these are available for messages in thread and for reply intervention and can be turned on or off separately from the others. The app has a selection page in the beginning where this can be done.
 
  ## Good to know
 
- The first thing the app will ask a user to do is to choose a nickname. Nicknames aren't checked or controlled in anyway, having multiple users with the same nickname is entirely possible and should always be accounted for.
+ After annotation selection the app will ask the user to choose a nickname. Nicknames aren't checked or controlled in anyway, having multiple users with the same nickname is entirely possible and should always be accounted for.
 
  After choosing a nickname the app connects to a chat server running on the same domain. All Message Analyzer clients connected to the same chat server will receive all messages sent from the other clients.
 
  Clients do not know about the annotation settings of other clients and they will not affect each other in any way. All messages that go through the chat server will always be enriched with analysis data before being sent back to everyone (even the sender, because the sender also needs the analysis data). The client only uses the annotation settings to determine if it should show something extra according to the data that is always there, nothing else.
 
- Refreshing the page will lose all data from the app, meaning both the chosen nickname and all messages sent or received. Only the chat server keeps permanent logs of all messages sent.
+ Refreshing the page will lose all data from the app, meaning both the chosen nickname and all messages sent or received. ~~Only the chat server keeps permanent logs of all messages sent.~~
 
 ## Using with Docker
 ### 1. Build a Docker image
