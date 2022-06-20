@@ -30,7 +30,7 @@
 }
 
 /* Sidebar styles based on message valence (neutral, negative, positive) */
-.message-box.sidebar {
+.message-box.message-valence0.sidebar {
     border-right: 1em solid #787878;
 }
 

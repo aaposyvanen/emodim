@@ -5,10 +5,12 @@ import "./annotatedMessage.css";
 import "../buttons.css";
 import MessageHeader from "../messageHeader/messageHeader";
 import ReplyArea from "../replyArea/replyArea";
+import { useSelector } from "react-redux";
 
 import { messageFeedbackStrings as feedback } from "../../constants";
 
 const AnnotatedMessage = ({ data, wordLevelAnnotations, messageLevelAnnotations, response, emoji, sidebar, responseOpen, toggleResponsefield }) => {
+    const selectedSentiments = useSelector(state => state.annotationsReducer.annotations.sentiment);
     const { author } = data.commentMetadata;
     const words = data.words;
 
@@ -79,14 +81,18 @@ const AnnotatedMessage = ({ data, wordLevelAnnotations, messageLevelAnnotations,
     // can be easily used in rendering
     const setFeedback = () => {
         messageValence = sentenceValences.positive - sentenceValences.negative;
-        if (messageValence < 0) {
+        if (messageValence < 0 && selectedSentiments.negative) {
             analysisMessage = feedback.negative;
-            messageValence = -1
-        } else if (messageValence === 0) {
+            messageValence = -1;
+        } else if (messageValence === 0 && selectedSentiments.neutral) {
             analysisMessage = feedback.neutral;
-        } else if (messageValence > 0) {
+            messageValence = 0;
+        } else if (messageValence > 0 && selectedSentiments.positive) {
             analysisMessage = feedback.positive;
-            messageValence = 1
+            messageValence = 1;
+        } else {
+            analysisMessage = null;
+            messageValence = -2;
         }
     }
 

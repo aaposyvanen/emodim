@@ -2,7 +2,7 @@ import { Button, Checkbox, FormControlLabel, FormGroup, FormLabel } from "@mater
 import { React, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateAnnotations } from "../../actions/annotationActions";
-import { annotationType, elementSelectionTitles, buttonTexts } from "../../constants";
+import { annotationType, elementSelectionTitles, buttonTexts, sentiments } from "../../constants";
 import "./annotationSelection.css";
 import {
     useHistory,
@@ -33,7 +33,7 @@ const AnnotationSelection = () => {
         setCheckedAnnotations(temp);
     };
 
-    const {messageElements, feedbackElements } = elementSelectionTitles;
+    const {messageElements, feedbackElements, sentimentSelection } = elementSelectionTitles;
 
     return (
         <form className="form-area" onSubmit={(event) => handleSubmit(event)}>
@@ -73,6 +73,25 @@ const AnnotationSelection = () => {
                                     />
                                 }
                                 label={annotationType[keyName]}
+                            />
+                        })}
+                    </FormGroup>
+                </div>
+                <div className="form-group sentiment">
+                    <FormLabel>{sentimentSelection}</FormLabel>
+                    <FormGroup>
+                        {Object.keys(checkedAnnotations.sentiment).map((keyName, i) => {
+                            return <FormControlLabel
+                                key={`sentiment-label-${i}`}
+                                control={
+                                    <Checkbox
+                                        key={`sentiment-el-${i}`}
+                                        checked={checkedAnnotations.sentiment[keyName]}
+                                        onChange={(event) => handleChange(event, "sentiment")}
+                                        name={keyName}
+                                    />
+                                }
+                                label={sentiments[keyName]}
                             />
                         })}
                     </FormGroup>

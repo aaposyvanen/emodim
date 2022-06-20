@@ -15,6 +15,11 @@ const initialState = {
             sidebar: false,
             sentenceHighlighs: false,
             wordHighlights: false,
+        },
+        sentiment: {
+            positive: false,
+            negative: false,
+            neutral: false,
         }
     }
 };

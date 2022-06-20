@@ -8,7 +8,7 @@ export const messageFeedbackStrings = {
 }
 export const feedbackTitles = {
     regular: "Tarkista viestisi kieliasu",
-    annotated: "Tarkista viestisi tunnesisältö"
+    annotated: "Tarkista viestisi tunnesisältö",
 }
 export const userSelectionStrings = {
     primaryInstruction: "Valitse käyttäjänimi",
@@ -35,5 +35,12 @@ export const annotationType = {
 
 export const elementSelectionTitles = {
     messageElements: "Viestiketjun viestit",
-    feedbackElements: "Lähetettävä viesti"
+    feedbackElements: "Lähetettävä viesti",
+    sentimentSelection: "Näytettävät tunteet"
+}
+
+export const sentiments = {
+    positive: "Positiivinen",
+    negative: "Negatiivinen",
+    neutral: "Neutraali",
 }

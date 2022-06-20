@@ -10,11 +10,14 @@ const EmojiAnnotation = ({ messageValence }) => {
         valenceEmoji = faLaugh;
     } else if (messageValence === -1) {
         valenceEmoji = faAngry;
-    } else {
+    } else if (messageValence === 0) {
         valenceEmoji = faMeh;
+    } else {
+        valenceEmoji = null;
     }
 
     return (
+        valenceEmoji &&
         <div className="emoji-annotation">
             <FontAwesomeIcon
                 icon={valenceEmoji}
