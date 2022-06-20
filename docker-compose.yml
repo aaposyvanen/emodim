@@ -39,6 +39,8 @@ services:
       - emodim
     ports:
       - "3010:3010"
+    volumes:
+      - "chatServer/logs:/app/logs"
   front:
     container_name: front
     build:
