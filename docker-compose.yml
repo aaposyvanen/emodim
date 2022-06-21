@@ -40,7 +40,7 @@ services:
     ports:
       - "3010:3010"
     volumes:
-      - logs:/app/logs
+      - "./logs:/app/logs"
   front:
     container_name: front
     build:

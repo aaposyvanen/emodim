@@ -49,7 +49,7 @@ io.on("connection", async socket => {
         }
 
         io.emit("message", messageToBroadcast);
-        //logHelper.handleMessageLogging(dataToLog);
+        logHelper.handleMessageLogging(dataToLog);
     });
 
     socket.on("disconnect", () => {

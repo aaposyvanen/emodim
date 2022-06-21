@@ -1,7 +1,7 @@
 const fs = require("fs");
 const _ = require("lodash");
 
-const LOGFILE = "./log.json";
+const LOGFILE = "logs/log.json";
 
 function ensureLogFileExists() {
     if (!fs.existsSync(LOGFILE)) {
