@@ -40,7 +40,7 @@ services:
     ports:
       - "3010:3010"
     volumes:
-      - ".chatServer/logs:/app/logs"
+      - "/chatServer/logs:/app/logs"
   front:
     container_name: front
     build:
@@ -57,4 +57,4 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: ".chatServer/logs"
+      device: "/chatServer/logs"
