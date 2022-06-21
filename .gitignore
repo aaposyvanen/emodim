@@ -140,3 +140,4 @@ datahandling/
 *finBERT/
 word-analysis/voikko/libvoikko-1.dll
 *logs/
+chatServer/logs/

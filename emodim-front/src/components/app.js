@@ -13,7 +13,7 @@ import {
     updateCurrentRawThread,
 } from "../actions/rawDataActions";
 import { updateCurrentThread } from "../actions/threadActions";
-import json from "../testData/discussion_valence_test.json";
+import json from "../testData/test.json";
 import { useSelector, useDispatch } from "react-redux";
 
 export const separateResponsesFromComments = (rawComments) => {
