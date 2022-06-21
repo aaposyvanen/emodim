@@ -53,3 +53,7 @@ services:
 
 volumes:
   logs:
+    driver: local
+    driver_opts:
+      type: bind
+      device: "./logs"
