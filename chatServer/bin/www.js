@@ -7,6 +7,9 @@ const axios = require("axios");
 const logHelper = require("./logHelper");
 const analysisHelper = require("./analysisHelper");
 
+logHelper.ensureLogFileExists("logs/log.json");
+logHelper.ensureLogFileExists("logs/threads.json");
+
 const port = normalizePort(process.env.PORT || "3010");
 app.set("port", port);
 

@@ -22,7 +22,6 @@ function ensureLogFileExists(path) {
 
 function handleMessageLogging(path, objectToLog) {
     const LOGFILE = path;
-    ensureLogFileExists(LOGFILE);
     try {
         fs.readFile(LOGFILE, (err, data) => {
             if (err) {
