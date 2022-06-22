@@ -7,8 +7,6 @@ const axios = require("axios");
 const logHelper = require("./logHelper");
 const analysisHelper = require("./analysisHelper");
 
-logHelper.ensureLogFileExists();
-
 const port = normalizePort(process.env.PORT || "3010");
 app.set("port", port);
 
@@ -49,7 +47,11 @@ io.on("connection", async socket => {
         }
 
         io.emit("message", messageToBroadcast);
-        logHelper.handleMessageLogging(dataToLog);
+        logHelper.handleMessageLogging("logs/log.json", dataToLog);
+    });
+
+    socket.on("thread", async (data) => {
+        logHelper.handleMessageLogging("logs/threads.json", data);
     });
 
     socket.on("disconnect", () => {

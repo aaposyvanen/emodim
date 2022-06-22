@@ -67,6 +67,8 @@ const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggl
     useEffect(() => {
         const socket = socketIOClient(chatEndpoint);
         socketRef.current = socket;
+
+        return () => socket.disconnect();
     }, []);
 
     const handleClose = () => {
