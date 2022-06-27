@@ -7,7 +7,6 @@ import Comment from "../comment/comment";
 import ResponseSection from "../responseSection/responseSection";
 import { updateCurrentThread } from "../../actions/threadActions";
 import { separateResponsesFromComments, moveResponsesToTheirParents} from "../app"
-import SaveThread from "../saveThread/saveThread";
 import { chatEndpoint } from "../../constants";
 import socketIOClient from "socket.io-client";
 import { formWordArrayFromAnalyzedData } from "../responseAnalysisDialog/responseAnalysisDialog";
@@ -110,7 +109,6 @@ export const MessageArea = () => {
                     commentId={0}
                 />
             </div>
-            <SaveThread/>
         </div>
     );
 }

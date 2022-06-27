@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./thread.css";
 import MessageArea from "../messageArea/messageArea";
+import SaveThread from "../saveThread/saveThread";
 
 export class Thread extends Component {
 
@@ -22,6 +23,7 @@ export class Thread extends Component {
                     separateResponsesFromComments={this.props.separateResponsesFromComments}
                     moveResponsesToTheirParents={this.props.moveResponsesToTheirParents}
                 />
+                <SaveThread/>
             </div>
         );
     }

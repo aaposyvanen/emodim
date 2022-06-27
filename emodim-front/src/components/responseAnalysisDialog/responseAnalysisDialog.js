@@ -58,7 +58,9 @@ const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggl
 
     const socketRef = useRef(null);
     const analysisResults = useSelector(state => state.responseReducer.analysisResults);
+    console.log('analysisResults', analysisResults)
     const currentResponseText = useSelector(state => state.responseReducer.responseText);
+    const results = useSelector(state => state.responseReducer.valenceResults);
     const currentThread = useSelector(state => state.threadReducer.thread);
     const isWaitingForAnalysis = useSelector(state => state.responseReducer.isWaitingForAnalysis);
     const username = useSelector(state => state.userReducer.username);
@@ -102,16 +104,23 @@ const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggl
     const constructMessage = () => {
         const words = formWordArrayFromAnalyzedData(analysisResults);
         const metadata = constructMetadata();
+        const valenceResults = results;
+        console.log('words', words)
         return {
             commentMetadata: metadata,
-            words
+            words,
+            valenceResults
         }
     }
 
     const sendMessageDataToServer = (constructedMessage) => {
+        console.log('constructedMessage', constructedMessage)
         const messageData = {};
         messageData.metadata = constructedMessage.commentMetadata
-        messageData.originalMessage = constructedMessage.words;
+        messageData.originalMessage = {
+            words: constructedMessage.words,
+            valenceResults: constructedMessage.valenceResults
+        }
         messageData.editedMessage = currentResponseText;
         socketRef.current.emit("message", messageData);
     }
