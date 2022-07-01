@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: column;
     background-color: #F3F3F3;
-    max-width: 70ch;
-    padding: 1em;
+    padding: 0 1em 1em 1em;
     height: 100%;
     min-height: 100vh;
+    max-width: 70ch;
 }
 
 .title {

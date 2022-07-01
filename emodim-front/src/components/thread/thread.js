@@ -16,9 +16,10 @@ export class Thread extends Component {
     render() {
         return (
             <div className="thread">
-                <div className="title">
+                {/* <div className="title">
                     {this.getCurrentThreadTitle()}
-                </div>
+                </div> */}
+                <h1>Kommentit</h1>
                 <MessageArea
                     separateResponsesFromComments={this.props.separateResponsesFromComments}
                     moveResponsesToTheirParents={this.props.moveResponsesToTheirParents}

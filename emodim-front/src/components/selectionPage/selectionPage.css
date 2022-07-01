@@ -1,0 +1,9 @@
+.selection-area {
+    padding: 2em;
+    background-color: #F3F3F3;
+}
+
+.img-preview-wrapper img {
+    width: 150px;
+    margin-top: 1em;
+}

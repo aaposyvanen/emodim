@@ -1,13 +1,14 @@
 .form-area {
     margin-top: 2em;
-    padding: 2em;
-    background-color: white;
 }
 
 .check-area {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    background-color: white;
+    margin-bottom: 1em;
+    padding: 1em;
 }
 
 .form-group {

@@ -7,7 +7,7 @@ import Comment from "../comment/comment";
 import ResponseSection from "../responseSection/responseSection";
 import { updateCurrentThread } from "../../actions/threadActions";
 import { separateResponsesFromComments, moveResponsesToTheirParents} from "../app"
-import { chatEndpoint } from "../../constants";
+import { chatEndpoint, responseSection } from "../../constants";
 import socketIOClient from "socket.io-client";
 import { formWordArrayFromAnalyzedData } from "../responseAnalysisDialog/responseAnalysisDialog";
 import { addMessageToCurrentThread } from "../../actions/threadActions";
@@ -44,7 +44,7 @@ export const MessageArea = () => {
 
     return (
         <div className="message-area">
-            <div className="thread-start">
+            {/* <div className="thread-start">
                 {
                     startMessage.commentMetadata
                         ?
@@ -59,7 +59,7 @@ export const MessageArea = () => {
                         :
                         null
                 }
-            </div>
+            </div> */}
 
             <div className="comments">
                 {
@@ -102,6 +102,7 @@ export const MessageArea = () => {
                 }
             </div>
             <div className="response-section">
+                <h2>{responseSection.header}</h2>
                 <ResponseSection 
                     wordLevelAnnotations={currentAnnotations.feedback.wordHighlights}
                     messageLevelAnnotations={currentAnnotations.feedback.messageAnalysis}

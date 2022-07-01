@@ -39,7 +39,7 @@ const rawDataReducer = (state = initialState, action) => {
                 currentThread: {
                     threadID,
                     startMessage,
-                    comments: _.drop(comments, 1),
+                    comments, //: _.drop(comments, 1),
                     metadata: threadMetadata
                 }
             };

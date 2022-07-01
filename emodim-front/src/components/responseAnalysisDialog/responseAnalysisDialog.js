@@ -58,7 +58,6 @@ const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggl
 
     const socketRef = useRef(null);
     const analysisResults = useSelector(state => state.responseReducer.analysisResults);
-    console.log('analysisResults', analysisResults)
     const currentResponseText = useSelector(state => state.responseReducer.responseText);
     const results = useSelector(state => state.responseReducer.valenceResults);
     const currentThread = useSelector(state => state.threadReducer.thread);
@@ -105,7 +104,6 @@ const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggl
         const words = formWordArrayFromAnalyzedData(analysisResults);
         const metadata = constructMetadata();
         const valenceResults = results;
-        console.log('words', words)
         return {
             commentMetadata: metadata,
             words,
@@ -132,8 +130,8 @@ const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggl
             datetime: dayjs().format("YYYY-MM-DD HH:mm:ss").toString(),
             comment_id: dayjs().unix().toString(),
             msg_type: "comment",
-            parent_comment_id: parentId ? parentId : currentThread.startMessage.commentMetadata.comment_id,
-            parent_datetime: currentThread.startMessage.commentMetadata.datetime,
+            parent_comment_id: parentId ? parentId : null,
+            //parent_datetime: currentThread.startMessage.commentMetadata.datetime,
         }
     }
 

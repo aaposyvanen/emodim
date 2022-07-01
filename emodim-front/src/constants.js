@@ -23,8 +23,12 @@ export const buttonTexts = {
     confirm: "Vahvista",
     save: "Tallenna viestiketju"
 }
-export const responseFieldPlaceHolder = "Kirjoita vastaus..."
-
+export const responseSection = {
+    header: "Kirjoita kommentti",
+    placeholderComment: "Kirjoita kommenttisi tähän",
+    placeholderReply: "Kirjoita vastauksesi tähän",
+    userText: "Kommenttisi näkyy nimimerkillä",
+}
 export const annotationType = {
     messageAnalysis: "Tunneanalyysi",
     emoji: "Hymiö",

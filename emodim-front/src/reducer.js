@@ -4,6 +4,7 @@ import threadReducer from "./reducers/threadReducer";
 import responseReducer from "./reducers/responseReducer";
 import userReducer from "./reducers/userReducer";
 import annotationsReducer from "./reducers/annotationsReducer";
+import newsReducer from "./reducers/newsReducer";
 
 const createRootReducer = combineReducers({
     rawDataReducer,
@@ -11,6 +12,7 @@ const createRootReducer = combineReducers({
     responseReducer,
     userReducer,
     annotationsReducer,
+    newsReducer,
 });
 
 export default createRootReducer;

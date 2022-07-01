@@ -6,7 +6,7 @@
             "comment_id": "0",
             "datetime": "2021-11-11 14:00:33",
             "author": "Anonyymi",
-            "parent_comment_id": "0",
+            "parent_comment_id": null,
             "thread_id": "0",
             "title": "Husin potilaista jo 23 prosenttia rokotettuja",
             "msg_type": "thread_start"
@@ -331,7 +331,7 @@
             "comment_id": "1",
             "datetime": "2021-11-11 14:00:33",
             "author": "Anonyymi",
-            "parent_comment_id": "0",
+            "parent_comment_id": null,
             "thread_id": "0",
             "title": "Husin potilaista jo 23 prosenttia rokotettuja",
             "msg_type": "thread_start"
@@ -444,7 +444,7 @@
             "comment_id": "2",
             "datetime": "2021-11-11 14:00:33",
             "author": "Anonyymi",
-            "parent_comment_id": "0",
+            "parent_comment_id": null,
             "thread_id": "0",
             "title": "Husin potilaista jo 23 prosenttia rokotettuja",
             "msg_type": "thread_start"
@@ -600,7 +600,7 @@
             "comment_id": "3",
             "datetime": "2021-11-11 14:00:33",
             "author": "Anonyymi ",
-            "parent_comment_id": "0",
+            "parent_comment_id": null,
             "thread_id": "0",
             "title": "Husin potilaista jo 23 prosenttia rokotettuja",
             "msg_type": "thread_start"
@@ -723,7 +723,7 @@
             "comment_id": "1655814418",
             "datetime": "2022-06-21 15:26:58",
             "author": "asa",
-            "parent_comment_id": "0",
+            "parent_comment_id": null,
             "thread_id": "0",
             "title": "Husin potilaista jo 23 prosenttia rokotettuja",
             "msg_type": "comment",

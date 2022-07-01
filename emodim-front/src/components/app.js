@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import AnnotationSelection from './annotationSelection/annotationSelection';
+import SelectionPage from './selectionPage/selectionPage';
 import Layout from './layout/layout';
 import './app.css';
 import {
@@ -18,7 +18,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 export const separateResponsesFromComments = (rawComments) => {
     const groupedComments = _.groupBy(rawComments, comment => {
-        return comment.commentMetadata.parent_comment_id === "0";
+        return !comment.commentMetadata.parent_comment_id;
     });
 
     const comments = groupedComments["true"];
@@ -88,7 +88,7 @@ const App = () => {
                         <Layout/>
                     </Route>
                     <Route path="/">
-                        <AnnotationSelection/>
+                        <SelectionPage/>
                     </Route>
                 </Switch>
             </div>
