@@ -37,3 +37,7 @@
 .input {
     display: none;
 }
+
+.button-big.MuiButtonBase-root.MuiButton-root {
+    margin-top: 1em;
+}

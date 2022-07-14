@@ -5,8 +5,9 @@ import responseReducer from "./reducers/responseReducer";
 import userReducer from "./reducers/userReducer";
 import annotationsReducer from "./reducers/annotationsReducer";
 import newsReducer from "./reducers/newsReducer";
+import { END_TEST } from "./actions/endActions";
 
-const createRootReducer = combineReducers({
+const appReducer = combineReducers({
     rawDataReducer,
     threadReducer,
     responseReducer,
@@ -14,5 +15,12 @@ const createRootReducer = combineReducers({
     annotationsReducer,
     newsReducer,
 });
+
+const createRootReducer = (state, action) => {
+    if (action.type === END_TEST) {
+        return appReducer(undefined, action);
+    }
+     return appReducer(state, action);
+}
 
 export default createRootReducer;

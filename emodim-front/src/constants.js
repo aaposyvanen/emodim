@@ -21,7 +21,10 @@ export const buttonTexts = {
     cancel: "Peruuta",
     comment_reply: "Vastaa viestiin",
     confirm: "Vahvista",
-    save: "Tallenna viestiketju"
+    save: "Tallenna viestiketju",
+    next: "Seuraava",
+    quit: "Lopeta",
+    start: "Aloita",
 }
 export const responseSection = {
     header: "Kirjoita kommentti",
@@ -36,15 +39,22 @@ export const annotationType = {
     sentenceHighlighs: "Lausekorostus",
     wordHighlights: "Sanakorostus",
 }
-
 export const elementSelectionTitles = {
     messageElements: "Viestiketjun viestit",
     feedbackElements: "Lähetettävä viesti",
-    sentimentSelection: "Näytettävät tunteet"
+    sentimentSelection: "Näytettävät tunteet",
 }
-
 export const sentiments = {
     positive: "Positiivinen",
     negative: "Negatiivinen",
     neutral: "Neutraali",
+}
+export const errorMessages = {
+    noArticle: "Uutisartikkelia ei löytynyt",
+}
+export const instructionTexts = {
+    startTitle: "Hei",
+    startText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n\nQuisque ultrices consequat justo, eu luctus sem. Praesent in leo eget nisl accumsan suscipit. Etiam eu elit nisi. Sed mattis ex vitae velit eleifend fringilla. Nunc vehicula nunc sit amet dui tempus venenatis. Mauris vestibulum elit lacus, et tincidunt magna semper et. Cras nunc sapien, aliquet tincidunt ultricies quis, dapibus vitae libero. Curabitur et nisl congue neque lobortis ultrices. Sed at eros tellus.",
+    endTitle: "Loppu",
+    endText: "moi moi",
 }

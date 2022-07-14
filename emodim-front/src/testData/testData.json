@@ -1,0 +1,1340 @@
+[
+  {
+    "newsArticle": {
+      "file": "kuuma.htm",
+      "image": "image001.jpg"
+    },
+    "comments": [
+      {
+        "commentMetadata": {
+          "comment_id": "0",
+          "datetime": "2021-11-11 14:00:33",
+          "author": "Anonyymi",
+          "parent_comment_id": null,
+          "thread_id": "0",
+          "title": "Husin potilaista jo 23 prosenttia rokotettuja",
+          "msg_type": "thread_start"
+        },
+        "sentenceValencePredictions": [
+          [
+            "0.0514",
+            "0.9221",
+            "0.0265"
+          ],
+          [
+            "0.6478",
+            "0.3003",
+            "0.0519"
+          ],
+          [
+            "0.0008",
+            "0.9531",
+            "0.0461"
+          ]
+        ],
+        "words": [
+          {
+            "word": "Mikä",
+            "type": "WORD",
+            "valence": null,
+            "arousal": null,
+            "dominance": null
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "huomattavaa",
+            "type": "WORD",
+            "valence": 0.52,
+            "arousal": -0.1,
+            "dominance": 0.392
+          },
+          {
+            "word": ",",
+            "type": "PUNCTUATION"
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "niin",
+            "type": "WORD",
+            "valence": 0.124,
+            "arousal": -0.16,
+            "dominance": -0.216
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "nimenomaan",
+            "type": "WORD",
+            "valence": 0.204,
+            "arousal": -0.442,
+            "dominance": 0.016
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "kahdesti",
+            "type": "WORD",
+            "valence": 0.04,
+            "arousal": -0.6,
+            "dominance": -0.192
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "rokotettuja",
+            "type": "WORD",
+            "valence": 0.408,
+            "arousal": 0,
+            "dominance": -0.186
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "on",
+            "type": "WORD",
+            "valence": 0.34,
+            "arousal": -0.52,
+            "dominance": 0.108
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "sairaalassa",
+            "type": "WORD",
+            "valence": -0.177,
+            "arousal": -0.025,
+            "dominance": 0.115
+          },
+          {
+            "word": ".",
+            "type": "PUNCTUATION"
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "Kerran",
+            "type": "WORD",
+            "valence": null,
+            "arousal": null,
+            "dominance": null
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "rokotettuja",
+            "type": "WORD",
+            "valence": 0.408,
+            "arousal": 0,
+            "dominance": -0.186
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "ei",
+            "type": "WORD",
+            "valence": 0.34,
+            "arousal": -0.52,
+            "dominance": 0.108
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "lainkaan",
+            "type": "WORD",
+            "valence": 0.34,
+            "arousal": -0.52,
+            "dominance": 0.108
+          },
+          {
+            "word": ".",
+            "type": "PUNCTUATION"
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "Toinen",
+            "type": "WORD",
+            "valence": -0.02,
+            "arousal": -0.58,
+            "dominance": -0.5
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "rokote",
+            "type": "WORD",
+            "valence": 0,
+            "arousal": 0.04,
+            "dominance": 0.11
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "siis",
+            "type": "WORD",
+            "valence": 0.438,
+            "arousal": 0.02,
+            "dominance": 0.434
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "heikentää",
+            "type": "WORD",
+            "valence": -0.776,
+            "arousal": -0.5,
+            "dominance": -0.554
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "entisestään",
+            "type": "WORD",
+            "valence": -0.5,
+            "arousal": 0.04,
+            "dominance": -0.388
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "ihmisen",
+            "type": "WORD",
+            "valence": 0.534,
+            "arousal": -0.372,
+            "dominance": 0.21
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "vastustuskykyä",
+            "type": "WORD",
+            "valence": 0.87,
+            "arousal": -0.146,
+            "dominance": 0.102
+          },
+          {
+            "word": ",",
+            "type": "PUNCTUATION"
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "jos",
+            "type": "WORD",
+            "valence": 0.742,
+            "arousal": -0.294,
+            "dominance": 0.296
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "vaikka",
+            "type": "WORD",
+            "valence": 0.448,
+            "arousal": -0.46,
+            "dominance": 0.586
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "yhdestä",
+            "type": "WORD",
+            "valence": 0.084,
+            "arousal": -0.416,
+            "dominance": -0.26
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "rokotteesta",
+            "type": "WORD",
+            "valence": 0,
+            "arousal": 0.04,
+            "dominance": 0.11
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "onkin",
+            "type": "WORD",
+            "valence": 0.34,
+            "arousal": -0.52,
+            "dominance": 0.108
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "parantunut",
+            "type": "WORD",
+            "valence": 0.838,
+            "arousal": -0.04,
+            "dominance": 0.358
+          },
+          {
+            "word": ".",
+            "type": "PUNCTUATION"
+          },
+          {
+            "word": "\n",
+            "type": "WHITESPACE"
+          }
+        ]
+      },
+      {
+        "commentMetadata": {
+          "comment_id": "1",
+          "datetime": "2021-11-11 14:00:33",
+          "author": "Anonyymi",
+          "parent_comment_id": null,
+          "thread_id": "0",
+          "title": "Husin potilaista jo 23 prosenttia rokotettuja",
+          "msg_type": "thread_start"
+        },
+        "sentenceValencePredictions": [
+          [
+            "0.1797",
+            "0.7446",
+            "0.0756"
+          ]
+        ],
+        "words": [
+          {
+            "word": "Husin",
+            "type": "WORD",
+            "valence": null,
+            "arousal": null,
+            "dominance": null
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "potilaista",
+            "type": "WORD",
+            "valence": 0.166,
+            "arousal": -0.614,
+            "dominance": -0.32
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "77",
+            "type": "WORD",
+            "valence": null,
+            "arousal": null,
+            "dominance": null
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "prosenttia",
+            "type": "WORD",
+            "valence": -0.06,
+            "arousal": -0.3,
+            "dominance": -0.288
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "on",
+            "type": "WORD",
+            "valence": 0.34,
+            "arousal": -0.52,
+            "dominance": 0.108
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "rokottamattomia",
+            "type": "WORD",
+            "valence": 0.63,
+            "arousal": -0.018,
+            "dominance": 0.574
+          },
+          {
+            "word": ".",
+            "type": "PUNCTUATION"
+          },
+          {
+            "word": "\n\n",
+            "type": "WHITESPACE"
+          }
+        ],
+        "children": [
+          {
+            "commentMetadata": {
+              "comment_id": "1655814411",
+              "datetime": "2022-06-21 15:26:51",
+              "author": "asa",
+              "parent_comment_id": "1",
+              "thread_id": "0",
+              "title": "Husin potilaista jo 23 prosenttia rokotettuja",
+              "msg_type": "comment",
+              "parent_datetime": "2021-11-11 14:00:33"
+            },
+            "words": [
+              {
+                "word": "Sas",
+                "type": "WORD",
+                "valence": null,
+                "arousal": null,
+                "dominance": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "commentMetadata": {
+          "comment_id": "2",
+          "datetime": "2021-11-11 14:00:33",
+          "author": "Anonyymi",
+          "parent_comment_id": null,
+          "thread_id": "0",
+          "title": "Husin potilaista jo 23 prosenttia rokotettuja",
+          "msg_type": "thread_start"
+        },
+        "sentenceValencePredictions": [
+          [
+            "0.001",
+            "0.969",
+            "0.03"
+          ]
+        ],
+        "words": [
+          {
+            "word": "Ruotsissa",
+            "type": "WORD",
+            "valence": 0.354,
+            "arousal": -0.25,
+            "dominance": 0.462
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "taas",
+            "type": "WORD",
+            "valence": 0.02,
+            "arousal": 0.154,
+            "dominance": 0.018
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "jo",
+            "type": "WORD",
+            "valence": 0.124,
+            "arousal": -0.296,
+            "dominance": -0.322
+          },
+          {
+            "word": "  ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "yli",
+            "type": "WORD",
+            "valence": -0.25,
+            "arousal": -0.344,
+            "dominance": -0.416
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "puolet",
+            "type": "WORD",
+            "valence": 0.071,
+            "arousal": -0.409,
+            "dominance": -0.298
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "koronaan",
+            "type": "WORD",
+            "valence": 0.636,
+            "arousal": -0.122,
+            "dominance": 0.49
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "kuolleista",
+            "type": "WORD",
+            "valence": -0.896,
+            "arousal": -0.092,
+            "dominance": -0.612
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "eli",
+            "type": "WORD",
+            "valence": 0.5,
+            "arousal": -0.388,
+            "dominance": 0.258
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "70",
+            "type": "WORD",
+            "valence": null,
+            "arousal": null,
+            "dominance": null
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "prosenttia",
+            "type": "WORD",
+            "valence": -0.06,
+            "arousal": -0.3,
+            "dominance": -0.288
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "on",
+            "type": "WORD",
+            "valence": 0.34,
+            "arousal": -0.52,
+            "dominance": 0.108
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "tuplarokotettuja",
+            "type": "WORD",
+            "valence": null,
+            "arousal": null,
+            "dominance": null
+          },
+          {
+            "word": ".",
+            "type": "PUNCTUATION"
+          },
+          {
+            "word": "\n",
+            "type": "WHITESPACE"
+          }
+        ]
+      },
+      {
+        "commentMetadata": {
+          "comment_id": "3",
+          "datetime": "2021-11-11 14:00:33",
+          "author": "Anonyymi ",
+          "parent_comment_id": null,
+          "thread_id": "0",
+          "title": "Husin potilaista jo 23 prosenttia rokotettuja",
+          "msg_type": "thread_start"
+        },
+        "sentenceValencePredictions": [
+          [
+            "0.0117",
+            "0.4689",
+            "0.5193"
+          ]
+        ],
+        "words": [
+          {
+            "word": "Colin",
+            "type": "WORD",
+            "valence": 0.306,
+            "arousal": 0.122,
+            "dominance": 0.258
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "Powel",
+            "type": "WORD",
+            "valence": null,
+            "arousal": null,
+            "dominance": null
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "on",
+            "type": "WORD",
+            "valence": 0.34,
+            "arousal": -0.52,
+            "dominance": 0.108
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "tyytyväinen",
+            "type": "WORD",
+            "valence": 0.714,
+            "arousal": 0.224,
+            "dominance": 0.492
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "kun",
+            "type": "WORD",
+            "valence": 0.25,
+            "arousal": -0.352,
+            "dominance": 0.038
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "hän",
+            "type": "WORD",
+            "valence": 0.592,
+            "arousal": 0.114,
+            "dominance": 0.322
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "otti",
+            "type": "WORD",
+            "valence": 0.656,
+            "arousal": 0.074,
+            "dominance": -0.304
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "2",
+            "type": "WORD",
+            "valence": null,
+            "arousal": null,
+            "dominance": null
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "rokotetta",
+            "type": "WORD",
+            "valence": 0,
+            "arousal": 0.04,
+            "dominance": 0.11
+          },
+          {
+            "word": "!",
+            "type": "PUNCTUATION"
+          },
+          {
+            "word": "\n",
+            "type": "WHITESPACE"
+          }
+        ]
+      },
+      {
+        "commentMetadata": {
+          "comment_id": "1655814418",
+          "datetime": "2022-06-21 15:26:58",
+          "author": "asa",
+          "parent_comment_id": null,
+          "thread_id": "0",
+          "title": "Husin potilaista jo 23 prosenttia rokotettuja",
+          "msg_type": "comment",
+          "parent_datetime": "2021-11-11 14:00:33"
+        },
+        "words": [
+          {
+            "word": "dsads",
+            "type": "WORD",
+            "valence": null,
+            "arousal": null,
+            "dominance": null
+          }
+        ]
+      }
+    ],
+    "threadMetadata": {
+      "datetime": "2021-11-11 14:00:33",
+      "thread_id": "0",
+      "title": "Husin potilaista jo 23 prosenttia rokotettuja"
+    },
+    "annotations": {
+      "message": {
+        "messageAnalysis": true,
+        "emoji": false,
+        "sidebar": true,
+        "sentenceHighlighs": false,
+        "wordHighlights": true
+      },
+      "feedback": {
+        "messageAnalysis": true,
+        "emoji": true,
+        "sidebar": true,
+        "sentenceHighlighs": false,
+        "wordHighlights": true
+      },
+      "sentiment": {
+        "positive": true,
+        "negative": true,
+        "neutral": false
+      }
+    }
+  },
+  {
+    "newsArticle": {
+      "file": "banana.htm",
+      "image": "banana.png"
+    },
+    "comments": [
+      {
+        "commentMetadata": {
+          "comment_id": "1656673780",
+          "datetime": "2022-07-01 14:09:40",
+          "author": "Nimimerkki",
+          "parent_comment_id": null,
+          "thread_id": "1",
+          "title": "Husin potilaista jo 23 prosenttia rokotettuja",
+          "msg_type": "comment"
+        },
+        "words": [
+          {
+            "word": "Hei",
+            "type": "WORD",
+            "valence": null,
+            "arousal": null,
+            "dominance": null
+          },
+          {
+            "word": ",",
+            "type": "PUNCTUATION"
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "hieno",
+            "type": "WORD",
+            "valence": 0.646,
+            "arousal": -0.52,
+            "dominance": 0.294
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "uutinen",
+            "type": "WORD",
+            "valence": 0.104,
+            "arousal": -0.368,
+            "dominance": 0.066
+          },
+          {
+            "word": "!",
+            "type": "PUNCTUATION"
+          }
+        ]
+      },
+      {
+        "commentMetadata": {
+          "comment_id": "1656673795",
+          "datetime": "2022-07-01 14:09:55",
+          "author": "Nimimerkki",
+          "parent_comment_id": null,
+          "thread_id": "1",
+          "title": "Husin potilaista jo 23 prosenttia rokotettuja",
+          "msg_type": "comment"
+        },
+        "words": [
+          {
+            "word": "Tosi",
+            "type": "WORD",
+            "valence": 0.438,
+            "arousal": 0.02,
+            "dominance": 0.434
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "kiva",
+            "type": "WORD",
+            "valence": 0.86,
+            "arousal": -0.116,
+            "dominance": 0.3
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "juttu",
+            "type": "WORD",
+            "valence": 0.104,
+            "arousal": -0.368,
+            "dominance": 0.066
+          },
+          {
+            "word": ".",
+            "type": "PUNCTUATION"
+          }
+        ]
+      },
+      {
+        "commentMetadata": {
+          "comment_id": "1656673",
+          "datetime": "2022-07-01 14:09:55",
+          "author": "Nimimerkki",
+          "parent_comment_id": "1656673780",
+          "thread_id": "1",
+          "title": "Husin potilaista jo 23 prosenttia rokotettuja",
+          "msg_type": "comment"
+        },
+        "words": [
+          {
+            "word": "Tosi",
+            "type": "WORD",
+            "valence": 0.438,
+            "arousal": 0.02,
+            "dominance": 0.434
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "kiva",
+            "type": "WORD",
+            "valence": 0.86,
+            "arousal": -0.116,
+            "dominance": 0.3
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "juttu",
+            "type": "WORD",
+            "valence": 0.104,
+            "arousal": -0.368,
+            "dominance": 0.066
+          },
+          {
+            "word": ".",
+            "type": "PUNCTUATION"
+          }
+        ]
+      }
+    ],
+    "threadMetadata": {
+      "datetime": "2021-11-11 14:00:33",
+      "thread_id": "1",
+      "title": "Kuuma"
+    },
+    "annotations": {
+      "message": {
+        "messageAnalysis": true,
+        "emoji": false,
+        "sidebar": false,
+        "sentenceHighlighs": false,
+        "wordHighlights": false
+      },
+      "feedback": {
+        "messageAnalysis": true,
+        "emoji": false,
+        "sidebar": false,
+        "sentenceHighlighs": false,
+        "wordHighlights": false
+      },
+      "sentiment": {
+        "positive": true,
+        "negative": true,
+        "neutral": true
+      }
+    }
+  },
+  {
+    "newsArticle": {
+      "file": "helle2.htm",
+      "image": "helle2.jpg"
+    },
+    "comments": [
+      {
+        "commentMetadata": {
+          "comment_id": "1656673780",
+          "datetime": "2022-07-01 14:09:40",
+          "author": "Nimimerkki",
+          "parent_comment_id": null,
+          "thread_id": "2",
+          "title": "Husin potilaista jo 23 prosenttia rokotettuja",
+          "msg_type": "comment"
+        },
+        "words": [
+          {
+            "word": "Hei",
+            "type": "WORD",
+            "valence": null,
+            "arousal": null,
+            "dominance": null
+          },
+          {
+            "word": ",",
+            "type": "PUNCTUATION"
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "hieno",
+            "type": "WORD",
+            "valence": 0.646,
+            "arousal": -0.52,
+            "dominance": 0.294
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "uutinen",
+            "type": "WORD",
+            "valence": 0.104,
+            "arousal": -0.368,
+            "dominance": 0.066
+          },
+          {
+            "word": "!",
+            "type": "PUNCTUATION"
+          }
+        ],
+        "children": [
+          {
+            "commentMetadata": {
+              "comment_id": "1657107468",
+              "datetime": "2022-07-06 14:37:48",
+              "author": "a",
+              "parent_comment_id": "1656673780",
+              "thread_id": "2",
+              "title": "Husin potilaista jo 23 prosenttia rokotettuja",
+              "msg_type": "comment"
+            },
+            "words": [
+              {
+                "word": "Huono",
+                "type": "WORD",
+                "valence": -0.75,
+                "arousal": 0.25,
+                "dominance": -0.254
+              },
+              {
+                "word": " ",
+                "type": "WHITESPACE"
+              },
+              {
+                "word": "uutinen",
+                "type": "WORD",
+                "valence": 0.104,
+                "arousal": -0.368,
+                "dominance": 0.066
+              },
+              {
+                "word": ".",
+                "type": "PUNCTUATION"
+              }
+            ],
+            "sentenceValencePredictions": [
+              [
+                0.716540813,
+                0.178654224,
+                0.104804948
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "commentMetadata": {
+          "comment_id": "1656673795",
+          "datetime": "2022-07-01 14:09:55",
+          "author": "Nimimerkki",
+          "parent_comment_id": null,
+          "thread_id": "2",
+          "title": "Husin potilaista jo 23 prosenttia rokotettuja",
+          "msg_type": "comment"
+        },
+        "words": [
+          {
+            "word": "Tosi",
+            "type": "WORD",
+            "valence": 0.438,
+            "arousal": 0.02,
+            "dominance": 0.434
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "kiva",
+            "type": "WORD",
+            "valence": 0.86,
+            "arousal": -0.116,
+            "dominance": 0.3
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "juttu",
+            "type": "WORD",
+            "valence": 0.104,
+            "arousal": -0.368,
+            "dominance": 0.066
+          },
+          {
+            "word": ".",
+            "type": "PUNCTUATION"
+          }
+        ]
+      },
+      {
+        "commentMetadata": {
+          "comment_id": "1657107455",
+          "datetime": "2022-07-06 14:37:35",
+          "author": "a",
+          "parent_comment_id": null,
+          "thread_id": "2",
+          "title": "Husin potilaista jo 23 prosenttia rokotettuja",
+          "msg_type": "comment"
+        },
+        "words": [
+          {
+            "word": "Tosi",
+            "type": "WORD",
+            "valence": 0.438,
+            "arousal": 0.02,
+            "dominance": 0.434
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "tyhmä",
+            "type": "WORD",
+            "valence": -0.734,
+            "arousal": 0.02,
+            "dominance": -0.6
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "juttu",
+            "type": "WORD",
+            "valence": 0.104,
+            "arousal": -0.368,
+            "dominance": 0.066
+          },
+          {
+            "word": ".",
+            "type": "PUNCTUATION"
+          }
+        ],
+        "sentenceValencePredictions": [
+          [
+            0.855619371,
+            0.0375937819,
+            0.10678678
+          ]
+        ]
+      }
+    ],
+    "threadMetadata": {
+      "datetime": "2021-11-11 14:00:33",
+      "thread_id": "2",
+      "title": "Kuuma"
+    },
+    "annotations": {
+      "message": {
+        "messageAnalysis": true,
+        "emoji": true,
+        "sidebar": true,
+        "sentenceHighlighs": true,
+        "wordHighlights": true
+      },
+      "feedback": {
+        "messageAnalysis": true,
+        "emoji": true,
+        "sidebar": true,
+        "sentenceHighlighs": true,
+        "wordHighlights": true
+      },
+      "sentiment": {
+        "positive": false,
+        "negative": true,
+        "neutral": false
+      }
+    }
+  },
+  {
+    "newsArticle": {
+      "file": "uutinen.htm",
+      "image": "space.jpg"
+    },
+    "comments": [
+      {
+        "commentMetadata": {
+          "comment_id": "1656673780",
+          "datetime": "2022-07-01 14:09:40",
+          "author": "Nimimerkki",
+          "parent_comment_id": null,
+          "thread_id": "3",
+          "title": "Husin potilaista jo 23 prosenttia rokotettuja",
+          "msg_type": "comment"
+        },
+        "words": [
+          {
+            "word": "Hei",
+            "type": "WORD",
+            "valence": null,
+            "arousal": null,
+            "dominance": null
+          },
+          {
+            "word": ",",
+            "type": "PUNCTUATION"
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "hieno",
+            "type": "WORD",
+            "valence": 0.646,
+            "arousal": -0.52,
+            "dominance": 0.294
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "uutinen",
+            "type": "WORD",
+            "valence": 0.104,
+            "arousal": -0.368,
+            "dominance": 0.066
+          },
+          {
+            "word": "!",
+            "type": "PUNCTUATION"
+          }
+        ]
+      },
+      {
+        "commentMetadata": {
+          "comment_id": "1656673795",
+          "datetime": "2022-07-01 14:09:55",
+          "author": "Nimimerkki",
+          "parent_comment_id": null,
+          "thread_id": "3",
+          "title": "Husin potilaista jo 23 prosenttia rokotettuja",
+          "msg_type": "comment"
+        },
+        "words": [
+          {
+            "word": "Tosi",
+            "type": "WORD",
+            "valence": 0.438,
+            "arousal": 0.02,
+            "dominance": 0.434
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "kiva",
+            "type": "WORD",
+            "valence": 0.86,
+            "arousal": -0.116,
+            "dominance": 0.3
+          },
+          {
+            "word": " ",
+            "type": "WHITESPACE"
+          },
+          {
+            "word": "juttu",
+            "type": "WORD",
+            "valence": 0.104,
+            "arousal": -0.368,
+            "dominance": 0.066
+          },
+          {
+            "word": ".",
+            "type": "PUNCTUATION"
+          }
+        ]
+      }
+    ],
+    "threadMetadata": {
+      "datetime": "2021-11-11 14:00:33",
+      "thread_id": "3",
+      "title": "Kuuma"
+    },
+    "annotations": {
+      "message": {
+        "messageAnalysis": false,
+        "emoji": false,
+        "sidebar": false,
+        "sentenceHighlighs": false,
+        "wordHighlights": false
+      },
+      "feedback": {
+        "messageAnalysis": false,
+        "emoji": false,
+        "sidebar": false,
+        "sentenceHighlighs": false,
+        "wordHighlights": false
+      },
+      "sentiment": {
+        "positive": false,
+        "negative": false,
+        "neutral": false
+      }
+    }
+  },
+  {
+    "newsArticle": {
+      "file": "lorem_ipsum.htm",
+      "image": "silta.jpg"
+    },
+    "comments": [],
+    "threadMetadata": {
+      "datetime": "2021-11-11 14:00:33",
+      "thread_id": "4",
+      "title": "Tyhjä"
+    },
+    "annotations": {
+      "message": {
+        "messageAnalysis": false,
+        "emoji": false,
+        "sidebar": false,
+        "sentenceHighlighs": false,
+        "wordHighlights": false
+      },
+      "feedback": {
+        "messageAnalysis": false,
+        "emoji": false,
+        "sidebar": false,
+        "sentenceHighlighs": false,
+        "wordHighlights": false
+      },
+      "sentiment": {
+        "positive": false,
+        "negative": false,
+        "neutral": false
+      }
+    }
+  }
+]

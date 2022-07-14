@@ -20,6 +20,10 @@ const configureStore = () => {
     store.subscribe(throttle(() => {
         saveState({
             annotationsReducer: store.getState().annotationsReducer,
+            userReducer: store.getState().userReducer,
+            threadReducer: store.getState().threadReducer,
+            rawDataReducer: store.getState().rawDataReducer,
+            newsReducer: store.getState().newsReducer,
             });
     }, 1000));
 

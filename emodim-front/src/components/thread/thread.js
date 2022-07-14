@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./thread.css";
 import MessageArea from "../messageArea/messageArea";
-import SaveThread from "../saveThread/saveThread";
 
 export class Thread extends Component {
 
@@ -16,15 +15,8 @@ export class Thread extends Component {
     render() {
         return (
             <div className="thread">
-                {/* <div className="title">
-                    {this.getCurrentThreadTitle()}
-                </div> */}
                 <h1>Kommentit</h1>
-                <MessageArea
-                    separateResponsesFromComments={this.props.separateResponsesFromComments}
-                    moveResponsesToTheirParents={this.props.moveResponsesToTheirParents}
-                />
-                <SaveThread/>
+                <MessageArea/>
             </div>
         );
     }

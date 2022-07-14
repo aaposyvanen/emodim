@@ -1,8 +1,7 @@
-import _ from "lodash";
-
 import {
     UPDATE_RAW_THREAD_DATA,
     UPDATE_CURRENT_RAW_THREAD,
+    UPDATE_CURRENT_INDEX
 } from "../actions/rawDataActions";
 
 const initialState = {
@@ -13,12 +12,23 @@ const initialState = {
         startMessage: {},
         comments: [],
         metadata: {}
-    }
+    },
+    currentAnnotations: {
+        message: {},
+        feedback: {},
+        sentiment: {}
+    },
+    currentNewsArticle: {}
 };
 
 const rawDataReducer = (state = initialState, action) => {
 
     switch (action.type) {
+        case UPDATE_CURRENT_INDEX:
+            return {
+                ...state,
+                currentIndex: action.payload
+            };
         case UPDATE_RAW_THREAD_DATA:
             return {
                 ...state,
@@ -29,7 +39,9 @@ const rawDataReducer = (state = initialState, action) => {
             const {
                 threadID,
                 comments,
-                threadMetadata
+                threadMetadata,
+                annotations,
+                newsArticle
             } = action.payload;
 
             const startMessage = comments[0];
@@ -39,9 +51,11 @@ const rawDataReducer = (state = initialState, action) => {
                 currentThread: {
                     threadID,
                     startMessage,
-                    comments, //: _.drop(comments, 1),
+                    comments,
                     metadata: threadMetadata
-                }
+                },
+                currentAnnotations: annotations,
+                currentNewsArticle: newsArticle
             };
         default:
             return state;

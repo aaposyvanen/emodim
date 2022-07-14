@@ -1,0 +1,10 @@
+.home {
+    margin: auto;
+    max-width: 70ch;
+    text-align: center;
+}
+
+.text {
+    text-align: left;
+    white-space: pre-line;
+}

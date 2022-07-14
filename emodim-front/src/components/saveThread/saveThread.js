@@ -14,7 +14,7 @@ const SaveThread = () => {
     // Simulates mouse click to start the download immediately.
     const handleClick = () => {
         const newThread = {
-            comments: [currentThread.startMessage].concat(currentThread.comments),
+            comments: currentThread.comments,
             threadMetadata: currentThread.metadata,
             threadID: dayjs().unix().toString(),
         }    

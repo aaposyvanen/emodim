@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import * as dayjs from "dayjs";
 import socketIOClient from "socket.io-client";
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -14,7 +13,6 @@ import Typography from '@material-ui/core/Typography';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import ResponseField from "../responseField/responseField";
-
 import ResponseAnalysis from "../responseAnalysis/responseAnalysis";
 import {
     chatEndpoint,
@@ -27,30 +25,7 @@ import {
 } from "../../actions/responseActions";
 import "./responseAnalysisDialog.css";
 import "../buttons.css";
-
-export const formWordArrayFromAnalyzedData = (analysisData) => {
-    const wordArray = [];
-
-    if (Array.isArray(analysisData)) {
-        for (const data of analysisData) {
-            let word = {
-                word: data.original_text
-            }
-            if (data.rating) {
-                word.type = "WORD";
-                word.valence = data.rating[0];
-                word.arousal = data.rating[1];
-                word.dominance = data.rating[2];
-            } else if (data.original_text === " ") {
-                word.type = "WHITESPACE";
-            } else {
-                word.type = "PUNCTUATION"
-            }
-            wordArray.push(word);
-        }
-    }
-    return wordArray;
-}
+import { constructMessage } from "../../utils/messageUtils";
 
 const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggleResponsefield }) => {
     const dispatch = useDispatch();
@@ -90,7 +65,7 @@ const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggl
     }
 
     const handleSend = () => {
-        const message = constructMessage();
+        const message = constructMessage(parentId, analysisResults, results, currentThread, username);
         sendMessageDataToServer(message);
         dispatch(updateMessageText(""));
         handleClose();
@@ -100,19 +75,18 @@ const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggl
         }
     }
 
-    const constructMessage = () => {
-        const words = formWordArrayFromAnalyzedData(analysisResults);
-        const metadata = constructMetadata();
-        const valenceResults = results;
-        return {
-            commentMetadata: metadata,
-            words,
-            valenceResults
-        }
-    }
+    // const constructMessage = () => {
+    //     const words = formWordArrayFromAnalyzedData(analysisResults);
+    //     const metadata = constructMetadata(parentId, username, currentThread);
+    //     const valenceResults = results;
+    //     return {
+    //         commentMetadata: metadata,
+    //         words,
+    //         valenceResults
+    //     }
+    // }
 
     const sendMessageDataToServer = (constructedMessage) => {
-        console.log('constructedMessage', constructedMessage)
         const messageData = {};
         messageData.metadata = constructedMessage.commentMetadata
         messageData.originalMessage = {
@@ -121,18 +95,6 @@ const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggl
         }
         messageData.editedMessage = currentResponseText;
         socketRef.current.emit("message", messageData);
-    }
-
-    const constructMetadata = () => {
-        return {
-            ...currentThread.startMessage.commentMetadata,
-            author: username,
-            datetime: dayjs().format("YYYY-MM-DD HH:mm:ss").toString(),
-            comment_id: dayjs().unix().toString(),
-            msg_type: "comment",
-            parent_comment_id: parentId ? parentId : null,
-            //parent_datetime: currentThread.startMessage.commentMetadata.datetime,
-        }
     }
 
     return (
@@ -160,7 +122,8 @@ const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggl
                         ? <FontAwesomeIcon icon={faCircleNotch} className="loading-icon" />
                         : <div>
                             <ResponseAnalysis
-                                analysisResults={formWordArrayFromAnalyzedData(analysisResults)}
+                                parentId={parentId}
+                                analysisResults={analysisResults}
                             />
                             <ResponseField 
                                 input={currentResponseText}

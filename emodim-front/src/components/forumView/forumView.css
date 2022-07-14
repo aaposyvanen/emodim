@@ -17,4 +17,5 @@
     max-width: 70ch;
     width: 100%;
     overflow: auto;
+    margin-bottom: 1em;
 }

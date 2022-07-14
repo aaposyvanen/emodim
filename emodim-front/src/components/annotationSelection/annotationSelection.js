@@ -22,7 +22,7 @@ const AnnotationSelection = () => {
     // Save selected annotations to redux state and push user to username selection.
     const handleSubmit = (event) => {
         event.preventDefault();
-        dispatch(updateAnnotations(checkedAnnotations));
+        //dispatch(updateAnnotations(checkedAnnotations));
         history.push("/forum");
     }
 

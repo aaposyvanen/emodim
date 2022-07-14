@@ -3,9 +3,8 @@
     flex-direction: column;
     background-color: #F3F3F3;
     padding: 0 1em 1em 1em;
-    height: 100%;
-    min-height: 100vh;
-    max-width: 70ch;
+
+    width: 70ch;
 }
 
 .title {
