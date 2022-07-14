@@ -17,10 +17,9 @@ path = "..\\Voikko"
 libvoikko.Voikko.setLibrarySearchPath(path)
 v = libvoikko.Voikko(u"fi", path)
 """
-check = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '...', '---', ',,,', '>', '???', '!!!', ':', '_',
-         "jeesus", "paavali", "jumala", "raamattu", "http", "www.", '&gt;', '"', '-', '\'', '(', ')']
+check = ['...', '---', ',,,', '>', '???', '!!!', ':', '_', "http", "www.", '&gt;']
 """
-check = ["http", "www.", '>', '...', ',,,', '???', '!!!']
+check = ["http", "www.", '>', '...', ',,,', '???', '!!!', '[', ']']
 
 
 def deleteTrash(trash):
@@ -51,7 +50,8 @@ def deleteTrash(trash):
 def untrashify():
     dir = "..\\..\\data\\sentences\\"
     dir2 = f"..\\..\\data\\tr\\"
-    untrashify = [  f"E:\\OneDrive - TUNI.fi\\Emodim\\backend\\data\\txts\\FinnSentiment2020_neut_13-07-2021_09-39-26.txt"
+    untrashify = [  f"D:\Work\Data\s24_2017_sentences_shuffled_slice - Copy.txt"
+                    # f"E:\\Emodim\\data\\txts\\FinnSentiment2020_neut_13-07-2021_09-39-26.txt"
                     # f"{dir}ArousalSentences.txt", f"{dir}ValenceSentences.txt",
                     # f"{dir}negative_valence_sentences.txt",
                     # f"{dir}positive_valence_sentences.txt", f"{dir}positive_valence_sentences2.txt",
