@@ -15,7 +15,9 @@ const FrameWrapper = ({ article, image }) => {
         // Set the uploaded image as the image source.
         if (article && image) {
             const imageTag = document.querySelector("iframe").contentWindow.document.querySelector("img");
-            imageTag.src = image;
+            if (imageTag) {
+                imageTag.src = image;
+            }
         }
     }
 

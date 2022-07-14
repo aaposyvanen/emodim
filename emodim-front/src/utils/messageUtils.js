@@ -17,8 +17,9 @@ export const constructMetadata = (parentId, username, currentThread) => {
         datetime: dayjs().format("YYYY-MM-DD HH:mm:ss").toString(),
         author: username,
         parent_comment_id: parentId ? parentId : null,
+        thread_id: currentThread.threadMetadata.thread_id,
         msg_type: "comment",
-        title: currentThread.title    
+        title: currentThread.threadMetadata.title
     }
 }
 
