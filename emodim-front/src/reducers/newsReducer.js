@@ -1,8 +1,10 @@
-import { UPDATE_NEWS_ARTICLE, UPDATE_NEWS_IMAGE } from "../actions/newsActions";
+import { UPDATE_NEWS_ARTICLE } from "../actions/newsActions";
 
 const initialState = {
-    article: null,
-    image: null
+    article: {
+        file: null,
+        image: null,
+    },
 };
 
 const newsReducer = (state = initialState, action) => {
@@ -12,11 +14,6 @@ const newsReducer = (state = initialState, action) => {
                 ...state,
                 article: action.payload
             };
-        case UPDATE_NEWS_IMAGE:
-            return {
-                ...state,
-                image: action.payload
-            }
         default:
             return state;
     }

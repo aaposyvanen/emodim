@@ -1,5 +1,12 @@
 import * as dayjs from "dayjs";
 
+/**
+ * Returns constructed thread.
+ * @param {object} currentThread 
+ * @param {object} currentAnnotations 
+ * @param {object} currentNews 
+ * @returns {object} thread
+ */
 export const constructThread = (currentThread, currentAnnotations, currentNews) => {
     const metadata = constructThreadMetadata(currentThread);
     const newThread = {
@@ -12,6 +19,11 @@ export const constructThread = (currentThread, currentAnnotations, currentNews) 
     return newThread;
 }
 
+/**
+ * Returns constructed thread metadata.
+ * @param {object} currentThread 
+ * @returns thread metadata
+ */
 export const constructThreadMetadata = (currentThread) => {
     return {
         ...currentThread.threadMetadata,

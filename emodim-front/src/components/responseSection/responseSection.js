@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+
+import { useSelector } from "react-redux";
+
 import ResponseAnalysisDialog from "../responseAnalysisDialog/responseAnalysisDialog";
 import ResponseField from "../responseField/responseField";
-import { useSelector } from "react-redux";
 import { responseSection } from "../../constants";
 
 const ResponseSection = ({ toggleResponsefield, commentId }) => {
-    const user = useSelector(state => state.userReducer.username);
     const [input, setInput] = useState('');
+    
+    const user = useSelector(state => state.userReducer.username);
 
     const handleChange = (event) => {
         setInput(event.target.value);

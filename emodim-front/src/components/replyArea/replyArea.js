@@ -1,5 +1,7 @@
 import React from "react";
+
 import Button from "@material-ui/core/Button";
+
 import { buttonTexts } from "../../constants";
 import ResponseSection from "../responseSection/responseSection";
 

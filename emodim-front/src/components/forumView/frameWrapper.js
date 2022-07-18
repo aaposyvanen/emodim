@@ -1,14 +1,16 @@
 import React, { useState, useRef } from "react";
-import "./forumView.css";
+
 import { errorMessages } from "../../constants";
+
+import "./forumView.css";
 
 const FrameWrapper = ({ article, image }) => {
     const ref = useRef();
+
     const [frameHeight, setFrameHeight] = useState(0);
 
     const onLoad = () => {
-
-        // Set the height of the frame to match the lenght of the content.
+        // Set the height of the frame to match the length of the content.
         const height = document.querySelector("iframe").contentWindow.document.querySelector("div").scrollHeight;
         setFrameHeight(height + 50);
 

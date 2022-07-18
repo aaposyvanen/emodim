@@ -1,5 +1,14 @@
 import * as dayjs from "dayjs";
 
+/**
+ * Returns constructed message.
+ * @param {string} parentId 
+ * @param {object} analysisResults 
+ * @param {Array} results 
+ * @param {object} currentThread 
+ * @param {string} username 
+ * @returns {object} constructed message
+ */
 export const constructMessage = (parentId, analysisResults, results, currentThread, username) => {
     const metadata = constructMetadata(parentId, username, currentThread);
     const words = formWordArrayFromAnalyzedData(analysisResults);
@@ -11,6 +20,13 @@ export const constructMessage = (parentId, analysisResults, results, currentThre
     }
 }
 
+/**
+ * Returns constructed comment metadata.
+ * @param {string} parentId 
+ * @param {string} username 
+ * @param {object} currentThread 
+ * @returns {object} comment metadata
+ */
 export const constructMetadata = (parentId, username, currentThread) => {
     return {
         comment_id: dayjs().unix().toString(),
@@ -23,6 +39,11 @@ export const constructMetadata = (parentId, username, currentThread) => {
     }
 }
 
+/**
+ * Returns array of words with valence, arousal and dominance ratings.
+ * @param {object} analysisData 
+ * @returns {Array} Array of words with valence, arousal and dominance ratings.
+ */
 export const formWordArrayFromAnalyzedData = (analysisData) => {
     const wordArray = [];
 

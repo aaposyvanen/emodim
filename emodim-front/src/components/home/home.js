@@ -1,11 +1,15 @@
 import React from "react";
+
 import { Button } from "@material-ui/core";
-import { buttonTexts, instructionTexts } from "../../constants";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+
+import { buttonTexts, instructionTexts } from "../../constants";
 import { updateCurrentThread } from "../../actions/threadActions";
 import { updateAnnotations } from '../../actions/annotationActions';
 import { updateNewsArticle } from "../../actions/newsActions";
+import { updateCurrentIndex } from "../../actions/rawDataActions";
+
 import "../buttons.css";
 import "./home.css";
 
@@ -14,10 +18,13 @@ const Home = () => {
     const dispatch = useDispatch();
 
     const availableRawThreads = useSelector(state => state.rawDataReducer.availableThreads);
-    const currentIndex = useSelector(state => state.rawDataReducer.currentIndex);
 
-    const handleClick = () => {        
-        dispatch(updateCurrentThread(availableRawThreads[currentIndex]));
+    /**
+     * Show the first thread.
+     */
+    const handleClick = () => {
+        dispatch(updateCurrentIndex(0));
+        dispatch(updateCurrentThread(availableRawThreads[0]));
         const article = availableRawThreads[0].newsArticle;
         dispatch(updateNewsArticle(article));
         const annotations = availableRawThreads[0].annotations;

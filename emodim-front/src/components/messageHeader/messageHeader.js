@@ -1,6 +1,8 @@
 import React from "react";
-import "./messageHeader.css";
+
 import EmojiAnnotation from "../emojiAnnotation/emojiAnnotation";
+
+import "./messageHeader.css";
 
 const MessageHeader = ({ author, messageLevelAnnotations, analysisMessage, messageValence, emoji }) => {
     return (

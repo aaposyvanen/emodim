@@ -1,48 +1,53 @@
 import React, { useEffect, useState, useRef } from "react";
-import socketIOClient from "socket.io-client";
+
 import { Button } from "@material-ui/core";
-import { buttonTexts, chatEndpoint } from "../../constants";
-import Thread from "../thread/thread";
-import "./forumView.css";
-import "../buttons.css";
-import FrameWrapper from "./frameWrapper";
-import { useSelector, useDispatch } from "react-redux";
-import { updateCurrentIndex } from "../../actions/rawDataActions";
+import socketIOClient from "socket.io-client";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+
+import { buttonTexts, chatEndpoint } from "../../constants";
+import { constructThread } from "../../utils/threadUtils";
+import FrameWrapper from "./frameWrapper";
+import Thread from "../thread/thread";
+import { updateCurrentIndex } from "../../actions/rawDataActions";
 import { updateCurrentThread } from "../../actions/threadActions";
 import { updateAnnotations } from '../../actions/annotationActions';
 import { updateNewsArticle } from "../../actions/newsActions";
-import { constructThread } from "../../utils/threadUtils";
+
+import "../buttons.css";
+import "./forumView.css";
 
 export const ForumView = () => {
     const dispatch = useDispatch();
-    const currentArticle = useSelector(state => state.newsReducer.article.file);
-    const currentImage = useSelector(state => state.newsReducer.article.image);
+    const socketRef = useRef(null);
+    const history = useHistory();
+
+    const currentThread = useSelector(state => state.threadReducer.thread);
     const currentNews = useSelector(state => state.newsReducer.article);
     const currentAnnotations = useSelector(state => state.annotationsReducer);
-
-    const [threadsLength, setThreadsLength] = useState(0);
-    const [lastThread, setLastThread] = useState(false);
     const availableRawThreads = useSelector(state => state.rawDataReducer.availableThreads);
     const currentIndex = useSelector(state => state.rawDataReducer.currentIndex);
 
-    const socketRef = useRef(null);
-    const history = useHistory();
-    // Gets current message thread from redux state.
-    const currentThread = useSelector(state => state.threadReducer.thread);
-    
-    // Import articles and images dynamically
+    const [threadsLength, setThreadsLength] = useState(0);
+    const [lastThread, setLastThread] = useState(false);
+
+    /**
+     * Import articles and images dynamically.
+     * @param {function} r 
+     * @returns {object} items in the folder
+     */
     const importFolder = (r) => {
-        let images = {};
-        r.keys().forEach((item, index) => { images[item.replace("./", "")] = r(item)});
-        return images;
+        let folder = {};
+        r.keys().forEach((item, index) => { folder[item.replace("./", "")] = r(item)});
+        return folder;
     }
 
     const images = importFolder(require.context("../../testData/images", false, /\.(png|jpe?g|svg)$/));
     const articles = importFolder(require.context("../../testData/articles", false, /\.(htm)$/));
 
-    // Converts thread object to json and makes it into a dowload link.
-    // Simulates mouse click to start the download immediately.
+    /**
+     * Save the thread on the server and move to next thread.
+     */
     const handleClick = () => {
         sendThreadToServer();
 
@@ -59,11 +64,17 @@ export const ForumView = () => {
         window.scrollTo({top: 0, left: 0, behavior: "smooth"});
     }
 
+    /**
+     * Send the current thread to server.
+     */
     const sendThreadToServer = () => {
         const newThread = constructThread(currentThread, currentAnnotations, currentNews);
         socketRef.current.emit("thread", newThread);
     }
 
+    /**
+     * Save the thread on the server, clear session storage and move to the end page.
+     */
     const handleQuit = () => {
         sendThreadToServer();
         sessionStorage.clear();
@@ -89,8 +100,8 @@ export const ForumView = () => {
     return (
         <div className="forum-view">
             <FrameWrapper
-                article={articles[currentArticle] ? articles[currentArticle].default : null}
-                image={images[currentImage] ? images[currentImage].default : null}
+                article={articles[currentNews.file] ? articles[currentNews.file].default : null}
+                image={images[currentNews.image] ? images[currentNews.image].default : null}
             />
             <Thread/>
             { lastThread

@@ -1,6 +1,5 @@
 import {
     UPDATE_RAW_THREAD_DATA,
-    UPDATE_CURRENT_RAW_THREAD,
     UPDATE_CURRENT_INDEX
 } from "../actions/rawDataActions";
 
@@ -33,29 +32,6 @@ const rawDataReducer = (state = initialState, action) => {
             return {
                 ...state,
                 availableThreads: action.payload
-            };
-        case UPDATE_CURRENT_RAW_THREAD:
-
-            const {
-                threadID,
-                comments,
-                threadMetadata,
-                annotations,
-                newsArticle
-            } = action.payload;
-
-            const startMessage = comments[0];
-
-            return {
-                ...state,
-                currentThread: {
-                    threadID,
-                    startMessage,
-                    comments,
-                    metadata: threadMetadata
-                },
-                currentAnnotations: annotations,
-                currentNewsArticle: newsArticle
             };
         default:
             return state;

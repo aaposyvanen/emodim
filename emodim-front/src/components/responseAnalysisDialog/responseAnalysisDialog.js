@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect, useState, useRef } from "react";
 
+import { useDispatch, useSelector } from "react-redux";
 import socketIOClient from "socket.io-client";
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -12,6 +12,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
+
 import ResponseField from "../responseField/responseField";
 import ResponseAnalysis from "../responseAnalysis/responseAnalysis";
 import {
@@ -23,15 +24,17 @@ import {
     sendMessageForAnalysis,
     updateMessageText
 } from "../../actions/responseActions";
-import "./responseAnalysisDialog.css";
-import "../buttons.css";
 import { constructMessage } from "../../utils/messageUtils";
+
+import "../buttons.css";
+import "./responseAnalysisDialog.css";
 
 const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggleResponsefield }) => {
     const dispatch = useDispatch();
-    const [open, setOpen] = React.useState(false);
-
     const socketRef = useRef(null);
+
+    const [open, setOpen] = useState(false);
+
     const analysisResults = useSelector(state => state.responseReducer.analysisResults);
     const currentResponseText = useSelector(state => state.responseReducer.responseText);
     const results = useSelector(state => state.responseReducer.valenceResults);
@@ -53,7 +56,7 @@ const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggl
 
     const handleReplyClick = () => {
         if (inputText) {
-            dispatch(updateMessageText(inputText));
+            dispatch(updateMessageText(inputText.trim()));
             setOpen(true);
             dispatch(sendMessageForAnalysis());
             clearResponseField();
@@ -75,17 +78,10 @@ const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggl
         }
     }
 
-    // const constructMessage = () => {
-    //     const words = formWordArrayFromAnalyzedData(analysisResults);
-    //     const metadata = constructMetadata(parentId, username, currentThread);
-    //     const valenceResults = results;
-    //     return {
-    //         commentMetadata: metadata,
-    //         words,
-    //         valenceResults
-    //     }
-    // }
-
+    /**
+     * Send message to the server.
+     * @param {object} constructedMessage 
+     */
     const sendMessageDataToServer = (constructedMessage) => {
         const messageData = {};
         messageData.metadata = constructedMessage.commentMetadata
@@ -93,7 +89,7 @@ const ResponseAnalysisDialog = ({ inputText, parentId, clearResponseField, toggl
             words: constructedMessage.words,
             valenceResults: constructedMessage.valenceResults
         }
-        messageData.editedMessage = currentResponseText;
+        messageData.editedMessage = currentResponseText.trim();
         socketRef.current.emit("message", messageData);
     }
 

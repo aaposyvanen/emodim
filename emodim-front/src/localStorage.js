@@ -1,3 +1,7 @@
+/**
+ * Gets state from sessionsStorage.
+ * @returns {state|undefined} Returns undefined if getItem fails or nothing is saved.
+ */
 export const loadState = () => {
     try {
         const serializedState = sessionStorage.getItem('state');
@@ -10,6 +14,10 @@ export const loadState = () => {
     }
 };
 
+/**
+ * Saves state to sessionStorage.
+ * @param {object} state 
+ */
 export const saveState = (state) => {
     try {
         const serializedState = JSON.stringify(state);

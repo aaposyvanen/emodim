@@ -1,5 +1,7 @@
 import React from "react";
+
 import { responseSection } from "../../constants";
+
 import "./responseField.css";
 
 const ResponseField = ({ input, handleChange, parentId }) => {

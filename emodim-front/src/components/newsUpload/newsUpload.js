@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useDispatch } from "react-redux";
-import { updateNewsArticle, updateNewsImage } from "../../actions/newsActions";
+
 import { Button } from "@material-ui/core";
+import { useDispatch } from "react-redux";
+import { updateNewsArticle } from "../../actions/newsActions";
+
 import "../buttons.css";
 import "./newsUpload.css";
 
@@ -9,6 +11,7 @@ const imageMimeType = /image\/(png|jpg|jpeg)/i;
 
 const NewsUpload = () => {
     const dispatch = useDispatch();
+    
     const [article, setArticle] = useState(null);
     const [image, setImage] = useState(null);
     const [imageDataURL, setImageDataURL] = useState(null);

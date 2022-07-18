@@ -1,6 +1,8 @@
 import React from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngry, faLaugh, faMeh } from "@fortawesome/free-regular-svg-icons";
+
 import "./emojiAnnotation.css"
 
 const EmojiAnnotation = ({ messageValence }) => {

@@ -1,18 +1,25 @@
 import React, { useEffect, useRef } from "react";
-import { useSelector, useDispatch } from "react-redux";
+
 import _ from "lodash";
-import "./messageArea.css";
+import socketIOClient from "socket.io-client";
+import { useSelector, useDispatch } from "react-redux";
+
+import { addMessageToCurrentThread } from "../../actions/threadActions";
 import AnnotatedMessage from "../annotatedMessage/annotatedMessage";
+import { chatEndpoint, responseSection } from "../../constants";
 import Comment from "../comment/comment";
+import { formWordArrayFromAnalyzedData } from "../../utils/messageUtils";
 import ResponseSection from "../responseSection/responseSection";
 import { updateCurrentThread } from "../../actions/threadActions";
-import { chatEndpoint, responseSection } from "../../constants";
-import socketIOClient from "socket.io-client";
-import { formWordArrayFromAnalyzedData } from "../../utils/messageUtils";
-import { addMessageToCurrentThread } from "../../actions/threadActions";
 
-// Returns array containing two arrays: comments and responses.
-// Responses have a parent_id, comments do not (null).
+import "./messageArea.css";
+
+/**
+ * Separates comments and responses.
+ * Responses have a parent_comment_id, comments don't.
+ * @param {Array} rawComments 
+ * @returns {Array} rawComments separated into comments and responses
+ */
 export const separateResponsesFromComments = (rawComments) => {
     const groupedComments = _.groupBy(rawComments, comment => {
         return !comment.commentMetadata.parent_comment_id;
@@ -23,8 +30,12 @@ export const separateResponsesFromComments = (rawComments) => {
     return [comments, responses];
 }
 
-// Adds responses to the right comment's children array
-// and returns a new message chain.
+/**
+ * Moves responses to their parent comment's children array.
+ * @param {Array} comments 
+ * @param {Array} responses 
+ * @returns {Array} messageChain with responses as children.
+ */
 export const moveResponsesToTheirParents = (comments, responses) => {
     const messageChain = [];
 
@@ -74,7 +85,9 @@ export const MessageArea = () => {
         return () => socket.disconnect();
     }, [dispatch]);
 
-    // Make responses children of their parent comment so they will be rendered under the parent comment
+    /**
+     * Update thread when new comment is added
+     */
     useEffect(() => {
         if (currentThread && currentComments) {
             const [comments, responses] = separateResponsesFromComments(currentThread.comments);

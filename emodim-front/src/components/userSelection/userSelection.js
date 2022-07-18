@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+
 import { useDispatch } from "react-redux";
-import { updateUsername } from "../../actions/userActions";
 import { Button, TextField } from "@material-ui/core";
+
+import { updateUsername } from "../../actions/userActions";
 import { userSelectionStrings, buttonTexts } from "../../constants";
+
 import "./userSelection.css";
 import "../buttons.css";
 
@@ -12,9 +15,13 @@ const UserSelection = () => {
     const [inputValue, setInputValue] = useState("");
     const [helperText, setHelperText] = useState("");
 
-    const handleSubmit = username => {
-        if (username) {
-            dispatch(updateUsername(username));
+    /**
+     * Save username in redux state.
+     */
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if (inputValue) {
+            dispatch(updateUsername(inputValue));
             setHelperText("");
         } else {
             setHelperText(userSelectionStrings.helperText);
@@ -26,7 +33,7 @@ const UserSelection = () => {
     }
 
     return (
-        <form className="user-selection" onSubmit={() => handleSubmit(inputValue)}>
+        <form className="user-selection" onSubmit={handleSubmit}>
             {userSelectionStrings.primaryInstruction}
             <TextField
                 type="text"

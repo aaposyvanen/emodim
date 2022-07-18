@@ -1,13 +1,15 @@
 import React from "react";
+
 import _ from "lodash";
-import AnnotatedWord from "../annotatedWord/annotatedWord";
-import "./annotatedMessage.css";
-import "../buttons.css";
-import MessageHeader from "../messageHeader/messageHeader";
-import ReplyArea from "../replyArea/replyArea";
 import { useSelector } from "react-redux";
 
+import AnnotatedWord from "../annotatedWord/annotatedWord";
 import { messageFeedbackStrings as feedback } from "../../constants";
+import MessageHeader from "../messageHeader/messageHeader";
+import ReplyArea from "../replyArea/replyArea";
+
+import "./annotatedMessage.css";
+import "../buttons.css";
 
 const AnnotatedMessage = ({ data, wordLevelAnnotations, messageLevelAnnotations, response, emoji, sidebar, responseOpen, toggleResponsefield }) => {
     const selectedSentiments = useSelector(state => state.annotationsReducer.annotations.sentiment);
@@ -31,10 +33,15 @@ const AnnotatedMessage = ({ data, wordLevelAnnotations, messageLevelAnnotations,
         />
     });
 
-    // predictionArray has three floating point numbers, each representing
-    // the certainty of the sentence belonging to that category
-    // this function finds the index of the highest value
-    // Example predictionArray: [0.2, 0.3, 0.5]
+    
+    /**
+     * PredictionArray has three floating point numbers, each representing
+     * the certainty of the sentence belonging to that category.
+     * This function finds the index of the highest value.
+     * Example predictionArray: [0.2, 0.3, 0.5]
+     * @param {Array} predictionArray 
+     * @returns {number} Index of the highest prediction.
+     */
     const findHighestPredictionIndex = predictionArray => {
 
         let highestPrediction = 0;
@@ -52,8 +59,11 @@ const AnnotatedMessage = ({ data, wordLevelAnnotations, messageLevelAnnotations,
         return indexOfHighestPrediction;
     }
 
-    // increases the correct counter to keep track of how many sentences
-    // have been found for each valence category
+    /**
+     * Increases the correct counter to keep track of how many sentences
+     * have been found for each valence category.
+     * @param {number} index 
+     */
     const increaseValenceCounters = (index) => {
         if (index === 0) {
             sentenceValences.negative++;
@@ -64,8 +74,10 @@ const AnnotatedMessage = ({ data, wordLevelAnnotations, messageLevelAnnotations,
         }
     }
 
-    // Goes through the prediction data of all of the sentences in a message and
-    // increases the correct valence counter for each.
+    /**
+     * Goes through the prediction data of all of the sentences in a message and
+     * increases the correct valence counter for each.
+     */
     const interpretValencePredictionData = () => {
         if (data.sentenceValencePredictions) {
             const messagePredictions = data.sentenceValencePredictions;
@@ -77,8 +89,10 @@ const AnnotatedMessage = ({ data, wordLevelAnnotations, messageLevelAnnotations,
         }
     }
 
-    // sets analysisMessage and messageValence to their correct values so they
-    // can be easily used in rendering
+    /**
+     * Sets analysisMessage and messageValence to their correct values so they
+     * can be easily used in rendering.
+     */
     const setFeedback = () => {
         messageValence = sentenceValences.positive - sentenceValences.negative;
         if (messageValence < 0 && selectedSentiments.negative) {

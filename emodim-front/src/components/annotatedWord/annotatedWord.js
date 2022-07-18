@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./annotatedWord.css";
 
 const AnnotatedWord = ({ wordData, highlights }) => {
