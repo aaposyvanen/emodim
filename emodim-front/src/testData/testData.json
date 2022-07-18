@@ -766,7 +766,7 @@
       },
       "sentiment": {
         "positive": true,
-        "negative": true,
+        "negative": false,
         "neutral": false
       }
     }
@@ -1288,19 +1288,19 @@
         "emoji": false,
         "sidebar": false,
         "sentenceHighlighs": false,
-        "wordHighlights": false
+        "wordHighlights": true
       },
       "feedback": {
         "messageAnalysis": false,
         "emoji": false,
         "sidebar": false,
         "sentenceHighlighs": false,
-        "wordHighlights": false
+        "wordHighlights": true
       },
       "sentiment": {
-        "positive": false,
-        "negative": false,
-        "neutral": false
+        "positive": true,
+        "negative": true,
+        "neutral": true
       }
     }
   },

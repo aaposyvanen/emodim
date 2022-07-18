@@ -30,6 +30,7 @@ const AnnotatedMessage = ({ data, wordLevelAnnotations, messageLevelAnnotations,
             key={index}
             wordData={wordData}
             highlights={wordLevelAnnotations}
+            selectedSentiments={selectedSentiments}
         />
     });
 

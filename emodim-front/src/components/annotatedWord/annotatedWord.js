@@ -2,7 +2,7 @@ import React from "react";
 
 import "./annotatedWord.css";
 
-const AnnotatedWord = ({ wordData, highlights }) => {
+const AnnotatedWord = ({ wordData, highlights, selectedSentiments }) => {
 
     let renderedWord = null;
     const { arousal, valence } = wordData;
@@ -12,13 +12,13 @@ const AnnotatedWord = ({ wordData, highlights }) => {
 
 
     if (highlights) {
-        if (valence < -0.75) {
+        if (valence < -0.75 && selectedSentiments.negative) {
             valenceClass = -2;
-        } else if (valence < -0.5) {
+        } else if (valence < -0.5 && selectedSentiments.negative) {
             valenceClass = -1;
-        } else if (valence > 0.5 && valence < 0.75) {
+        } else if (valence > 0.5 && valence < 0.75 && selectedSentiments.positive) {
             valenceClass = 1;
-        } else if (valence > 0.75) {
+        } else if (valence > 0.75 && selectedSentiments.positive) {
             valenceClass = 2;
         }
 
