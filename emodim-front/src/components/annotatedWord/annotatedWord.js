@@ -14,9 +14,9 @@ const AnnotatedWord = ({ wordData, highlights, selectedSentiments }) => {
     if (highlights) {
         if (valence < -0.75 && selectedSentiments.negative) {
             valenceClass = -2;
-        } else if (valence < -0.5 && selectedSentiments.negative) {
+        } else if (valence < -0.6 && selectedSentiments.negative) {
             valenceClass = -1;
-        } else if (valence > 0.5 && valence < 0.75 && selectedSentiments.positive) {
+        } else if (valence > 0.6 && valence < 0.75 && selectedSentiments.positive) {
             valenceClass = 1;
         } else if (valence > 0.75 && selectedSentiments.positive) {
             valenceClass = 2;
