@@ -136,7 +136,7 @@ chatServer/log.json
 docker-compose.yml
 skipgram_dbs/
 
-data/
+data/others
 datahandling/
 *finBERT/
 word-analysis/voikko/libvoikko-1.dll
