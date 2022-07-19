@@ -2,7 +2,7 @@
 
 This repository contains the components for Emodim project.
 
-The frontend components are done by [Tomi](https://github.com/JokkeT).
+The frontend components are done by [Tomi](https://github.com/JokkeT) and further developed by [Hannemari](https://github.com/hansupie).
 
 ## Setting up the Docker environment
 

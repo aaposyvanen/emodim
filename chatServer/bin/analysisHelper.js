@@ -6,11 +6,6 @@ async function getWordLevelAnalysis(message) {
         const res = await axios.post("http://word-analysis:5000/evaluateSentence/", {
             instances: message,
         });
-        /*
-        const res = await axios.post("http://localhost:5000/evaluateSentence/", {
-            instances: message
-        });
-        */
         return res.data[0];
     } catch (error) {
         console.log(error);
@@ -26,12 +21,6 @@ async function getSentenceValencePredictions(message) {
             signature_name: "serving_default",
             instances: sentences
         });
-        /*
-        const res = await axios.post("http://localhost:8501/v1/models/rnnmodel:predict", {
-            signature_name: "serving_default",
-            instances: sentences
-        });
-        */
         return ("res", res.data.predictions);
     } catch (error) {
         console.log(error);

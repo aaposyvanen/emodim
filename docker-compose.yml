@@ -16,6 +16,7 @@ services:
       - "./sentence-analysis/model/rnnmodel:/models/rnnmodel"
     environment: 
       - MODEL_NAME=rnnmodel
+    # - MODEL_NAME=fine_tuned_finBERT
     command:
       - "--rest_api_enable_cors_support"
   word-analysis:
