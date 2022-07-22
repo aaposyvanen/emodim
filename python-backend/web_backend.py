@@ -22,5 +22,6 @@ def evaluateSentence():
 def tokenize():
     tokenizer = AutoTokenizer.from_pretrained("tokenizer")
     t = tokenizer.batch_encode_plus(request.json["instances"], add_special_tokens=True, return_attention_mask=True, return_token_type_ids=False, max_length=75, padding='max_length')
-    encoded = [t["input_ids"], t["attention_mask"]]
-    return jsonify(encoded)
+    # encoded = [t["input_ids"], t["attention_mask"]]
+    # return jsonify(encoded)
+    return t
