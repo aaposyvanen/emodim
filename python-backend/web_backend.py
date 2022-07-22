@@ -1,7 +1,7 @@
 from flask import *  # render_template
 from flask_cors import CORS, cross_origin
 import emodim as em
-from transformers import AutoTokenizer
+from transformers import AutoTokenizer, InputFeatures
 
 
 app = Flask(__name__, static_folder='')
@@ -26,4 +26,5 @@ def tokenize():
                                     return_attention_mask=True, 
                                     return_token_type_ids=False, 
                                     max_length=75, padding='max_length')
-    return jsonify(t)
+    inputs = {"inputs": {"input_1": t["input_ids"], "input_2": t["attention_mask"]}}
+    return json.dumps(inputs)
