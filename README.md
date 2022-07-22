@@ -17,11 +17,11 @@ docker-compose up -d
 or by running the following commands
 ```
 Emodim> docker pull tensorflow/serving
-Emodim> docker build -t word-analysis ./word-analysis
+Emodim> docker build -t python-backend ./python-backend
 Emodim> docker build -t chat-server ./chatServer
 Emodim> docker build -t front ./emodim-front
 Emodim/sentence-analysis> docker run -dp 8501:8501 --rm --network emodim --name sentence-analysis -v "%cd%/model/rnnmodel:/models/rnnmodel" -e MODEL_NAME=rnnmodel tensorflow/serving # cmd
-Emodim/word-analysis> docker run -dp 5000:5000 --rm --network emodim --name word-analysis -v "%cd%/skipgram_dbs":"/app/skipgram_dbs" word-analysis # cmd
+Emodim/python-backend> docker run -dp 5000:5000 --rm --network emodim --name python-backend -v "%cd%/skipgram_dbs":"/app/skipgram_dbs" python-backend # cmd
 Emodim/chatServer> docker run -dp 3010:3010 --rm --network emodim --name chat-server chat-server
 Emodim/emodim-front> docker run -dp 3000:3000 --rm --network emodim --name front front
 ```

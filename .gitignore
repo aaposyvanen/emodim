@@ -139,6 +139,6 @@ skipgram_dbs/
 data/others
 datahandling/
 *finBERT/
-word-analysis/voikko/libvoikko-1.dll
+python-backend/voikko/libvoikko-1.dll
 *logs/
 chatServer/logs/

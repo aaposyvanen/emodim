@@ -13,16 +13,17 @@ services:
     ports:
       - "8501:8501"
     volumes:
-      - "./sentence-analysis/model/rnnmodel:/models/rnnmodel"
+      #- "./sentence-analysis/model/rnnmodel:/models/rnnmodel"
+      - "./sentence-analysis/model/fine_tuned_finBERT:/models/fine_tuned_finBERT"
     environment: 
-      - MODEL_NAME=rnnmodel
-    # - MODEL_NAME=fine_tuned_finBERT
+    #   - MODEL_NAME=rnnmodel
+      - MODEL_NAME=fine_tuned_finBERT
     command:
       - "--rest_api_enable_cors_support"
-  word-analysis:
-    container_name: word-analysis
+  python-backend:
+    container_name: python-backend
     build:
-      context: ./word-analysis
+      context: ./python-backend
       dockerfile: Dockerfile
     networks: 
       - emodim
