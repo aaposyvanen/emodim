@@ -2,7 +2,7 @@ from flask import *  # render_template
 from flask_cors import CORS, cross_origin
 import emodim as em
 from transformers import AutoTokenizer
-import numpy as np
+
 
 app = Flask(__name__, static_folder='')
 cors = CORS(app)
@@ -21,7 +21,6 @@ def evaluateSentence():
 @cross_origin(origins=["http://localhost:3000", "http://localhost:3010"])
 def tokenize():
     tokenizer = AutoTokenizer.from_pretrained("tokenizer")
-    t = tokenizer.batch_encode_plus(request.json["instances"], add_special_tokens=True ,return_attention_mask=True, return_token_type_ids=False, max_length=75, padding='max_length')
-    encoded = [np.array(t["input_ids"]), np.array(t["attention_mask"])]
-    print(encoded)
-    return encoded
+    t = tokenizer.batch_encode_plus(request.json["instances"], add_special_tokens=True, return_attention_mask=True, return_token_type_ids=False, max_length=75, padding='max_length')
+    encoded = [t["input_ids"], t["attention_mask"]]
+    return jsonify(encoded)
