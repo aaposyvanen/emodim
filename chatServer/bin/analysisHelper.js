@@ -21,9 +21,10 @@ async function getSentenceValencePredictions(message) {
         const encoded = await axios.post("http://python-backend:5000/tokenize/", {
             instances: sentences,
         });
+        console.log(encoded);
         const res = await axios.post("http://sentence-analysis:8501/v1/models/fine_tuned_finBERT:predict", {
             signature_name: "serving_default",
-            instances: encoded
+            instances: encoded.data
         });
         console.log(res);
         return ("res", res.data.predictions);
