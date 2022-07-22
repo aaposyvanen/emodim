@@ -18,9 +18,9 @@ def evaluateSentence():
     return jsonify(em.evaluateText(text))
 
 @app.route('/tokenize/', methods = ['POST'])
-@cross_origin(origins=["http://localhost:3000"])
+@cross_origin(origins=["http://localhost:3000", "http://localhost:3010"])
 def tokenize():
-    tokenizer = AutoTokenizer.from_pretrained("TurkuNLP/bert-base-finnish-uncased-v1")
+    tokenizer = AutoTokenizer.from_pretrained("tokenizer")
     t = tokenizer.batch_encode_plus(request.json["instances"], add_special_tokens=True ,return_attention_mask=True, return_token_type_ids=False, max_length=75, padding='max_length')
     encoded = [np.array(t["input_ids"]), np.array(t["attention_mask"])]
     print(encoded)

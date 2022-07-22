@@ -35,7 +35,7 @@ export const sendMessageForAnalysis = () => {
                 // Attempting to fetch valence predictions for the message directly from Tensorflow serving
                 const regex = /(?<=[.!?])\s/;
                 let sentences = state.responseReducer.responseText.split(regex);
-                const encoded = await axios.post("http://python-backend:5000/tokenize/", {
+                const encoded = await axios.post(`${analysisEndpoint}/tokenize/`, {
                     instances: sentences,
                 });
                 console.log(encoded);
