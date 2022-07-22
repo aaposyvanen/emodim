@@ -24,7 +24,7 @@ async function getSentenceValencePredictions(message) {
         console.log(encoded);
         const res = await axios.post("http://sentence-analysis:8501/v1/models/fine_tuned_finBERT:predict", {
             signature_name: "serving_default",
-            inputs: encoded.data[0]
+            inputs: encoded.data
         });
         console.log(res);
         return ("res", res.data.predictions);

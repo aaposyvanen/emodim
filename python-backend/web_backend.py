@@ -26,5 +26,5 @@ def tokenize():
                                     return_attention_mask=True, 
                                     return_token_type_ids=False, 
                                     max_length=83, padding='max_length')
-    inputs = {"inputs": {"input_1": t["input_ids"], "input_2": t["attention_mask"]}}
+    inputs = {"input_1": t["input_ids"], "input_2": t["attention_mask"]}
     return json.dumps(inputs)
