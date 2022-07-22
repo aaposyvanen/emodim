@@ -41,7 +41,7 @@ export const sendMessageForAnalysis = () => {
                 console.log(encoded);
                 const resValence = await axios.post("http://localhost:8501/v1/models/fine_tuned_finBERT:predict", {
                     signature_name: "serving_default",
-                    inputs: encoded.data
+                    inputs: encoded.data[0]
                 });
                 console.log(resValence);
                 dispatch(updateAnalysisData({"words" : res.data[0], "sentenceValencePredictions" :resValence['data']['predictions']}));
