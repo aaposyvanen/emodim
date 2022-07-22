@@ -35,12 +35,15 @@ export const sendMessageForAnalysis = () => {
                 // Attempting to fetch valence predictions for the message directly from Tensorflow serving
                 const regex = /(?<=[.!?])\s/;
                 let sentences = state.responseReducer.responseText.split(regex);
-                // console.log(sentences);
-                const resValence = await axios.post("http://localhost:8501/v1/models/rnnmodel:predict", {
-                    signature_name: "serving_default",
-                    instances: sentences
+                const encoded = await axios.post("http://python-backend:5000/tokenize/", {
+                    instances: sentences,
                 });
-                console.log(resValence.data.predictions);
+                console.log(encoded);
+                const resValence = await axios.post("http://localhost:8501/v1/models/fine_tuned_finBERT:predict", {
+                    signature_name: "serving_default",
+                    instances: encoded
+                });
+                console.log(resValence);
                 dispatch(updateAnalysisData({"words" : res.data[0], "sentenceValencePredictions" :resValence['data']['predictions']}));
             // end TODO clean up lines 32-45
             dispatch(setWaitingForAnalysis(false));
